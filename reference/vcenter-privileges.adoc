@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference/vcenter-privileges.html 
 keywords: disaster recovery, bluexp, vcenter, 
-summary: 'NetApp Disaster Recovery がデータストアの登録と登録解除、VM の起動と停止、仮想マシン (VM) の再構成などのサービスを実行できるようにするには、vCenter アカウントに最低限の vCenter 権限が必要です。次の表には、 NetApp Disaster Recovery が vCenter クラスタとインターフェースするために必要なすべての権限がリストされています。' 
+summary: 'NetApp Disaster Recovery がデータストアの登録と登録解除、VM の起動と停止、仮想マシン (VM) の再構成などのサービスを実行できるようにするには、vCenter アカウントに最低限の vCenter 権限が必要です。次の表には、NetApp Disaster Recovery がvCenter クラスタとインターフェースするために必要なすべての権限がリストされています。' 
 ---
-= NetAppディザスタリカバリに必要な vCenter 権限
+= NetApp Disaster Recoveryに必要な vCenter 権限
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: 'NetApp Disaster Recovery がデータストアの登録と登録解除
 
 
 [role="lead"]
-NetApp Disaster Recovery がデータストアの登録と登録解除、VM の起動と停止、仮想マシン (VM) の再構成などのサービスを実行できるようにするには、vCenter アカウントに最低限の vCenter 権限が必要です。次の表には、 NetApp Disaster Recovery が vCenter クラスタとインターフェースするために必要なすべての権限がリストされています。
+NetApp Disaster Recovery がデータストアの登録と登録解除、VM の起動と停止、仮想マシン (VM) の再構成などのサービスを実行できるようにするには、vCenter アカウントに最低限の vCenter 権限が必要です。次の表には、NetApp Disaster Recovery がvCenter クラスタとインターフェースするために必要なすべての権限がリストされています。
 
 [cols="25,35a,40a"]
 |===
@@ -132,7 +132,7 @@ vCenter Server またはホスト インベントリから VM を登録解除す
 
 
 | *仮想マシンの状態*  a| 
-仮想マシン.スナップショット管理.スナップショットの作成
+仮想マシン。スナップショット管理。スナップショットの作成
  a| 
 VM の現在の状態からスナップショットを作成するために使用します。
 

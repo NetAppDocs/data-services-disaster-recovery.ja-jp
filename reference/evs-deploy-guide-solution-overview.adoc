@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-solution-overview.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, bluexp, evs, console, amazon elastic vmware service 
-summary: Amazon EVS と Amazon FSxN を使用したNetAppディザスタリカバリのソリューションの概要。 
+summary: Amazon EVS と Amazon FSxN を使用したNetApp Disaster Recoveryのソリューションの概要。 
 ---
-= Amazon EVS と Amazon FSs for NetApp ONTAPを使用したNetAppディザスタリカバリのソリューション概要
+= Amazon EVS と Amazon FSs for NetApp ONTAPを使用したNetApp Disaster Recoveryのソリューション概要
 :allow-uri-read: 
 
 
 [role="lead"]
-NetAppディザスタ リカバリは、 NetAppコンソールのソフトウェア アズ ア サービス環境内でホストされる付加価値サービスであり、コアNetAppコンソール アーキテクチャに依存します。コンソール内の VMware 保護の DR サービスは、いくつかの主要コンポーネントで構成されています。
+NetApp Disaster Recoveryは、 NetApp Consoleのコア アーキテクチャに依存する、NetAppNetApp Consoleのソフトウェア アズ ア サービス環境内でホストされる付加価値サービスです。コンソール内の VMware 保護の DR サービスは、いくつかの主要コンポーネントで構成されています。
 
-NetAppディザスタリカバリソリューションの完全な概要については、以下を参照してください。link:../get-started/dr-intro.html["NetApp のVMware 向けディザスタリカバリについて学ぶ"] 。
+NetApp Disaster Recoveryソリューションの完全な概要については、以下を参照してください。link:../get-started/dr-intro.html["NetApp Disaster Recoveryについて学ぶ"] 。
 
 オンプレミスの VMware がホストする仮想マシンを Amazon AWS に保護する場合は、 Amazon FSx for NetApp ONTAPストレージがホストするデータストアを使用して Amazon EVS にバックアップするサービスを使用します。
 
-次の図は、Amazon EVS を使用して VM を保護するサービスの動作を示しています。
+次の図は、Amazon EVS を使用して VM を保護するサービスがどのように機能するかを示しています。
 
-Amazon EVS と FSx for ONTAPを使用したNetApp災害復旧の概要image:evs-soloverview-evs.png["Amazon EVS と FSx for ONTAPを使用したNetApp災害復旧の概要"]
+Amazon EVS と FSx for ONTAPを使用したNetApp Disaster Recoveryの概要image:evs-soloverview-evs.png["Amazon EVS と FSx for ONTAPを使用したNetApp Disaster Recoveryの概要"]
 
-. Amazon EVS は、単一のアベイラビリティーゾーン (AZ) 構成でアカウントにデプロイされ、仮想プライベートクラウド (VPC) 内にデプロイされます。
+. Amazon EVS は、単一のアベイラビリティーゾーン (AZ) 構成でアカウントにデプロイされ、仮想プライベートクラウド (VPC) 内にもデプロイされます。
 . FSx for ONTAPファイルシステムは、Amazon EVS デプロイメントと同じ AZ にデプロイされます。ファイルシステムは、Elastic Network Interface (ENI)、VPC ピア接続、または AmazonTransit Gateway を介して Amazon EVS に直接接続します。
-. NetAppコンソール エージェントが VPC にインストールされます。  NetAppコンソール エージェントは、ローカルの物理データセンターと Amazon AWS がホストするリソースの両方で VMware インフラストラクチャの DR を管理するNetApp Disaster Recovery エージェントを含む、複数のデータ管理サービス (エージェントと呼ばれる) をホストします。
-. NetAppディザスタ リカバリ エージェントは、 NetAppコンソール クラウド ホスト サービスと安全に通信してタスクを受信し、それらのタスクを適切なオンプレミスおよび AWS ホストの vCenter およびONTAPストレージ インスタンスに配布します。
-. NetAppコンソールのクラウド ホスト UI コンソールを使用してレプリケーション プランを作成し、保護する必要がある VM、それらの VM を保護する頻度、オンプレミス サイトからのフェイルオーバーが発生した場合にそれらの VM を再起動するために実行する必要がある手順を指定します。
-. レプリケーション プランは、保護された VM をホストしている vCenter データストアと、それらのデータストアをホストしているONTAPボリュームを決定します。  FSx for ONTAPクラスターにボリュームがまだ存在しない場合は、 NetApp Disaster Recovery によって自動的に作成されます。
+. NetApp Consoleエージェントが VPC にインストールされます。  NetApp Consoleエージェントは、ローカルの物理データセンターと Amazon AWS がホストするリソースの両方で VMware インフラストラクチャの DR を管理するNetApp Disaster Recoveryエージェントを含む、複数のデータ管理サービス (エージェントと呼ばれる) をホストします。
+. NetApp Disaster Recoveryエージェントは、 NetApp Consoleクラウド ホスト サービスと安全に通信してタスクを受信し、それらのタスクを適切なオンプレミスおよび AWS ホストの vCenter およびONTAPストレージ インスタンスに配布します。
+. NetApp Consoleのクラウド ホスト UI コンソールを使用してレプリケーション プランを作成し、保護する必要がある VM、それらの VM を保護する頻度、オンプレミス サイトからのフェイルオーバーが発生した場合にそれらの VM を再起動するために実行する必要がある手順を指定します。
+. レプリケーション プランは、保護された VM をホストしている vCenter データストアと、それらのデータストアをホストしているONTAPボリュームを決定します。  FSx for ONTAPクラスターにボリュームがまだ存在しない場合は、 NetApp Disaster Recoveryによって自動的に作成されます。
 . 識別されたソースONTAPボリュームごとに、各宛先 FSx for ONTAPがホストするONTAPボリュームへのSnapMirror関係が作成され、レプリケーション プランでユーザーが指定した RPO に基づいてレプリケーション スケジュールが作成されます。
-. プライマリ サイトに障害が発生した場合、管理者はNetAppコンソール内で手動のフェイルオーバー プロセスを開始し、復元ポイントとして使用するバックアップを選択します。
-. NetAppディザスタ リカバリ エージェントは、FSx for ONTAPでホストされるデータ保護ボリュームをアクティブ化します。
+. プライマリ サイトに障害が発生した場合、管理者はNetApp Console内で手動のフェイルオーバー プロセスを開始し、復元ポイントとして使用するバックアップを選択します。
+. NetApp Disaster Recoveryエージェントは、FSx for ONTAPでホストされるデータ保護ボリュームをアクティブ化します。
 . エージェントは、アクティブ化された各 FSx for ONTAPボリュームを Amazon EVS vCenter に登録し、保護された各 VM を Amazon EVS vCenter に登録し、レプリケーション プランに含まれる定義済みルールに従って各 VM を起動します。
 

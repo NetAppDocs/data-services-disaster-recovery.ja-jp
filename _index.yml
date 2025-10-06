@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: NetAppディザスタリカバリドキュメント
+  title: NetApp Disaster Recoveryドキュメント
   summary: NetApp Disaster Recovery for VMware を使用すると、 ONTAPストレージを実行しているオンプレミスの VMware
     ワークロードを、 NetAppクラウド ストレージを使用して、災害復旧サイトとしてパブリック クラウド内の VMware ソフトウェア定義データセンターに複製できます。
   keywords: disaster, disaster recovery, bluexp, replicate, replication, cloud storage
@@ -10,19 +10,19 @@ indexpage:
   tiles:
   - title: 始めましょう
     links:
-    - title: NetAppディザスタリカバリについて学ぶ
+    - title: NetApp Disaster Recoveryについて学ぶ
       url: "/get-started/dr-intro.html"
-    - title: NetAppディザスタリカバリの新機能
+    - title: NetApp Disaster Recoveryの新機能
       url: "/release-notes/dr-whats-new.html"
     - title: クイック スタート
       url: "/get-started/dr-quick-start.html"
     - title: 前提条件
       url: "/get-started/dr-prerequisites.html"
-    - title: NetAppディザスタリカバリにアクセス
+    - title: NetApp Disaster Recoveryにアクセス
       url: "/get-started/dr-login.html"
     - title: FAQ
       url: "/get-started/dr-faq.html"
-  - title: NetAppディザスタリカバリを使用する
+  - title: NetApp Disaster Recoveryを使用する
     links:
     - title: サイトにvCenterを追加する
       url: "/use/sites-add.html"
@@ -38,13 +38,13 @@ indexpage:
       url: "/use/failback.html"
   - title: ブログとコミュニティ
     links:
-    - title: NetAppコンソール
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: NetAppデータサービス
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: NetAppコミュニティ
       url: https://community.netapp.com
-    - title: NetAppディザスタリカバリブログ
+    - title: NetApp Disaster Recoveryブログ
       url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-disaster-recovery-service-for-BC-with-VMware-Cloud-on-AWS-and-FSx-for/ba-p/447066
     - title: NetApp Disaster Recovery as a Service ラボ オンデマンドの開始
       url: https://labondemand.netapp.com/lab/draas

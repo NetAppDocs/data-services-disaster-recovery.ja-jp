@@ -2,27 +2,27 @@
 section: reference
 title: 参照
 entries:
-- title: NetAppディザスタリカバリに必要な vCenter 権限
+- title: NetApp Disaster Recoveryに必要な vCenter 権限
   url: "/reference/vcenter-privileges.html"
-- title: NetAppディザスタリカバリのロールと権限
+- title: NetApp Disaster Recoveryのロールと権限
   url: "/reference/dr-reference-roles.html"
-- title: Amazon EVS でNetApp災害復旧を使用する
+- title: Amazon EVS でNetApp Disaster Recoveryを使用する
   entries:
-  - title: Amazon EVS を使用したNetApp災害復旧の概要
+  - title: Amazon EVS を使用したNetApp Disaster Recoveryの概要
     url: "/reference/evs-deploy-guide-introduction.html"
   - title: ソリューションの概要
     url: "/reference/evs-deploy-guide-solution-overview.html"
-  - title: NetAppコンソールエージェントをインストールする
+  - title: NetApp Consoleエージェントをインストールする
     url: "/reference/evs-deploy-guide-install-connector.html"
-  - title: Amazon EVS 用のNetApp災害復旧を構成する
+  - title: Amazon EVS 用のNetApp Disaster Recoveryを構成する
     entries:
-    - title: Amazon EVS 向けNetAppディザスタリカバリの構成の概要
+    - title: Amazon EVS 向けNetApp Disaster Recoveryの構成の概要
       url: "/reference/evs-deploy-guide-config-draas.html"
     - title: Amazon EVS の前提条件
       url: "/reference/evs-deploy-guide-config-prereqs.html"
     - title: Amazon EVS 用のONTAPストレージアレイを追加する
       url: "/reference/evs-deploy-guide-config-add-arrays.html"
-    - title: Amazon EVS にNetApp災害復旧機能を追加
+    - title: Amazon EVS にNetApp Disaster Recoveryを追加
       url: "/reference/evs-deploy-guide-enable-draas.html"
     - title: NetApp Disaster Recovery for Amazon EVS にサイトを追加する
       url: "/reference/evs-deploy-guide-add-sites.html"

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference/dr-reference-roles.html 
 keywords: how bluexp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back, vmware cloud, netapp intelligent services 
-summary: NetApp Disaster Recovery では、ロールを使用して、各ユーザーの特定の機能やアクションへのアクセスを制御します。 
+summary: NetApp Disaster Recovery、ロールを使用して、各ユーザーの特定の機能やアクションへのアクセスを制御します。 
 ---
 = NetApp Disaster Recovery の機能へのロールベースのアクセス
 :hardbreaks:
@@ -12,19 +12,19 @@ summary: NetApp Disaster Recovery では、ロールを使用して、各ユー�
 
 
 [role="lead"]
-NetApp Disaster Recovery では、ロールを使用して、各ユーザーの特定の機能やアクションへのアクセスを制御します。
+NetApp Disaster Recovery、ロールを使用して、各ユーザーの特定の機能やアクションへのアクセスを制御します。
 
-このサービスは、 NetApp Disaster Recovery に固有の次のロールを使用します。
+このサービスは、NetApp Disaster Recoveryに固有の次のロールを使用します。
 
-* *ディザスタ リカバリ管理者*: NetAppディザスタ リカバリであらゆるアクションを実行します。
-* *災害復旧フェイルオーバー管理者*: NetApp災害復旧でフェイルオーバーと移行アクションを実行します。
+* *ディザスタ リカバリ管理者*: NetApp Disaster Recoveryであらゆるアクションを実行します。
+* *災害復旧フェイルオーバー管理者*: NetApp Disaster Recoveryでフェイルオーバーと移行アクションを実行します。
 * *災害復旧アプリケーション管理者*: レプリケーション プランを作成および変更し、テスト フェイルオーバーを開始します。
-* *ディザスタ リカバリ ビューア*: NetAppディザスタ リカバリの情報を表示できますが、アクションを実行することはできません。
+* *ディザスタ リカバリ ビューアー*: NetApp Disaster Recoveryの情報を表示できますが、アクションを実行することはできません。
 
 
-これらのロールはNetApp Disaster Recovery に固有のものであり、 NetAppコンソールで使用されるプラットフォーム ロールとは異なります。  NetAppコンソールプラットフォームのすべてのロールの詳細については、 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["NetAppコンソールのセットアップと管理に関するドキュメント"^] 。
+これらのロールはNetApp Disaster Recoveryに固有のものであり、 NetApp Consoleで使用されるプラットフォーム ロールとは異なります。  NetApp Consoleプラットフォームのすべてのロールの詳細については、 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["NetApp Consoleのセットアップと管理に関するドキュメント"^] 。
 
-次の表は、各NetAppディザスタ リカバリ ロールが実行できるアクションを示しています。
+次の表は、各NetApp Disaster Recoveryロールが実行できるアクションを示しています。
 
 [cols="30,20a,20a,20a,20a"]
 |===
@@ -114,7 +114,7 @@ NetApp Disaster Recovery では、ロールを使用して、各ユーザーの�
 5+| *レプリケーション プラン オプションについて*: 
 
 
-| レプリケーションプランを表示する  a| 
+| レプリケーションプランの表示  a| 
 はい
  a| 
 はい

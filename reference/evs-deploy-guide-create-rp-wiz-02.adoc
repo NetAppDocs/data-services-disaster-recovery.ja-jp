@@ -2,20 +2,20 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-create-rp-wiz-02.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, netapp, ontap,amazon elastic vmware service 
-summary: Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetAppディザスタリカバリの紹介。  NetApp Disaster Recovery を使用して保護する仮想マシンを選択します。 
+summary: Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介。  NetApp Disaster Recoveryを使用して保護する仮想マシンを選択します。 
 ---
-= レプリケーションプランの作成: ステップ 2 - NetApp Disaster Recovery で VM リソースを選択する
+= レプリケーションプランの作成: ステップ 2 - NetApp Disaster Recoveryで VM リソースを選択する
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp Disaster Recovery を使用して保護する仮想マシンを選択します。
+NetApp Disaster Recoveryを使用して保護する仮想マシンを選択します。
 
 保護する VM を選択する方法はいくつかあります。
 
 * *個々の VM を選択*: *仮想マシン* ボタンをクリックすると、保護する個々の VM を選択できます。各 VM を選択すると、サービスによって画面の右側にあるデフォルトのリソース グループに追加されます。
-* *以前に作成したリソース グループを選択*: NetApp Disaster Recovery メニューの [リソース グループ] オプションを使用して、事前にカスタム リソース グループを作成できます。他の 2 つの方法を使用して、レプリケーション プラン プロセスの一部としてリソース グループを作成できるため、これは必須ではありません。詳細については、 link:../use/drplan-create.html["レプリケーションプランを作成する"] 。
-* *vCenter データストア全体を選択*: このレプリケーション プランで保護する VM が多数ある場合は、個々の VM を選択するのが効率的ではない可能性があります。 NetApp Disaster Recovery ではボリュームベースのSnapMirrorレプリケーションを使用して VM を保護するため、データストアに存在するすべての VM がボリュームの一部として複製されます。ほとんどの場合、 NetApp Disaster Recovery を使用して、データストアにあるすべての VM を保護し、再起動する必要があります。このオプションを使用して、選択したデータストアでホストされているすべての VM を保護された VM のリストに追加するようにサービスに指示します。
+* *以前に作成したリソース グループを選択*: NetApp Disaster Recoveryメニューの [リソース グループ] オプションを使用して、事前にカスタム リソース グループを作成できます。他の 2 つの方法を使用して、レプリケーション プラン プロセスの一部としてリソース グループを作成できるため、これは必須ではありません。詳細については、 link:../use/drplan-create.html["レプリケーションプランを作成する"] 。
+* *vCenter データストア全体を選択*: このレプリケーション プランで保護する VM が多数ある場合は、個々の VM を選択するのが効率的ではない可能性があります。 NetApp Disaster RecoveryボリュームベースのSnapMirrorレプリケーションを使用して VM を保護するため、データストアに存在するすべての VM がボリュームの一部として複製されます。ほとんどの場合、 NetApp Disaster Recovery を使用して、データストアにあるすべての VM を保護し、再起動する必要があります。このオプションを使用して、選択したデータストアでホストされているすべての VM を保護された VM のリストに追加するようにサービスに指示します。
 
 
 このガイド付きの手順では、vCenter データストア全体を選択します。

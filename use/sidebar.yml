@@ -1,8 +1,8 @@
 ---
 section: use
-title: NetAppディザスタリカバリを使用する
+title: NetApp Disaster Recoveryを使用する
 entries:
-- title: NetAppディザスタリカバリの概要
+- title: NetApp Disaster Recoveryの概要
   url: "/use/use-overview.html"
 - title: ダッシュボードで災害復旧計画の健全性を確認する
   url: "/use/dashboard-view.html"

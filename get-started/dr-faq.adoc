@@ -4,7 +4,7 @@ permalink: get-started/dr-faq.html
 keywords: disaster recovery faq, disaster recovery frequently asked questions 
 summary: 質問に対する簡単な回答を探している場合は、この FAQ が役立ちます。 
 ---
-= NetAppディザスタリカバリに関するよくある質問
+= NetApp Disaster Recoveryに関するよくある質問
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -14,10 +14,10 @@ summary: 質問に対する簡単な回答を探している場合は、この F
 [role="lead"]
 質問に対する簡単な回答を探している場合は、この FAQ が役立ちます。
 
-* NetAppディザスタリカバリ URL とは何ですか?*  URL については、ブラウザで次のように入力します。 https://console.netapp.com/["https://console.netapp.com/"^] NetAppコンソールにアクセスします。
+* NetApp Disaster RecoveryURL とは何ですか?*  URL については、ブラウザで次のように入力します。 https://console.netapp.com/["https://console.netapp.com/"^] NetAppコンソールにアクセスします。
 
-* NetApp Disaster Recovery を使用するにはライセンスが必要ですか?*完全なアクセスには、 NetApp Disaster Recovery ライセンスが必要です。ただし、無料トライアルで試してみることはできます。
+* NetApp Disaster Recovery を使用するにはライセンスが必要ですか?*完全なアクセスには、 NetApp Disaster Recoveryライセンスが必要です。ただし、無料トライアルで試してみることはできます。
 
-NetApp Disaster Recoveryのライセンス設定の詳細については、link:../get-started/dr-licensing.html["NetApp Disaster Recoveryライセンスを設定する"] 。
+NetApp Disaster Recoveryのライセンス設定の詳細については、以下を参照してください。link:../get-started/dr-licensing.html["NetApp Disaster Recoveryライセンスを設定する"] 。
 
-* NetApp Disaster Recovery にどのようにアクセスしますか?* NetApp Disaster Recovery では有効化は必要ありません。災害復旧オプションは、 NetAppコンソールの左側のナビゲーションに自動的に表示されます。
+* NetApp Disaster Recoveryにどのようにアクセスしますか?* NetApp Disaster Recovery有効化は必要ありません。災害復旧オプションは、NetApp Consoleの左側のナビゲーションに自動的に表示されます。

@@ -4,7 +4,7 @@ permalink: use/use-overview.html
 keywords: disaster recovery remediate, disaster recovery, failover, failback, replication 
 summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。 
 ---
-= NetAppディザスタリカバリの概要
+= NetApp Disaster Recoveryの概要
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

@@ -2,14 +2,14 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-create-rp-wiz-03.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, netapp, ontap,amazon elastic vmware service 
-summary: Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetAppディザスタリカバリの紹介。保護する VM のリストを取得したら、 NetApp Disaster Recovery では、フェイルオーバー中に使用するフェイルオーバー マッピングと VM 構成情報を提供する必要があります。 
+summary: Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介。保護する VM のリストを取得したら、 NetApp Disaster Recoveryでは、フェイルオーバー中に使用するフェイルオーバー マッピングと VM 構成情報を提供する必要があります。 
 ---
-= レプリケーション プランの作成: ステップ 3 - NetApp Disaster Recovery でリソースをマップする
+= レプリケーション プランの作成: ステップ 3 - NetApp Disaster Recoveryでリソースをマップする
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp Disaster Recovery を使用して保護する VM のリストを作成したら、フェイルオーバー中に使用するフェイルオーバー マッピングと VM 構成情報を指定します。
+NetApp Disaster Recoveryを使用して保護する VM のリストを作成したら、フェイルオーバー中に使用するフェイルオーバー マッピングと VM 構成情報を指定します。
 
 主に次の 4 種類の情報をマッピングする必要があります。
 
@@ -45,7 +45,7 @@ image:evs-create-rp-wiz-c0.png["レプリケーションプランの作成、リ
 . 選択した仮想データセンター内のクラスターのリストから、データストアと VM をホストするクラスターを選択します。
 . (オプション) ターゲット クラスター内のターゲット ホストを選択します。
 +
-NetApp Disaster Recovery は vCenter でクラスタに追加された最初のホストを選択するため、この手順は必要ありません。その時点で、VM はその ESXi ホスト上で引き続き実行されるか、VMware DRS は構成された DRS ルールに基づいて必要に応じて VM を別の ESXi ホストに移動します。
+NetApp Disaster Recovery はvCenter でクラスタに追加された最初のホストを選択するため、この手順は必要ありません。その時点で、VM はその ESXi ホスト上で引き続き実行されるか、VMware DRS は構成された DRS ルールに基づいて必要に応じて VM を別の ESXi ホストに移動します。
 
 . (オプション) VM 登録を配置する最上位の vCenter フォルダの名前を指定します。
 +
@@ -135,14 +135,14 @@ image:evs-create-rp-wiz-c-vm-resources-boot-delay-1-2.png["レプリケーショ
 
 NetApp Disaster Recovery は、各 VM に対していくつかのゲスト OS 操作の実行をサポートしています。
 
-* NetApp Disaster Recovery は、Oracle データベースおよび Microsoft SQL Server データベースを実行している VM のアプリケーション整合性のあるバックアップを取得できます。
-* NetApp Disaster Recovery では、各 VM のゲスト OS に適したカスタム定義のスクリプトを実行できます。このようなスクリプトを実行するには、スクリプトにリストされている操作を実行するための十分な権限を持ち、ゲスト OS が受け入れ可能なユーザー資格情報が必要です。
+* NetApp Disaster Recovery は、 Oracle データベースおよび Microsoft SQL Server データベースを実行している VM のアプリケーション整合性のあるバックアップを取得できます。
+* NetApp Disaster Recovery、各 VM のゲスト OS に適したカスタム定義のスクリプトを実行できます。このようなスクリプトを実行するには、スクリプトにリストされている操作を実行するための十分な権限を持ち、ゲスト OS が受け入れ可能なユーザー資格情報が必要です。
 
 
 .各VMのカスタムゲストOS操作を変更する
 . (オプション) VM が Oracle または SQL Server データベースをホストしている場合は、[アプリケーション整合性レプリカを作成する] チェックボックスをオンにします。
 . (オプション) 起動プロセスの一部としてゲスト OS 内でカスタムアクションを実行するには、任意の VM のスクリプトをアップロードします。すべての VM で 1 つのスクリプトを実行するには、強調表示されたチェックボックスを使用してフィールドに入力します。
-. 特定の構成変更では、操作を実行するために適切な権限を持つユーザー資格情報が必要です。次の場合には資格情報を提供します。
+. 特定の構成変更には、操作を実行するための適切な権限を持つユーザー資格情報が必要です。次の場合に資格情報を提供します。
 +
 ** スクリプトはゲスト OS によって VM 内で実行されます。
 ** アプリケーション整合性スナップショットを実行する必要があります。
@@ -163,7 +163,7 @@ image:evs-create-rp-wiz-c-vm-resources-ac-scripts-creds-1-2.png["レプリケー
 さらに、オプションで、使用するデータ LIF (論理インターフェイス) とエクスポート ポリシーをカスタマイズすることもできます。これらの設定を指定しない場合、 NetApp Disaster Recovery は適切なプロトコル (NFS、iSCSI、または FC) に関連付けられているすべてのデータ LIF を使用し、NFS ボリュームのデフォルトのエクスポート ポリシーを使用します。
 
 .データストア（ボリューム）マッピングを構成するには
-. (オプション) 既存のONTAP SnapMirrorレプリケーション スケジュールを使用するか、 NetApp Disaster Recovery で VM の保護を管理するか (デフォルト) を決定します。
+. (オプション) 既存のONTAP SnapMirrorレプリケーション スケジュールを使用するか、 NetApp Disaster Recoveryで VM の保護を管理するか (デフォルト) を決定します。
 . サービスがバックアップを開始するタイミングの開始点を指定します。
 . サービスがバックアップを取得し、それを DR 宛先のAmazon FSx for NetApp ONTAPクラスターに複製する頻度を指定します。
 . 保持する履歴バックアップの数を指定します。このサービスは、ソース ストレージ クラスターと宛先ストレージ クラスターで同じ数のバックアップを維持します。

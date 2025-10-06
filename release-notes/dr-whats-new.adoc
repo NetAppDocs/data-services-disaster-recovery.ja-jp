@@ -4,7 +4,7 @@ permalink: release-notes/dr-whats-new.html
 keywords: disaster recovery, bluexp, disaster recovery, vmware, vcenter, draas, disaster 
 summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。  NetApp Disaster Recovery for VMware を使用すると、 ONTAPストレージを実行しているオンプレミスの VMware ワークロードを、 NetAppクラウド ストレージを使用して、災害復旧サイトとしてパブリック クラウド内の VMware ソフトウェア定義データセンターに複製できます。 
 ---
-= NetAppディザスタリカバリの新機能
+= NetApp Disaster Recoveryの新機能
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 
 [role="lead"]
-NetAppディザスタリカバリの新機能について説明します。
+NetApp Disaster Recoveryの新機能について説明します。
 
 
 
@@ -20,23 +20,23 @@ NetAppディザスタリカバリの新機能について説明します。
 
 
 
-=== BlueXP disaster recoveryはNetApp災害復旧になりました
+=== BlueXP disaster recoveryはNetApp Disaster Recoveryになりました
 
-BlueXP disaster recoveryはNetAppディザスタリカバリに名前が変更されました。
+BlueXP disaster recoveryはNetApp Disaster Recoveryに名前が変更されました。
 
 
 
-=== BlueXPはNetAppコンソールになりました
+=== BlueXPはNetApp Consoleになりました
 
-NetAppコンソールは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetAppデータ サービスの集中管理を提供し、リアルタイムの分析情報、ワークフローの高速化、および高度なセキュリティとコンプライアンスを備えた簡素化された管理を実現します。
+NetApp Consoleは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetApp Data Servicesの集中管理を提供し、リアルタイムの分析情報、より高速なワークフロー、および高度なセキュリティとコンプライアンスを備えた簡素化された管理を実現します。
 
-変更内容の詳細については、link:https://docs.netapp.com/us-en/bluexp-relnotes/index.html["NetAppコンソールのリリースノート"] 。
+変更内容の詳細については、link:https://docs.netapp.com/us-en/bluexp-relnotes/index.html["NetApp Consoleのリリースノート"] 。
 
 
 
 === その他のアップデート
 
-* Amazon FSx for NetApp ONTAPを使用した Amazon Elastic VMware Service (EVS) のサポートはパブリックプレビュー段階です。このリリースにより、一般公開されました。詳細については、link:../reference/evs-deploy-guide-introduction.html["Amazon Elastic VMware Service とAmazon FSx for NetApp ONTAPを使用したNetApp災害復旧の紹介"] 。
+* Amazon FSx for NetApp ONTAPを使用した Amazon Elastic VMware Service (EVS) のサポートはパブリックプレビュー段階です。このリリースにより、一般公開されました。詳細については、link:../reference/evs-deploy-guide-introduction.html["Amazon Elastic VMware Service とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介"] 。
 * オンプレミス展開での検出時間の短縮を含む、ストレージ検出の改善
 * ロールベースのアクセス制御（RBAC）や強化されたユーザー権限を含む、アイデンティティおよびアクセス管理（IAM）のサポート
 * Azure VMware ソリューションとCloud Volumes ONTAPのプライベート プレビュー サポート。このサポートにより、 Cloud Volumes ONTAPストレージを使用して、オンプレミスから Azure VMware ソリューションへのディザスター リカバリー保護を構成できるようになりました。
@@ -50,7 +50,7 @@ NetAppコンソールは、強化され再構築されたBlueXP基盤上に構�
 
 
 
-=== NetAppディザスタリカバリのアップデート
+=== NetApp Disaster Recoveryのアップデート
 
 このリリースには次の更新が含まれています。
 
@@ -61,7 +61,7 @@ NetAppコンソールは、強化され再構築されたBlueXP基盤上に構�
 * レプリケーション プラン作成の一環としてボリュームを作成するときに、宛先ボリュームがソース ボリュームと同じになることを妨げる制限を削除しました。
 * Azure Marketplace のNetApp Intelligent Services への従量課金制 (PAYGO) サブスクリプションのサポートが追加され、無料試用版ダイアログに Azure Marketplace へのリンクが追加されました。
 +
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html#licensing["NetAppディザスタリカバリライセンス"]そして https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["NetApp Disaster Recoveryのライセンスを設定する"]。
+詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html#licensing["NetApp Disaster Recoveryライセンス"]そして https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["NetApp Disaster Recoveryのライセンスを設定する"]。
 
 
 
@@ -73,19 +73,19 @@ NetAppコンソールは、強化され再構築されたBlueXP基盤上に構�
 
 
 
-=== NetAppディザスタリカバリにおけるユーザーロール
+=== NetApp Disaster Recoveryにおけるユーザーロール
 
-NetApp Disaster Recovery では、各ユーザーの特定の機能やアクションへのアクセスを制御するためにロールを採用するようになりました。
+NetApp Disaster Recoveryでは、各ユーザーの特定の機能やアクションへのアクセスを制御するためにロールを採用するようになりました。
 
-このサービスは、 NetApp Disaster Recovery に固有の次のロールを使用します。
+このサービスは、NetApp Disaster Recoveryに固有の次のロールを使用します。
 
-* *ディザスタ リカバリ管理者*: NetAppディザスタ リカバリであらゆるアクションを実行します。
-* *災害復旧フェイルオーバー管理者*: NetApp災害復旧でフェイルオーバーと移行アクションを実行します。
+* *ディザスタ リカバリ管理者*: NetApp Disaster Recoveryであらゆるアクションを実行します。
+* *災害復旧フェイルオーバー管理者*: NetApp Disaster Recoveryでフェイルオーバーと移行アクションを実行します。
 * *災害復旧アプリケーション管理者*: レプリケーション プランを作成および変更し、テスト フェイルオーバーを開始します。
-* *ディザスタ リカバリ ビューア*: NetAppディザスタ リカバリの情報を表示できますが、アクションを実行することはできません。
+* *ディザスタ リカバリ ビューアー*: NetApp Disaster Recoveryの情報を表示できますが、アクションを実行することはできません。
 
 
-NetApp Disaster Recovery サービスをクリックして初めて構成する場合は、*SnapCenterAdmin* 権限または *Organization Admin* ロールが必要です。
+NetApp Disaster Recoveryサービスをクリックして初めて構成する場合は、*SnapCenterAdmin* 権限または *Organization Admin* ロールが必要です。
 
 詳細については、  https://docs.netapp.com/us-en/bluexp-disaster-recovery/reference/dr-reference-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限"] 。
 
@@ -106,12 +106,12 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.
 
 * 次回のスケジュールされた検出または手動検出時の古いデータの管理:
 +
-** vCenter で VM が削除されると、 NetApp Disaster Recovery によってその VM がレプリケーション プランから自動的に削除されるようになりました。
-** vCenter でデータストアまたはネットワークが削除されると、 NetApp Disaster Recovery によってレプリケーション プランとリソース グループからそれが削除されるようになりました。
-** vCenter でクラスタ、ホスト、またはデータセンターが削除されると、 NetApp Disaster Recovery によってレプリケーション プランとリソース グループからそれが削除されるようになりました。
+** vCenter で VM が削除されると、 NetApp Disaster Recoveryによってその VM がレプリケーション プランから自動的に削除されるようになりました。
+** vCenter でデータストアまたはネットワークが削除されると、 NetApp Disaster Recoveryによってレプリケーション プランとリソース グループからそれが削除されるようになりました。
+** vCenter でクラスタ、ホスト、またはデータセンターが削除されると、 NetApp Disaster Recoveryによってレプリケーション プランとリソース グループからそれが削除されるようになりました。
 
 
-* ブラウザのシークレット モードで Swagger ドキュメントにアクセスできるようになりました。  NetApp Disaster Recovery 内の [設定] オプション > [API ドキュメント] からアクセスするか、ブラウザのシークレット モードで次の URL から直接アクセスできます。 https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["Swaggerドキュメント"^] 。
+* ブラウザのシークレット モードで Swagger ドキュメントにアクセスできるようになりました。NetApp Disaster Recovery内の [設定] オプション > [API ドキュメント] からアクセスするか、ブラウザのシークレット モードで次の URL から直接アクセスできます。 https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["Swaggerドキュメント"^] 。
 * 状況によっては、フェイルバック操作後に、操作の完了後に iGroup が残されることがあります。このアップデートでは、古くなった iGroup が削除されます。
 * レプリケーション プランで NFS FQDN が使用されていた場合、 NetApp Disaster Recovery はそれを IP アドレスに解決するようになりました。この更新は、災害復旧サイトで FQDN を解決できない場合に役立ちます。
 * UIの配置の改善
@@ -180,7 +180,7 @@ Windows ローカル管理者パスワード ソリューション (Windows LAPS
 
 VM1 には、NetworkA に接続された vNIC (10.1.1.50) があります。レプリケーション プラン設定では、NetworkA は NetworkB にマップされます。
 
-フェイルオーバー時に、 NetApp Disaster Recovery は元の IP アドレス (10.1.1) のネットワーク部分を置き換え、元の IP アドレス (10.1.1.50) のホスト アドレス (.50) を保持します。 VM1 の場合、 NetApp Disaster Recovery は NetworkB の CIDR 設定を確認し、NetworkB のネットワーク部分 192.168.1 を使用し、ホスト部分 (.50) を保持して VM1 の新しい IP アドレスを作成します。新しい IP は 192.168.1.50 になります。
+フェイルオーバー時に、 NetApp Disaster Recovery は元の IP アドレス (10.1.1) のネットワーク部分を置き換え、元の IP アドレス (10.1.1.50) のホスト アドレス (.50) を保持します。 VM1 の場合、 NetApp Disaster Recovery はNetworkB の CIDR 設定を確認し、NetworkB のネットワーク部分 192.168.1 を使用し、ホスト部分 (.50) を保持して VM1 の新しい IP アドレスを作成します。新しい IP は 192.168.1.50 になります。
 
 要約すると、ホスト アドレスは同じままですが、ネットワーク アドレスはサイトのサブネット マッピングで構成されているものに置き換えられます。これにより、特に数百のネットワークと数千の VM を管理する場合に、フェイルオーバー時の IP アドレスの再割り当てをより簡単に管理できるようになります。
 
@@ -190,9 +190,9 @@ VM1 には、NetworkA に接続された vNIC (10.1.1.50) があります。レ�
 
 === スキップ保護
 
-レプリケーション プランのフェイルオーバー後にサービスが自動的に逆保護関係を作成しないように、保護をスキップできるようになりました。これは、 NetApp Disaster Recovery 内でサイトをオンラインに戻す前に、復元されたサイトで追加の操作を実行する場合に役立ちます。
+レプリケーション プランのフェイルオーバー後にサービスが自動的に逆保護関係を作成しないように、保護をスキップできるようになりました。これは、NetApp Disaster Recovery内でサイトをオンラインに戻す前に、復元されたサイトで追加の操作を実行する場合に役立ちます。
 
-フェールオーバーを開始すると、元のソース サイトがオンラインの場合、デフォルトでは、サービスによってレプリケーション プラン内の各ボリュームに対して逆方向の保護関係が自動的に作成されます。これは、サービスがターゲット サイトからソース サイトへのSnapMirror関係を作成することを意味します。このサービスは、フェイルバックを開始すると、 SnapMirror関係も自動的に逆転させます。
+フェールオーバーを開始すると、元のソース サイトがオンラインの場合、デフォルトでは、サービスによってレプリケーション プラン内の各ボリュームに対して逆方向の保護関係が自動的に作成されます。これは、サービスがターゲット サイトからソース サイトへのSnapMirror関係を作成することを意味します。また、フェイルバックを開始すると、このサービスはSnapMirror関係を自動的に元に戻します。
 
 フェイルオーバーを開始するときに、*保護をスキップ*オプションを選択できるようになりました。これにより、サービスはSnapMirror関係を自動的に逆転させなくなります。代わりに、レプリケーション プランの両側に書き込み可能なボリュームを残します。
 
@@ -204,7 +204,7 @@ VM1 には、NetworkA に接続された vNIC (10.1.1.50) があります。レ�
 
 === SnapMirrorはレプリケーションプランで更新をスケジュールします
 
-NetApp Disaster Recovery では、ネイティブのONTAP SnapMirrorポリシー スケジューラやONTAPとのサードパーティ統合などの外部スナップショット管理ソリューションの使用がサポートされるようになりました。レプリケーション プラン内のすべてのデータストア (ボリューム) に、別の場所で管理されているSnapMirror関係がすでに存在する場合は、それらのスナップショットをNetApp Disaster Recovery のリカバリ ポイントとして使用できます。
+NetApp Disaster Recovery、ネイティブのONTAP SnapMirrorポリシー スケジューラやONTAPとのサードパーティ統合などの外部スナップショット管理ソリューションの使用がサポートされるようになりました。レプリケーション プラン内のすべてのデータストア (ボリューム) に、別の場所で管理されているSnapMirror関係がすでに存在する場合は、それらのスナップショットをNetApp Disaster Recoveryのリカバリ ポイントとして使用できます。
 
 設定するには、レプリケーション プラン > リソース マッピング セクションで、データストア マッピングを設定するときに *プラットフォーム管理のバックアップと保持スケジュールを使用する* チェックボックスをオンにします。
 
@@ -212,7 +212,7 @@ NetApp Disaster Recovery では、ネイティブのONTAP SnapMirrorポリシー
 
 これが構成されると、サービスは定期的にスケジュールされたスナップショットを取得せず、代わりに外部エンティティに依存してスナップショットを取得および更新します。
 
-レプリケーションプランで外部スナップショットソリューションを使用する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+レプリケーションプランで外部スナップショットソリューションを使用する方法の詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -224,7 +224,7 @@ NetApp Disaster Recovery では、ネイティブのONTAP SnapMirrorポリシー
 
 === VMのスケジュールされた検出
 
-NetApp Disaster Recovery は 24 時間ごとに検出を実行します。このリリースでは、ニーズに合わせて検出スケジュールをカスタマイズし、必要なときにパフォーマンスへの影響を軽減できるようになりました。たとえば、多数の VM がある場合は、検出スケジュールを 48 時間ごとに実行するように設定できます。  VM の数が少ない場合は、検出スケジュールを 12 時間ごとに実行するように設定できます。
+NetApp Disaster Recovery は24 時間ごとに検出を実行します。このリリースでは、ニーズに合わせて検出スケジュールをカスタマイズし、必要なときにパフォーマンスへの影響を軽減できるようになりました。たとえば、多数の VM がある場合は、検出スケジュールを 48 時間ごとに実行するように設定できます。  VM の数が少ない場合は、検出スケジュールを 12 時間ごとに実行するように設定できます。
 
 検出をスケジュールしたくない場合は、スケジュールされた検出オプションを無効にして、いつでも手動で検出を更新できます。
 
@@ -266,15 +266,15 @@ NetApp Disaster Recovery は 24 時間ごとに検出を実行します。この
 
 === インテリジェントなプロキシサポート
 
-NetAppコンソール エージェントはインテリジェント プロキシをサポートします。インテリジェント プロキシは、オンプレミスのシステムをNetApp Disaster Recovery に接続するための軽量かつ安全で効率的な方法です。 VPN や直接のインターネット アクセスを必要とせずに、システムとNetApp Disaster Recovery 間の安全な接続を提供します。この最適化されたプロキシ実装は、ローカル ネットワーク内の API トラフィックをオフロードします。
+NetApp Consoleエージェントはインテリジェント プロキシをサポートします。インテリジェント プロキシは、オンプレミス システムをNetApp Disaster Recoveryに接続するための軽量かつ安全で効率的な方法です。 VPN や直接のインターネット アクセスを必要とせずに、システムとNetApp Disaster Recovery間の安全な接続を提供します。この最適化されたプロキシ実装は、ローカル ネットワーク内の API トラフィックをオフロードします。
 
-プロキシが設定されている場合、 NetApp Disaster Recovery は VMware またはONTAPと直接通信を試み、直接通信が失敗した場合は設定されたプロキシを使用します。
+プロキシが設定されている場合、 NetApp Disaster Recovery はVMware またはONTAPと直接通信を試み、直接通信が失敗した場合は設定されたプロキシを使用します。
 
-NetAppディザスタ リカバリ プロキシの実装では、コンソール エージェントと、HTTPS プロトコルを使用した vCenter Server およびONTAPアレイ間のポート 443 通信が必要です。コンソール エージェント内のNetApp Disaster Recovery エージェントは、アクションを実行するときに VMware vSphere、VC、またはONTAPと直接通信します。
+NetApp Disaster Recoveryプロキシの実装では、コンソール エージェントと、HTTPS プロトコルを使用した vCenter Server およびONTAPアレイ間のポート 443 通信が必要です。コンソール エージェント内のNetApp Disaster Recoveryエージェントは、アクションを実行するときに VMware vSphere、VC、またはONTAPと直接通信します。
 
-NetApp Disaster Recoveryのインテリジェントプロキシの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-setup.html["NetAppディザスタリカバリ用のインフラストラクチャをセットアップする"] 。
+NetApp Disaster Recoveryのインテリジェントプロキシの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-setup.html["NetApp Disaster Recovery用のインフラストラクチャをセットアップする"] 。
 
-NetAppコンソールでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。
+NetApp Consoleでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。
 
 
 
@@ -294,7 +294,7 @@ NetAppコンソールでの一般的なプロキシ設定の詳細について�
 
 === VMFSストレージ上のVMおよびデータストアに対するASA r2のサポート
 
-NetApp Disaster Recovery のこのリリースでは、VM および VMFS ストレージ上のデータストアに対してASA r2 のサポートが提供されます。  ASA r2 システムでは、 ONTAPソフトウェアは基本的な SAN 機能をサポートしますが、SAN 環境でサポートされていない機能は削除されます。
+NetApp Disaster Recoveryのこのリリースでは、VM および VMFS ストレージ上のデータストアに対してASA r2 のサポートが提供されます。  ASA r2 システムでは、 ONTAPソフトウェアは基本的な SAN 機能をサポートしますが、SAN 環境でサポートされていない機能は削除されます。
 
 このリリースでは、 ASA r2 の次の機能がサポートされています。
 
@@ -302,9 +302,9 @@ NetApp Disaster Recovery のこのリリースでは、VM および VMFS スト�
 * SnapMirror自動化を含むバックアップ（コンシステンシグループ）操作
 
 
-NetApp Disaster Recovery におけるASA r2 のサポートには、 ONTAP 9.16.1 が使用されます。
+NetApp Disaster RecoveryにおけるASA r2 のサポートには、 ONTAP 9.16.1 が使用されます。
 
-データストアはONTAPボリュームまたはASA r2 ストレージ ユニットにマウントできますが、 NetApp Disaster Recovery のリソース グループにはONTAPのデータストアとASA r2 のデータストアの両方を含めることはできません。リソース グループでは、 ONTAPのデータストアまたはASA r2 のデータストアのいずれかを選択できます。
+データストアはONTAPボリュームまたはASA r2 ストレージ ユニットにマウントできますが、 NetApp Disaster Recoveryのリソース グループにはONTAPのデータストアとASA r2 のデータストアの両方を含めることはできません。リソース グループでは、 ONTAPのデータストアまたはASA r2 のデータストアのいずれかを選択できます。
 
 
 
@@ -322,7 +322,7 @@ NetApp Disaster Recovery におけるASA r2 のサポートには、 ONTAP 9.16.
 
 === 30日間無料トライアル
 
-NetApp Disaster Recovery の 30 日間無料トライアルに今すぐサインアップできます。以前は、無料トライアルは 90 日間でした。
+NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサインアップできます。以前は、無料トライアルは 90 日間でした。
 
 参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["ライセンスの設定"]。
 
@@ -335,7 +335,7 @@ NetApp Disaster Recovery の 30 日間無料トライアルに今すぐサイン
 方法は次のとおりです。
 
 . メニューから*レプリケーション プラン*を選択します。
-. プランを選択し、アクション アイコンを選択してドロップダウン メニューを表示します。
+. プランを選択し、[アクション] アイコンを選択してドロップダウン メニューを表示します。
 . *無効*を選択します。
 . 数分後、「*有効*」を選択します。
 
@@ -392,7 +392,7 @@ NetApp Disaster Recovery の 30 日間無料トライアルに今すぐサイン
 
 === スナップショットを調整する
 
-ソースとターゲット間で同期されていないスナップショットを調整できるようになりました。これは、NetApp Disaster Recovery の外部のターゲットでスナップショットが削除された場合に発生する可能性があります。サービスは、ソース上のスナップショットを 24 時間ごとに自動的に削除します。ただし、これをオンデマンドで実行できます。この機能により、すべてのサイト間でスナップショットの一貫性を確保できます。
+ソースとターゲット間で同期されていないスナップショットを調整できるようになりました。これは、NetApp Disaster Recoveryの外部のターゲットでスナップショットが削除された場合に発生する可能性があります。サービスは、ソース上のスナップショットを 24 時間ごとに自動的に削除します。ただし、これをオンデマンドで実行できます。この機能により、すべてのサイト間でスナップショットの一貫性を確保できます。
 
 詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["レプリケーションプランの管理"] 。
 
@@ -409,7 +409,7 @@ NetApp Disaster Recovery の 30 日間無料トライアルに今すぐサイン
 iSCSI プロトコルと FC プロトコルの両方に関する追加の考慮事項を次に示します。
 
 * FC サポートは、レプリケーション用ではなく、クライアント フロントエンド プロトコル用です。
-* NetApp Disaster Recovery では、 ONTAPボリュームごとに 1 つの LUN のみをサポートします。ボリュームには複数の LUN を含めることはできません。
+* NetApp Disaster Recovery、 ONTAPボリュームごとに 1 つの LUN のみをサポートします。ボリュームには複数の LUN を含めることはできません。
 * どのレプリケーション プランでも、宛先ONTAPボリュームは、保護された VM をホストするソースONTAPボリュームと同じプロトコルを使用する必要があります。たとえば、ソースが FC プロトコルを使用する場合、宛先も FC を使用する必要があります。
 
 
@@ -447,7 +447,7 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 方法は次のとおりです。
 
 . メニューから*レプリケーション プラン*を選択します。
-. プランを選択し、アクション アイコンを選択してドロップダウン メニューを表示します。
+. プランを選択し、[アクション] アイコンを選択してドロップダウン メニューを表示します。
 . *無効*を選択します。
 . 数分後、「*有効*」を選択します。
 
@@ -474,7 +474,7 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 
 == 2024年7月5日
 
-このNetApp Disaster Recovery リリースには、次の更新が含まれています。
+このNetApp Disaster Recoveryリリースには、次の更新が含まれています。
 
 
 
@@ -535,13 +535,13 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 
 NetApp Disaster Recovery の前提条件情報が更新されました。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-prerequisites.html["NetAppディザスタリカバリの前提条件"]。
+参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-prerequisites.html["NetApp Disaster Recoveryの前提条件"]。
 
 
 
 == 2024年5月15日
 
-このNetApp Disaster Recovery リリースには、次の更新が含まれています。
+このNetApp Disaster Recoveryリリースには、次の更新が含まれています。
 
 
 
@@ -553,33 +553,33 @@ NetApp Disaster Recovery の前提条件情報が更新されました。
 
 === ライセンスの更新
 
-NetApp Disaster Recovery では、90 日間の無料トライアルにサインアップしたり、Amazon Marketplace で従量課金制 (PAYGO) サブスクリプションを購入したり、NetApp の営業担当者またはNetAppサポート サイト (NSS) から取得したNetAppライセンス ファイル (NLF) である Bring Your NetApp License (BYOL) を使用したりすることができます。
+NetApp Disaster Recoveryでは、90 日間の無料トライアルにサインアップしたり、Amazon Marketplace で従量課金制 (PAYGO) サブスクリプションを購入したり、NetApp の営業担当者またはNetAppサポート サイト (NSS) から取得したNetAppライセンス ファイル (NLF) である Bring Your NetApp License (BYOL) を使用したりすることができます。
 
-NetApp Disaster Recoveryのライセンス設定の詳細については、link:../get-started/dr-licensing.html["ライセンスの設定"] 。
+NetApp Disaster Recoveryのライセンス設定の詳細については、以下を参照してください。link:../get-started/dr-licensing.html["ライセンスの設定"] 。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetAppディザスタリカバリの詳細"] 。
+https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"] 。
 
 
 
 == 2024年3月5日
 
-これはNetApp Disaster Recovery の一般提供リリースであり、次の更新が含まれています。
+これはNetApp Disaster Recoveryの一般提供リリースであり、次の更新が含まれています。
 
 
 
 === ライセンスの更新
 
-NetApp Disaster Recovery では、90 日間の無料トライアルにサインアップするか、 NetApp の営業担当者から取得したNetAppライセンス ファイル (NLF) である Bring Your Own License (BYOL) を利用できます。ライセンス シリアル番号を使用して、 NetAppコンソール サブスクリプションで BYOL をアクティブ化できます。  NetAppディザスタリカバリ料金は、データストアのプロビジョニングされた容量に基づいて決まります。
+NetApp Disaster Recoveryでは、90 日間の無料トライアルにサインアップするか、 NetApp の営業担当者から取得したNetAppライセンス ファイル (NLF) である Bring Your Own License (BYOL) を使用することができます。ライセンス シリアル番号を使用して、 NetApp Consoleサブスクリプションで BYOL をアクティブ化できます。  NetApp Disaster Recovery料金は、データストアのプロビジョニングされた容量に基づいて決まります。
 
 NetApp Disaster Recoveryのライセンス設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["ライセンスの設定"] 。
 
-すべてのNetAppコンソールデータサービスのライセンス管理の詳細については、 https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["すべてのNetAppコンソールデータサービスのライセンスを管理する"^] 。
+すべてのNetApp Consoleデータサービスのライセンス管理の詳細については、 https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["すべてのNetApp Consoleデータサービスのライセンスを管理する"^] 。
 
 
 
 === スケジュールを編集する
 
-このリリースでは、コンプライアンス テストとフェイルオーバー テストをテストするスケジュールを設定できるようになり、必要に応じて正しく動作することを確認できるようになりました。
+このリリースでは、コンプライアンス テストとフェイルオーバー テストのスケジュールを設定して、必要に応じて正しく動作することを確認できるようになりました。
 
 詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
@@ -587,7 +587,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 == 2024年2月1日
 
-このNetApp Disaster Recovery プレビュー リリースには、次の更新が含まれています。
+このNetApp Disaster Recoveryプレビュー リリースには、次の更新が含まれています。
 
 
 
@@ -605,7 +605,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 === カスタムスクリプト
 
-フェイルオーバー後のプロセスとして含めることができるようになりました。カスタム スクリプトを使用すると、フェイルオーバー プロセス後にNetApp Disaster Recovery でスクリプトを実行できます。たとえば、フェイルオーバーが完了した後、カスタム スクリプトを使用してすべてのデータベース トランザクションを再開できます。
+フェイルオーバー後のプロセスとして含めることができるようになりました。カスタム スクリプトを使用すると、フェイルオーバー プロセス後にNetApp Disaster Recoveryでスクリプトを実行できます。たとえば、カスタム スクリプトを使用して、フェイルオーバーが完了した後にすべてのデータベース トランザクションを再開できます。
 
 詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["リモートサイトへのフェイルオーバー"] 。
 
@@ -613,7 +613,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 === SnapMirror関係
 
-レプリケーション プランを開発しながらSnapMirror関係を作成できるようになりました。以前は、 NetApp Disaster Recovery の外部で関係を作成する必要がありました。
+レプリケーション プランを開発しながらSnapMirror関係を作成できるようになりました。以前は、 NetApp Disaster Recoveryの外部で関係を作成する必要がありました。
 
 詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
@@ -621,7 +621,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 === 一貫性グループ
 
-レプリケーション プランを作成するときに、異なるボリュームや異なる SVM からの VM を含めることができます。  NetApp Disaster Recovery は、すべてのボリュームを含めて整合性グループのスナップショットを作成し、すべてのセカンダリ ロケーションを更新します。
+レプリケーション プランを作成するときに、異なるボリュームおよび異なる SVM からの VM を含めることができます。  NetApp Disaster Recovery は、すべてのボリュームを含めて整合性グループのスナップショットを作成し、すべてのセカンダリ ロケーションを更新します。
 
 詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
@@ -645,7 +645,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 == 2024年1月11日
 
-NetApp Disaster Recovery のこのプレビュー リリースには、次の更新が含まれています。
+NetApp Disaster Recoveryのこのプレビュー リリースには、次の更新が含まれています。
 
 
 
@@ -653,13 +653,13 @@ NetApp Disaster Recovery のこのプレビュー リリースには、次の更
 
 このリリースでは、ダッシュボードから他のページの情報にさらに迅速にアクセスできるようになりました。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetAppディザスタリカバリについて学ぶ"] 。
+https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryについて学ぶ"] 。
 
 
 
 == 2023年10月20日
 
-NetApp Disaster Recovery のこのプレビュー リリースには、次の更新が含まれています。
+NetApp Disaster Recoveryのこのプレビュー リリースには、次の更新が含まれています。
 
 
 
@@ -670,13 +670,13 @@ NetApp Disaster Recovery を使用すると、パブリック クラウドに加
 
 NOTE: このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetAppディザスタリカバリの詳細"] 。
+https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"] 。
 
 
 
 == 2023年9月27日
 
-NetApp Disaster Recovery のこのプレビュー リリースには、次の更新が含まれています。
+NetApp Disaster Recoveryのこのプレビュー リリースには、次の更新が含まれています。
 
 
 
@@ -694,7 +694,7 @@ NetApp Disaster Recovery のこのプレビュー リリースには、次の更
 +
 参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
 
-* *ネットワークの機能強化*: レプリケーション プランの仮想マシン セクションでソースとターゲットの場所の間でネットワークをマッピングするときに、 NetApp Disaster Recovery では DHCP または静的 IP の 2 つのオプションが提供されるようになりました。以前は、DHCP のみがサポートされていました。静的 IP の場合は、サブネット、ゲートウェイ、および DNS サーバーを構成します。さらに、仮想マシンの資格情報を入力できるようになりました。
+* *ネットワークの機能強化*: レプリケーション プランの仮想マシン セクションでソースとターゲットの場所の間でネットワークをマッピングするときに、 NetApp Disaster RecoveryDHCP または静的 IP の 2 つのオプションが提供されるようになりました。以前は、DHCP のみがサポートされていました。静的 IP の場合は、サブネット、ゲートウェイ、および DNS サーバーを構成します。さらに、仮想マシンの資格情報を入力できるようになりました。
 +
 参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
 
@@ -721,14 +721,14 @@ NetApp Disaster Recovery のこのプレビュー リリースには、次の更
 
 
 
-=== NetAppディザスタリカバリ プレビュー
+=== NetApp Disaster Recoveryプレビュー
 
-NetApp Disaster Recovery プレビューは、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。最初に、 NetApp Disaster Recovery プレビューを使用すると、 Amazon FSx for ONTAPを使用して、 NetAppストレージを実行しているオンプレミスの NFS ベースの VMware ワークロードを AWS 上の VMware Cloud (VMC) に保護できます。
+NetApp Disaster Recoveryプレビューは、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。最初に、 NetApp Disaster Recoveryプレビューを使用すると、 Amazon FSx for ONTAPを使用して、 NetAppストレージを実行しているオンプレミスの NFS ベースの VMware ワークロードを AWS 上の VMware Cloud (VMC) に保護できます。
 
 
 NOTE: このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetAppディザスタリカバリの詳細"] 。
+https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"] 。
 
 このリリースには次の更新が含まれています。
 
@@ -742,7 +742,7 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 === レプリケーション検証
 
-災害復旧またはレプリケーション プランを作成し、ウィザードで繰り返しを指定して、災害復旧サイトへのレプリケーションを開始すると、 NetApp Disaster Recovery は 30 分ごとに、レプリケーションがプランに従って実際に実行されているかどうかを確認します。ジョブ モニター ページで進行状況を監視できます。。  https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/replicate.html["アプリケーションを別のサイトに複製する"] 。
+災害復旧またはレプリケーション プランを作成し、ウィザードで繰り返しを指定して、災害復旧サイトへのレプリケーションを開始すると、 NetApp Disaster Recovery は30 分ごとに、レプリケーションがプランに従って実際に実行されているかどうかを確認します。ジョブ モニター ページで進行状況を監視できます。。  https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/replicate.html["アプリケーションを別のサイトに複製する"] 。
 
 
 
@@ -760,12 +760,12 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 == 2023年5月18日
 
-これはNetApp Disaster Recovery の最初のリリースです。
+これはNetApp Disaster Recoveryの最初のリリースです。
 
 
 
 === クラウドベースの災害復旧サービス
 
-NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。最初に、 NetApp Disaster Recovery プレビューを使用すると、 Amazon FSx for ONTAPを使用して、 NetAppストレージを実行しているオンプレミスの NFS ベースの VMware ワークロードを AWS 上の VMware Cloud (VMC) に保護できます。
+NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。最初に、 NetApp Disaster Recoveryプレビューを使用すると、 Amazon FSx for ONTAPを使用して、 NetAppストレージを実行しているオンプレミスの NFS ベースの VMware ワークロードを AWS 上の VMware Cloud (VMC) に保護できます。
 
-link:https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetAppディザスタリカバリの詳細"] 。
+link:https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"] 。

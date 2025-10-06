@@ -2,15 +2,15 @@
 section: get-started
 title: 始めましょう
 entries:
-- title: NetAppディザスタリカバリについて学ぶ
+- title: NetApp Disaster Recoveryについて学ぶ
   url: "/get-started/dr-intro.html"
 - title: 前提条件
   url: "/get-started/dr-prerequisites.html"
 - title: クイック スタート
   url: "/get-started/dr-quick-start.html"
-- title: NetAppディザスタリカバリ用のインフラストラクチャをセットアップする
+- title: NetApp Disaster Recovery用のインフラストラクチャをセットアップする
   url: "/get-started/dr-setup.html"
-- title: NetAppディザスタリカバリにアクセス
+- title: NetApp Disaster Recoveryにアクセス
   url: "/get-started/dr-login.html"
 - title: ライセンスの設定
   url: "/get-started/dr-licensing.html"

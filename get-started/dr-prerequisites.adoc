@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: get-started/dr-prerequisites.html 
 keywords: what are disaster recovery requirements, disaster recovery prerequisites, bluexp, disaster recovery 
-summary: NetApp Disaster Recovery を使用する前に、環境がONTAPストレージ、VMware vCenter クラスタ、およびNetAppコンソールの要件を満たしていることを確認する必要があります。 
+summary: NetApp Disaster Recoveryを使用する前に、環境がONTAPストレージ、VMware vCenter クラスタ、およびNetApp Consoleの要件を満たしていることを確認する必要があります。 
 ---
-= NetAppディザスタリカバリの前提条件
+= NetApp Disaster Recoveryの前提条件
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: NetApp Disaster Recovery を使用する前に、環境がONTAPスト�
 
 
 [role="lead"]
-NetApp Disaster Recovery を使用する前に、環境がONTAPストレージ、VMware vCenter クラスタ、およびNetAppコンソールの要件を満たしていることを確認する必要があります。
+NetApp Disaster Recoveryを使用する前に、環境がONTAPストレージ、VMware vCenter クラスタ、およびNetApp Consoleの要件を満たしていることを確認する必要があります。
 
 
 
@@ -64,9 +64,9 @@ ONTAP 9.10.0以降
 
 これらの前提条件は、オンプレミスの vCenter クラスタと VMware Cloud for AWS ソフトウェア定義データセンター (SDDC) の両方に適用されます。
 
-* レビューlink:../reference/vcenter-privileges.html["vCenter 権限"]NetAppディザスタリカバリに必要です。
-* NetApp Disaster Recovery で管理するすべての VMware クラスターは、保護する VM をホストするためにONTAPボリュームを使用します。
-* NetApp Disaster Recovery によって管理されるすべての VMware データストアでは、次のいずれかのプロトコルを使用する必要があります。
+* レビューlink:../reference/vcenter-privileges.html["vCenter 権限"]NetApp Disaster Recoveryに必要です。
+* NetApp Disaster Recoveryで管理するすべての VMware クラスターは、保護する VM をホストするためにONTAPボリュームを使用します。
+* NetApp Disaster Recoveryによって管理されるすべての VMware データストアでは、次のいずれかのプロトコルを使用する必要があります。
 +
 ** NFS
 ** iSCSI または FC プロトコルを使用した VMFS
@@ -75,7 +75,7 @@ ONTAP 9.10.0以降
 * VMware vSphere バージョン 7.0 Update 3 (7.0v3) 以降
 * VMware Cloud SDDC を使用している場合は、次の前提条件が適用されます。
 +
-** VMware Cloud コンソールで、管理者および NSX Cloud 管理者のサービス ロールを使用します。組織ロールには組織の所有者も使用します。参照 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["VMware Cloud Foundations と AWS FSx for NetApp ONTAP の使用に関するドキュメント"^]。
+** VMware Cloud コンソールでは、管理者および NSX Cloud 管理者のサービス ロールを使用します。組織ロールには組織の所有者も使用します。参照 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["VMware Cloud Foundations と AWS FSx for NetApp ONTAP の使用に関するドキュメント"^]。
 ** VMware Cloud SDDC をAmazon FSx for NetApp ONTAPインスタンスにリンクします。参照 https://vmc.techzone.vmware.com/fsx-guide#overview["VMware Cloud on AWS とAmazon FSx for NetApp ONTAP の統合の展開情報"^]。
 
 
@@ -83,34 +83,34 @@ ONTAP 9.10.0以降
 
 
 
-== NetAppコンソールの前提条件
+== NetApp Consoleの前提条件
 
 
 
-=== NetAppコンソールを使い始める
+=== NetApp Consoleを使い始める
 
-まだお済みでない場合は、 https://docs.netapp.com/us-en/bluexp-setup-admin/task-sign-up-saas.html["NetAppコンソールにサインアップして組織を作成する"^] 。
+まだお済みでない場合は、 https://docs.netapp.com/us-en/bluexp-setup-admin/task-sign-up-saas.html["NetApp Consoleにサインアップして組織を作成する"^] 。
 
 
 
 === ONTAPとVMwareの資格情報を収集する
 
-* NetAppディザスタリカバリの管理に使用するNetAppコンソール プロジェクト内のシステムに、 Amazon FSx for ONTAPと AWS 認証情報を追加する必要があります。
-* NetApp Disaster Recovery には vCenter の資格情報が必要です。  NetApp Disaster Recovery でサイトを追加するときに、vCenter の資格情報を入力します。
+* NetApp Disaster Recoveryを管理するために使用されるNetApp Consoleプロジェクト内のシステムに、 Amazon FSx for ONTAPと AWS 認証情報を追加する必要があります。
+* NetApp Disaster Recovery には vCenter の資格情報が必要です。  NetApp Disaster Recoveryでサイトを追加するときに、vCenter の資格情報を入力します。
 +
-必要なvCenter権限のリストについては、以下を参照してください。link:../reference/vcenter-privileges.html["NetAppディザスタリカバリに必要な vCenter 権限"] 。サイトを追加する方法については、link:../use/sites-add.html["サイトを追加する"] 。
+必要なvCenter権限のリストについては、link:../reference/vcenter-privileges.html["NetApp Disaster Recoveryに必要な vCenter 権限"] 。サイトを追加する方法については、link:../use/sites-add.html["サイトを追加する"] 。
 
 
 
 
 
-=== NetAppコンソールエージェントを作成する
+=== NetApp Consoleエージェントを作成する
 
 コンソール エージェントは、コンソールがONTAPストレージおよび VMware vCenter クラスターと通信できるようにするソフトウェア コンポーネントです。災害復旧が適切に機能するために必要です。エージェントはプライベート ネットワーク（オンプレミス データセンターまたはクラウド VPC 内）に常駐し、 ONTAPストレージ インスタンスやその他のサーバーおよびアプリケーション コンポーネントと通信します。災害復旧の場合、これは管理対象の vCenter クラスターへのアクセスです。
 
-NetAppコンソールにコンソール エージェントを設定する必要があります。エージェントを使用すると、災害復旧サービスに適切な機能が含まれるようになります。
+NetApp Consoleにコンソール エージェントを設定する必要があります。エージェントを使用すると、災害復旧サービスに適切な機能が含まれるようになります。
 
-* NetApp Disaster Recovery は、標準モード エージェントの展開でのみ機能します。見る https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-standard-mode.html["NetAppコンソールの標準モードでの使用開始"^]。
+* NetApp Disaster Recovery は、標準モード エージェントの展開でのみ機能します。見る https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-standard-mode.html["NetApp Consoleの標準モードでの使用開始"^]。
 * ソース vCenter とターゲット vCenter の両方で同じコンソール エージェントが使用されていることを確認します。
 * 必要なコンソール エージェントの種類:
 +
@@ -120,14 +120,14 @@ NetAppコンソールにコンソール エージェントを設定する必要�
 
 TIP: オンプレミスからオンプレミスへの接続には、オンプレミスのコンソール エージェントを使用します。オンプレミスから AWS の場合、ソースのオンプレミス vCenter と宛先のオンプレミス vCenter にアクセスできる AWS コンソールエージェントを使用します。
 
-** インストールされたコンソール エージェントは、 NetApp Disaster Recovery が管理するすべての VMware クラスターにアクセスできる必要があります。
+** インストールされたコンソール エージェントは、 NetApp Disaster Recoveryが管理するすべての VMware クラスターにアクセスできる必要があります。
 
 
-* NetApp Disaster Recovery によって管理されるすべてのONTAPアレイは、 NetApp Disaster Recovery の管理に使用されるNetAppコンソール プロジェクト内のすべてのシステムに追加する必要があります。
+* NetApp Disaster Recoveryによって管理されるすべてのONTAPアレイは、 NetApp Disaster Recoveryの管理に使用されるNetApp Consoleプロジェクト内のすべてのシステムに追加する必要があります。
 +
 見る https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAPクラスタの検出"^]。
 
-* NetApp Disaster Recoveryのインテリジェントプロキシの設定については、以下を参照してください。link:../get-started/dr-setup.html["NetAppディザスタリカバリ用のインフラストラクチャをセットアップする"] 。
+* NetApp Disaster Recoveryのインテリジェントプロキシの設定については、以下を参照してください。link:../get-started/dr-setup.html["NetApp Disaster Recovery用のインフラストラクチャをセットアップする"] 。
 
 
 

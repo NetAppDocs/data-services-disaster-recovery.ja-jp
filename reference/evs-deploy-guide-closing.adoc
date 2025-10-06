@@ -2,17 +2,17 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-closing.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
-summary: Amazon EVS と Amazon FSxN を使用したNetAppディザスタリカバリの紹介。 
+summary: Amazon EVS と Amazon FSxN を使用したNetApp Disaster Recoveryの紹介。 
 ---
 = まとめ
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp Disaster Recovery は、Amazon EVS とAmazon FSx for NetApp ONTAP をDR ターゲットとして使用するように設定することで、オンプレミスの VMware インフラストラクチャにコスト効率の高いハイブリッドクラウド DR ソリューションを提供します。これにより、ミッションクリティカルなインフラストラクチャに堅牢な DR ターゲットが提供されます。  NetApp Disaster Recovery は、数十年にわたるデータ保護の経験に裏打ちされたネイティブのONTAPデータ保護機能を活用し、データが完全に保護されることを保証するために徹底的にテストされています。
+NetApp Disaster Recovery は、 Amazon EVS とAmazon FSx for NetApp ONTAP をDR ターゲットとして使用するように設定することで、オンプレミスの VMware インフラストラクチャにコスト効率の高いハイブリッドクラウド DR ソリューションを提供します。これにより、ミッションクリティカルなインフラストラクチャに堅牢な DR ターゲットが提供されます。  NetApp Disaster Recovery は、数十年にわたるデータ保護の経験に裏打ちされたネイティブのONTAPデータ保護機能を活用し、データが完全に保護されることを保証するために徹底的にテストされています。
 
 詳細情報：
 
 * https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started.html["Amazon FSx for NetApp ONTAPを使い始める"^]
-* https://docs.netapp.com/us-en/bluexp-disaster-recovery/index.html["NetAppディザスタリカバリドキュメント"]
+* https://docs.netapp.com/us-en/bluexp-disaster-recovery/index.html["NetApp Disaster Recoveryドキュメント"]
 

@@ -4,7 +4,7 @@ permalink: release-notes/dr-limitations.html
 keywords: disaster recovery, bluexp 
 summary: 既知の制限事項では、このリリースのサービスでサポートされていない、または正しく相互運用されないプラットフォーム、デバイス、または機能が特定されます。 
 ---
-= NetApp災害復旧の制限
+= NetApp Disaster Recoveryの限界
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -22,24 +22,24 @@ summary: 既知の制限事項では、このリリースのサービスでサ�
 
 
 
-== NetAppコンソールがAmazon FSx for NetApp ONTAPを検出しない可能性があります
+== NetApp ConsoleがAmazon FSx for NetApp ONTAPを検出しない可能性があります
 
-場合によっては、 NetAppコンソールでAmazon FSx for NetApp ONTAPクラスターが検出されないことがあります。  FSx 資格情報が正しくなかったことが原因である可能性があります。
+場合によっては、 NetApp ConsoleでAmazon FSx for NetApp ONTAPクラスターが検出されないことがあります。  FSx 資格情報が正しくなかったことが原因である可能性があります。
 
-*回避策*: NetAppコンソールにAmazon FSx for NetApp ONTAPクラスターを追加し、定期的にクラスターを更新して変更を表示します。
+*回避策*: NetApp ConsoleにAmazon FSx for NetApp ONTAPクラスターを追加し、定期的にクラスターを更新して変更を表示します。
 
-NetApp Disaster Recovery からONTAP FSx クラスターを削除する必要がある場合は、次の手順を実行します。
+NetApp Disaster RecoveryからONTAP FSx クラスターを削除する必要がある場合は、次の手順を実行します。
 
-. NetAppコンソールエージェントでは、クラウドプロバイダーの接続オプションを使用して、コンソールエージェントが実行されるLinux VMに接続し、 `docker restart occm`指示。
+. NetApp Consoleエージェントでは、クラウドプロバイダーの接続オプションを使用して、コンソールエージェントが実行されるLinux VMに接続し、 `docker restart occm`指示。
 
 
 参照 https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["既存のコンソールエージェントを管理する"^]。
 
-. NetAppコンソール システム ページで、 Amazon FSx for ONTAPシステムを再度追加し、FSx 認証情報を入力します。
+. NetApp Consoleシステム ページで、 Amazon FSx for ONTAPシステムを再度追加し、FSx 認証情報を入力します。
 +
 参照 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["Amazon FSx for NetApp ONTAPファイルシステムを作成する"^]。
 
-. NetApp Disaster Recoveryから*サイト*を選択し、vCenterの行で*アクション*オプションを選択します。image:../use/icon-vertical-dots.png["NetApp Disaster Recovery のアクション メニュー アイコン"]をクリックし、[アクション] メニューから [*更新*] を選択して、 NetApp Disaster Recovery の FSx 検出を更新します。
+. NetApp Disaster Recoveryから*Sites*を選択し、vCenter行で*Actions*オプションを選択します。image:../use/icon-vertical-dots.png["NetApp Disaster Recoveryのアクション メニュー アイコン"]をクリックし、[アクション] メニューから [*更新*] を選択して、 NetApp Disaster Recoveryの FSx 検出を更新します。
 +
 これにより、データストア、その仮想マシン、およびその宛先関係が再検出されます。
 

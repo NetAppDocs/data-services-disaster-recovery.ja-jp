@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: get-started/dr-setup.html 
 keywords: bluexp, disaster recovery, aws, amazon web services, amazon fsx for netapp ontap 
-summary: NetApp Disaster Recovery を使用するには、いくつかの手順を実行してセットアップする必要があります。 
+summary: NetApp Disaster Recoveryを使用するには、いくつかの手順を実行してセットアップする必要があります。 
 ---
-= NetAppディザスタリカバリ用のインフラストラクチャをセットアップする
+= NetApp Disaster Recovery用のインフラストラクチャをセットアップする
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: NetApp Disaster Recovery を使用するには、いくつかの手順�
 
 
 [role="lead"]
-NetApp Disaster Recovery を使用するには、Amazon Web Services (AWS) とNetAppコンソールの両方でいくつかの手順を実行して設定する必要があります。
+NetApp Disaster Recoveryを使用するには、Amazon Web Services (AWS) とNetApp Consoleの両方でいくつかの手順を実行してセットアップする必要があります。
 
 
 TIP: レビューlink:../get-started/dr-prerequisites.html["前提条件"]システムの準備ができていることを確認します。
@@ -93,7 +93,7 @@ AWS を使用してオンプレミスからクラウドへの保護用にNetApp 
 
 * Amazon FSx for ONTAPをシステムに追加し、 FSx for ONTAPの AWS 認証情報を追加します。
 * AWS FSx for ONTAPインスタンスで宛先ONTAP SVM を作成または検証します。
-* NetAppコンソールで、ソースのオンプレミスONTAPクラスターと FSx for ONTAPインスタンス間のレプリケーションを構成します。
+* NetApp Consoleで、ソースのオンプレミスONTAPクラスターと FSx for ONTAPインスタンス間のレプリケーションを構成します。
 
 
 参照 https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["FSx for ONTAPシステムのセットアップ方法"^]詳細な手順については、こちらをご覧ください。
@@ -110,7 +110,7 @@ AWS上でVMware Cloud環境を構成するには、以下の手順に従って�
 
 == プライベート クラウド
 
-NetApp Disaster Recovery を使用すると、VM データストアを同じプライベート データセンター内またはリモートのプライベート データセンターまたは併置されたデータセンター内の別の vCenter クラスタに複製することで、1 つ以上の vCenter クラスタでホストされている VMware VM を保護できます。
+NetApp Disaster Recoveryを使用すると、VM データストアを同じプライベート データセンター内またはリモートのプライベート データセンターまたは併置されたデータセンター内の別の vCenter クラスタに複製することで、1 つ以上の vCenter クラスタでホストされている VMware VM を保護できます。
 
 オンプレミスからオンプレミスへの状況では、物理サイトの 1 つにコンソール エージェントをインストールします。
 
@@ -133,7 +133,7 @@ NetApp Disaster Recovery を使用すると、VM データストアを同じプ�
 * vCenter クラスタ
 +
 ** 保護する VM が NFS データストア ( ONTAP NFS ボリュームを使用) または VMFS データストア ( NetApp iSCSI LUN を使用) でホストされていることを確認します。
-** レビューlink:../reference/vcenter-privileges.html["vCenter 権限"]NetAppディザスタリカバリに必要です。
+** レビューlink:../reference/vcenter-privileges.html["vCenter 権限"]NetApp Disaster Recoveryに必要です。
 ** 災害復旧ユーザー アカウント (デフォルトの vCenter 管理者アカウントではない) を作成し、そのアカウントに vCenter 権限を割り当てます。
 
 
@@ -143,10 +143,10 @@ NetApp Disaster Recovery を使用すると、VM データストアを同じプ�
 
 === インテリジェントなプロキシサポート
 
-NetAppコンソール エージェントはインテリジェント プロキシをサポートします。インテリジェント プロキシは、オンプレミス環境をNetAppコンソールに接続するための軽量で安全かつ効率的な方法です。 VPN や直接のインターネット アクセスを必要とせずに、システムとコンソール サービス間の安全な接続を提供します。この最適化されたプロキシ実装は、ローカル ネットワーク内の API トラフィックをオフロードします。
+NetApp Consoleエージェントはインテリジェント プロキシをサポートします。インテリジェント プロキシは、オンプレミス環境をNetApp Consoleに接続するための軽量かつ安全で効率的な方法です。 VPN や直接のインターネット アクセスを必要とせずに、システムとコンソール サービス間の安全な接続を提供します。この最適化されたプロキシ実装は、ローカル ネットワーク内の API トラフィックをオフロードします。
 
-プロキシが設定されている場合、 NetApp Disaster Recovery は VMware またはONTAPと直接通信を試み、直接通信が失敗した場合は設定されたプロキシを使用します。
+プロキシが設定されている場合、 NetApp Disaster Recovery はVMware またはONTAPと直接通信を試み、直接通信が失敗した場合は設定されたプロキシを使用します。
 
-NetAppディザスタ リカバリ プロキシの実装では、コンソール エージェントと、HTTPS プロトコルを使用した vCenter Server およびONTAPアレイ間のポート 443 通信が必要です。コンソール エージェント内のNetApp Disaster Recovery エージェントは、アクションを実行するときに VMware vSphere、VC、またはONTAPと直接通信します。
+NetApp Disaster Recoveryプロキシの実装では、コンソール エージェントと、HTTPS プロトコルを使用した vCenter Server およびONTAPアレイ間のポート 443 通信が必要です。コンソール エージェント内のNetApp Disaster Recoveryエージェントは、アクションを実行するときに VMware vSphere、VC、またはONTAPと直接通信します。
 
-NetAppコンソールでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。
+NetApp Consoleでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。

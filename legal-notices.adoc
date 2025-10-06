@@ -47,4 +47,4 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 通知ファイルには、 NetAppソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が提供されます。
 
-link:media/NOTICE.pdf["NetApp災害復旧に関するお知らせ"^]
+link:media/NOTICE.pdf["NetApp Disaster Recoveryに関するお知らせ"^]

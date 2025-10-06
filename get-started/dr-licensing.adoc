@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: get-started/dr-licensing.html 
 keywords: bluexp license, disaster recovery licensing 
-summary: NetApp Disaster Recovery では、無料トライアル、従量課金制サブスクリプション、独自のライセンスの使用など、さまざまなライセンス プランを使用できます。 
+summary: NetApp Disaster Recoveryでは、無料トライアル、従量課金制サブスクリプション、独自のライセンスの使用など、さまざまなライセンス プランを使用できます。 
 ---
 = NetApp Disaster Recoveryのライセンスを設定する
 :hardbreaks:
@@ -12,21 +12,21 @@ summary: NetApp Disaster Recovery では、無料トライアル、従量課金�
 
 
 [role="lead"]
-NetApp Disaster Recovery では、無料トライアル、従量課金制サブスクリプション、独自のライセンスの使用など、さまざまなライセンス プランを使用できます。
+NetApp Disaster Recoveryでは、無料トライアル、従量課金制サブスクリプション、独自のライセンスの使用など、さまざまなライセンス プランを使用できます。
 
-*必要なNetAppコンソール ロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、またはディザスタ リカバリ アプリケーション管理者のロール。
+*必要なNetApp Consoleロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、またはディザスタ リカバリ アプリケーション管理者のロール。
 
-link:../reference/dr-reference-roles.html["NetApp Disaster Recovery におけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスのアクセスロールについて学ぶ"^] 。
+link:../reference/dr-reference-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスのアクセスロールについて学ぶ"^] 。
 
 *ライセンス オプション* 次のライセンス オプションを使用できます。
 
 * 30 日間の無料トライアルにサインアップしてください。
 * Amazon Web Services (AWS) Marketplace または Microsoft Azure Marketplace の従量課金制 (PAYGO) サブスクリプションを購入します。
-* BYOL (Bring Your Own License) は、 NetApp の営業担当者から取得したNetAppライセンス ファイル (NLF) です。ライセンス シリアル番号を使用して、 NetAppコンソールで BYOL をアクティブ化できます。
+* BYOL (Bring Your Own License) は、 NetApp の営業担当者から取得したNetAppライセンス ファイル (NLF) です。ライセンス シリアル番号を使用して、 NetApp Consoleで BYOL をアクティブ化できます。
 
 
 
-NOTE: NetAppディザスタリカバリ料金は、レプリケーション プランを持つ VM が少なくとも 1 つある場合、ソース サイトのデータストアの使用済み容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、容量許容量に含まれません。  BYOL の場合、データが許可された容量を超えると、追加の容量ライセンスを取得するか、 NetAppコンソールでライセンスをアップグレードするまで、サービスでの操作が制限されます。
+NOTE: NetApp Disaster Recovery料金は、レプリケーション プランを持つ VM が少なくとも 1 つある場合、ソース サイトのデータストアの使用済み容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、容量許容量に含まれません。  BYOL の場合、データが許可された容量を超えると、追加の容量ライセンスを取得するか、 NetApp Consoleでライセンスをアップグレードするまで、サービスでの操作が制限されます。
 
 link:https://docs.netapp.com/us-en/bluexp-digital-wallet/concept-digital-wallet.html["サブスクリプションについて詳しくはこちら"^] 。
 
@@ -41,7 +41,7 @@ link:https://docs.netapp.com/us-en/bluexp-digital-wallet/concept-digital-wallet.
 
 == 30日間の無料トライアルでお試しください
 
-30 日間の無料トライアルを使用して、 NetApp Disaster Recovery を試すことができます。
+30 日間の無料トライアルを使用して、 NetApp Disaster Recoveryを試すことができます。
 
 
 NOTE: トライアル期間中は容量制限は適用されません。
@@ -51,19 +51,19 @@ NOTE: トライアル期間中は容量制限は適用されません。
 試用期間中は、すべての機能をご利用になれます。
 
 .手順
-. ログイン https://console.netapp.com/["NetAppコンソール"^]。
-. NetAppコンソールの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
+. ログイン https://console.netapp.com/["NetApp Console"^]。
+. NetApp Consoleの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
 +
 このサービスに初めてログインする場合は、ランディング ページが表示されます。
 
 +
-image:draas-landing6-free-trial.png["NetApp Disaster Recovery のランディング ページのスクリーンショット"]
+image:draas-landing6-free-trial.png["NetApp Disaster Recoveryのランディング ページのスクリーンショット"]
 
 . 他のサービス用のコンソール エージェントをまだ追加していない場合は、追加します。
 +
 コンソールエージェントを追加するには、 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["コンソールエージェントについて学ぶ"^] 。
 
-. エージェントを設定すると、 NetApp Disaster Recovery ランディング ページで、エージェントを追加するボタンが無料トライアルを開始するためのボタンに変わります。  *無料トライアルを開始*を選択します。
+. エージェントを設定すると、 NetApp Disaster Recoveryランディング ページで、エージェントを追加するボタンが無料トライアルを開始するためのボタンに変わります。  *無料トライアルを開始*を選択します。
 . まず、vCenter を追加します。
 +
 詳細については、 link:../use/sites-add.html["vCenterサイトを追加する"] 。
@@ -77,18 +77,18 @@ image:draas-landing6-free-trial.png["NetApp Disaster Recovery のランディン
 無料トライアルが終了したら、 NetAppからライセンスを購入するか、AWS Marketplace または Microsoft Azure Marketplace を通じてサブスクライブすることができます。この手順では、マーケットプレイスのいずれかで直接サブスクライブする方法の概要を説明します。
 
 .手順
-. NetApp Disaster Recovery で、無料トライアルの有効期限が切れることを示すメッセージが表示されます。メッセージで、[*サブスクライブまたはライセンスを購入*] を選択します。
+. NetApp Disaster Recoveryで、無料トライアルの有効期限が切れるというメッセージが表示されます。メッセージで、[*サブスクライブまたはライセンスを購入*] を選択します。
 +
 または、 から [*支払い方法の表示*] を選択します。
 
 +
-image:dr-licensing-payment-methods.png["NetAppディザスタリカバリの支払い方法ページ"]
+image:dr-licensing-payment-methods.png["NetApp Disaster Recoveryの支払い方法ページ"]
 
 . *AWS Marketplace でサブスクライブ* または *Azure Marketplace でサブスクライブ* を選択します。
 . AWS Marketplace または Microsoft Azure Marketplace を使用して * NetApp Disaster Recovery* をサブスクライブします。
-. NetApp Disaster Recovery に戻ると、サブスクライブしたことを示すメッセージが表示されます。
+. NetApp Disaster Recoveryに戻ると、サブスクライブしたことを示すメッセージが表示されます。
 +
-サブスクリプションの詳細は、 NetAppコンソールのサブスクリプション ページで確認できます。link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-homepage.html["NetAppコンソールを使用したサブスクリプションの管理の詳細"^] 。
+サブスクリプションの詳細は、NetApp Consoleのサブスクリプション ページで確認できます。link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-homepage.html["NetApp Consoleを使用したサブスクリプションの管理の詳細"^] 。
 
 
 
@@ -98,22 +98,22 @@ image:dr-licensing-payment-methods.png["NetAppディザスタリカバリの支�
 
 試用期間が終了したら、 NetApp の営業担当者を通じてライセンスを購入できます。
 
-独自のライセンスを持ち込む場合 (BYOL)、セットアップにはライセンスの購入、 NetAppライセンス ファイル (NLF) の取得、 NetAppコンソールへのライセンスの追加が含まれます。
+独自のライセンスを持ち込む場合 (BYOL)、セットアップにはライセンスの購入、 NetAppライセンス ファイル (NLF) の取得、 NetApp Consoleへのライセンスの追加が含まれます。
 
-* NetAppコンソールにライセンスを追加します** NetApp の営業担当者からNetApp Disaster Recovery ライセンスを購入したら、コンソールでライセンスを管理できます。
+* NetApp Consoleにライセンスを追加します ** NetApp の営業担当者からNetApp Disaster Recoveryライセンスを購入したら、コンソールでライセンスを管理できます。
 
-https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["NetAppコンソールでライセンスを追加する方法について学習します"^] 。
+https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["NetApp Consoleでライセンスを追加する方法について学習します"^] 。
 
 
 
 == ライセンスの有効期限が切れたら更新してください
 
-ライセンスの有効期限が近づいている場合、またはライセンス容量が制限に達した場合は、 NetApp Disaster Recovery UI で通知されます。  NetApp Disaster Recovery ライセンスは期限が切れる前に更新できるので、スキャンしたデータへのアクセスが中断されることはありません。
+ライセンスの有効期限が近づいている場合、またはライセンス容量が制限に達した場合は、 NetApp Disaster Recovery UI で通知されます。  NetApp Disaster Recoveryライセンスは期限が切れる前に更新できるので、スキャンしたデータへのアクセスが中断されることはありません。
 
 
-TIP: このメッセージはNetAppコンソールと https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["通知"]。
+TIP: このメッセージはNetApp Consoleと https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["通知"]。
 
-https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["NetAppコンソールでライセンスを更新する方法について学習します"^] 。
+https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["NetApp Consoleでライセンスを更新する方法について学習します"^] 。
 
 
 
@@ -122,7 +122,7 @@ https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-li
 無料トライアルはいつでも停止できます。また、有効期限が切れるまで待つこともできます。
 
 .手順
-. NetApp Disaster Recovery で、*無料トライアル - 詳細を表示*を選択します。
+. NetApp Disaster Recoveryで、*無料トライアル - 詳細を表示*を選択します。
 . ドロップダウンの詳細で、[*無料トライアルを終了*]を選択します。
 +
 image:draas-trial-end3.png["無料トライアルページ終了"]

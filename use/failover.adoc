@@ -4,7 +4,7 @@ permalink: use/failover.html
 keywords: disaster recovery, bluexp disaster recovery, failover, replicate, fail over, vmware, vcenter 
 summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。 
 ---
-= NetApp Disaster Recovery でアプリケーションをリモート サイトにフェイルオーバーする
+= NetApp Disaster Recoveryでアプリケーションをリモート サイトにフェイルオーバーする
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,11 +12,11 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 
 [role="lead"]
-災害が発生した場合は、プライマリのオンプレミス VMware サイトを別のオンプレミスの VMware サイトまたは VMware Cloud on AWS にフェイルオーバーします。必要に応じてフェイルオーバー プロセスをテストして、成功を確認できます。
+災害が発生した場合は、プライマリのオンプレミス VMware サイトを別のオンプレミスの VMware サイトまたは VMware Cloud on AWS にフェイルオーバーします。フェールオーバー プロセスをテストして、必要なときに成功することを確認できます。
 
-*必要なNetAppコンソール ロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、またはディザスタ リカバリ フェールオーバー管理者のロール。
+*必要なNetApp Consoleロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、またはディザスタ リカバリ フェールオーバー管理者のロール。
 
-link:../reference/dr-reference-roles.html["NetApp Disaster Recovery におけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+link:../reference/dr-reference-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
 
 *このタスクについて*
 
@@ -58,11 +58,11 @@ link:../reference/dr-reference-roles.html["NetApp Disaster Recovery における
 
 
 .手順
-. ログイン https://console.netapp.com/["NetAppコンソール"^]。
-. NetAppコンソールの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
-. NetAppディザスタリカバリ メニューから、*レプリケーション プラン* を選択します。
+. ログイン https://console.netapp.com/["NetApp Console"^]。
+. NetApp Consoleの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
+. NetApp Disaster Recoveryメニューから、*レプリケーション プラン* を選択します。
 . レプリケーション プランを選択します。
-. 右側で*アクション*オプションを選択しますimage:../use/icon-horizontal-dots.png["NetApp Disaster Recovery サービスのアクション メニュー アイコン"]*フェイルオーバーのテスト*を選択します。
+. 右側で*アクション*オプションを選択しますimage:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"]*フェイルオーバーのテスト*を選択します。
 . テスト フェイルオーバー ページで、「テスト フェイルオーバー」と入力し、*テスト フェイルオーバー* を選択します。
 . テストが完了したら、テスト環境をクリーンアップします。
 
@@ -74,9 +74,9 @@ link:../reference/dr-reference-roles.html["NetApp Disaster Recovery における
 フェイルオーバー テストが終了したら、テスト環境をクリーンアップする必要があります。このプロセスでは、テスト場所、FlexClone、および一時データストアから一時 VM が削除されます。
 
 .手順
-. NetAppディザスタリカバリ メニューから、*レプリケーション プラン* を選択します。
+. NetApp Disaster Recoveryメニューから、*レプリケーション プラン* を選択します。
 . レプリケーション プランを選択します。
-. 右側で*アクション*オプションを選択しますimage:../use/icon-horizontal-dots.png["NetApp Disaster Recovery サービスのアクション メニュー アイコン"]*フェールオーバー テストのクリーンアップ*を選択します。
+. 右側で*アクション*オプションを選択しますimage:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"]*フェールオーバー テストのクリーンアップ*を選択します。
 . [テスト フェールオーバー] ページで、「フェールオーバーのクリーンアップ」と入力し、[*フェールオーバー テストのクリーンアップ*] を選択します。
 
 
@@ -84,7 +84,7 @@ link:../reference/dr-reference-roles.html["NetApp Disaster Recovery における
 
 == ソースサイトを災害復旧サイトにフェイルオーバーする
 
-災害が発生した場合、FSx for NetApp ONTAPを使用して、プライマリのオンプレミス VMware サイトを別のオンプレミス VMware サイトまたは VMware Cloud on AWS にオンデマンドでフェイルオーバーします。
+災害が発生した場合、FSx for NetApp ONTAPを使用して、プライマリオンプレミス VMware サイトを別のオンプレミス VMware サイトまたは VMware Cloud on AWS にオンデマンドでフェイルオーバーします。
 
 フェイルオーバー プロセスには次の操作が含まれます。
 
@@ -98,16 +98,16 @@ link:../reference/dr-reference-roles.html["NetApp Disaster Recovery における
 * ターゲット仮想マシンは、リソース グループ ページでキャプチャされたブート順序に基づいて電源がオンになります。
 * ソース vCenter がまだアクティブな場合は、フェールオーバーされているすべてのソース側 VM の電源をオフにします。
 * 「アプリケーション整合性」と示されている VM 内のサポートされているデータベース アプリケーションを静止解除します。
-* ソース vCenter およびONTAPクラスタがまだアクティブな場合は、逆方向のSnapMirror関係を作成し、フェイルオーバー状態にある間に行われた変更を元のソース サイトに複製します。  SnapMirror関係はターゲット仮想マシンからソース仮想マシンに逆転されます。
+* ソース vCenter およびONTAPクラスタがまだアクティブな場合は、逆方向のSnapMirror関係を作成し、フェイルオーバー状態中に行われた変更を元のソース サイトに複製します。  SnapMirror関係はターゲット仮想マシンからソース仮想マシンに逆転されます。
 
 
 
 TIP: フェイルオーバーが開始すると、災害復旧サイトの vCenter で復旧した VM (仮想マシン、ネットワーク、データストア) を確認できます。デフォルトでは、仮想マシンはワークロード フォルダーに回復されます。
 
 .手順
-. NetAppディザスタリカバリ メニューから、*レプリケーション プラン* を選択します。
+. NetApp Disaster Recoveryメニューから、*レプリケーション プラン* を選択します。
 . レプリケーション プランを選択します。
-. 右側で*アクション*オプションを選択しますimage:../use/icon-horizontal-dots.png["NetApp Disaster Recovery サービスのアクション メニュー アイコン"]*フェイルオーバー*を選択します。
+. 右側で*アクション*オプションを選択しますimage:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"]*フェイルオーバー*を選択します。
 +
 image:dr-plan-failover3.png["フェイルオーバーページ"]
 
@@ -116,7 +116,7 @@ image:dr-plan-failover3.png["フェイルオーバーページ"]
 フェイルオーバーが発生する前に、現在のソースのスナップショットが作成され、現在の宛先に複製されます。
 
 . 通常はフェイルオーバーの発生を妨げるエラーが検出された場合でもフェイルオーバーを発生させる場合は、必要に応じて「*強制フェイルオーバー*」を選択します。
-. オプションで、レプリケーション プランのフェイルオーバー後にサービスによってリバースSnapMirror保護関係が自動的に作成されないようにするには、[保護をスキップ] を選択します。これは、 NetApp Disaster Recovery 内でサイトをオンラインに戻す前に、復元されたサイトで追加の操作を実行する場合に役立ちます。
+. オプションで、レプリケーション プランのフェイルオーバー後にサービスによってリバースSnapMirror保護関係が自動的に作成されないようにするには、[保護をスキップ] を選択します。これは、NetApp Disaster Recovery内でサイトをオンラインに戻す前に、復元されたサイトで追加の操作を実行する場合に役立ちます。
 +
 
 TIP: レプリケーション プランの [アクション] メニューから [リソースの保護] を選択すると、逆保護を確立できます。これにより、プラン内の各ボリュームに対して逆方向のレプリケーション関係を作成しようとします。保護が復元されるまで、このジョブを繰り返し実行できます。保護が復元されると、通常の方法でフェイルバックを開始できます。
