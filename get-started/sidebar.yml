@@ -1,0 +1,16 @@
+---
+section: get-started
+title: 始めましょう
+entries:
+- title: NetAppディザスタリカバリについて学ぶ
+  url: "/get-started/dr-intro.html"
+- title: 前提条件
+  url: "/get-started/dr-prerequisites.html"
+- title: クイック スタート
+  url: "/get-started/dr-quick-start.html"
+- title: NetAppディザスタリカバリ用のインフラストラクチャをセットアップする
+  url: "/get-started/dr-setup.html"
+- title: NetAppディザスタリカバリにアクセス
+  url: "/get-started/dr-login.html"
+- title: ライセンスの設定
+  url: "/get-started/dr-licensing.html"

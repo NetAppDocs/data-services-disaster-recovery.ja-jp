@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-config-draas.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: NetAppコンソール エージェントをインストールした後、DR プロセスに参加するすべてのONTAPストレージと VMware vCenter リソースを統合する必要があります。 
+---
+= Amazon EVS 向けNetAppディザスタリカバリの構成の概要
+:allow-uri-read: 
+
+
+[role="lead"]
+NetAppコンソール エージェントをインストールした後、災害復旧プロセスに参加するすべてのONTAPストレージと VMware vCenter リソースをNetApp Disaster Recovery と統合する必要があります。
+
+* link:evs-deploy-guide-config-prereqs.html["NetApp Disaster Recovery を使用した Amazon EVS の前提条件"]
+* link:evs-deploy-guide-config-add-arrays.html["NetApp Disaster RecoveryにONTAPストレージアレイを追加する"]
+* link:evs-deploy-guide-enable-draas.html["Amazon EVS でNetApp災害復旧を有効にする"]
+* link:evs-deploy-guide-config-add-arrays.html["NetApp Disaster Recovery に vCenter サイトを追加する"]
+* link:evs-deploy-guide-add-vcenters.html["NetApp Disaster Recovery に vCenter クラスタを追加する"]
+

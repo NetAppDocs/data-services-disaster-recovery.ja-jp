@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-verify-rp.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
+summary: Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetAppディザスタリカバリの紹介。 
+---
+= NetApp Disaster Recoveryですべてが正常に動作していることを確認する
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp Disaster Recovery でレプリケーション プランを追加したら、レプリケーション プラン ページに戻り、レプリケーション プランとそのステータスを確認できます。レプリケーション プランが *正常* な状態であることを確認する必要があります。そうでない場合は、続行する前にレプリケーション プランのステータスを確認し、問題を修正する必要があります。
+
+図: レプリケーション プラン ページimage:evs-replication-plan-post-create.png["レプリケーションプランページ"]
+
+NetApp Disaster Recovery は、一連のテストを実行して、すべてのコンポーネント (ONTAPクラスタ、vCenter クラスタ、および VM) がアクセス可能であり、VM を保護するためのサービスが適切な状態にあることを確認します。これはコンプライアンス チェックと呼ばれ、定期的に実行されます。
+
+レプリケーション プラン ページでは、次の情報を確認できます。
+
+* 最後のコンプライアンスチェックのステータス
+* レプリケーションプランのレプリケーション状態
+* 保護された（ソース）サイトの名前
+* レプリケーションプランによって保護されているリソースグループのリスト
+* フェイルオーバー（宛先）サイトの名前
+

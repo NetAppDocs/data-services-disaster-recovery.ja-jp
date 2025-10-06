@@ -1,0 +1,28 @@
+---
+section: use
+title: NetAppディザスタリカバリを使用する
+entries:
+- title: NetAppディザスタリカバリの概要
+  url: "/use/use-overview.html"
+- title: ダッシュボードで災害復旧計画の健全性を確認する
+  url: "/use/dashboard-view.html"
+- title: サイトにvCenterを追加する
+  url: "/use/sites-add.html"
+- title: リソースグループを作成する
+  url: "/use/resource-group.html"
+- title: レプリケーションプランを作成する
+  url: "/use/drplan-create.html"
+- title: 別のサイトに複製する
+  url: "/use/replicate.html"
+- title: 別のサイトに移行する
+  url: "/use/migrate.html"
+- title: リモートサイトへのフェイルオーバー
+  url: "/use/failover.html"
+- title: アプリケーションを元のソースサイトにフェイルバックする
+  url: "/use/failback.html"
+- title: サイト、プラン、データストア、仮想マシンの情報を管理する
+  url: "/use/manage.html"
+- title: 災害復旧ジョブを監視する
+  url: "/use/monitor-jobs.html"
+- title: 災害復旧レポートを作成する
+  url: "/use/reports.html"

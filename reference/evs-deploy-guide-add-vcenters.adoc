@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-add-vcenters.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
+summary: Amazon EVS と Amazon FSxN を使用したNetApp Disaster Recovery の紹介。サイトが作成されたら、 NetApp Disaster Recovery の各サイトに vCenter クラスターを追加します。各サイトを作成するときに、それぞれのサイトがどのような種類のサイトであるかを示しました。これにより、 NetApp Disaster Recovery は、各サイト タイプでホストされている vCenter に必要なアクセス タイプを把握できるようになります。 Amazon EVS の利点の 1 つは、Amazon EVS vCenter とオンプレミスの vCenter の間に実質的な違いがないことです。どちらも同じ接続および認証情報が必要です。 
+---
+= NetApp Disaster Recovery にオンプレミスおよび Amazon EVS vCenter クラスターを追加する
+:allow-uri-read: 
+
+
+[role="lead"]
+サイトを作成したら、 NetApp Disaster Recovery の各サイトに vCenter クラスターを追加します。各サイトを作成するときに、各サイトの種類を指定しました。これにより、 NetApp Disaster Recovery は、各サイト タイプでホストされている vCenter に必要なアクセス タイプを把握できるようになります。 Amazon EVS の利点の 1 つは、Amazon EVS vCenter とオンプレミスの vCenter の間に実質的な違いがないことです。どちらも同じ接続および認証情報が必要です。
+
+.各サイトにvCenterを追加する手順
+. *サイト* オプションから、必要なサイトの *vCenter の追加* を選択します。
++
+image:evs-add-vcenter-1.png["vCenterオプションの追加"]
+
+. [vCenter サーバーの追加] ダイアログ ボックスで、次の情報を選択または入力します。
++
+.. AWS VPC 内でホストされるNetAppコンソール エージェント。
+.. 追加する vCenter の IP アドレスまたは FQDN。
+.. 異なる場合は、ポート値を vCenter クラスタ マネージャが使用する TCP ポートに変更します。
+.. 以前に作成したアカウントの vCenter ユーザー名。NetApp Disaster RecoveryがvCenter を管理するために使用します。
+.. 指定されたユーザー名の vCenter パスワード。
+.. 会社が外部の証明機関 (CA) または vCenter エンドポイント証明書ストアを使用して vCenter にアクセスする場合は、[自己署名証明書を使用する] チェックボックスをオフにします。それ以外の場合は、ボックスをオンのままにしておきます。
+
+
+. *追加*を選択します。
++
+image:evs-add-vcenter-2-3.png["vCenter の追加ダイアログボックス"]
+
+

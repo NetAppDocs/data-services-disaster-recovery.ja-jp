@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-quick-start.html 
+keywords: how to get started with bluexp disaster recovery, disaster recovery quick start, failover, failback 
+summary: わずか数ステップでNetAppディザスタ リカバリ サービスを開始できます。 
+---
+= NetAppディザスタリカバリのクイックスタート
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+NetApp Disaster Recovery を開始するために必要な手順の概要を説明します。各ステップ内のリンクをクリックすると、詳細情報を提供するページに移動します。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]前提条件を確認する
+[role="quick-margin-para"]
+link:../get-started/dr-prerequisites.html["システムがこれらの要件を満たしていることを確認してください"] 。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]NetAppディザスタリカバリのセットアップ
+[role="quick-margin-list"]
+* link:../get-started/dr-setup.html["サービスのインフラストラクチャを構築する"] 。
+* link:../get-started/dr-licensing.html["ライセンスの設定"] 。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"]次は何?
+[role="quick-margin-para"]
+サービスを設定したら、次に行うことは次のとおりです。
+
+[role="quick-margin-list"]
+* link:../use/sites-add.html["vCenter サイトをNetApp Disaster Recovery に追加する"] 。
+* link:../use/manage.html#manage-resource-groups["最初のリソースグループを作成する"] 。
+* link:../use/drplan-create.html["最初のレプリケーションプランを作成する"] 。
+* link:../use/replicate.html["アプリケーションを別のサイトに複製する"] 。
+* link:../use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"] 。
+* link:../use/failback.html["アプリケーションを元のソースサイトにフェイルバックする"] 。
+* link:../use/manage.html["サイト、リソース グループ、レプリケーション プランを管理する"] 。
+* link:../use/monitor-jobs.html["災害復旧オペレーションの監視"] 。
+

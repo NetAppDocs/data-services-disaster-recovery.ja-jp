@@ -1,0 +1,8 @@
+---
+section: release-notes
+title: リリース ノート
+entries:
+- title: 新機能
+  url: "/release-notes/dr-whats-new.html"
+- title: 制限事項
+  url: "/release-notes/dr-limitations.html"

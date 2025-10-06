@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: use/reports.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor, bluexp, protection, reports 
+summary: 災害復旧レポートを確認すると、災害復旧への備えを分析するのに役立ちます。事前に設計されたレポートには、フェイルオーバーとフェイルバックの概要、すべてのサイトのレプリケーションの詳細、過去 1 年間のジョブの詳細が含まれます。 
+---
+= NetApp災害復旧レポートを作成する
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+NetAppディザスタ リカバリ レポートを確認すると、ディザスタ リカバリへの備えを分析するのに役立ちます。事前に設計されたレポートには、過去 7 日間のアカウント内のすべてのサイトのテスト フェイルオーバーの概要、レプリケーション プランの詳細、ジョブの詳細が含まれます。
+
+レポートは PDF、HTML、または JSON 形式でダウンロードできます。
+
+ダウンロードリンクは6時間有効です。
+
+.手順
+. ログイン https://console.netapp.com/["NetAppコンソール"^]。
+. NetAppコンソールの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
+. NetAppコンソールの左側のナビゲーション バーから、*レプリケーション プラン* を選択します。
+. *レポートの作成*を選択します。
+. ファイル形式の種類と過去 7 日間の期間を選択します。
+. *作成*を選択します。
++
+
+NOTE: レポートが表示されるまで数分かかる場合があります。
+
+. レポートをダウンロードするには、[*レポートのダウンロード*] を選択し、管理者のダウンロード フォルダーで選択します。
+

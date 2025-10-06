@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-add-sites.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
+summary: VM インフラストラクチャを保護する前に、 NetAppディザスタ リカバリ サービスでは、保護対象の VM をホストしている VMware vCenter クラスターと、それらの vCenter が配置されている場所を認識する必要があります。最初のステップは、ソース データ センターと宛先データ センターを表すサイトを作成することです。サイトは障害ドメインまたは回復ドメインです。 
+---
+= NetApp Disaster Recovery for Amazon EVS にサイトを追加する
+:allow-uri-read: 
+
+
+[role="lead"]
+VM インフラストラクチャを保護する前に、保護対象の VM をホストしている VMware vCenter クラスターと、それらの vCenter が配置されている場所を特定する必要があります。最初のステップは、ソース データ センターと宛先データ センターを表すサイトを作成することです。サイトは障害ドメインまたは回復ドメインです。
+
+以下を作成する必要があります。
+
+* 実稼働 vCenter クラスタが存在する各実稼働データセンターを表すサイト
+* Amazon EVS/ Amazon FSx for NetApp ONTAPクラウドデータセンターのサイト
+
+
+
+
+== オンプレミスサイトを作成する
+
+本番環境の vCenter サイトを作成します。
+
+.手順
+. NetAppコンソールの左側のナビゲーション バーから、*保護* > *ディザスタ リカバリ* を選択します。
+. NetApp Disaster Recovery の任意のページから、*サイト* オプションを選択します。
++
+image:evs-create-site-op-1.png["サイトオプション"]
+
+. [サイト] オプションから [追加] を選択します。
++
+image:evs-create-site-op-2.png["サイトオプションの追加オプション"]
+
+. [サイトの追加] ダイアログ ボックスで、サイト名を入力します。
+. 場所として「オンプレミス」を選択します。
+. *追加*を選択します。
++
+image:evs-create-site-op-3-5.png["サイト作成ダイアログボックス"]
+
+
+
+他に本番環境の vCenter サイトがある場合は、同じ手順で追加できます。
+
+
+
+== Amazonクラウドサイトを作成する
+
+Amazon FSx for NetApp ONTAPストレージを使用して Amazon EVS の DR サイトを作成します。
+
+. NetApp Disaster Recovery の任意のページから、*サイト* オプションを選択します。
++
+image:evs-create-site-op-1.png["サイトオプション"]
+
+. [サイト] オプションから [追加] を選択します。
++
+image:evs-create-site-aws-2.png["サイトページのオプションの追加"]
+
+. [サイトの追加] ダイアログ ボックスで、サイト名を入力します。
+. 場所として「AWS-EVS」を選択します。
+. *追加*を選択します。
++
+image:evs-create-site-aws-3-5.png["ダイアログボックスの追加"]
+
+
+
+.結果
+これで、本番 (ソース) サイトと DR (宛先) サイトが作成されました。

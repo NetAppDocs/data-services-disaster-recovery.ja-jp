@@ -1,0 +1,25 @@
+= インテリジェントなプロキシサポート
+:allow-uri-read: 
+
+
+
+
+=== インテリジェントなプロキシサポート
+
+NetAppコンソール エージェントはインテリジェント プロキシをサポートします。インテリジェント プロキシは、オンプレミスのシステムをNetApp Disaster Recovery に接続するための軽量かつ安全で効率的な方法です。 VPN や直接のインターネット アクセスを必要とせずに、システムとNetApp Disaster Recovery 間の安全な接続を提供します。この最適化されたプロキシ実装は、ローカル ネットワーク内の API トラフィックをオフロードします。
+
+プロキシが設定されている場合、 NetApp Disaster Recovery は VMware またはONTAPと直接通信を試み、直接通信が失敗した場合は設定されたプロキシを使用します。
+
+NetAppディザスタ リカバリ プロキシの実装では、コンソール エージェントと、HTTPS プロトコルを使用した vCenter Server およびONTAPアレイ間のポート 443 通信が必要です。コンソール エージェント内のNetApp Disaster Recovery エージェントは、アクションを実行するときに VMware vSphere、VC、またはONTAPと直接通信します。
+
+NetApp Disaster Recoveryのインテリジェントプロキシの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-setup.html["NetAppディザスタリカバリ用のインフラストラクチャをセットアップする"] 。
+
+NetAppコンソールでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。
+
+
+
+=== 無料トライアルはいつでも終了できます
+
+無料トライアルはいつでも停止できます。また、有効期限が切れるまで待つこともできます。
+
+見る https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html#end-the-free-trial["無料トライアルを終了する"]。

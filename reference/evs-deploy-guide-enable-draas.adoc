@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-enable-draas.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
+summary: Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetAppディザスタリカバリの紹介。 NetApp Disaster Recovery はライセンス製品であり、使用する前に購入する必要があります。ライセンスにはいくつかの種類があり、ライセンスを購入する方法もいくつかあります。 
+---
+= Amazon EVS のNetAppコンソール アカウントにNetApp Disaster Recovery サービスを追加します
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp Disaster Recovery はライセンス製品であり、使用する前に購入する必要があります。ライセンスにはいくつかの種類があり、ライセンスを購入する方法もいくつかあります。ライセンスにより、特定の期間にわたって特定の量のデータを保護する権利が付与されます。
+
+NetApp Disaster Recoveryライセンスの詳細については、以下を参照してください。link:../get-started/dr-licensing.html["NetApp Disaster Recoveryのライセンスを設定する"] 。
+
+
+
+== ライセンス タイプ
+
+ライセンスには主に 2 つの種類があります。
+
+* NetAppはlink:../get-started/dr-licensing.html["30日間試用ライセンス"]ONTAPおよび VMware リソースを使用してNetApp Disaster Recovery を評価するために使用できます。このライセンスでは、保護された容量を無制限に 30 日間使用できます。
+* 30 日間の試用期間を超えて DR 保護が必要な場合は、製品ライセンスを購入してください。このライセンスは、NetApp のクラウド パートナーのマーケットプレイスを通じて購入できますが、このガイドでは、Amazon AWS Marketplace を使用してNetApp Disaster Recovery のマーケットプレイス ライセンスを購入することをお勧めします。  Amazonマーケットプレイスでライセンスを購入する方法の詳細については、link:../get-started/dr-licensing.html["AWS Marketplace からサブスクライブする"] 。
+
+
+
+
+== 災害復旧能力のニーズを予測する
+
+ライセンスを購入する前に、保護する必要があるONTAPストレージ容量を把握しておく必要があります。  NetApp ONTAPストレージを使用する利点の 1 つは、 NetApp がデータを保存する際の効率性が高いことです。  ONTAPボリュームに保存されるすべてのデータ (VMware データストアをホストする VM など) は、非常に効率的な方法で保存されます。 ONTAP は、物理ストレージにデータを書き込むときに、圧縮、重複排除、圧縮という 3 種類のストレージ効率をデフォルトに設定します。最終的な結果は、保存されるデータの種類に応じて、1.5:1 から 4:1 のストレージ効率になります。実際、 NetAppは https://www.netapp.com/media/79014-ng-937-Efficiency-Guarantee-Customer-Flyer.pdf["ストレージ効率保証"^]特定のワークロード向け。
+
+NetApp Disaster Recovery は、すべてのONTAPストレージ効率が適用された後にライセンスの目的で容量を計算するため、これは有益です。たとえば、サービスを使用して保護する 100 台の仮想マシンをホストするために、vCenter 内に 100 テラバイト (TiB) の NFS データストアをプロビジョニングしたとします。さらに、データがONTAPボリュームに書き込まれるときに、自動的に適用されるストレージ効率化技術により、これらの VM が消費するストレージ効率は 33TiB のみ (3:1 のストレージ効率) になると仮定します。 NetApp Disaster Recovery のライセンスは、100TiB ではなく 33TiB のみ必要です。これは、他の DR ソリューションと比較した場合、DR ソリューションの総所有コストにとって非常に大きなメリットとなります。
+
+.手順
+. 保護対象の VMware データストアをホストしている各ボリュームで消費されているデータ量を確認するには、各ボリュームに対してONTAP CLI コマンドを実行して、ディスク上の容量消費量を確認します。 `volume show-space -volume < _volume name_ > -vserver < _SVM name_ >` 。
++
+例えば：
+
++
+[listing]
+----
+cluster1::> volume show-space
+Vserver : vm-nfs-ds1
+Volume  : vol0
+Feature                                Used      Used%
+-----------------------------      --------     ------
+User Data                           163.4MB         3%
+Filesystem Metadata                   172KB         0%
+Inodes                               2.93MB         0%
+Snapshot Reserve                    292.9MB         5%
+Total Metadata                        185KB         0%
+Total Used                          459.4MB         8%
+Total Physical Used                 166.4MB         3%
+
+----
+. 各ボリュームの*Total Physical Used*の値をメモします。これは、 NetApp Disaster Recovery が保護する必要があるデータの量であり、ライセンスが必要な容量を決定するために使用する値です。
+

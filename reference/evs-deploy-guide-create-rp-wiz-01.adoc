@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-create-rp-wiz-01.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
+summary: まず、 NetApp Disaster Recovery を使用してレプリケーション プラン名を指定し、レプリケーションのソース vCenter とターゲット vCenter を選択します。 
+---
+= レプリケーションプランの作成: ステップ 1 - NetApp Disaster Recovery で vCenter を選択する
+:allow-uri-read: 
+
+
+[role="lead"]
+まず、 NetApp Disaster Recovery を使用して、レプリケーション プラン名を指定し、レプリケーションのソース vCenter とターゲット vCenter を選択します。
+
+. レプリケーション プランの一意の名前を入力します。
++
+レプリケーション プラン名には、英数字とアンダースコア (_) のみを使用できます。
+
+. ソース vCenter クラスタを選択します。
+. 宛先の vCenter クラスタを選択します。
+. *次へ*を選択します。
++
+image:evs-create-rp-wiz-a-1-4.png["レプリケーションプランを作成し、vCentersを選択します"]
+
+
+
+続けるlink:evs-deploy-guide-create-rp-wiz-02.html["レプリケーションプラン作成ウィザード ステップ 2"]。

@@ -1,0 +1,52 @@
+---
+indexpage:
+  title: NetAppディザスタリカバリドキュメント
+  summary: NetApp Disaster Recovery for VMware を使用すると、 ONTAPストレージを実行しているオンプレミスの VMware
+    ワークロードを、 NetAppクラウド ストレージを使用して、災害復旧サイトとしてパブリック クラウド内の VMware ソフトウェア定義データセンターに複製できます。
+  keywords: disaster, disaster recovery, bluexp, replicate, replication, cloud storage
+  lead: クラウドへの災害復旧は、サイトの停止やデータ破損イベント (ランサムウェアなど) からワークロードを保護する、回復力がありコスト効率に優れた方法です。  NetApp
+    Disaster Recovery for VMware を使用すると、 ONTAPストレージを実行しているオンプレミスの VMware ワークロードを、パブリック
+    クラウド内の VMware ソフトウェア定義データセンター、または災害復旧サイトとして別のオンプレミス サイトに複製できます。
+  tiles:
+  - title: 始めましょう
+    links:
+    - title: NetAppディザスタリカバリについて学ぶ
+      url: "/get-started/dr-intro.html"
+    - title: NetAppディザスタリカバリの新機能
+      url: "/release-notes/dr-whats-new.html"
+    - title: クイック スタート
+      url: "/get-started/dr-quick-start.html"
+    - title: 前提条件
+      url: "/get-started/dr-prerequisites.html"
+    - title: NetAppディザスタリカバリにアクセス
+      url: "/get-started/dr-login.html"
+    - title: FAQ
+      url: "/get-started/dr-faq.html"
+  - title: NetAppディザスタリカバリを使用する
+    links:
+    - title: サイトにvCenterを追加する
+      url: "/use/sites-add.html"
+    - title: 災害復旧計画を作成する
+      url: "/use/drplan-create.html"
+    - title: アプリを別のサイトに複製する
+      url: "/use/replicate.html"
+    - title: アプリを別のサイトに移行する
+      url: "/use/migrate.html"
+    - title: アプリをリモートサイトにフェイルオーバーする
+      url: "/use/failover.html"
+    - title: アプリを元のソースサイトにフェイルバックする
+      url: "/use/failback.html"
+  - title: ブログとコミュニティ
+    links:
+    - title: NetAppコンソール
+      url: https://www.netapp.com/console
+    - title: NetAppデータサービス
+      url: https://www.netapp.com/data-services/
+    - title: NetAppコミュニティ
+      url: https://community.netapp.com
+    - title: NetAppディザスタリカバリブログ
+      url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-disaster-recovery-service-for-BC-with-VMware-Cloud-on-AWS-and-FSx-for/ba-p/447066
+    - title: NetApp Disaster Recovery as a Service ラボ オンデマンドの開始
+      url: https://labondemand.netapp.com/lab/draas
+    - title: ビデオ
+      url: https://www.youtube.com/@netapp/videos

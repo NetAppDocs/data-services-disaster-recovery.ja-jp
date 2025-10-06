@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: use/monitor-jobs.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor, bluexp 
+summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。すべての災害復旧ジョブを監視し、その進行状況を確認できます。 
+---
+= NetAppディザスタリカバリジョブの監視
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+すべてのNetAppディザスタ リカバリ ジョブを監視し、その進行状況を確認できます。
+
+
+
+== ジョブの表示
+
+*必要なNetAppコンソール ロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、ディザスタ リカバリ アプリケーション管理者、またはディザスタ リカバリ ビューア ロール。
+
+link:../reference/dr-reference-roles.html["NetApp Disaster Recovery におけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+.手順
+. ログイン https://console.netapp.com/["NetAppコンソール"^]。
+. NetAppコンソールの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
+. メニューから*ジョブ監視*を選択します。
+. 操作に関連するすべてのジョブを調べ、タイムスタンプとステータスを確認します。
+. 特定のジョブの詳細を表示するには、その行を選択します。
+. 情報を更新するには、[*更新*] を選択します。
+
+
+
+
+== ジョブをキャンセルする
+
+ジョブが進行中またはキュー状態にあり、続行したくない場合は、キャンセルできます。ジョブが同じ状態のまま停止し、キュー内の次の操作を解放したい場合は、ジョブをキャンセルする必要があります。タイムアウトする前にジョブをキャンセルする必要がある場合があります。
+
+*必要なNetAppコンソール ロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、ディザスタ リカバリ フェールオーバー管理者、またはディザスタ リカバリ アプリケーション管理者のロール。
+
+link:../reference/dr-reference-roles.html["NetApp Disaster Recovery におけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+.手順
+. NetAppコンソールの左側のナビゲーション バーから、*保護* > *災害復旧* を選択します。
+. メニューから*ジョブ監視*を選択します。
+. ジョブ モニター ページで、キャンセルするジョブの ID をメモします。
++
+ジョブは「進行中」または「キューに登録済み」の状態である必要があります。
+
+. [アクション] 列で、[*ジョブのキャンセル*] を選択します。
+

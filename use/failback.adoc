@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: use/failback.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。 
+---
+= NetApp Disaster Recovery でアプリケーションを元のソースにフェイルバック
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+災害が解決したら、災害復旧サイトからソース サイトにフェールバックして通常の運用に戻ります。復元するスナップショットを選択できます。
+
+*必要なNetAppコンソール ロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、またはディザスタ リカバリ フェールオーバー管理者のロール。
+
+link:../reference/dr-reference-roles.html["NetApp Disaster Recovery におけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+*このタスクについて*
+
+このワークフローでは、 NetApp Disaster Recovery は、レプリケーションの方向を反転する前に、すべての変更を元のソース仮想マシンにレプリケート (再同期) します。このプロセスは、ターゲットへのフェールオーバーが完了した関係から開始され、次の手順が含まれます。
+
+* 回復したサイトでコンプライアンス チェックを実行します。
+* 回復されたサイトにあると特定された各 vCenter クラスタの vCenter 情報を更新します。
+* ターゲット サイトで、仮想マシンの電源をオフにして登録を解除し、ボリュームをマウント解除します。
+* 元のソースのSnapMirror関係を解除して、読み取り/書き込み可能にします。
+* レプリケーションを元に戻すには、 SnapMirror関係を再同期します。
+* ソース仮想マシンの電源をオンにして登録し、ソースにボリュームをマウントします。
+
+
+.手順
+. ログイン https://console.netapp.com/["NetAppコンソール"^]。
+. NetAppコンソールの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
+. NetAppディザスタリカバリ メニューから、*レプリケーション プラン* を選択します。
+. レプリケーション プランを選択します。
+. 右側で*アクション*オプションを選択しますimage:../use/icon-horizontal-dots.png["NetApp Disaster Recovery サービスのアクション メニュー アイコン"]*フェイルバック*を選択します。
+. レプリケーション プラン名を入力して確認し、フェイルバックを開始します。
+. 回復するデータストアのスナップショットを選択します。デフォルトは最新です。
+. 進行状況を確認するには、メニューで*ジョブ監視*を選択します。
+

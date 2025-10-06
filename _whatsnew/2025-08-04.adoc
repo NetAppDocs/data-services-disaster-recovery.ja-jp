@@ -1,0 +1,20 @@
+= NetAppディザスタリカバリのアップデート
+:allow-uri-read: 
+
+
+
+
+=== NetAppディザスタリカバリのアップデート
+
+このリリースには次の更新が含まれています。
+
+* 複数のストレージ仮想マシンから提示される同じ LUN を処理できるように VMFS サポートが改善されました。
+* すでにアンマウントまたは削除されているデータストアを処理するために、テストのティアダウン クリーンアップが改善されました。
+* サブネット マッピングが改善され、入力されたゲートウェイが指定されたネットワーク内に含まれているかどうかが検証されるようになりました。
+* VM 名に「.com」が含まれている場合にレプリケーション プランが失敗する可能性がある問題を修正しました。
+* レプリケーション プラン作成の一環としてボリュームを作成するときに、宛先ボリュームがソース ボリュームと同じになることを妨げる制限を削除しました。
+* Azure Marketplace のNetApp Intelligent Services への従量課金制 (PAYGO) サブスクリプションのサポートが追加され、無料試用版ダイアログに Azure Marketplace へのリンクが追加されました。
++
+詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html#licensing["NetAppディザスタリカバリライセンス"]そして https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["NetApp Disaster Recoveryのライセンスを設定する"]。
+
+

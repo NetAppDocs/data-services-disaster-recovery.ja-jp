@@ -1,0 +1,50 @@
+= NetAppディザスタリカバリにおけるユーザーロール
+:allow-uri-read: 
+
+
+
+
+=== NetAppディザスタリカバリにおけるユーザーロール
+
+NetApp Disaster Recovery では、各ユーザーの特定の機能やアクションへのアクセスを制御するためにロールを採用するようになりました。
+
+このサービスは、 NetApp Disaster Recovery に固有の次のロールを使用します。
+
+* *ディザスタ リカバリ管理者*: NetAppディザスタ リカバリであらゆるアクションを実行します。
+* *災害復旧フェイルオーバー管理者*: NetApp災害復旧でフェイルオーバーと移行アクションを実行します。
+* *災害復旧アプリケーション管理者*: レプリケーション プランを作成および変更し、テスト フェイルオーバーを開始します。
+* *ディザスタ リカバリ ビューア*: NetAppディザスタ リカバリの情報を表示できますが、アクションを実行することはできません。
+
+
+NetApp Disaster Recovery サービスをクリックして初めて構成する場合は、*SnapCenterAdmin* 権限または *Organization Admin* ロールが必要です。
+
+詳細については、  https://docs.netapp.com/us-en/bluexp-disaster-recovery/reference/dr-reference-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限"] 。
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスのアクセスロールについて学ぶ"^] 。
+
+
+
+=== NetApp Disaster Recoveryのその他のアップデート
+
+* 強化されたネットワーク検出
+* スケーラビリティの改善:
++
+** すべての詳細ではなく必要なメタデータをフィルタリングする
+** VM リソースをより速く取得および更新するための検出の改善
+** データ取得とデータ更新のためのメモリ最適化とパフォーマンス最適化
+** vCenter SDK クライアントの作成とプール管理の改善
+
+
+* 次回のスケジュールされた検出または手動検出時の古いデータの管理:
++
+** vCenter で VM が削除されると、 NetApp Disaster Recovery によってその VM がレプリケーション プランから自動的に削除されるようになりました。
+** vCenter でデータストアまたはネットワークが削除されると、 NetApp Disaster Recovery によってレプリケーション プランとリソース グループからそれが削除されるようになりました。
+** vCenter でクラスタ、ホスト、またはデータセンターが削除されると、 NetApp Disaster Recovery によってレプリケーション プランとリソース グループからそれが削除されるようになりました。
+
+
+* ブラウザのシークレット モードで Swagger ドキュメントにアクセスできるようになりました。  NetApp Disaster Recovery 内の [設定] オプション > [API ドキュメント] からアクセスするか、ブラウザのシークレット モードで次の URL から直接アクセスできます。 https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["Swaggerドキュメント"^] 。
+* 状況によっては、フェイルバック操作後に、操作の完了後に iGroup が残されることがあります。このアップデートでは、古くなった iGroup が削除されます。
+* レプリケーション プランで NFS FQDN が使用されていた場合、 NetApp Disaster Recovery はそれを IP アドレスに解決するようになりました。この更新は、災害復旧サイトで FQDN を解決できない場合に役立ちます。
+* UIの配置の改善
+* 検出が成功した後に vCenter のサイズ設定の詳細をキャプチャするためのログの改善
+

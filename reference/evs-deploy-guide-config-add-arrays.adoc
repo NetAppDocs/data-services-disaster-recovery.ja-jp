@@ -1,0 +1,77 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-config-add-arrays.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter,amazon elastic vmware service 
+summary: NetApp Disaster Recovery を使用する前に、オンプレミスおよびクラウドホストのストレージ インスタンスをNetAppコンソール システムに追加する必要があります。 
+---
+= NetAppディザスタリカバリを使用して Amazon EVS のNetAppコンソール システムにオンプレミス アレイを追加する
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp Disaster Recovery を使用する前に、オンプレミスおよびクラウドホストのストレージ インスタンスをNetAppコンソール システムに追加する必要があります。
+
+次の操作を行う必要があります。
+
+* オンプレミスのアレイをNetAppコンソール システムに追加します。
+* Amazon FSx for NetApp ONTAP (FSx for ONTAP) インスタンスをNetAppコンソール システムに追加します。
+
+
+
+
+== NetAppコンソールシステムにオンプレミスのストレージアレイを追加する
+
+オンプレミスのONTAPストレージ リソースをNetAppコンソール システムに追加します。
+
+. NetAppコンソール システム ページから、[システムの追加] を選択します。
++
+image:evs-canvas-add-working-env-1.png["システムを追加"]
+
+. 「システムの追加」ページで、「*オンプレミス*」カードを選択します。
++
+image:evs-canvas-add-working-env-2.png["システムイメージを追加する"]
+
+. On-Premises ONTAPカードで *Discover* を選択します。
++
+image:evs-canvas-add-working-env-3.png["システムイメージを追加する"]
+
+. 「クラスターの検出」ページで、次の情報を入力します。
++
+.. ONTAPアレイクラスタ管理ポートのIPアドレス
+.. 管理者のユーザー名
+.. 管理者パスワード
+
+
+. ページの下部にある*Discover*を選択します。
++
+image:evs-canvas-add-working-env-4-5.png["システムイメージを追加する"]
+
+. vCenter データストアをホストする各ONTAPアレイに対して手順 1 ～ 5 を繰り返します。
+
+
+
+
+== Amazon FSx for NetApp ONTAPストレージインスタンスをNetAppコンソールシステムに追加する
+
+次に、 Amazon FSx for NetApp ONTAPストレージリソースをNetAppコンソールシステムに追加します。
+
+. NetAppコンソール システム ページから、[システムの追加] を選択します。
++
+image:evs-canvas-add-working-env-1.png["システムイメージを追加する"]
+
+. 「システムの追加」ページから、*Amazon Web Services* カードを選択します。
++
+image:evs-canvas-add-working-evs-2.png["システムイメージを追加する"]
+
+. Amazon FSx for ONTAPカードの *Discover Existing* リンクを選択します。
++
+image:evs-canvas-add-working-evs-3.png["システムイメージを追加する"]
+
+. FSx for ONTAPインスタンスをホストしている認証情報と AWS リージョンを選択します。
+. 追加する FSx for ONTAPファイル システムを 1 つ以上選択します。
+. ページの下部にある*Discover*を選択します。
++
+image:evs-needs-updates-canvas-add-working-evs-4-5.png["システムイメージを追加する"]
+
+. vCenter データストアをホストする各 FSx for ONTAPインスタンスに対して手順 1 ～ 6 を繰り返します。
+

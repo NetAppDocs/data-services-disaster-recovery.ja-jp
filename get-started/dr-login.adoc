@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-login.html 
+keywords: bluexp login, disaster recovery log in 
+summary: NetAppコンソールでサービスにアクセスして、 NetApp Disaster Recovery を開始します。 
+---
+= NetAppディザスタリカバリにアクセス
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+NetAppコンソールを使用して、 NetAppディザスタ リカバリ サービスにログインします。
+
+ログインするには、 NetAppサポート サイトの認証情報を使用するか、電子メールとパスワードを使用してNetAppクラウド ログインにサインアップすることができます。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["ログインについて詳しくはこちら"^] 。
+
+特定のタスクには特定のユーザー ロールが必要です。link:../reference/dr-reference-roles.html["NetApp Disaster Recovery におけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetAppコンソールのアクセスロールについて学習します"^] 。
+
+.手順
+. ウェブブラウザを開いて、 https://console.netapp.com/["NetAppコンソール"^] 。
++
+NetAppコンソールのログイン ページが表示されます。
+
+. NetAppコンソールにログインします。
+. NetAppコンソールの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
++
+このサービスに初めてログインする場合は、ランディング ページが表示され、無料トライアルにサインアップできます。
+
++
+image:draas-landing6-free-trial.png["NetApp Disaster Recovery のランディング ページのスクリーンショット"]
+
++
+それ以外の場合は、 NetAppディザスタ リカバリ ダッシュボードが表示されます。
+
++
+** NetAppコンソール エージェントをまだ追加していない場合は、追加する必要があります。エージェントを追加するには、 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["コンソールエージェントについて学ぶ"^] 。
+** 既存のエージェントを持つNetAppコンソール ユーザーの場合は、「ディザスタ リカバリ」を選択すると、サインアップに関するメッセージが表示されます。
+** すでにサービスを使用している場合は、「災害復旧」を選択するとダッシュボードが表示されます。
+
+
++
+image:dr-dashboard.png["NetApp災害復旧ダッシュボード"]
+
+

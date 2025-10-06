@@ -1,0 +1,152 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-setup.html 
+keywords: bluexp, disaster recovery, aws, amazon web services, amazon fsx for netapp ontap 
+summary: NetApp Disaster Recovery を使用するには、いくつかの手順を実行してセットアップする必要があります。 
+---
+= NetAppディザスタリカバリ用のインフラストラクチャをセットアップする
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+NetApp Disaster Recovery を使用するには、Amazon Web Services (AWS) とNetAppコンソールの両方でいくつかの手順を実行して設定する必要があります。
+
+
+TIP: レビューlink:../get-started/dr-prerequisites.html["前提条件"]システムの準備ができていることを確認します。
+
+NetApp Disaster Recovery は、次のインフラストラクチャで使用できます。
+
+* オンプレミスの VMware とONTAPデータセンターを、VMware Cloud on AWS とAmazon FSx for NetApp ONTAPに基づく AWS DR インフラストラクチャに複製するハイブリッド クラウド DR。
+* オンプレミスの VMware とONTAP vCenter を別のオンプレミスの VMware とONTAP vCenter に複製するプライベート クラウド DR。
+
+
+
+
+== VMware Cloud とAmazon FSx for NetApp ONTAPハイブリッド クラウド
+
+この方法は、NFS プロトコルを使用してONTAP FlexVolボリュームでホストされるデータストアを使用するオンプレミスの本番環境の vCenter インフラストラクチャで構成されます。  DR サイトは、NFS プロトコルを使用する 1 つ以上の FSx for ONTAPインスタンスによって提供されるFlexVolボリューム上でホストされるデータストアを使用する 1 つ以上の VMware Cloud SDDC インスタンスで構成されます。
+
+本番サイトと DR サイトは、AWS 互換の安全な接続によって接続されます。一般的な接続タイプは、安全な VPN (プライベートまたは AWS 提供)、AWS Direct Connect、またはその他の承認された相互接続方法です。
+
+AWS クラウド インフラストラクチャに関連する災害復旧の場合は、AWS のコンソール エージェントを使用する必要があります。エージェントは、FSx for ONTAPインスタンスと同じ VPC にインストールする必要があります。追加の FSx for ONTAPインスタンスが他の VPC に導入されている場合、エージェントをホストしている VPC は他の VPC にアクセスできる必要があります。
+
+
+
+=== AWS アベイラビリティゾーン
+
+AWS は、特定のリージョン内の 1 つ以上のアベイラビリティーゾーン (AZ) でのソリューションのデプロイをサポートしています。ディザスタリカバリでは、VMware Cloud for AWS と AWS FSx for NetApp ONTAP2 つの AWS ホストサービスが使用されます。
+
+* *VMware Cloud for AWS*: シングル AZ またはデュアル AZ ストレッチ クラスタ SDDC 環境での展開をサポートします。ディザスタリカバリは、Amazon VMware Cloud for AWS の単一 AZ SDDC デプロイメントのみをサポートします。
+* *AWS FSx for NetApp ONTAP*: これをデュアル AZ 構成で導入すると、各ボリュームは単一の FSx システムによって所有されます。各ボリュームは単一の FSx システムによって所有されます。ボリュームのデータは 2 番目の FSx システムにミラーリングされます。 FSx for ONTAPシステムは、シングル AZ またはデュアル AZ のいずれかのデプロイメントで導入できます。ディザスタ リカバリでは、FSx for ONTAP のデプロイメントにおいて、単一 AZ とマルチ AZ の両方の FSx がサポートされます。
+
+
+*ベスト プラクティス*: AWS DR サイト構成の場合、 NetApp、VMware Cloud と AWS FSx for ONTAPインスタンスの両方に単一の AZ デプロイメントを使用することを推奨しています。 DR用にAWSを利用している為、複数AZを導入するメリットはありません。マルチ AZ ではコストと複雑さが増す可能性があります。
+
+
+
+=== オンプレミスからAWSへ
+
+AWS は、プライベートデータセンターを AWS クラウドに接続するための次の方法を提供します。各ソリューションには利点とコストに関する考慮事項があります。
+
+* *AWS Direct Connect*: これは、プライベートデータセンターと同じ地理的領域にあり、AWS パートナーによって提供される AWS クラウド相互接続です。このソリューションは、パブリックインターネット接続を必要とせずに、ローカルデータセンターと AWS クラウド間の安全なプライベート接続を提供します。これは AWS が提供する最も直接的で効率的な接続方法です。
+* *AWS インターネットゲートウェイ*: AWS クラウドリソースと外部コンピューティングリソース間のパブリック接続を提供します。このタイプの接続は通常、セキュリティが要求されない HTTP/HTTPS サービスなど、外部の顧客にサービスを提供するために使用されます。サービス品質の制御、セキュリティ、接続の保証はありません。このため、この接続方法は、実稼働データセンターをクラウドに接続する場合には推奨されません。
+* *AWS サイト間 VPN*: この仮想プライベートネットワーク接続は、パブリックインターネットサービスプロバイダーとともに安全なアクセス接続を提供するために使用できます。  VPN は、AWS クラウドとの間でやり取りされるすべてのデータを暗号化および復号化します。 VPN はソフトウェアベースまたはハードウェアベースのいずれかになります。エンタープライズ アプリケーションの場合、パブリック インターネット サービス プロバイダー (ISP) は、DR レプリケーションに十分な帯域幅と待機時間が提供されるように、サービス品質の保証を提供する必要があります。
+
+
+*ベストプラクティス*: AWS DR サイト構成の場合、 NetAppAWS Direct Connect の使用を推奨しています。このソリューションは、エンタープライズ アプリケーションに最高のパフォーマンスとセキュリティを提供します。利用できない場合は、VPN と併用した高性能パブリック ISP 接続を使用する必要があります。適切なネットワーク パフォーマンスを確保するために、ISP が商用 QoS サービス レベルを提供していることを確認します。
+
+
+
+=== VPC 間の相互接続
+
+AWS では、次のタイプの VPC 間相互接続を提供しています。各ソリューションには利点とコストに関する考慮事項があります。
+
+* *VPC ピアリング*: これは 2 つの VPC 間のプライベート接続です。これは AWS が提供する最も直接的で効率的な接続方法です。  VPC ピアリングを使用すると、同じまたは異なる AWS リージョン内の VPC を接続できます。
+* *AWS インターネットゲートウェイ*: これは通常、AWS VPC リソースと AWS 以外のリソースおよびエンドポイント間の接続を提供するために使用されます。すべてのトラフィックは「ヘアピン」パスをたどります。このパスでは、別の VPC 宛ての VPC トラフィックがインターネットゲートウェイを介して AWS インフラストラクチャから出て、同じゲートウェイまたは別のゲートウェイを介して AWS インフラストラクチャに戻ります。これは、エンタープライズ VMware ソリューションに適した VPC 接続タイプではありません。
+* *AWS Transit Gateway*: これは集中型のルーターベースの接続タイプであり、各 VPC が単一の中央ゲートウェイに接続できるようにします。このゲートウェイは、すべての VPC 間トラフィックの中央ハブとして機能します。これを VPN ソリューションに接続して、オンプレミスのデータセンター リソースが AWS VPC でホストされているリソースにアクセスできるようにすることもできます。このタイプの接続を実装するには、通常、追加のコストが必要です。
+
+
+*ベスト プラクティス*: VMware Cloud と単一の FSx for ONTAP VPC を含む DR ソリューションの場合、 NetAppVPC ピア接続を使用することをお勧めします。複数の FSx for ONTAP VPC を導入する場合は、AWS Transit Gateway を使用して複数の VPC ピア接続の管理オーバーヘッドを削減することをお勧めします。
+
+
+
+=== AWS を使用したオンプレミスからクラウドへの保護の準備
+
+AWS を使用してオンプレミスからクラウドへの保護用にNetApp Disaster Recovery を設定するには、以下を設定する必要があります。
+
+* NetApp ONTAP用の AWS FSx をセットアップする
+* VMware Cloud on AWS SDDC をセットアップする
+
+
+
+
+==== NetApp ONTAP用の AWS FSx をセットアップする
+
+* Amazon FSx for NetApp ONTAPファイルシステムを作成します。
++
+** FSx for ONTAPをプロビジョニングおよび構成します。  Amazon FSx for NetApp ONTAP は、 NetApp ONTAPファイルシステム上に構築された、信頼性が高く、スケーラブルで、高性能かつ機能豊富なファイルストレージを提供する、フルマネージドサービスです。
+** 以下の手順に従ってください https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["テクニカルレポート 4938: VMware Cloud on AWS でAmazon FSx ONTAP をNFS データストアとしてマウントする"^]そして https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/task-getting-started-fsx.html["Amazon FSx for NetApp ONTAP のクイックスタート"]FSx for ONTAPをプロビジョニングおよび構成します。
+
+
+* Amazon FSx for ONTAPをシステムに追加し、 FSx for ONTAPの AWS 認証情報を追加します。
+* AWS FSx for ONTAPインスタンスで宛先ONTAP SVM を作成または検証します。
+* NetAppコンソールで、ソースのオンプレミスONTAPクラスターと FSx for ONTAPインスタンス間のレプリケーションを構成します。
+
+
+参照 https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["FSx for ONTAPシステムのセットアップ方法"^]詳細な手順については、こちらをご覧ください。
+
+
+
+==== VMware Cloud on AWS SDDC をセットアップする
+
+https://www.vmware.com/products/vmc-on-aws.html["VMware Cloud on AWS"^]AWS エコシステム内の VMware ベースのワークロードにクラウドネイティブのエクスペリエンスを提供します。各 VMware ソフトウェア定義データセンター (SDDC) は Amazon Virtual Private Cloud (VPC) で実行され、完全な VMware スタック (vCenter Server を含む)、NSX-T ソフトウェア定義ネットワーク、vSAN ソフトウェア定義ストレージ、およびワークロードにコンピューティング リソースとストレージ リソースを提供する 1 つ以上の ESXi ホストを提供します。
+
+AWS上でVMware Cloud環境を構成するには、以下の手順に従ってください。 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-setup.html["AWS 上で仮想化環境を展開および構成する"^]パイロットライト クラスターは、災害復旧の目的にも使用できます。
+
+
+
+== プライベート クラウド
+
+NetApp Disaster Recovery を使用すると、VM データストアを同じプライベート データセンター内またはリモートのプライベート データセンターまたは併置されたデータセンター内の別の vCenter クラスタに複製することで、1 つ以上の vCenter クラスタでホストされている VMware VM を保護できます。
+
+オンプレミスからオンプレミスへの状況では、物理サイトの 1 つにコンソール エージェントをインストールします。
+
+災害復旧は、イーサネットと TCP/IP を使用したサイト間レプリケーションをサポートします。すべての変更を復旧ポイント目標 (RPO) の時間枠内に DR サイトに複製できるように、運用サイトの VM 上のデータ変更率をサポートするために十分な帯域幅が利用可能であることを確認します。
+
+
+
+=== オンプレミスからオンプレミスへの保護の準備
+
+オンプレミス間の保護のためにNetApp Disaster Recovery を設定する前に、次の要件が満たされていることを確認してください。
+
+* ONTAPストレージ
++
+** ONTAP認証情報があることを確認します。
+** 災害復旧サイトを作成または検証します。
+** 宛先のONTAP SVM を作成または検証します。
+** ソースとデスティネーションのONTAP SVM がピアリングされていることを確認します。
+
+
+* vCenter クラスタ
++
+** 保護する VM が NFS データストア ( ONTAP NFS ボリュームを使用) または VMFS データストア ( NetApp iSCSI LUN を使用) でホストされていることを確認します。
+** レビューlink:../reference/vcenter-privileges.html["vCenter 権限"]NetAppディザスタリカバリに必要です。
+** 災害復旧ユーザー アカウント (デフォルトの vCenter 管理者アカウントではない) を作成し、そのアカウントに vCenter 権限を割り当てます。
+
+
+
+
+
+
+=== インテリジェントなプロキシサポート
+
+NetAppコンソール エージェントはインテリジェント プロキシをサポートします。インテリジェント プロキシは、オンプレミス環境をNetAppコンソールに接続するための軽量で安全かつ効率的な方法です。 VPN や直接のインターネット アクセスを必要とせずに、システムとコンソール サービス間の安全な接続を提供します。この最適化されたプロキシ実装は、ローカル ネットワーク内の API トラフィックをオフロードします。
+
+プロキシが設定されている場合、 NetApp Disaster Recovery は VMware またはONTAPと直接通信を試み、直接通信が失敗した場合は設定されたプロキシを使用します。
+
+NetAppディザスタ リカバリ プロキシの実装では、コンソール エージェントと、HTTPS プロトコルを使用した vCenter Server およびONTAPアレイ間のポート 443 通信が必要です。コンソール エージェント内のNetApp Disaster Recovery エージェントは、アクションを実行するときに VMware vSphere、VC、またはONTAPと直接通信します。
+
+NetAppコンソールでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。

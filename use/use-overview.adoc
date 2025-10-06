@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: use/use-overview.html 
+keywords: disaster recovery remediate, disaster recovery, failover, failback, replication 
+summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。 
+---
+= NetAppディザスタリカバリの概要
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+NetApp Disaster Recovery を使用すると、次の目標を達成できます。
+
+* link:../use/dashboard-view.html["災害復旧計画の健全性を確認する"] 。
+* link:../use/sites-add.html["vCenterサイトを追加する"] 。
+* link:../use/resource-group.html["VM をまとめて整理するためのリソース グループを作成する"]
+* link:../use/drplan-create.html["災害復旧計画を作成する"] 。
+* link:../use/replicate.html["VMwareアプリを複製する"]SnapMirrorレプリケーションを使用して、プライマリ サイトのデータをクラウド内の災害復旧リモート サイトに移行します。
+* link:../use/migrate.html["VMwareアプリの移行"]プライマリサイトから別のサイトへ。
+* link:../use/failover.html["フェイルオーバーをテストする"]元の仮想マシンを中断することなく。
+* 災害が発生した場合、link:../use/failover.html["プライマリサイトをフェイルオーバーする"] FSx for NetApp ONTAPを使用して VMware Cloud on AWS に移行します。
+* 災害が解決した後、link:../use/failback.html["フェイルバック"]災害復旧サイトからプライマリ サイトへ。
+* link:../use/monitor-jobs.html["災害復旧オペレーションの監視"]ジョブ監視ページで。
+
