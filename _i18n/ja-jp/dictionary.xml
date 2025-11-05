@@ -275,7 +275,6 @@
   <block id="caf89067dc5383afa96e1ac3e7c34bb7" category="paragraph">*ライセンス オプション* 次のライセンス オプションを使用できます。</block>
   <block id="7f2210756be2a83d832be1ebb9b06adf" category="list-text">Amazon Web Services (AWS) Marketplace または Microsoft Azure Marketplace の従量課金制 (PAYGO) サブスクリプションを購入します。</block>
   <block id="4e33b7dde110d702aea770ac0e58ff70" category="inline-link-macro">サブスクリプションについて詳しくはこちら</block>
-  <block id="a9a7b012bab63c64c9eef57c3d5a98c5" category="paragraph"><block ref="538594e0e314e6f72a64aef360b9c966" category="inline-link-macro-rx"></block> 。</block>
   <block id="e23539b066371b4dcfdd50b7d80417d8" category="paragraph">無料トライアルが終了した後、またはライセンスの有効期限が切れた後でも、サービス内で次の操作を実行できます。</block>
   <block id="9a0514da0283645471837a7dd9cdd00a" category="list-text">ワークロードやレプリケーション プランなどのリソースを表示します。</block>
   <block id="1868701c43ed8ccfa46dc8fe93f4252f" category="list-text">ワークロードやレプリケーション プランなどのリソースを削除します。</block>
@@ -347,7 +346,6 @@
   <block id="e2066cd1f4f96874fad4da9c48f8715b" category="list-text">すでにサービスを使用している場合は、「災害復旧」を選択するとダッシュボードが表示されます。</block>
   <block id="41fc27202bd95bf86c36faca5aa2292a" category="inline-image-macro">NetApp Disaster Recoveryダッシュボード</block>
   <block id="9b4e9ca1e2c8ff4e1232f26bb61224ee" category="paragraph"><block ref="9b4e9ca1e2c8ff4e1232f26bb61224ee" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7caf4ca80ac9c8fa8523ec38a393bbae" category="summary">NetApp Disaster Recoveryを使用する前に、環境がONTAPストレージ、VMware vCenter クラスタ、およびNetApp Consoleの要件を満たしていることを確認する必要があります。</block>
   <block id="4e692aafecf38a7bf746c7d87b8ca190" category="doc">NetApp Disaster Recoveryの前提条件</block>
   <block id="6d29d2542a6a2e3e81746082b1d99b07" category="section-title">ソフトウェアバージョン</block>
   <block id="2cb05e4bb7830be982f0922fed86b4cd" category="cell">コンポーネント</block>
@@ -362,11 +360,8 @@
   <block id="d28c14a0fc5b1bfa37eb72dd0ac54a13" category="section-title">ONTAPストレージの前提条件</block>
   <block id="911d68300fa1a1a181b338683eb2e1b9" category="paragraph">これらの前提条件は、 ONTAPまたは Amazon FSX for NetApp ONTAPインスタンスに適用されます。</block>
   <block id="07a02bd33ebc759fa2827fd098fe4d5b" category="list-text">ソース クラスターと宛先クラスターにはピア関係が必要です。</block>
-  <block id="4a240de94d3b8b2cf85c70ef705ec1ad" category="list-text">ディザスタ リカバリ ボリュームをホストする SVM は、宛先クラスタ上に存在している必要があります。</block>
   <block id="49a62cf19d5f5549f15f53e7cc0931a4" category="list-text">ソース SVM と宛先 SVM にはピア関係が必要です。</block>
   <block id="3c6fc169e2cb30ab2f19198ee948214f" category="list-text">Amazon FSx for NetApp ONTAPを使用してデプロイする場合は、次の前提条件が適用されます。</block>
-  <block id="9ff73081ad3af348b09105664054c18f" category="inline-link">始め方</block>
-  <block id="416e7e2f04e50d9ce77de6997e876b89" category="list-text">VMware DR データストアをホストするAmazon FSx for NetApp ONTAPインスタンスが VPC 内に存在している必要があります。  Amazon FSx for ONTAPのドキュメントを参照してください。<block ref="db982a545763422931a00c332a8601c2" category="inline-link-rx"></block> 。</block>
   <block id="78ac16e6d697b73a4da8c7145ce2ebf3" category="section-title">VMware vCenter クラスタの前提条件</block>
   <block id="e43184d3dcdfbef8d9c719533929f538" category="paragraph">これらの前提条件は、オンプレミスの vCenter クラスタと VMware Cloud for AWS ソフトウェア定義データセンター (SDDC) の両方に適用されます。</block>
   <block id="4fb2c1490deb1111ddde75358c461f13" category="inline-link-macro">vCenter 権限</block>
@@ -386,13 +381,11 @@
   <block id="924c58a8fd83feffaf2992bcfe6747f1" category="inline-link">NetApp Consoleにサインアップして組織を作成する</block>
   <block id="a365735407987353fb0d409038d3fcd5" category="paragraph">まだお済みでない場合は、<block ref="d976bcdfe98c8a7f3f75b182d4034c67" category="inline-link-rx"></block> 。</block>
   <block id="2111321b91f7f03ee0c9d795126e728d" category="section-title">ONTAPとVMwareの資格情報を収集する</block>
-  <block id="83ea42b6775e389ed5d6686bca745cb5" category="list-text">NetApp Disaster Recoveryを管理するために使用されるNetApp Consoleプロジェクト内のシステムに、 Amazon FSx for ONTAPと AWS 認証情報を追加する必要があります。</block>
   <block id="d70a6a4283fe47d23c6adff45d1620fb" category="list-text">NetApp Disaster Recovery には vCenter の資格情報が必要です。  NetApp Disaster Recoveryでサイトを追加するときに、vCenter の資格情報を入力します。</block>
   <block id="0f0ee2397f9657d6f4e252d0c2f19706" category="inline-link-macro">NetApp Disaster Recoveryに必要な vCenter 権限</block>
   <block id="663ac415354a0662169e04ba51a80ee1" category="inline-link-macro">サイトを追加する</block>
   <block id="7fda46228a14f2f55a79cab0163e29e8" category="paragraph">必要なvCenter権限のリストについては、<block ref="86bed0402ce0dbd7b91cef3021301e67" category="inline-link-macro-rx"></block> 。サイトを追加する方法については、<block ref="4e15c40290645aa1bfcc516405624ad3" category="inline-link-macro-rx"></block> 。</block>
   <block id="04611b209933eb29e1f8fdaec6553eaa" category="section-title">NetApp Consoleエージェントを作成する</block>
-  <block id="5a47b3f0e8d6c5af989186785df791a5" category="paragraph">コンソール エージェントは、コンソールがONTAPストレージおよび VMware vCenter クラスターと通信できるようにするソフトウェア コンポーネントです。災害復旧が適切に機能するために必要です。エージェントはプライベート ネットワーク（オンプレミス データセンターまたはクラウド VPC 内）に常駐し、 ONTAPストレージ インスタンスやその他のサーバーおよびアプリケーション コンポーネントと通信します。災害復旧の場合、これは管理対象の vCenter クラスターへのアクセスです。</block>
   <block id="9703473550a81b3fd3679dafa7c81b5c" category="paragraph">NetApp Consoleにコンソール エージェントを設定する必要があります。エージェントを使用すると、災害復旧サービスに適切な機能が含まれるようになります。</block>
   <block id="c8838dcf38d330918fef4cc55c1d8bda" category="inline-link">NetApp Consoleの標準モードでの使用開始</block>
   <block id="51dd3d7e28a72cf0fdec6a253e1d1518" category="list-text">NetApp Disaster Recovery は、標準モード エージェントの展開でのみ機能します。見る<block ref="5a1f12b31848038fb05bcfabb59a655f" category="inline-link-rx"></block>。</block>
@@ -403,7 +396,6 @@
   <block id="7ff9f8e2467774df163161a38d2d5040" category="inline-link">AWS のコンソールエージェントのインストールオプション</block>
   <block id="14fe150f182f90b42cc29c3f50abaade" category="list-text">*オンプレミスから AWS*: AWS VPC に AWS 用コンソールエージェントをインストールします。参照<block ref="70bdc3086a31c8e9f05388b39311f274" category="inline-link-rx"></block>。</block>
   <block id="24b5be8f6df5fb021eca578769b77774" category="admonition">オンプレミスからオンプレミスへの接続には、オンプレミスのコンソール エージェントを使用します。オンプレミスから AWS の場合、ソースのオンプレミス vCenter と宛先のオンプレミス vCenter にアクセスできる AWS コンソールエージェントを使用します。</block>
-  <block id="ec934991ff9576c778e97bd0dd49e11e" category="list-text">インストールされたコンソール エージェントは、 NetApp Disaster Recoveryが管理するすべての VMware クラスターにアクセスできる必要があります。</block>
   <block id="ab3c83e3945cd7f2df0456e2d8f83bb0" category="list-text">NetApp Disaster Recoveryによって管理されるすべてのONTAPアレイは、 NetApp Disaster Recoveryの管理に使用されるNetApp Consoleプロジェクト内のすべてのシステムに追加する必要があります。</block>
   <block id="c5fbee6586294d81141f8dd158707985" category="inline-link">オンプレミスのONTAPクラスタの検出</block>
   <block id="c99bafeb844cf906e2f562103d12d623" category="paragraph">見る<block ref="8cab2f9c49f209aeaa6ba3d7ce4342f6" category="inline-link-rx"></block>。</block>
@@ -411,8 +403,6 @@
   <block id="9d5cd03b2fcfbe5b4558a93d2fd07ca2" category="section-title">ワークロードの前提条件</block>
   <block id="6a84d76f499de61c5fe29550fe09a932" category="paragraph">アプリケーション整合性プロセスが確実に成功するには、次の前提条件を適用します。</block>
   <block id="7033a5d3e074f0c7401499ee4e48f38a" category="list-text">保護する VM 上で VMware ツール (または Open VM ツール) が実行されていることを確認します。</block>
-  <block id="53967495fd407c118c305a84866ca152" category="list-text">Microsoft SQL Server または Oracle Database、あるいはその両方を実行している Windows VM の場合、データベースで VSS ライターが有効になっている必要があります。</block>
-  <block id="af77ac64a97a80925dee7dc916344004" category="list-text">Linux オペレーティング システムで実行されている Oracle データベースでは、Oracle データベース SYSDBA ロールに対してオペレーティング システム ユーザー認証が有効になっている必要があります。</block>
   <block id="e769451afb614edbefc73e1f7dcacb52" category="summary">わずか数ステップでNetApp Disaster Recoveryサービスを開始できます。</block>
   <block id="ab07b3034b07b0c33cf08953e5962ee2" category="doc">NetApp Disaster Recoveryのクイックスタート</block>
   <block id="7964f4bbcfaebbe74a50dd88c021268a" category="paragraph">NetApp Disaster Recoveryを開始するために必要な手順の概要を以下に示します。各ステップ内のリンクをクリックすると、詳細情報を提供するページに移動します。</block>
@@ -606,14 +596,8 @@
   <block id="090ccdeb67b025c4f8b7081fde3f9701" category="list-text">会社が外部の証明機関 (CA) または vCenter エンドポイント証明書ストアを使用して vCenter にアクセスする場合は、[自己署名証明書を使用する] チェックボックスをオフにします。それ以外の場合は、ボックスをオンのままにしておきます。</block>
   <block id="b3a5c8845f853fe3c75c53b6ba4b310a" category="inline-image-macro">vCenter の追加ダイアログボックス</block>
   <block id="34fdfb7ad906ce66a12a8da2c109d447" category="paragraph"><block ref="34fdfb7ad906ce66a12a8da2c109d447" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d173e60098a46beb09260bd420a159bc" category="summary">Amazon EVS と Amazon FSxN を使用したNetApp Disaster Recoveryの紹介。</block>
-  <block id="6f8b794f3246b0c1e1780bb4d4d5dc53" category="doc">まとめ</block>
-  <block id="4d99324fc48065f11e63fb209ec337aa" category="paragraph">NetApp Disaster Recovery は、 Amazon EVS とAmazon FSx for NetApp ONTAP をDR ターゲットとして使用するように設定することで、オンプレミスの VMware インフラストラクチャにコスト効率の高いハイブリッドクラウド DR ソリューションを提供します。これにより、ミッションクリティカルなインフラストラクチャに堅牢な DR ターゲットが提供されます。  NetApp Disaster Recovery は、数十年にわたるデータ保護の経験に裏打ちされたネイティブのONTAPデータ保護機能を活用し、データが完全に保護されることを保証するために徹底的にテストされています。</block>
-  <block id="55707b4848b3a26a39057e3af6948b43" category="paragraph">詳細情報：</block>
   <block id="0f5cc47067a5c4b536ab91f1a843de82" category="inline-link">Amazon FSx for NetApp ONTAPを使い始める</block>
-  <block id="6c289628dee43319166eea9002566c44" category="list-text"><block ref="6c289628dee43319166eea9002566c44" category="inline-link-rx"></block></block>
   <block id="ca098fd032be41af7e2c6add5e270ac2" category="inline-link">NetApp Disaster Recoveryドキュメント</block>
-  <block id="483fd2990c168581254c61b55b471e93" category="list-text"><block ref="483fd2990c168581254c61b55b471e93" category="inline-link-rx"></block></block>
   <block id="7f28f59c47464c242d6442ba13026efb" category="summary">NetApp Disaster Recoveryを使用する前に、オンプレミスおよびクラウドホストのストレージ インスタンスをNetApp Consoleシステムに追加する必要があります。</block>
   <block id="db931cab7409f85dc1d9775949614f0a" category="doc">NetApp Disaster Recoveryを使用して Amazon EVS のNetApp Consoleシステムにオンプレミス アレイを追加する</block>
   <block id="110cf9f49141b2330ac27d9a9baedd2f" category="paragraph">次の操作を行う必要があります。</block>
@@ -1042,7 +1026,6 @@
   <block id="97f038e2f4284e7bd85ce8986351f37a" category="paragraph">これにより、データストア、その仮想マシン、およびその宛先関係が再検出されます。</block>
   <block id="6b2c385261ff0cb6c8365e9b2627a238" category="summary">NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。  NetApp Disaster Recovery for VMware を使用すると、 ONTAPストレージを実行しているオンプレミスの VMware ワークロードを、 NetAppクラウド ストレージを使用して、災害復旧サイトとしてパブリック クラウド内の VMware ソフトウェア定義データセンターに複製できます。</block>
   <block id="c11b69e74ac28288df478284e9a69a9e" category="doc">NetApp Disaster Recoveryの新機能</block>
-  <block id="20c2a4ce829c1bfe59988843f4146d8a" category="paragraph">NetApp Disaster Recoveryの新機能について説明します。</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">2025年10月6日</block>
   <block id="3488d38349240c72f75d081c2a79fa3b" category="section-title">2025年8月4日</block>
   <block id="4a32789f771ba902fef02cd0f2a544e6" category="paragraph">バージョン4.2.5P2</block>
@@ -1070,11 +1053,7 @@
   <block id="e1229c7ad0ab8ec8028a9d0383ad8106" category="paragraph">このリリースには、日次および週次スケジュールをサポートするために必要だったフェールオーバー テスト スケジュール構造の更新が含まれています。この更新では、新しい毎日および毎週のフェールオーバー テスト スケジュールを使用できるように、既存のすべてのレプリケーション プランを無効にしてから再度有効にする必要があります。これは 1 回限りの要件です。</block>
   <block id="acd962f8090b530f4e4c526ecbf56b61" category="section-title">レプリケーションプランの更新</block>
   <block id="7df13e1b4ece3e3deb4fbe809d05ea7c" category="paragraph">このリリースには、レプリケーション プラン データの更新が含まれており、「スナップショットが見つかりません」という問題が解決されています。これには、すべてのレプリケーション プランの保持数を 1 に変更し、オンデマンド スナップショットを開始する必要があります。このプロセスにより、新しいバックアップが作成され、古いバックアップはすべて削除されます。</block>
-  <block id="3d3e2652059a9417e7a9b8801e83b99d" category="list-text">レプリケーション プランを選択し、[*フェールオーバー マッピング*] タブをクリックして、[*編集*] 鉛筆アイコンをクリックします。</block>
-  <block id="f05351f8a712da4ff1e724d342c4670b" category="list-text">*データストア*矢印をクリックして展開します。</block>
-  <block id="0d59b78804ed5feec9399254629a60f1" category="list-text">レプリケーション プランの保持カウントの値をメモします。これらの手順が完了したら、この元の値を復元する必要があります。</block>
   <block id="e9c686cd7f0fc0f9a24375142cf2639b" category="list-text">カウントを 1 に減らします。</block>
-  <block id="94eec0eecc897e0613b4dca05f1db3b5" category="list-text">オンデマンド スナップショットを開始します。これを行うには、[レプリケーション プラン] ページでプランを選択し、[アクション] アイコンをクリックして、[今すぐスナップショットを作成] を選択します。</block>
   <block id="4be920e5d3a5c6a1a13e6a9ed1ea0d96" category="list-text">スナップショット ジョブが正常に完了したら、レプリケーション プランのカウントを、最初の手順でメモした元の値に戻します。</block>
   <block id="fcf0bc475de9e6576c18ef6dcf5d7506" category="list-text">既存のすべてのレプリケーション プランに対してこれらの手順を繰り返します。</block>
   <block id="60f72027f1d6cd2e0c4f75d06deeb162" category="section-title">2024年7月5日</block>
@@ -1145,7 +1124,6 @@
   <block id="8fb7b8d770a994170f1c007a9255f124" category="admonition">このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。</block>
   <block id="0d2ad64b559232943585fd7b1d8a6a97" category="section-title">2023年9月27日</block>
   <block id="de9bf2b4fc18ad740d18dc573f01d00d" category="section-title">ダッシュボードの更新</block>
-  <block id="a50d40a404b06d36129623086efe89e7" category="paragraph">ダッシュボードのオプションをクリックできるようになり、情報をすばやく簡単に確認できるようになりました。また、ダッシュボードにはフェイルオーバーと移行のステータスが表示されるようになりました。</block>
   <block id="be74a2f8b73ed15a46d21c202566b3bb" category="inline-link">ダッシュボードで災害復旧計画の健全性を確認する</block>
   <block id="d1181cbae4acc0d9feb9f608b3ee586f" category="paragraph">参照<block ref="cdc1638a4873b7c2cfc1c5962a5d03ab" category="inline-link-rx"></block>。</block>
   <block id="056f6fba19f65e991a1c38d676e1c20d" category="list-text">*RPO*: レプリケーション プランのデータストア セクションで、復旧ポイント目標 (RPO) と保持数を入力できるようになりました。これは、設定された時間よりも古くない、存在する必要があるデータの量を示します。たとえば、これを 5 分に設定すると、災害が発生した場合にシステムが最大 5 分間のデータを失っても、ビジネスクリティカルなニーズには影響しません。</block>
@@ -1631,7 +1609,6 @@
   <block id="544bb990c26b075198ab3593eb235cab" category="list-text">ボックスに「failover」と入力します。</block>
   <block id="d84be8f4bd42528d316284b904e45288" category="summary">すべてのNetApp Disaster Recoveryリソースを簡単に確認し、vCenter サイト、リソース グループ、レプリケーション プランを管理できます。</block>
   <block id="06804fd9ef3d874a22951c7ab07ff304" category="doc">NetApp Disaster Recoveryを使用して、サイト、リソース グループ、レプリケーション プラン、データストア、仮想マシンの情報を管理します。</block>
-  <block id="681e043e8c759b6b80b2223a79b56a0e" category="paragraph">NetApp Disaster Recoveryリソースのすべてをざっと確認したり、それぞれの詳細を確認したりできます。</block>
   <block id="3faa64303d5f5bcd043bb88f6768e603" category="list-text">サイト</block>
   <block id="769b718779fbe38c65b122b69e0271a3" category="list-text">リソース グループ</block>
   <block id="a8fc43ecd23ee9eb5e9efa5c60cb20b9" category="list-text">レプリケーションプラン</block>
@@ -1643,9 +1620,7 @@
   <block id="b2209ab446f654c29ab1bfca5d8d2693" category="list-text">*アクション*オプションを選択します<block ref="b571b46a13691830124ae7cdd5a7ca96" category="inline-image-macro-rx" type="image"></block>vCenter 名の右側にある [*編集*] を選択します。</block>
   <block id="c4b621211240f640df1e2cfcc6cc5bec" category="list-text">vCenter サイトの名前と場所を編集します。</block>
   <block id="ec972bce7640d5d440d3549702031815" category="section-title">リソース グループの管理</block>
-  <block id="df5bd7f92bf7a899cafe7f5f4cede250" category="paragraph">レプリケーション プランの作成の一環としてリソース グループを追加することもできますが、グループを個別に追加し、後でそのグループをプラン内で使用する方が便利な場合があります。リソース グループは、VM またはデータストアごとに作成します。</block>
   <block id="f14421e984d67b669d82e97c5f322ee1" category="paragraph">次の方法で、データストアごとにリソース グループを作成できます。</block>
-  <block id="c13f805e54076a6b9272f554c6665394" category="paragraph">リソース グループでは次のタスクを実行できます。</block>
   <block id="7dc3653a56cf32cd6556cb35e316d496" category="list-text">リソース グループ名を変更します。</block>
   <block id="28bc604f06695c0dd7fafde0ac528672" category="list-text">リソース グループに VM を追加します。</block>
   <block id="105e582ff5868a70b8749c89dc720eea" category="list-text">リソース グループから VM を削除します。</block>
@@ -1654,7 +1629,6 @@
   <block id="15f78fe59a1cd46fa3451eee4d4abd68" category="paragraph">リソースグループの作成の詳細については、<block ref="2b3c741429e386b5764de1b41e09f2a5" category="inline-link-macro-rx"></block> 。</block>
   <block id="dcf89107be2e3e74879158c2197da867" category="list-text">メニューから*リソース グループ*を選択します。</block>
   <block id="fb64cb9f2eb5e660830a8f202d12f794" category="list-text">リソース グループを追加するには、[*グループの追加*] を選択します。</block>
-  <block id="5f322b75b37e06720216711ec831f49c" category="list-text">リソースグループでアクションを実行するには、[アクション] オプションを選択します。<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>右側にある *リソース グループの編集* や *リソース グループの削除* などのオプションのいずれかを選択します。</block>
   <block id="88947748ef8b3b00cf2cf0c3999a702e" category="paragraph">レプリケーション プランを無効化、有効化、および削除できます。スケジュールは変更できます。</block>
   <block id="3058d1612836b55d5c4e71a540ba0c44" category="list-text">レプリケーション プランを一時的に一時停止する場合は、無効にして後で有効にすることができます。</block>
   <block id="98a6ed9560bddac4a68acf12bb7ce31c" category="list-text">プランが不要になった場合は削除できます。</block>
@@ -1672,23 +1646,16 @@
   <block id="919f04c7393ca337da4d5ecf62b924fc" category="list-text">*スケジュールに従ってテストフェイルオーバーを実行する*をチェックします。</block>
   <block id="87446024d70eefcd64c28443544975b4" category="list-text">「繰り返し」オプションで、毎日、毎週、または毎月のスケジュールを選択します。</block>
   <block id="ed5712a5338a0cddb9b90afe427576e5" category="section-title">オンデマンドでスナップショットを調整する</block>
-  <block id="6c2bc725654231e0111d8b4adcd666d0" category="paragraph">ソースとターゲット間で同期されていないスナップショットを調整できます。これは、NetApp Disaster Recoveryの外部のターゲットでスナップショットが削除された場合に発生する可能性があります。サービスは、ソース上のスナップショットを 24 時間ごとに自動的に削除します。ただし、これをオンデマンドで実行できます。この機能により、すべてのサイト間でスナップショットの一貫性を確保できます。</block>
-  <block id="34ec48d6af2f98f1956cfc75d32b92fe" category="list-text">レプリケーションプランのリストから*アクション*オプションを選択します<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>プランの右側にある [*スナップショットの調整*] を選択します。</block>
   <block id="08bb8fbd3da836cf3622737c948a4ede" category="list-text">調整情報を確認します。</block>
   <block id="571a21bebeed1a6e73b024d56871482d" category="list-text">*調整*を選択します。</block>
   <block id="2dcc77d52e005461a9eab86fef63c3f9" category="section-title">レプリケーションプランを削除する</block>
-  <block id="0f6c94cfa5509a16442ca505884acf3e" category="paragraph">不要になったレプリケーション プランは削除できます。レプリケーション プランを削除すると、そのプランによって作成されたプライマリ スナップショットとセカンダリ スナップショットも削除できます。</block>
   <block id="3b107f5143841ab861176b3715f11587" category="list-text">*アクション*オプションを選択します<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>プランの右側にある [*削除*] を選択します。</block>
-  <block id="e28e746e68d02b24d2750571a0776bd0" category="list-text">プライマリ スナップショット、セカンダリ スナップショット、またはプランによって作成されたメタデータのみを削除するかどうかを選択します。</block>
-  <block id="90486e8ee3ac6fe6a17dab32429bf3ee" category="list-text">削除を確認するには「delete」と入力します。</block>
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">*削除*を選択します。</block>
   <block id="f51ae48fcef0eb66752ca677561d408c" category="section-title">フェイルオーバースケジュールの保持数を変更する</block>
-  <block id="b138bbcc2a9cc6e505caed49815b326b" category="paragraph">保持されるデータストアの数を変更できます。</block>
   <block id="03d6e40e14e15773309e166be782dc5b" category="list-text">レプリケーション プランを選択し、[*フェールオーバー マッピング*] タブを選択して、[*編集*] 鉛筆アイコンを選択します。</block>
   <block id="72b0b6c8ac453b14a3dc76bb9323c7e5" category="list-text">*データストア*矢印を選択して展開します。</block>
   <block id="ee9e0fb0a09a468f33fa6f2dabc4ff49" category="inline-image-macro">フェイルオーバーマッピングの編集ページ</block>
   <block id="2aef38b97efb9369d3e496e8d062d8fd" category="paragraph"><block ref="2aef38b97efb9369d3e496e8d062d8fd" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="51c600bec26d8fec2fcc4cb42728fd01" category="list-text">レプリケーション プラン内の保持カウントの値を変更します。</block>
   <block id="e3a15d734e1eafd89e04f5eb526ec5cc" category="list-text">レプリケーション プランを選択した状態で、[アクション] メニューを選択し、[*古いスナップショットのクリーンアップ*] を選択して、新しい保持カウントに合わせてターゲット上の古いスナップショットを削除します。</block>
   <block id="a6dcfee4cd10f2ad60c3d81bc2a3b8ad" category="section-title">データストア情報を表示する</block>
   <block id="432624070ae1b8a0b19fd42c048a224c" category="paragraph">ソースとターゲットに存在するデータストアの数に関する情報を表示できます。</block>
@@ -1784,22 +1751,16 @@
   <block id="de18d8f949f454da2ede489b3979469b" category="paragraph">vCenter クラスタは 1 つのサイトにのみ存在できます。  vCenter クラスタをサイトに追加するには、次の情報が必要です。</block>
   <block id="eecc1c046815522892ed1b8255f3f967" category="list-text">vCenter管理IPアドレスまたはFQDN</block>
   <block id="a0b1f7f83e512f18531427c30dfda111" category="inline-link-macro">必要なvCenter権限</block>
-  <block id="4080221450b759d2b8450afa1ac3e345" category="list-text">操作を実行するために必要な権限を持つ vCenter アカウントの資格情報。見る<block ref="9e7079c4a4f90ca76a9a02909aa5bf5b" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
   <block id="1f490ffa54a278cbe959d7caaf6de272" category="list-text">クラウドホスト型VMwareサイトの場合、必要なクラウドアクセスキー</block>
   <block id="03d24609520a8800132bd62fa4280091" category="list-text">vCenter にアクセスするためのセキュリティ証明書。</block>
   <block id="06cb80959b7e29d23b7c09355933539d" category="admonition">このサービスは、自己署名セキュリティ証明書または中央証明機関 (CA) からの証明書をサポートします。</block>
-  <block id="ecc7b363bd82d14e4f4308e65d23d1e3" category="paragraph">NetApp Disaster Recoveryボード ページが表示されます。サービスを初めて開始するときは、vCenter 情報を追加する必要があります。その後、ダッシュボードにサイトとレプリケーション プランに関するデータが表示されます。</block>
   <block id="1a575de6e97bed53905ae3b55c22dd29" category="admonition">追加するサイトの種類に応じて、さまざまなフィールドが表示されます。</block>
   <block id="db5ad0ead9eeceb394e92d65f79adbfe" category="list-text">すでにいくつかの vCenter サイトが存在し、さらに追加する場合は、メニューから [*サイト*] を選択し、[*追加*] を選択します。</block>
   <block id="4a5eb18788b768b36f708c9617ffef9e" category="list-text">[サイト] ページでサイトを選択し、[vCenter の追加] を選択します。</block>
   <block id="901540dd7e45eaf2226327527c8d78b4" category="list-text">*ソース*: *vCenter サーバーの検出* を選択して、ソース vCenter サイトに関する情報を入力します。</block>
-  <block id="6b3b905a38750ec7a08fa2e97d6315bf" category="admonition">すでにいくつかの vCenter サイトが存在し、さらに追加する場合は、上部のメニューから [*サイト*] を選択し、[*追加*] を選択します。</block>
   <block id="5a05572673bc07b0b94f07c482a67d13" category="inline-image-macro">vCenter Server のスクリーンショットを追加</block>
   <block id="c65c0c2ea94db5e745008fb8af0f7f2e" category="paragraph"><block ref="c65c0c2ea94db5e745008fb8af0f7f2e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a883c3f7a5af569be1488bf115fe2127" category="list-text">サイトを選択し、 NetApp Consoleエージェントを選択して、vCenter の資格情報を入力します。</block>
-  <block id="7dbf01d6d33098287eb82c71ea10ea1e" category="list-text">(オンプレミス サイトにのみ適用) ソース vCenter の自己署名証明書を受け入れるには、チェックボックスをオンにします。</block>
   <block id="1909b7ffbea69e2cc7b387ed9d255c18" category="admonition">自己署名証明書は他の証明書ほど安全ではありません。  vCenter が証明機関 (CA) 証明書で構成されていない場合は、このボックスをオンにする必要があります。そうしないと、vCenter への接続が機能しません。</block>
-  <block id="a0fa7543e8627767b57d6c2797fbbda9" category="paragraph">次に、ターゲット vCenter を追加します。</block>
   <block id="ecc10bfc44edd7abd754949b1bda0e4b" category="list-text">ターゲット vCenter のサイトを再度追加します。</block>
   <block id="0409428076b2c81e1f1d6d6bd331b296" category="list-text">再度、「vCenter の追加」を選択し、ターゲットの vCenter 情報を追加します。</block>
   <block id="bc7f3cb185f48d451eb5ef976e8ad82d" category="list-text">*ターゲット*：</block>
@@ -1921,4 +1882,37 @@
   <block id="a900cb57c651ef75881dfa4543e4701d" category="sidebar">別のサイトに複製する</block>
   <block id="ad80d6168dc288f4361413eeca80dc5f" category="sidebar">別のサイトに移行する</block>
   <block id="b7cd69eed80f723036ef0a99b8bb375e" category="sidebar">サイト、プラン、データストア、仮想マシンの情報を管理する</block>
+  <block id="dd64baea4cd51b54ff1827028e4db4f6" category="paragraph"><block ref="b0f53b92ba6c515b65cd9cce152b9651" category="inline-link-macro-rx"></block>。</block>
+  <block id="867215f2d24d8d500f9d6d76b166230b" category="summary">NetApp Disaster Recoveryを使用する前に、環境がONTAPストレージ、VMware vCenter クラスタ、およびNetApp Consoleの要件を満たしていることを確認してください。</block>
+  <block id="43f2bccff85f631b4171a654387bbcc5" category="list-text">ディザスタ リカバリ ボリュームをホストする SVM が宛先クラスタ上に存在している必要があります。</block>
+  <block id="ad534f647119b6dc497ed6df26304325" category="inline-link-macro">Amazon FSx for ONTAPドキュメント</block>
+  <block id="6a9f393c771a2d23fdd73d7dcb38852e" category="list-text">VMware DR データストアをホストするAmazon FSx for NetApp ONTAPインスタンスが VPC 内に存在している必要があります。始めるには、<block ref="6ae09d1010480d9e1a6425b1f33dfdd2" category="inline-link-macro-rx"></block> 。</block>
+  <block id="6a5f3f109fcda550019219a08b2f9c00" category="list-text">NetApp Disaster Recoveryを管理するNetApp Consoleプロジェクト内のシステムに、 Amazon FSx for ONTAPと AWS 認証情報を追加する必要があります。</block>
+  <block id="3e2058a360b0af2c32f423f3aaaeed52" category="paragraph">コンソール エージェントは、コンソールがONTAPストレージおよび VMware vCenter クラスターと通信できるようにするソフトウェア コンポーネントです。災害復旧が適切に機能するために必要です。エージェントはプライベート ネットワーク (オンプレミス データセンターまたはクラウド VPC) に常駐し、 ONTAPストレージ インスタンスやその他のサーバーおよびアプリケーション コンポーネントと通信します。災害復旧の場合、これは管理対象の vCenter クラスターへのアクセスです。</block>
+  <block id="7ef83357fc923bb1138846ec262ec0cd" category="list-text">インストールされたコンソール エージェントは、Disaster Recovery が管理する vCenter クラスタによって管理されるすべての VMware vCenter クラスタ インスタンスおよび ESXi ホストにアクセスできる必要があります。</block>
+  <block id="298b6679b4a5fedf91682cb4609690c5" category="list-text">Microsoft SQL Server、Oracle Database、またはその両方を実行している Windows VM の場合、データベースで VSS ライターが有効になっている必要があります。</block>
+  <block id="876b8d27a8711ccaad8551b08b7a888a" category="list-text">Linux オペレーティング システムで実行されている Oracle データベースでは、Oracle データベース SYSDBA ロールに対してオペレーティング システム ユーザー認証が有効になっている必要があります。</block>
+  <block id="ac9d9cedbd075fff9bfcb2776127474a" category="paragraph">NetApp Disaster Recoveryの新機能について説明します。</block>
+  <block id="c4b657898484a4fc73adb716b67d3ad7" category="list-text">レプリケーション プランの保持カウントの値をメモします。これらの手順が完了したら、この元の値を復元する必要があります。</block>
+  <block id="3298d659fab0af52765e43822c472d69" category="list-text">オンデマンド スナップショットを開始します。これを行うには、[レプリケーション プラン] ページでプランを選択し、[アクション] アイコンを選択して、[*今すぐスナップショットを作成*] を選択します。</block>
+  <block id="f68c6089f559d4079e24537b4018d2a5" category="paragraph">ダッシュボードのオプションを選択できるようになり、情報をすばやく簡単に確認できるようになりました。また、ダッシュボードにはフェイルオーバーと移行のステータスが表示されるようになりました。</block>
+  <block id="291fd08745b243b885d5ad0cf9556e2d" category="paragraph">NetApp Disaster Recovery は、すべてのリソースの概要と詳細な視点を提供します。</block>
+  <block id="4807e9e42b4283aaf7b590eb1b7a8aa6" category="paragraph">VM またはデータストアごとにリソース グループを作成できます。これらは、レプリケーション プランの作成時または作成後に追加できます。</block>
+  <block id="cf0031dda1508b365e62eb97d90152a0" category="paragraph">リソース グループでは次のタスクを実行できます。</block>
+  <block id="6c1d71ea8876ab07fa54b29a3f65f754" category="list-text">*アクション*オプションを選択すると、リソースグループを変更または削除できます。<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block> 。</block>
+  <block id="281ea97852952087969b1df80742ba38" category="paragraph">ディザスタリカバリでは、ソース上のスナップショットが 24 時間ごとに自動的に削除されます。ソースと宛先の間でスナップショットが同期されていないことが判明した場合は、サイト間の一貫性を確保するためにスナップショット間の不一致を解決する必要があります。</block>
+  <block id="5a713acc18bc1c1fa687ddbad7c445aa" category="list-text">レプリケーションプランのリストから*アクション*オプションを選択します<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>次に*スナップショットを調整*します。</block>
+  <block id="3c843649a94855e3901bd423ac9ca414" category="paragraph">レプリケーション プランを削除すると、そのプランによって作成されたプライマリ スナップショットとセカンダリ スナップショットも削除できます。</block>
+  <block id="75c34b3422e5baaae429a2d21a62a9d8" category="list-text">プライマリ スナップショット、セカンダリ スナップショット、またはプランによって作成されたメタデータのみを削除するかどうかを選択します。</block>
+  <block id="8e15489db6e2853bdefe4e39cf285c3d" category="list-text">削除を確認するには「delete」と入力します。</block>
+  <block id="c1ba23522836b9d395a79f30f4da96b4" category="paragraph">保持数を変更すると、保存されるデータストアの数を増減できます。</block>
+  <block id="506d82cb3cd3b9175af419eb19bc5740" category="list-text">レプリケーション プランを選択し、次に *フェールオーバー マッピング* タブを選択します。*編集* 鉛筆アイコンを選択します。</block>
+  <block id="58777a5460ab56ac04a8fc9d5cb1b259" category="list-text">*データストア* 行の下矢印を選択して展開します。</block>
+  <block id="2d3c0c55028659ea4dd39b2fd1ee9a30" category="list-text">**すべてのデータストアの保持数** の値を変更します。</block>
+  <block id="7a988fd1e6beb5a163334993a7364fab" category="list-text">操作を実行するために必要な権限を持つ vCenter アカウントの資格情報。見る<block ref="0a23d475349d8b59d7b1d04d622e5f7f" category="inline-link-macro-rx"></block>詳細についてはこちらをご覧ください。</block>
+  <block id="09f1f22ef0473a64fe418a7bca316d95" category="paragraph">NetAppディザスタリカバリを初めて使用する場合は、vCenter 情報を追加する必要があります。  vCenter 情報をすでに追加している場合は、ダッシュボードが表示されます。</block>
+  <block id="a280f67014fa91a16b7bf85e07d4eb9f" category="admonition">vCenter サイトを追加するには、[*サイト*] を選択し、[*追加*] を選択します。</block>
+  <block id="c17db388b1bce3930a27ba26379fd97f" category="list-text">サイトを選択し、 NetApp Consoleエージェントを選択して、vCenter の資格情報を入力します。</block>
+  <block id="51f46f78f8aed3edc5be5baa188edfc3" category="list-text">**オンプレミス サイトのみ:** ソース vCenter の自己署名証明書を受け入れるには、チェックボックスをオンにします。</block>
+  <block id="3197d20854469510f60e5d3f44b0db4d" category="paragraph">次に、ターゲット vCenter を追加します。</block>
 </blocks>

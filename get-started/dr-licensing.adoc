@@ -28,7 +28,7 @@ link:../reference/dr-reference-roles.html["NetApp Disaster Recoveryにおける�
 
 NOTE: NetApp Disaster Recovery料金は、レプリケーション プランを持つ VM が少なくとも 1 つある場合、ソース サイトのデータストアの使用済み容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、容量許容量に含まれません。  BYOL の場合、データが許可された容量を超えると、追加の容量ライセンスを取得するか、 NetApp Consoleでライセンスをアップグレードするまで、サービスでの操作が制限されます。
 
-link:https://docs.netapp.com/us-en/bluexp-digital-wallet/concept-digital-wallet.html["サブスクリプションについて詳しくはこちら"^] 。
+link:https://docs.netapp.com/us-en/console-licenses-subscriptions/concept-licenses-subscriptions.html["サブスクリプションについて詳しくはこちら"^]。
 
 無料トライアルが終了した後、またはライセンスの有効期限が切れた後でも、サービス内で次の操作を実行できます。
 
