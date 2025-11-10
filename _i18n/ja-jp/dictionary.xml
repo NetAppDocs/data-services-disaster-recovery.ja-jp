@@ -1510,7 +1510,6 @@
   <block id="10c490bdf4b14320b22d49a659b33c9b" category="list-text">*優先 NFS LIF* と *エクスポート ポリシー*: 通常、サービスによって優先 NFS LIF とエクスポート ポリシーが選択されます。特定の NFS LIF またはエクスポート ポリシーを使用する場合は、各フィールドの横にある下矢印を選択し、適切なオプションを選択します。</block>
   <block id="3a34b1c612fbfa5151b5f75fa3b7f4d8" category="paragraph">オプションで、フェイルオーバー イベント後にボリュームの特定のデータ インターフェイス (LIF) を使用することもできます。これは、ターゲット SVM に複数の LIF がある場合に、データ トラフィックのバランスをとるのに役立ちます。</block>
   <block id="80b4d61db95d764d9478be9bd5dce2ba" category="paragraph">NAS データ アクセス セキュリティをさらに制御するために、このサービスでは、異なるデータストア ボリュームに固有の NAS エクスポート ポリシーを割り当てることができます。エクスポート ポリシーは、データストア ボリュームにアクセスする NFS クライアントのアクセス制御ルールを定義します。エクスポート ポリシーを指定しない場合、サービスは SVM のデフォルトのエクスポート ポリシーを使用します。</block>
-  <block id="c1010e08c79f29288805732c914b88b2" category="paragraph">*ベスト プラクティス*: 保護された VM をホストするソースとターゲットの vCenter ESXi ホストのみにボリューム アクセスを制限する専用のエクスポート ポリシーを作成することを強くお勧めします。これにより、外部エンティティが NFS エクスポートにアクセスできないようになります。</block>
   <block id="49511806f0e60c638845968f2dbb17f7" category="section-title">テストフェイルオーバーマッピングを追加する</block>
   <block id="a8c55ad0456d667323e1ede0b2d4845d" category="list-text">テスト環境に異なるマッピングを設定するには、ボックスのチェックを外して、[テスト マッピング] タブを選択します。</block>
   <block id="3d2d89948829d5041f9ae015297d638b" category="list-text">前と同じように各タブを確認しますが、今回はテスト環境です。</block>
@@ -1915,4 +1914,16 @@
   <block id="c17db388b1bce3930a27ba26379fd97f" category="list-text">サイトを選択し、 NetApp Consoleエージェントを選択して、vCenter の資格情報を入力します。</block>
   <block id="51f46f78f8aed3edc5be5baa188edfc3" category="list-text">**オンプレミス サイトのみ:** ソース vCenter の自己署名証明書を受け入れるには、チェックボックスをオンにします。</block>
   <block id="3197d20854469510f60e5d3f44b0db4d" category="paragraph">次に、ターゲット vCenter を追加します。</block>
+  <block id="5b5de768a01e088dbab56f46d97b5a38" category="doc">カスケードフェイルオーバーのサポート</block>
+  <block id="8115dd8449bd907d08f3347f6d04324a" category="paragraph">ONTAPでカスケード関係を設​​定し、そのレプリケーション関係の任意のレッグを使用して災害復旧を行うことができます。</block>
+  <block id="eb2fa9dcb8eaa46c82c070f8bbe8418a" category="section-title">登録中に VMware ハードウェア サポートをダウングレードする</block>
+  <block id="f83d7a6597b186db7483e2f478aeb8fa" category="paragraph">ディザスタ リカバリでは、登録中に VMware ハードウェアを vSphere の以前のバージョンにダウングレードできるようになりました。これは、ソース ESX ホストが災害復旧サイトよりも新しいバージョンを実行している場合に役立ちます。</block>
+  <block id="a412b7de9758b999e39beb6a86f38803" category="paragraph">詳細については、 <block ref="3b88d2273f8f2a777f18a77cece1dbb2" category="inline-xref-macro-rx"></block>。</block>
+  <block id="bcf697aa5ef7fc37fba63ce6d2bf0e43" category="section-title">正常なシャットダウン</block>
+  <block id="9437b903cdafc2fdfce3c66af80b97f0" category="paragraph">災害復旧では、VM の電源をオフにするのではなく、VM を正常にシャットダウンするようになりました。特定の VM の電源を切るのに 10 分以上かかる場合、Disaster Recovery によってその VM の電源がオフになります。</block>
+  <block id="9b9e3165f7ecae3e2e3b2c795e562976" category="section-title">バックアップ前のスクリプトのサポート</block>
+  <block id="bb05f5a972177b632dbf8088c480f305" category="paragraph">バックアップを作成する前に実行するカスタム スクリプトをフェイルオーバー ワークフローに挿入できるようになりました。バックアップ前のスクリプトを使用すると、スナップショットが複製される前に VM の状態を制御し、VM を移行用に準備することができます。たとえば、フェイルオーバー後に別のスクリプトを使用して再マウントされる NFS マウントをアンマウントするスクリプトを挿入できます。</block>
+  <block id="77750efa6f5ff153acdc42067058017f" category="section-title">2025年11月10日</block>
+  <block id="67d901d806b31ec45748075cf6b4b785" category="list-text">*VM ハードウェア バージョンをダウングレードして登録*: 登録時に一致するように、宛先 ESX ホストのバージョンがソースのバージョンよりも古い場合はこれを選択します。</block>
+  <block id="c41917a6c517c418de809b1e4f43f537" category="admonition">保護された VM をホストするソースとターゲットの vCenter ESXi ホストのみにボリューム アクセスを制限する専用のエクスポート ポリシーを作成することをお勧めします。これにより、外部エンティティが NFS エクスポートにアクセスできなくなります。</block>
 </blocks>
