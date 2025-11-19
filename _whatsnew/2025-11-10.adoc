@@ -14,7 +14,7 @@ ONTAPでカスケード関係を設​​定し、そのレプリケーション
 
 ディザスタ リカバリでは、登録中に VMware ハードウェアを vSphere の以前のバージョンにダウングレードできるようになりました。これは、ソース ESX ホストが災害復旧サイトよりも新しいバージョンを実行している場合に役立ちます。
 
-詳細については、 xref:drplan-create.html#map-resources-virtual-machines-section[NetApp Disaster Recoveryでレプリケーションプランを作成する]。
+詳細については、 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#select-vcenter-servers["NetApp Disaster Recoveryでレプリケーションプランを作成する"]。
 
 
 
@@ -28,4 +28,4 @@ ONTAPでカスケード関係を設​​定し、そのレプリケーション
 
 バックアップを作成する前に実行するカスタム スクリプトをフェイルオーバー ワークフローに挿入できるようになりました。バックアップ前のスクリプトを使用すると、スナップショットが複製される前に VM の状態を制御し、VM を移行用に準備することができます。たとえば、フェイルオーバー後に別のスクリプトを使用して再マウントされる NFS マウントをアンマウントするスクリプトを挿入できます。
 
-詳細については、 xref:drplan-create.html#map-resources-virtual-machines-section[NetApp Disaster Recoveryでレプリケーションプランを作成する]。
+詳細については、 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#select-vcenter-servers["NetApp Disaster Recoveryでレプリケーションプランを作成する"]。
