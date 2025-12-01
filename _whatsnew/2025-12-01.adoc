@@ -8,4 +8,4 @@
 
 NetApp Disaster Recovery、移行、フェイルオーバー、フェイルバック、テスト操作にGoogle Cloud NetApp Volumesを使用する Google Cloud VMware Engine をサポートするようになりました。この統合により、オンプレミス環境と Google Cloud 間でシームレスな障害復旧ワークフローが可能になります。
 
-必ず確認してくださいlink:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-prerequisites.html["前提条件"]そしてlink:https://docs.netapp.com/us-en/data-services-disaster-recovery/release-notes/dr-limitations.adoc["制限事項"]Google Cloud 向け。
+必ず確認してくださいlink:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-prerequisites.html["前提条件"]そしてlink:https://docs.netapp.com/us-en/data-services-disaster-recovery/release-notes/dr-limitations.html["制限事項"]Google Cloud 向け。
