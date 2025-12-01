@@ -10,4 +10,4 @@ Windows ローカル管理者パスワード ソリューション (Windows LAPS
 
 ドメイン コントローラーの詳細を指定して、サブネット マッピング オプションを選択し、LAPS オプションを確認できるようになりました。このオプションを使用すると、仮想マシンごとにパスワードを入力する必要がなくなります。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。

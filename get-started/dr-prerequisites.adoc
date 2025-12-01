@@ -23,13 +23,18 @@ NetApp Disaster Recoveryを使用する前に、環境がONTAPストレージ、
 | コンポーネント | 最小バージョン 
 
 
+| Amazon FSx for NetApp ONTAP  a| 
+最新バージョン
+
+
+
+| Google Google Cloud NetApp Volumesを使用した Google Cloud VMware Engine  a| 
+最新バージョン
+
+
+
 | ONTAPソフトウェア  a| 
 ONTAP 9.10.0以降
-
-
-
-| VMware オンプレミス vCenter  a| 
-7.0u3以降
 
 
 
@@ -38,10 +43,64 @@ ONTAP 9.10.0以降
 
 
 
-| Amazon FSx for NetApp ONTAP  a| 
-最新バージョン
+| VMware オンプレミス vCenter  a| 
+7.0u3以降
 
 |===
+
+
+== Google Cloud の前提条件と考慮事項
+
+Google Cloud NetApp Volumesを使用した Google Cloud VMware Engine での災害復旧では、適切な権限を設定し、記載されている考慮事項を遵守するようにしてください。
+
+* 次のものを許可リストに登録するには、Google SRE チームにお問い合わせください。
++
+** オンプレミス ストレージからGoogle Cloud NetApp Volumesにスナップショットを転送するための同期 API。
+** データストアの作成、マウント、アンマウントを行う VMware エンジンを使用した Google プロジェクト。
+
+
+* 絶対ですlink:https://docs.google.com/forms/d/1zuaHu437MNpUf8i5oByK-OTLWXcNIg0es9t036riYRc/viewform?edit_requested=true["ボリュームのハイブリッドレプリケーションを許可リストに追加するリクエストを提出する"^]。
+* 注意してくださいlink:https://docs.cloud.google.com/netapp/volumes/docs/quotas["Google Cloud NetApp Volumes の割り当てと制限"^]。
+* レプリケーション プランに追加できるボリュームまたはデータストアは 1 つだけです。
+* レビューlink:../release-notes/dr-limitations.html#limitations-with-google-cloud-netapp-volumes["制限事項"]。
+
+
+**フェイルオーバーの考慮事項**
+
+* フェイルオーバーは最新のスナップショットを使用した場合にのみサポートされます。必要に応じて、スナップショット中に新しいスナップショットを作成できます (つまり、選択スナップショット オプションを無効にする必要があります)。
+* フェイルオーバー後に新しいスナップショットを作成することはできません。
+* フェイルオーバー後にスナップショットを保持および調整することはできません。
+
+
+**フェイルバックの考慮事項**
+
+* フェイルバックは選択スナップショット オプションでのみ可能です。新しいスナップショットを取得してフェイルバックを実行することはできません。
+* オンプレミス ストレージとGoogle Cloud NetApp Volumesストレージ クラスタ間のクラスタ ピアリングを削除する場合は、オンプレミス クラスタからクラスタとストレージ VM のピアリング エントリを手動でクリアする必要があります。詳細については、 link:https://docs.netapp.com/us-en/ontap-cli/vserver-peer-delete.html["VServer ピア関係を削除する"^]。
+
+
+
+
+=== Google Cloud の権限
+
+Google Cloud のサービス プリンシパルには、次のロールまたは同等の権限を割り当てる必要があります。
+
+* link:https://docs.cloud.google.com/compute/docs/access/iam["コンピューティング管理者の役割"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["NetApp Consoleの Google Cloud 権限"^]
+* link:https://docs.cloud.google.com/iam/docs/roles-permissions/netapp["Google Cloud NetApp Volumes管理者"]
+* link:https://docs.cloud.google.com/vmware-engine/docs/iam#vmware-engine-roles["VMware Engine サービス管理者"^]
+
+
+
+
+=== NetApp Consoleの権限
+
+NetApp Consoleユーザーには次のロールが必要です。
+
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes管理者"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["SnapCenter管理者"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["災害復旧フェイルオーバー管理者"^]
+
+
 
 
 == ONTAPストレージの前提条件
@@ -89,7 +148,7 @@ ONTAP 9.10.0以降
 
 === NetApp Consoleを使い始める
 
-まだお済みでない場合は、 https://docs.netapp.com/us-en/bluexp-setup-admin/task-sign-up-saas.html["NetApp Consoleにサインアップして組織を作成する"^] 。
+まだお済みでない場合は、 https://docs.netapp.com/us-en/console-setup-admin/task-sign-up-saas.html["NetApp Consoleにサインアップして組織を作成する"^] 。
 
 
 
@@ -110,12 +169,12 @@ ONTAP 9.10.0以降
 
 NetApp Consoleにコンソール エージェントを設定する必要があります。エージェントを使用すると、災害復旧サービスに適切な機能が含まれるようになります。
 
-* NetApp Disaster Recovery は、標準モード エージェントの展開でのみ機能します。見る https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-standard-mode.html["NetApp Consoleの標準モードでの使用開始"^]。
+* NetApp Disaster Recovery は、標準モード エージェントの展開でのみ機能します。見る https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Consoleの標準モードでの使用開始"^]。
 * ソース vCenter とターゲット vCenter の両方で同じコンソール エージェントが使用されていることを確認します。
 * 必要なコンソール エージェントの種類:
 +
-** *オンプレミスからオンプレミスへの災害復旧*: 災害復旧サイトにコンソールのオンプレミス エージェントをインストールします。この方法を使用すると、プライマリ サイトに障害が発生しても、サービスが DR サイトで仮想リソースを再起動できなくなります。参照 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["オンプレミスでコンソールエージェントをインストールしてセットアップする"^]。
-** *オンプレミスから AWS*: AWS VPC に AWS 用コンソールエージェントをインストールします。参照 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-install-options-aws.html["AWS のコンソールエージェントのインストールオプション"^]。
+** *オンプレミスからオンプレミスへの災害復旧*: 災害復旧サイトにコンソールのオンプレミス エージェントをインストールします。この方法を使用すると、プライマリ サイトに障害が発生しても、サービスが DR サイトで仮想リソースを再起動できなくなります。参照 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["オンプレミスでコンソールエージェントをインストールしてセットアップする"^]。
+** *オンプレミスから AWS*: AWS VPC に AWS 用コンソールエージェントをインストールします。参照 https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["AWS のコンソールエージェントのインストールオプション"^]。
 +
 
 TIP: オンプレミスからオンプレミスへの接続には、オンプレミスのコンソール エージェントを使用します。オンプレミスから AWS の場合、ソースのオンプレミス vCenter と宛先のオンプレミス vCenter にアクセスできる AWS コンソールエージェントを使用します。
@@ -125,7 +184,7 @@ TIP: オンプレミスからオンプレミスへの接続には、オンプレ
 
 * NetApp Disaster Recoveryによって管理されるすべてのONTAPアレイは、 NetApp Disaster Recoveryの管理に使用されるNetApp Consoleプロジェクト内のすべてのシステムに追加する必要があります。
 +
-見る https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAPクラスタの検出"^]。
+見る https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAPクラスタの検出"^]。
 
 * NetApp Disaster Recoveryのインテリジェントプロキシの設定については、以下を参照してください。link:../get-started/dr-setup.html["NetApp Disaster Recovery用のインフラストラクチャをセットアップする"] 。
 

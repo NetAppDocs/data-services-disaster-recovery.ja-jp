@@ -88,7 +88,7 @@ AWS を使用してオンプレミスからクラウドへの保護用にNetApp 
 * Amazon FSx for NetApp ONTAPファイルシステムを作成します。
 +
 ** FSx for ONTAPをプロビジョニングおよび構成します。  Amazon FSx for NetApp ONTAP は、 NetApp ONTAPファイルシステム上に構築された、信頼性が高く、スケーラブルで、高性能かつ機能豊富なファイルストレージを提供する、フルマネージドサービスです。
-** 以下の手順に従ってください https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["テクニカルレポート 4938: VMware Cloud on AWS でAmazon FSx ONTAP をNFS データストアとしてマウントする"^]そして https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/task-getting-started-fsx.html["Amazon FSx for NetApp ONTAP のクイックスタート"]FSx for ONTAPをプロビジョニングおよび構成します。
+** 以下の手順に従ってください https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["テクニカルレポート 4938: VMware Cloud on AWS でAmazon FSx ONTAP をNFS データストアとしてマウントする"^]そして https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/task-getting-started-fsx.html["Amazon FSx for NetApp ONTAP のクイックスタート"]FSx for ONTAPをプロビジョニングおよび構成します。
 
 
 * Amazon FSx for ONTAPをシステムに追加し、 FSx for ONTAPの AWS 認証情報を追加します。
@@ -149,4 +149,4 @@ NetApp Consoleエージェントはインテリジェント プロキシをサ�
 
 NetApp Disaster Recoveryプロキシの実装では、コンソール エージェントと、HTTPS プロトコルを使用した vCenter Server およびONTAPアレイ間のポート 443 通信が必要です。コンソール エージェント内のNetApp Disaster Recoveryエージェントは、アクションを実行するときに VMware vSphere、VC、またはONTAPと直接通信します。
 
-NetApp Consoleでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。
+NetApp Consoleでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。

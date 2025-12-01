@@ -17,4 +17,4 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 
 このリリースでは、ジョブ モニター UI でジョブをキャンセルできるようになりました。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["ジョブの監視"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/monitor-jobs.html["ジョブの監視"]。

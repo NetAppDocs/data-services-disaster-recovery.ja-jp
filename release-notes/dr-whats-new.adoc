@@ -16,6 +16,18 @@ NetApp Disaster Recoveryの新機能について説明します。
 
 
 
+== 2025年12月1日
+
+
+
+=== Google Cloud NetApp Volumesを使用した Google Cloud VMware Engine のサポート
+
+NetApp Disaster Recovery、移行、フェイルオーバー、フェイルバック、テスト操作にGoogle Cloud NetApp Volumesを使用する Google Cloud VMware Engine をサポートするようになりました。この統合により、オンプレミス環境と Google Cloud 間でシームレスな障害復旧ワークフローが可能になります。
+
+必ず確認してくださいlink:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-prerequisites.html["前提条件"]そしてlink:https://docs.netapp.com/us-en/data-services-disaster-recovery/release-notes/dr-limitations.adoc["制限事項"]Google Cloud 向け。
+
+
+
 == 2025年11月10日
 
 
@@ -62,7 +74,7 @@ BlueXP disaster recoveryはNetApp Disaster Recoveryに名前が変更されま�
 
 NetApp Consoleは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetApp Data Servicesの集中管理を提供し、リアルタイムの分析情報、より高速なワークフロー、および高度なセキュリティとコンプライアンスを備えた簡素化された管理を実現します。
 
-変更内容の詳細については、link:https://docs.netapp.com/us-en/bluexp-relnotes/index.html["NetApp Consoleのリリースノート"] 。
+変更内容の詳細については、 link:https://docs.netapp.com/us-en/console-relnotes/index.html["NetApp Consoleのリリースノート"]。
 
 
 
@@ -93,7 +105,7 @@ NetApp Consoleは、強化され再構築されたBlueXP基盤上に構築され
 * レプリケーション プラン作成の一環としてボリュームを作成するときに、宛先ボリュームがソース ボリュームと同じになることを妨げる制限を削除しました。
 * Azure Marketplace のNetApp Intelligent Services への従量課金制 (PAYGO) サブスクリプションのサポートが追加され、無料試用版ダイアログに Azure Marketplace へのリンクが追加されました。
 +
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html#licensing["NetApp Disaster Recoveryライセンス"]そして https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["NetApp Disaster Recoveryのライセンスを設定する"]。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html#licensing["NetApp Disaster Recoveryライセンス"]そして https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html["NetApp Disaster Recoveryのライセンスを設定する"]。
 
 
 
@@ -119,9 +131,9 @@ NetApp Disaster Recoveryでは、各ユーザーの特定の機能やアクシ�
 
 NetApp Disaster Recoveryサービスをクリックして初めて構成する場合は、*SnapCenterAdmin* 権限または *Organization Admin* ロールが必要です。
 
-詳細については、  https://docs.netapp.com/us-en/bluexp-disaster-recovery/reference/dr-reference-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限"] 。
+詳細については、link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限"] 。
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスのアクセスロールについて学ぶ"^] 。
+https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスのアクセスロールについて学ぶ"^]。
 
 
 
@@ -188,7 +200,7 @@ Windows ローカル管理者パスワード ソリューション (Windows LAPS
 
 ドメイン コントローラーの詳細を指定して、サブネット マッピング オプションを選択し、LAPS オプションを確認できるようになりました。このオプションを使用すると、仮想マシンごとにパスワードを入力する必要がなくなります。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -216,7 +228,7 @@ VM1 には、NetworkA に接続された vNIC (10.1.1.50) があります。レ�
 
 要約すると、ホスト アドレスは同じままですが、ネットワーク アドレスはサイトのサブネット マッピングで構成されているものに置き換えられます。これにより、特に数百のネットワークと数千の VM を管理する場合に、フェイルオーバー時の IP アドレスの再割り当てをより簡単に管理できるようになります。
 
-サイトにサブネットマッピングを含める方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/sites-add.html["vCenter Server サイトを追加する"] 。
+サイトにサブネットマッピングを含める方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/sites-add.html["vCenter Server サイトを追加する"] 。
 
 
 
@@ -230,7 +242,7 @@ VM1 には、NetworkA に接続された vNIC (10.1.1.50) があります。レ�
 
 元のソース サイトがオンラインに戻った後、レプリケーション プランの [アクション] メニューから [*リソースの保護*] を選択して、逆方向の保護を確立できます。これにより、プラン内の各ボリュームに対して逆方向のレプリケーション関係を作成しようとします。保護が復元されるまで、このジョブを繰り返し実行できます。保護が復元されると、通常の方法でフェイルバックを開始できます。
 
-スキップ保護の詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"] 。
+スキップ保護の詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"] 。
 
 
 
@@ -244,7 +256,7 @@ NetApp Disaster Recovery、ネイティブのONTAP SnapMirrorポリシー スケ
 
 これが構成されると、サービスは定期的にスケジュールされたスナップショットを取得せず、代わりに外部エンティティに依存してスナップショットを取得および更新します。
 
-レプリケーションプランで外部スナップショットソリューションを使用する方法の詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+レプリケーションプランで外部スナップショットソリューションを使用する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -260,7 +272,7 @@ NetApp Disaster Recovery は24 時間ごとに検出を実行します。この�
 
 検出をスケジュールしたくない場合は、スケジュールされた検出オプションを無効にして、いつでも手動で検出を更新できます。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/sites-add.html["vCenter Server サイトを追加する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/sites-add.html["vCenter Server サイトを追加する"] 。
 
 
 
@@ -274,7 +286,7 @@ NetApp Disaster Recovery は24 時間ごとに検出を実行します。この�
 * レプリケーション プランを作成し、プラン内にリソース グループを作成すると、データストア内の VM を確認できます。
 
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -304,9 +316,9 @@ NetApp Consoleエージェントはインテリジェント プロキシをサ�
 
 NetApp Disaster Recoveryプロキシの実装では、コンソール エージェントと、HTTPS プロトコルを使用した vCenter Server およびONTAPアレイ間のポート 443 通信が必要です。コンソール エージェント内のNetApp Disaster Recoveryエージェントは、アクションを実行するときに VMware vSphere、VC、またはONTAPと直接通信します。
 
-NetApp Disaster Recoveryのインテリジェントプロキシの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-setup.html["NetApp Disaster Recovery用のインフラストラクチャをセットアップする"] 。
+NetApp Disaster Recoveryのインテリジェントプロキシの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-setup.html["NetApp Disaster Recovery用のインフラストラクチャをセットアップする"] 。
 
-NetApp Consoleでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。
+NetApp Consoleでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。
 
 
 
@@ -314,7 +326,7 @@ NetApp Consoleでの一般的なプロキシ設定の詳細については、以
 
 無料トライアルはいつでも停止できます。また、有効期限が切れるまで待つこともできます。
 
-見る https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html#end-the-free-trial["無料トライアルを終了する"]。
+見る https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html#end-the-free-trial["無料トライアルを終了する"]。
 
 
 
@@ -348,7 +360,7 @@ NetApp Disaster RecoveryにおけるASA r2 のサポートには、 ONTAP 9.16.1
 
 ランドスケープの分析に役立つレポートを生成してダウンロードできるようになりました。事前に設計されたレポートでは、フェイルオーバーとフェイルバックの概要、すべてのサイトのレプリケーションの詳細、過去 7 日間のジョブの詳細が表示されます。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/reports.html["災害復旧レポートを作成する"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/reports.html["災害復旧レポートを作成する"]。
 
 
 
@@ -356,7 +368,7 @@ NetApp Disaster RecoveryにおけるASA r2 のサポートには、 ONTAP 9.16.1
 
 NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサインアップできます。以前は、無料トライアルは 90 日間でした。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["ライセンスの設定"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html["ライセンスの設定"]。
 
 
 
@@ -378,7 +390,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーション プランを作成し、コンピューティング リソースをマップするときに、データセンター、クラスター、ホストに指定したフォルダーに VM が回復されるようにフォルダーをマップできるようになりました。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -386,7 +398,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 障害が発生し、フェイルオーバーを開始したり、フェイルバックを実行したり、フェイルオーバーをテストしたりするときに、VM の詳細を表示して、再起動しなかった VM を特定できるようになりました。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"]。
 
 
 
@@ -394,7 +406,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーション プランを作成するときに、プラン内の各 VM のブート遅延を設定できるようになりました。これにより、VM の起動シーケンスを設定して、後続の優先度の VM が起動される前に、優先度 1 の VM がすべて実行されていることを確認できます。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -402,7 +414,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーション プランを作成すると、プラン内の各 VM のオペレーティング システムを確認できるようになりました。これは、VM をリソース グループにグループ化する方法を決定するのに役立ちます。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -410,7 +422,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーション プランを作成するときに、災害復旧サイトの VM 名にプレフィックスとサフィックスを追加できるようになりました。これにより、プラン内の VM に、より説明的な名前を使用できるようになります。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -418,7 +430,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 指定した保持数を超えて不要になったスナップショットは削除できます。スナップショットの保持数を減らすと、時間の経過とともにスナップショットが蓄積される可能性があります。これで、スナップショットを削除してスペースを解放できます。これは、オンデマンドでいつでも、またはレプリケーション プランを削除するときに実行できます。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["サイト、リソース グループ、レプリケーション プラン、データストア、仮想マシンの情報の管理"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["サイト、リソース グループ、レプリケーション プラン、データストア、仮想マシンの情報の管理"] 。
 
 
 
@@ -426,7 +438,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 ソースとターゲット間で同期されていないスナップショットを調整できるようになりました。これは、NetApp Disaster Recoveryの外部のターゲットでスナップショットが削除された場合に発生する可能性があります。サービスは、ソース上のスナップショットを 24 時間ごとに自動的に削除します。ただし、これをオンデマンドで実行できます。この機能により、すべてのサイト間でスナップショットの一貫性を確保できます。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["レプリケーションプランの管理"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["レプリケーションプランの管理"] 。
 
 
 
@@ -464,7 +476,7 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 
 このリリースでは、ジョブ モニター UI でジョブをキャンセルできるようになりました。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["ジョブの監視"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/monitor-jobs.html["ジョブの監視"]。
 
 
 
@@ -527,7 +539,7 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 
 === レプリケーションプランの更新
 
-アプリケーション ページでデータストア別に VM をフィルタリングし、リソース マッピング ページでターゲットの詳細を選択することにより、レプリケーション プランをより簡単に追加できます。参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+アプリケーション ページでデータストア別に VM をフィルタリングし、リソース マッピング ページでターゲットの詳細を選択することにより、レプリケーション プランをより簡単に追加できます。参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
 
 
 
@@ -535,7 +547,7 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 
 このリリースでは、フェイルオーバー マッピング ページが強化され、よりわかりやすくなりました。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["プランを管理する"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["プランを管理する"]。
 
 
 
@@ -543,7 +555,7 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 
 このリリースでは、プラン内の VM を編集するプロセスに、いくつかの小さな UI の改善が加えられました。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["VMを管理する"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["VMを管理する"]。
 
 
 
@@ -551,7 +563,7 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 
 フェイルオーバーを開始する前に、VM のステータスと、VM の電源がオンかオフかを確認できるようになりました。フェイルオーバー プロセスでは、今すぐスナップショットを作成したり、スナップショットを選択したりできるようになりました。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"]。
 
 
 
@@ -559,7 +571,7 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 
 フェールオーバー テストを編集し、フェールオーバー テストの日次、週次、月次スケジュールを設定できるようになりました。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["プランを管理する"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["プランを管理する"]。
 
 
 
@@ -567,7 +579,7 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 
 NetApp Disaster Recovery の前提条件情報が更新されました。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-prerequisites.html["NetApp Disaster Recoveryの前提条件"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-prerequisites.html["NetApp Disaster Recoveryの前提条件"]。
 
 
 
@@ -589,7 +601,7 @@ NetApp Disaster Recoveryでは、90 日間の無料トライアルにサイン�
 
 NetApp Disaster Recoveryのライセンス設定の詳細については、以下を参照してください。link:../get-started/dr-licensing.html["ライセンスの設定"] 。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"] 。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"]。
 
 
 
@@ -603,9 +615,9 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 NetApp Disaster Recoveryでは、90 日間の無料トライアルにサインアップするか、 NetApp の営業担当者から取得したNetAppライセンス ファイル (NLF) である Bring Your Own License (BYOL) を使用することができます。ライセンス シリアル番号を使用して、 NetApp Consoleサブスクリプションで BYOL をアクティブ化できます。  NetApp Disaster Recovery料金は、データストアのプロビジョニングされた容量に基づいて決まります。
 
-NetApp Disaster Recoveryのライセンス設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["ライセンスの設定"] 。
+NetApp Disaster Recoveryのライセンス設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html["ライセンスの設定"] 。
 
-すべてのNetApp Consoleデータサービスのライセンス管理の詳細については、 https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["すべてのNetApp Consoleデータサービスのライセンスを管理する"^] 。
+すべてのNetApp Consoleデータサービスのライセンス管理の詳細については、 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["すべてのNetApp Consoleデータサービスのライセンスを管理する"^] 。
 
 
 
@@ -613,7 +625,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 このリリースでは、コンプライアンス テストとフェイルオーバー テストのスケジュールを設定して、必要に応じて正しく動作することを確認できるようになりました。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -631,7 +643,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 * 静的 IP: ソース VM と同じ情報または異なる情報を選択できます。ソースと同じものを選択した場合は、資格情報を入力する必要はありません。一方、ソースとは異なる情報を使用する場合は、資格情報、IP アドレス、サブネット マスク、DNS、ゲートウェイ情報を提供できます。
 
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -639,7 +651,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 フェイルオーバー後のプロセスとして含めることができるようになりました。カスタム スクリプトを使用すると、フェイルオーバー プロセス後にNetApp Disaster Recoveryでスクリプトを実行できます。たとえば、カスタム スクリプトを使用して、フェイルオーバーが完了した後にすべてのデータベース トランザクションを再開できます。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["リモートサイトへのフェイルオーバー"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["リモートサイトへのフェイルオーバー"] 。
 
 
 
@@ -647,7 +659,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 レプリケーション プランを開発しながらSnapMirror関係を作成できるようになりました。以前は、 NetApp Disaster Recoveryの外部で関係を作成する必要がありました。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -655,7 +667,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 レプリケーション プランを作成するときに、異なるボリュームおよび異なる SVM からの VM を含めることができます。  NetApp Disaster Recovery は、すべてのボリュームを含めて整合性グループのスナップショットを作成し、すべてのセカンダリ ロケーションを更新します。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -663,7 +675,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 レプリケーション プランを作成するときに、リソース グループに VM を追加できます。リソース グループを使用すると、各 VM に遅延を設定して、遅延されたシーケンスで VM の電源をオンにすることができます。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -671,7 +683,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 アプリケーション整合性のあるスナップショット コピーを作成するように指定できます。サービスはアプリケーションを静止させ、スナップショットを取得してアプリケーションの一貫した状態を取得します。
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 
 
 
@@ -685,7 +697,7 @@ NetApp Disaster Recoveryのこのプレビュー リリースには、次の更�
 
 このリリースでは、ダッシュボードから他のページの情報にさらに迅速にアクセスできるようになりました。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryについて学ぶ"] 。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryについて学ぶ"]。
 
 
 
@@ -702,7 +714,7 @@ NetApp Disaster Recovery を使用すると、パブリック クラウドに加
 
 NOTE: このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"] 。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"]。
 
 
 
@@ -716,7 +728,7 @@ NetApp Disaster Recoveryのこのプレビュー リリースには、次の更�
 
 ダッシュボードのオプションを選択できるようになり、情報をすばやく簡単に確認できるようになりました。また、ダッシュボードにはフェイルオーバーと移行のステータスが表示されるようになりました。
 
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/dashboard-view.html["ダッシュボードで災害復旧計画の健全性を確認する"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/dashboard-view.html["ダッシュボードで災害復旧計画の健全性を確認する"]。
 
 
 
@@ -724,15 +736,15 @@ NetApp Disaster Recoveryのこのプレビュー リリースには、次の更�
 
 * *RPO*: レプリケーション プランのデータストア セクションで、復旧ポイント目標 (RPO) と保持数を入力できるようになりました。これは、設定された時間よりも古くない、存在する必要があるデータの量を示します。たとえば、これを 5 分に設定すると、災害が発生した場合にシステムが最大 5 分間のデータを失っても、ビジネスクリティカルなニーズには影響しません。
 +
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
 
 * *ネットワークの機能強化*: レプリケーション プランの仮想マシン セクションでソースとターゲットの場所の間でネットワークをマッピングするときに、 NetApp Disaster RecoveryDHCP または静的 IP の 2 つのオプションが提供されるようになりました。以前は、DHCP のみがサポートされていました。静的 IP の場合は、サブネット、ゲートウェイ、および DNS サーバーを構成します。さらに、仮想マシンの資格情報を入力できるようになりました。
 +
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
 
 * *スケジュールの編集*: レプリケーション プランのスケジュールを更新できるようになりました。
 +
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["リソースを管理する"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["リソースを管理する"]。
 
 * * SnapMirror の自動化*: このリリースでレプリケーション プランを作成するときに、次のいずれかの構成でソース ボリュームとターゲット ボリューム間のSnapMirror関係を定義できます。
 +
@@ -741,7 +753,7 @@ NetApp Disaster Recoveryのこのプレビュー リリースには、次の更�
 ** 一貫性グループとしての多対1
 ** 多対多
 +
-参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
 
 
 
@@ -760,7 +772,7 @@ NetApp Disaster Recoveryプレビューは、災害復旧ワークフローを�
 
 NOTE: このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。
 
-https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"] 。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"]。
 
 このリリースには次の更新が含まれています。
 
@@ -768,25 +780,25 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 === ブート順序のリソース グループの更新
 
-災害復旧またはレプリケーション プランを作成するときに、機能リソース グループに仮想マシンを追加できます。リソース グループを使用すると、依存関係にある仮想マシンのセットを、要件を満たす論理グループにまとめることができます。たとえば、グループには回復時に実行できるブート順序を含めることができます。このリリースでは、各リソース グループに 1 つ以上の仮想マシンを含めることができます。仮想マシンは、プランに含めた順序に基づいて電源がオンになります。参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html#select-applications-to-replicate-and-assign-resource-groups["複製するアプリケーションを選択し、リソース グループを割り当てます"]。
+災害復旧またはレプリケーション プランを作成するときに、機能リソース グループに仮想マシンを追加できます。リソース グループを使用すると、依存関係にある仮想マシンのセットを、要件を満たす論理グループにまとめることができます。たとえば、グループには回復時に実行できるブート順序を含めることができます。このリリースでは、各リソース グループに 1 つ以上の仮想マシンを含めることができます。仮想マシンは、プランに含めた順序に基づいて電源がオンになります。参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#select-applications-to-replicate-and-assign-resource-groups["複製するアプリケーションを選択し、リソース グループを割り当てます"]。
 
 
 
 === レプリケーション検証
 
-災害復旧またはレプリケーション プランを作成し、ウィザードで繰り返しを指定して、災害復旧サイトへのレプリケーションを開始すると、 NetApp Disaster Recovery は30 分ごとに、レプリケーションがプランに従って実際に実行されているかどうかを確認します。ジョブ モニター ページで進行状況を監視できます。。  https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/replicate.html["アプリケーションを別のサイトに複製する"] 。
+災害復旧またはレプリケーション プランを作成し、ウィザードで繰り返しを指定して、災害復旧サイトへのレプリケーションを開始すると、 NetApp Disaster Recovery は30 分ごとに、レプリケーションがプランに従って実際に実行されているかどうかを確認します。ジョブ モニター ページで進行状況を監視できます。参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/replicate.html["アプリケーションを別のサイトに複製する"]。
 
 
 
 === レプリケーション計画は、リカバリポイント目標（RPO）の転送スケジュールを示します。
 
-災害復旧またはレプリケーション プランを作成するときに、VM を選択します。このリリースでは、データストアまたは VM に関連付けられている各ボリュームに関連付けられているSnapMirror を表示できるようになりました。SnapMirrorスケジュールに関連付けられている RPO 転送スケジュールも表示できます。RPO は、災害後の復旧にバックアップ スケジュールが十分かどうかを判断するのに役立ちます。参照 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+災害復旧またはレプリケーション プランを作成するときに、VM を選択します。このリリースでは、データストアまたは VM に関連付けられている各ボリュームに関連付けられているSnapMirror を表示できるようになりました。SnapMirrorスケジュールに関連付けられている RPO 転送スケジュールも表示できます。RPO は、災害後の復旧にバックアップ スケジュールが十分かどうかを判断するのに役立ちます。参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
 
 
 
 === ジョブモニターの更新
 
-ジョブ モニター ページに更新オプションが追加され、操作の最新ステータスを取得できるようになりました。。  https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["災害復旧ジョブを監視する"] 。
+ジョブ モニター ページに更新オプションが追加され、操作の最新ステータスを取得できるようになりました。参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/monitor-jobs.html["災害復旧ジョブを監視する"]。
 
 
 
@@ -800,4 +812,4 @@ https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html
 
 NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。最初に、 NetApp Disaster Recoveryプレビューを使用すると、 Amazon FSx for ONTAPを使用して、 NetAppストレージを実行しているオンプレミスの NFS ベースの VMware ワークロードを AWS 上の VMware Cloud (VMC) に保護できます。
 
-link:https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"] 。
+link:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"]。

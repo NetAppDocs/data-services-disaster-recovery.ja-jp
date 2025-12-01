@@ -16,9 +16,10 @@ summary: クラウドへの災害復旧は、サイトの停止やデータ破�
 
 NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。  NetApp Disaster Recoveryを使用すると、オンプレミスの NFS ベースのワークロードと、iSCSI および FC で実行されるNetAppストレージの VMware vSphere 仮想マシン ファイル システム (VMFS) データストアを次のいずれかに保護できます。
 
-* VMware Cloud (VMC) on AWS とAmazon FSx for NetApp ONTAP
 * Amazon Elastic VMware Service (EVS) とAmazon FSx for NetApp ONTAP の詳細については、link:../reference/evs-deploy-guide-introduction.html["Amazon Elastic VMware Service とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介"] 。
+* VMware Cloud (VMC) on AWS とAmazon FSx for NetApp ONTAP
 * Azure VMware Solution (AVS) とNetApp Cloud Volumes ONTAP (iSCSI) (プライベート プレビュー)
+* Google Cloud VMware Engine（GCVE）とGoogle Cloud NetApp Volumes
 * ONTAPストレージを備えた別のオンプレミス NFS または VMFS ベース (iSCSI/FC) VMware 環境
 
 
@@ -36,7 +37,7 @@ NetApp Consoleは、オンプレミスとクラウド環境全体にわたるエ
 
 NetApp Consoleの使用を開始するためにライセンスやサブスクリプションは必要ありません。ストレージ システムまたはNetAppデータ サービスへの接続を確保するためにクラウドにコンソール エージェントを展開する必要がある場合にのみ料金が発生します。ただし、コンソールからアクセスできる一部のNetAppデータ サービスは、ライセンスまたはサブスクリプションベースです。
 
-詳細はこちら https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Console"]。
+詳細はこちら https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console"]。
 
 
 
@@ -44,7 +45,7 @@ NetApp Consoleの使用を開始するためにライセンスやサブスクリ
 
 NetApp Disaster Recoveryには次のような利点があります。
 
-* 複数のポイントインタイムリカバリ操作によるアプリケーションの vCenter 検出およびリカバリのユーザー エクスペリエンスが簡素化されます。 
+* 複数のポイントインタイムリカバリ操作によるアプリケーションの vCenter 検出およびリカバリのユーザー エクスペリエンスが簡素化されます。
 * 運用コストが削減され、最小限のリソースで災害復旧計画を作成および調整できるため、総所有コストが削減されます。
 * 運用を中断しない仮想フェイルオーバー テストによる継続的な災害復旧の準備。実稼働ワークロードに影響を与えることなく、DR フェイルオーバー プランを定期的にテストできます。
 * IT 環境の動的な変化と災害復旧計画でそれに対応する能力により、価値実現までの時間が短縮されます。
@@ -181,6 +182,7 @@ image:dr-architecture-diagram-70-2.png["NetApp Disaster Recovery for VMware サ�
 * ONTAPストレージまたはオンプレミス FC/iSCSI VMSF を備えた別のオンプレミス NFS ベースの VMware 環境
 * Amazon Elastic VMware サービス
 * Azure VMware Solution (AVS) とNetApp Cloud Volumes ONTAP (iSCSI) (プライベート プレビュー)
+* Google Cloud VMware Engine（GCVE）とGoogle Cloud NetApp Volumes
 
 
 

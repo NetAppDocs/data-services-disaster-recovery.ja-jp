@@ -16,7 +16,7 @@ NetApp Consoleを使用して、 NetApp Disaster Recoveryサービスにログ�
 
 ログインするには、 NetAppサポート サイトの認証情報を使用するか、電子メールとパスワードを使用してNetAppクラウド ログインにサインアップすることができます。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["ログインについて詳しくはこちら"^] 。
 
-特定のタスクには特定のユーザー ロールが必要です。link:../reference/dr-reference-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+特定のタスクには特定のユーザー ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . ウェブブラウザを開いて、 https://console.netapp.com/["NetApp Console"^] 。
@@ -35,7 +35,7 @@ image:draas-landing6-free-trial.png["NetApp Disaster Recoveryのランディン�
 それ以外の場合は、 NetApp Disaster Recoveryボードが表示されます。
 
 +
-** NetApp Consoleエージェントをまだ追加していない場合は、追加する必要があります。エージェントを追加するには、 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["コンソールエージェントについて学ぶ"^] 。
+** NetApp Consoleエージェントをまだ追加していない場合は、追加する必要があります。エージェントを追加するには、 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントについて学ぶ"^] 。
 ** 既存のエージェントを持つNetApp Consoleユーザーの場合は、「ディザスタ リカバリ」を選択すると、サインアップに関するメッセージが表示されます。
 ** すでにサービスを使用している場合は、「災害復旧」を選択するとダッシュボードが表示されます。
 

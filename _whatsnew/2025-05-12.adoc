@@ -22,7 +22,7 @@ VM1 には、NetworkA に接続された vNIC (10.1.1.50) があります。レ�
 
 要約すると、ホスト アドレスは同じままですが、ネットワーク アドレスはサイトのサブネット マッピングで構成されているものに置き換えられます。これにより、特に数百のネットワークと数千の VM を管理する場合に、フェイルオーバー時の IP アドレスの再割り当てをより簡単に管理できるようになります。
 
-サイトにサブネットマッピングを含める方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/sites-add.html["vCenter Server サイトを追加する"] 。
+サイトにサブネットマッピングを含める方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/sites-add.html["vCenter Server サイトを追加する"] 。
 
 
 
@@ -36,7 +36,7 @@ VM1 には、NetworkA に接続された vNIC (10.1.1.50) があります。レ�
 
 元のソース サイトがオンラインに戻った後、レプリケーション プランの [アクション] メニューから [*リソースの保護*] を選択して、逆方向の保護を確立できます。これにより、プラン内の各ボリュームに対して逆方向のレプリケーション関係を作成しようとします。保護が復元されるまで、このジョブを繰り返し実行できます。保護が復元されると、通常の方法でフェイルバックを開始できます。
 
-スキップ保護の詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"] 。
+スキップ保護の詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"] 。
 
 
 
@@ -50,4 +50,4 @@ NetApp Disaster Recovery、ネイティブのONTAP SnapMirrorポリシー スケ
 
 これが構成されると、サービスは定期的にスケジュールされたスナップショットを取得せず、代わりに外部エンティティに依存してスナップショットを取得および更新します。
 
-レプリケーションプランで外部スナップショットソリューションを使用する方法の詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+レプリケーションプランで外部スナップショットソリューションを使用する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。

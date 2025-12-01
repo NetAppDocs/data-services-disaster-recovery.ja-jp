@@ -15,6 +15,6 @@
 * レプリケーション プラン作成の一環としてボリュームを作成するときに、宛先ボリュームがソース ボリュームと同じになることを妨げる制限を削除しました。
 * Azure Marketplace のNetApp Intelligent Services への従量課金制 (PAYGO) サブスクリプションのサポートが追加され、無料試用版ダイアログに Azure Marketplace へのリンクが追加されました。
 +
-詳細については、 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html#licensing["NetApp Disaster Recoveryライセンス"]そして https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["NetApp Disaster Recoveryのライセンスを設定する"]。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html#licensing["NetApp Disaster Recoveryライセンス"]そして https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html["NetApp Disaster Recoveryのライセンスを設定する"]。
 
 

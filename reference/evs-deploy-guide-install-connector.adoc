@@ -13,8 +13,8 @@ NetApp Consoleエージェントは、クラウドまたはオンプレミス �
 
 NetApp Disaster Recoveryの場合、実行されるアクションは、それぞれのサービスごとにネイティブ API を使用して VMware vCenter クラスターとONTAPストレージ インスタンスをオーケストレーションし、オンプレミスの場所で実行されている本番環境の VM を保護します。コンソール エージェントはネットワーク上の任意の場所にインストールできますが、 NetApp Disaster Recoveryの場合は、コンソール エージェントを DR サイトにインストールすることをお勧めします。これにより、プライマリ サイトに障害が発生した場合でも、 NetAppクラウドベースのコンソール UI はコンソール エージェントとの接続を維持し、その DR サイト内でリカバリ プロセスを調整できるようになります。
 
-サービスを使用するには、コンソール エージェントを標準モードでインストールします。コンソールエージェントのインストールの種類の詳細については、次のサイトをご覧ください。 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["NetApp Consoleの導入モードについて学ぶ | NetAppドキュメント"^] 。
+サービスを使用するには、コンソール エージェントを標準モードでインストールします。コンソールエージェントのインストールの種類の詳細については、次のサイトをご覧ください。 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの導入モードについて学ぶ | NetAppドキュメント"^] 。
 
 コンソール エージェントはサービスを使用する上で重要ですが、コンソール エージェントをインストールする手順は、ニーズとネットワーク構成によって異なります。インストールに関する具体的な手順を説明することは、この情報の範囲外です。
 
-Amazon AWS を使用してコンソールエージェントをインストールする最も簡単な方法は、AWS Marketplace を使用することです。  AWS Marketplaceを使用したコンソールエージェントのインストールの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-marketplace.html["AWS Marketplace からコンソールエージェントを作成する | NetAppドキュメント"^] 。
+Amazon AWS を使用してコンソールエージェントをインストールする最も簡単な方法は、AWS Marketplace を使用することです。AWS Marketplaceを使用したコンソールエージェントのインストールの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-marketplace.html["AWS Marketplace からコンソールエージェントを作成する | NetAppドキュメント"^] 。

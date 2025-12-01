@@ -20,7 +20,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 *必要なNetApp Consoleロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、ディザスタ リカバリ アプリケーション管理者、またはディザスタ リカバリ ビューア ロール。
 
-link:../reference/dr-reference-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . ログイン https://console.netapp.com/["NetApp Console"^]。
@@ -39,7 +39,7 @@ link:../reference/dr-reference-roles.html["NetApp Disaster Recoveryにおける�
 
 *必要なNetApp Consoleロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、ディザスタ リカバリ フェールオーバー管理者、またはディザスタ リカバリ アプリケーション管理者のロール。
 
-link:../reference/dr-reference-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . NetApp Consoleの左側のナビゲーション バーから、*保護* > *災害復旧* を選択します。

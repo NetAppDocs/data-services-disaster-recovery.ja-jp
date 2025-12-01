@@ -16,7 +16,7 @@ vCenter サイトを追加したら、災害復旧またはレプリケーショ
 
 *必要なNetApp Consoleロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、ディザスタ リカバリ フェールオーバー管理者、またはディザスタ リカバリ アプリケーション管理者のロール。
 
-link:../reference/dr-reference-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"] 。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^] 。
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 *このタスクについて*
 
@@ -55,6 +55,8 @@ link:../reference/dr-reference-roles.html["NetApp Disaster Recoveryにおける�
 SnapMirror関係を作成する前に、Disaster Recovery の外部でクラスタと SVM ピアリングを設定します。
 
 *ベスト プラクティス*: NetApp Disaster Recoveryを展開する前に VM を整理して、「データストアの無秩序な増加」を最小限に抑えます。保護が必要な VM をデータストアのサブセットに配置し、保護する必要のない VM をデータストアの別のサブセットに配置します。データストアベースの保護を使用して、特定のデータストア上の VM が確実に保護されるようにします。
+
+>[!IMPORTANT] >Google Cloud では、レプリケーション プランに追加できるボリュームまたはデータストアは 1 つだけです。
 
 
 

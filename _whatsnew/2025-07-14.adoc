@@ -18,9 +18,9 @@ NetApp Disaster Recoveryでは、各ユーザーの特定の機能やアクシ�
 
 NetApp Disaster Recoveryサービスをクリックして初めて構成する場合は、*SnapCenterAdmin* 権限または *Organization Admin* ロールが必要です。
 
-詳細については、  https://docs.netapp.com/us-en/bluexp-disaster-recovery/reference/dr-reference-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限"] 。
+詳細については、link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限"] 。
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスのアクセスロールについて学ぶ"^] 。
+https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスのアクセスロールについて学ぶ"^]。
 
 
 

@@ -33,7 +33,7 @@ NetApp Disaster RecoveryからONTAP FSx クラスターを削除する必要が�
 . NetApp Consoleエージェントでは、クラウドプロバイダーの接続オプションを使用して、コンソールエージェントが実行されるLinux VMに接続し、 `docker restart occm`指示。
 
 
-参照 https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["既存のコンソールエージェントを管理する"^]。
+参照 https://docs.netapp.com/us-en/console-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["既存のコンソールエージェントを管理する"^]。
 
 . NetApp Consoleシステム ページで、 Amazon FSx for ONTAPシステムを再度追加し、FSx 認証情報を入力します。
 +
@@ -43,4 +43,12 @@ NetApp Disaster RecoveryからONTAP FSx クラスターを削除する必要が�
 +
 これにより、データストア、その仮想マシン、およびその宛先関係が再検出されます。
 
+
+
+
+
+== Google Cloud NetApp Volumesの制限
+
+* フェイルオーバー テストを実行した後、クローン ボリュームを削除するには少なくとも 52 時間待つ必要があります。ボリュームを手動で削除する必要があります。  52 時間後に、フェイルオーバーを再度テストできます。
+* マウント操作の一部が失敗すると、フェイルオーバーは成功せず、ジョブはタイムアウトになります。  Google が問題を調査するのに最大 3 日かかり、その間、vCenter 上のすべてのデータストア関連の操作がブロックされます。
 

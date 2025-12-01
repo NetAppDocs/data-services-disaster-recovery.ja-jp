@@ -12,9 +12,9 @@ NetApp Consoleエージェントはインテリジェント プロキシをサ�
 
 NetApp Disaster Recoveryプロキシの実装では、コンソール エージェントと、HTTPS プロトコルを使用した vCenter Server およびONTAPアレイ間のポート 443 通信が必要です。コンソール エージェント内のNetApp Disaster Recoveryエージェントは、アクションを実行するときに VMware vSphere、VC、またはONTAPと直接通信します。
 
-NetApp Disaster Recoveryのインテリジェントプロキシの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-setup.html["NetApp Disaster Recovery用のインフラストラクチャをセットアップする"] 。
+NetApp Disaster Recoveryのインテリジェントプロキシの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-setup.html["NetApp Disaster Recovery用のインフラストラクチャをセットアップする"] 。
 
-NetApp Consoleでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。
+NetApp Consoleでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。
 
 
 
@@ -22,4 +22,4 @@ NetApp Consoleでの一般的なプロキシ設定の詳細については、以
 
 無料トライアルはいつでも停止できます。また、有効期限が切れるまで待つこともできます。
 
-見る https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html#end-the-free-trial["無料トライアルを終了する"]。
+見る https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html#end-the-free-trial["無料トライアルを終了する"]。
