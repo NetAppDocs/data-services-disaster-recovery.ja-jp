@@ -10,7 +10,7 @@
 
 新しい親 VM フォルダを指定するか、[**元のフォルダ階層を保持**] オプションのチェックを外すことで、この設定を上書きできるようになりました。
 
-詳細については、 link:../use/drplan-create.adoc["レプリケーションプランを作成する"]。
+詳細については、 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.adoc["レプリケーションプランを作成する"]。
 
 
 
@@ -18,4 +18,4 @@
 
 災害復旧では、作業環境で複数のコンソール エージェントを使用するための合理化されたプロセスがサポートされるようになりました。コンソール エージェントを切り替えるには、vCenter 構成を編集し、資格情報を再検出し、新しいコンソール エージェントを使用するようにレプリケーション プランを更新する必要があります。
 
-詳細については、 link:../reference/switch-console-agent.html["スイッチコンソールエージェント"]。
+詳細については、 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/reference/switch-console-agents.html["スイッチコンソールエージェント"]。
