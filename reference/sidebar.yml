@@ -2,8 +2,10 @@
 section: reference
 title: 参照
 entries:
-- title: NetApp Disaster Recoveryに必要な vCenter 権限
+- title: 災害復旧に必要な vCenter 権限
   url: "/reference/vcenter-privileges.html"
+- title: スイッチコンソールエージェント
+  url: "/reference/switch-console-agent.html"
 - title: Amazon EVS でNetApp Disaster Recoveryを使用する
   entries:
   - title: Amazon EVS を使用したNetApp Disaster Recoveryの概要

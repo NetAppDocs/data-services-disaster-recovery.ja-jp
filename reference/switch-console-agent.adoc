@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: reference/switch-console-agent.html 
+keywords: disaster recovery, console agent, high availability 
+summary: NetApp Disaster Recoveryで複数のコンソール エージェントを使用するための要件について説明します。 
+---
+= NetApp Disaster Recoveryを使用する場合のスイッチコンソールエージェント
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+NetApp Consoleは、単一の作業環境で複数のコンソール エージェントの使用をサポートしています。複数のコンソール エージェントを使用すると、別のコンソール エージェントでメンテナンスを実行しているときや、コンソール エージェントに障害が発生したときに、リソースへのアクセスを維持するのに役立ちます。各コンソール エージェントには一意の識別子があるため、コンソール エージェントを不適切に切り替えると、作業環境におけるリソースの可用性が損なわれる可能性があります。
+
+
+
+== 開始する前に
+
+* あなたにはxref:../get-started/dr-prerequisites.html#create-the-netapp-console-agent[作業環境に少なくとも 2 つのコンソール エージェントを追加しました]。
+* 両方のコンソール エージェントに同じONTAPクラスターが含まれている必要があります。
+
+
+
+
+== 手順
+
+. 災害復旧で、[**サイト**] を選択します。
+. ソース vCenter とターゲット vCenter の両方のコンソール エージェントを変更する必要があります。変更する vCenter を特定します。  vCenter のアクション メニューを選択し、[**編集**] を選択します。
++
+image:dr-sites-subnet-menu.png["サイトダッシュボードのスクリーンショット"]
+
+. ドロップダウン メニューから使用するコンソール エージェントを選択し、vCenter のユーザー名とパスワードを再入力します。**保存**を選択します。
++
+image:edit-vcenter.png["コンソールエージェントを変更するスクリーンショット"]
+
+. 変更する追加の vCenter ごとに手順 2 と 3 を繰り返します。
+. 変更した vCenter で、vCenter を更新して新しいコンソール エージェントを検出します。変更したすべての vCenter に対してこの手順を繰り返します。
+. 災害復旧で、**レプリケーション プラン** に移動します。
+. ワークフローを再開するために使用するレプリケーション プランを識別します。アクションメニューを選択 `...`次に**リソースを更新**します。  **ジョブ監視** でジョブのステータスを監視できます。
+
+
+
+
+== 詳細情報
+
+* link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html["コンソールエージェントについて学ぶ"^]
+
