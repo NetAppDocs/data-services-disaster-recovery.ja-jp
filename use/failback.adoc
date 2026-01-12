@@ -18,9 +18,11 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
-*このタスクについて*
 
-このワークフローでは、 NetApp Disaster Recovery は、レプリケーションの方向を反転する前に、すべての変更を元のソース仮想マシンにレプリケート (再同期) します。このプロセスは、ターゲットへのフェールオーバーが完了した関係から開始され、次の手順が含まれます。
+
+== フェイルバックについて
+
+フェイルバックでは、 NetApp Disaster Recovery は、レプリケーションの方向を反転する前に、すべての変更を元のソース仮想マシンにレプリケート (再同期) します。このプロセスは、ターゲットへのフェイルオーバーが完了した関係から開始され、次の手順が含まれます。
 
 * 回復したサイトでコンプライアンス チェックを実行します。
 * 回復されたサイトにあると特定された各 vCenter クラスタの vCenter 情報を更新します。
@@ -30,13 +32,21 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 * ソース仮想マシンの電源をオンにして登録し、ソースにボリュームをマウントします。
 
 
-.手順
-. ログイン https://console.netapp.com/["NetApp Console"^]。
+
+
+== 開始する前に
+
+データストアベースの保護を使用している場合、データストアに追加された VM は、フェールオーバー プロセスでデータストアに追加される可能性があります。このような状況が発生した場合は、フェイルバックを開始する前に、これらの VM の追加マッピング情報を提供するようにしてください。リソースマッピングを編集するには、 link:manage.html#manage-replication-plans["レプリケーションプランの管理"]。
+
+
+
+== 手順
+
 . NetApp Consoleの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
 . NetApp Disaster Recoveryメニューから、*レプリケーション プラン* を選択します。
 . レプリケーション プランを選択します。
 . 右側で*アクション*オプションを選択しますimage:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"]*フェイルバック*を選択します。
-. レプリケーション プラン名を入力して確認し、フェイルバックを開始します。
+. フェイルバックを開始するには、レプリケーション プランの名前を入力します。
 . 復元するデータストアのスナップショットを選択します。デフォルトは最新です。
-. 進行状況を確認するには、メニューで*ジョブ監視*を選択します。
+. ジョブの進行状況を監視するには、災害復旧メニューで*ジョブ監視*を選択します。
 
