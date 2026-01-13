@@ -25,7 +25,7 @@ NetApp Disaster Recovery は、災害復旧ワークフローを自動化する�
 
 NetApp Disaster Recovery は、統合されたネイティブ VMware オーケストレーションを備えたONTAP SnapMirrorテクノロジーを使用して、 ONTAPのすべてのストレージ効率の利点を維持しながら、VMware VM とそれに関連付けられたディスク上の OS イメージを保護します。災害復旧では、これらのテクノロジを災害復旧サイトへのレプリケーション トランスポートとして使用します。これにより、プライマリ サイトとセカンダリ サイトで業界最高のストレージ効率 (圧縮と重複排除) が実現されます。
 
-image:../use/evs-bluexp-architecture.png["NetApp Disaster Recovery for VMware のコンポーネントを示す図"]
+image:../use/evs-console-architecture.png["NetApp Disaster Recovery for VMware のコンポーネントを示す図"]
 
 
 
