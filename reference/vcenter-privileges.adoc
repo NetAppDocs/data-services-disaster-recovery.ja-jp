@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference/vcenter-privileges.html 
 keywords: disaster recovery, bluexp, vcenter, 
-summary: 'NetApp Disaster Recovery がデータストアの登録と登録解除、VM の起動と停止、仮想マシン (VM) の再構成などのサービスを実行できるようにするには、vCenter アカウントに最低限の vCenter 権限が必要です。次の表には、NetApp Disaster Recovery がvCenter クラスタとインターフェースするために必要なすべての権限がリストされています。' 
+summary: NetApp Disaster Recoveryが正常に機能するためには、vCenterアカウントに最低限のvCenter権限が必要です。 
 ---
-= NetApp Disaster Recoveryに必要な vCenter 権限
+= NetApp Disaster Recovery に必要な vCenter 権限
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,142 +12,134 @@ summary: 'NetApp Disaster Recovery がデータストアの登録と登録解除
 
 
 [role="lead"]
-NetApp Disaster Recovery がデータストアの登録と登録解除、VM の起動と停止、仮想マシン (VM) の再構成などのサービスを実行できるようにするには、vCenter アカウントに最低限の vCenter 権限が必要です。次の表には、NetApp Disaster Recovery がvCenter クラスタとインターフェースするために必要なすべての権限がリストされています。
+NetApp Disaster Recoveryがサービスを実行するには、vCenterアカウントに最小限のvCenter権限セットが必要です。これらの権限には、データストアの登録と登録解除、仮想マシン（VM）の起動と停止、VMの再構成が含まれます。
 
-[cols="25,35a,40a"]
+次の表は、Disaster RecoveryがvCenterクラスタとインターフェースするために必要なすべての権限を示しています。
+
+[cols="1,2,2,3"]
 |===
-| タイプ | 権限名 | 説明 
+| タイプ | 権限名（vSphere クライアント） | 権限名（API） | 説明 
 
 
-| *データストア*  a| 
-データストア.データストアを構成する
- a| 
-データストアを構成するために使用します。
+.3+| データストア | Datastore.Config | データストアを設定する | データストアの設定を許可します。 
 
 
-
-|   a| 
-データストア.データストアを削除
- a| 
-データストアを削除するために使用します。
+| Datastore.Delete | Remove datastore | データストアの削除を許可します。 
 
 
-
-| *仮想マシン*  a| 
-仮想マシン.構成.設定の変更
- a| 
-一般的な VM 設定を変更するために使用します。
+| Datastore.Rename | Rename datastore | データストアの名前の変更を許可します。 
 
 
-
-|   a| 
-仮想マシン.構成.デバイス設定の変更
- a| 
-既存のデバイスのプロパティを変更するために使用します。
+.3+| フォルダ | フォルダー作成 | フォルダを作成 | 新しいフォルダーの作成を許可します。 
 
 
-
-|   a| 
-仮想マシン.構成.パスからの再読み込み
- a| 
-VM の ID を保持しながら VM 構成パッチを変更するために使用します。  VMware vCenter Site Recovery Manager などのソリューションは、この操作を使用して、フェイルオーバーおよびフェイルバック中に VM の識別を維持します。
+| フォルダーの削除 | フォルダを削除 | フォルダーの削除を許可します。オブジェクトとその親の両方に対する権限が必要です。 
 
 
-
-|   a| 
-仮想マシン.構成.名前の変更
- a| 
-VM の名前を変更したり、VM に関連付けられたノードを変更したりするために使用します。
+| フォルダー名の変更 | フォルダ名を変更する | フォルダー名の変更を許可します。 
 
 
-
-|   a| 
-仮想マシン.構成.ゲスト情報をリセット
- a| 
-VM のゲスト オペレーティング システム情報を編集するために使用します。
+.2+| ネットワーク | Network.Assign | Assign network | VM にネットワークを割り当てることを許可します。 
 
 
-
-|   a| 
-仮想マシン.構成.メモリの変更
- a| 
-VM に割り当てられるメモリの量を変更するために使用します。
+| Network.Config | 設定 | ネットワークの構成を許可します。 
 
 
-
-|   a| 
-仮想マシン.構成.CPU数の変更
- a| 
-仮想 CPU の数を変更するために使用します。
+.9+| 仮想マシンの構成 | VirtualMachine.Config.AdvancedConfig | 高度な設定 | VM の構成ファイル内の高度なパラメータを追加または変更することを許可します。 
 
 
-
-| *仮想マシンゲスト*  a| 
-仮想マシン.ゲスト操作.ゲスト操作の変更
- a| 
-VM へのファイルの転送など、VM 内のゲスト オペレーティング システムの変更を伴う VM ゲスト操作を有効にします。
+| VirtualMachine．Config．Settings | 設定の変更 | 一般的な VM 設定の変更を許可します。 
 
 
-
-| *仮想マシンの相互作用*  a| 
-仮想マシン.インタラクション.電源オフ
- a| 
-電源がオンになっている VM の電源をオフにするために使用します。この操作により、ゲスト オペレーティング システムの電源がオフになります。
+| VirtualMachine.Config.CPUCount | Change CPU count | 仮想 CPU の数の変更を許可します。 
 
 
-
-|   a| 
-仮想マシン.インタラクション.電源オン
- a| 
-電源がオフになっている VM の電源をオンにし、一時停止されている VM を再開するために使用します。
+| VirtualMachine.Config.Memory | メモリを変更する | VM に割り当てられるメモリの量を変更できます。 
 
 
-
-|   a| 
-仮想マシン.相互作用.VMware Toolsのインストール
- a| 
-VMware Tools CD インストーラをゲスト オペレーティング システムの CD-ROM としてマウントおよびアンマウントするために使用します。
+| VirtualMachine.Config.Resource | Change resource | リソース プール内のVMノードのリソース構成の変更を許可します。 
 
 
-
-| *仮想マシンインベントリ*  a| 
-仮想マシン.インベントリ.新規作成
- a| 
-VM を作成し、その実行のためのリソースを割り当てるために使用します。
+| VirtualMachine.Config.Rename | 名前を変更 | VM の名前を変更したり、メモを変更したりすることを許可します。 
 
 
-
-|   a| 
-仮想マシン.インベントリ.登録
- a| 
-既存の VM を vCenter Server またはホスト インベントリに追加するために使用します。
+| VirtualMachine.Config.EditDevice | Modify device settings | 既存のデバイスのプロパティを変更できます。 
 
 
-
-|   a| 
-仮想マシン.インベントリ.登録解除
- a| 
-vCenter Server またはホスト インベントリから VM を登録解除するために使用します。
+| VirtualMachine.Config.ReloadFromPath | Reload from path | ID を保持しながら VM 構成パスを変更することを許可します。 
 
 
-
-| *仮想マシンの状態*  a| 
-仮想マシン。スナップショット管理。スナップショットの作成
- a| 
-VM の現在の状態からスナップショットを作成するために使用します。
+| VirtualMachine.Config.ResetGuestInfo | ゲスト情報をリセットする | VM のゲスト オペレーティング システム情報の編集を許可します。 
 
 
-
-|   a| 
-仮想マシン.スナップショット管理.スナップショットの削除
- a| 
-スナップショット履歴からスナップショットを削除するために使用します。
+.5+| 仮想マシンゲスト | VirtualMachine．GuestOperations．ModifyAliases | ゲスト操作エイリアスの変更 | VM のエイリアスの変更を許可します。 
 
 
+| VirtualMachine．GuestOperations．QueryAliases | ゲスト操作エイリアス クエリ | VM のエイリアスのクエリを許可します。 
 
-|   a| 
-仮想マシン。スナップショット管理。スナップショットへの復元
- a| 
-VM を特定のスナップショットの状態に設定する場合に使用します。
 
+| VirtualMachine.GuestOperations.Modify | Guest operation modifications | VM へのファイルの転送を含む変更操作を許可します。 
+
+
+| VirtualMachine.GuestOperations.Execute | ゲスト操作プログラムの実行 | VM 内でアプリケーションを実行することを許可します。 
+
+
+| VirtualMachine.GuestOperations.Query | ゲスト操作クエリ | ゲスト OS へのクエリを許可します。操作にはファイルのリスト表示が含まれます。 
+
+
+.9+| 仮想マシンの操作 | VirtualMachine.Interact.AnswerQuestion | Answer question | VM の状態遷移中またはランタイム エラー中の問題を解決できます。 
+
+
+| VirtualMachine.Interact.PowerOff | Power off | 電源がオンになっている VM の電源をオフにすることを許可します。 
+
+
+| VirtualMachine.Interact.PowerOn | Power on | VM の電源オンまたは再開を許可します。 
+
+
+| VirtualMachineの操作.ToolsInstall | VMware Toolsのインストール | VMware Tools インストーラのマウント / アンマウントを許可します。 
+
+
+| VirtualMachine.Inventory.CreateFromExisting | Create from existing | テンプレートから VM のクローニングまたは導入を許可します。 
+
+
+| VirtualMachine.Inventory.Create | Create new | VM の作成とリソースの割り当てを許可します。 
+
+
+| VirtualMachine.Inventory.Register | 登録 | 既存の VM をインベントリに追加することを許可します。 
+
+
+| VirtualMachine.Inventory.Delete | 削除 | VM とそのファイルの削除を許可します。オブジェクトとその親の両方に対する権限が必要です。 
+
+
+| VirtualMachine.Inventory.Unregister | 登録解除 | VM の登録解除を許可します。この権限には、オブジェクトとその親の両方に対する権限が必要です。 
+
+
+.4+| 仮想マシンのプロビジョニング | VirtualMachineのプロビジョニング：クローン | Clone virtual machine | VM の複製とリソースの割り当てを許可します。 
+
+
+| VirtualMachineのプロビジョニング：カスタマイズ | ゲストをカスタマイズ | VM のゲスト オペレーティング システムをカスタマイズできます。 
+
+
+| VirtualMachineのプロビジョニング：ModifyCustSpecs | カスタマイズ仕様の変更 | カスタマイズ仕様の作成、変更、または削除を許可します。 
+
+
+| VirtualMachineのプロビジョニング：ReadCustSpecs | Read customization specifications | VM のカスタマイズ仕様の読み取りを許可します。 
+
+
+.2+| 仮想マシン サービスの構成 | VirtualMachine.Namespace.Query | クエリ サービス構成 | VM サービスのリストの取得を許可します。 
+
+
+| VirtualMachine.Namespace.ReadContent | サービス構成の読み取り | 既存の VM サービス構成の取得を許可します。 
+
+
+.4+| 仮想マシンのスナップショット | VirtualMachine.State.CreateSnapshot | Snapshot の作成 | VM の現在の状態からスナップショットを作成することを許可します。 
+
+
+| VirtualMachine.State.RemoveSnapshot | Remove snapshot | スナップショットの削除を許可します。 
+
+
+| VirtualMachineの状態．RenameSnapshot | スナップショットの名前を変更する | スナップショットの名前を変更したり、その説明を更新したりできます。 
+
+
+| VirtualMachine.State.RevertToSnapshot | Revert to snapshot | VM を特定のスナップショットの状態に戻すことを許可します。 
 |===
