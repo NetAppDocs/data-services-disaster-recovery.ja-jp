@@ -9,20 +9,41 @@ summary: NetApp Disaster Recoveryを使用して Amazon EVS の設定を続行�
 
 
 [role="lead"]
-NetApp Disaster Recoveryを使用して Amazon EVS の設定を続行する前に、いくつかの前提条件が満たされていることを確認する必要があります。
+Amazon EVSをNetApp Disaster Recoveryで構成するための要件を確認し、満たしていることを確認してください。
 
-具体的には、次の操作を実行します。
-
+.前提条件
+* link:../get-started/dr-prerequisites["Disaster Recovery の一般的な前提条件"]を確認します。
 * NetApp Disaster Recovery が必要な操作を実行するために必要な特定の VMware 権限を持つ vCenter ユーザー アカウントを作成します。
 +
 
-NOTE: デフォルトの「\administrator@vsphere.com」管理者アカウントの使用はお勧めしません。代わりに、DR プロセスに参加するすべての vCenter クラスタにNetApp Disaster Recovery専用のユーザー アカウントを作成する必要があります。必要な特定の権限のリストについては、link:vcenter-privileges.html["NetApp Disaster Recoveryに必要な vCenter 権限"] 。
+NOTE: デフォルトの「\administrator@vsphere.com」管理者アカウントは使用しないことを推奨します。代わりに、ディザスタリカバリプロセスに参加するすべてのvCenterクラスタ上で、NetApp Disaster Recovery専用のユーザーアカウントを作成してください。必要な特定の権限の一覧については、link:vcenter-privileges.html["NetApp Disaster Recoveryに必要な vCenter 権限"]をご参照ください。
 
-* NetApp Disaster Recoveryによって保護される VM をホストするすべての vCenter データストアが、 NetApp ONTAPストレージ リソース上に配置されていることを確認します。
+* Disaster Recoveryで保護されるVMをホストするすべてのvCenterデータストアが、NetApp ONTAPストレージリソース上に配置されていることを確認してください。
 +
-このサービスは、 NetApp ONTAPでAmazon FSxを使用する場合、iSCSI 上の NFS および VMFS (FC はサポートされません) をサポートします。このサービスは FC をサポートしていますが、 Amazon FSx for NetApp ONTAP はFC をサポートしていません。
+Disaster Recoveryは、Amazon FSx for NetApp ONTAP使用時に、iSCSI上のNFSとVMFS（FCではない）をサポートします。Disaster RecoveryはFCをサポートしていますが、Amazon FSx for NetApp ONTAPはサポートしていません。
 
-* Amazon EVS vCenter がAmazon FSx for NetApp ONTAPストレージクラスターに接続されていることを確認します。
-* 保護されているすべての VM に VMware ツールがインストールされていることを確認します。
-* Amazon が承認した接続方法を使用して、オンプレミス ネットワークが AWS VPC ネットワークに接続されていることを確認します。  AWS Direct Connect、AWS Private Link、または AWS サイト間 VPN を使用することをお勧めします。
+* Amazon EVS vCenterがAmazon FSx for NetApp ONTAPストレージクラスタに接続されていることを確認してください。
+* 保護されているすべての VM に VMware Tools がインストールされていることを確認します。
+* オンプレミスネットワークが、Amazon が承認した接続方法を使用して AWS VPC ネットワークに接続されていることを確認してください。AWS Direct Connect、AWS Private Link、または AWS Site-to-Site VPN を使用することをお勧めします。
+* Disaster Recovery を使用した EVS の接続およびポート要件を確認し、準拠していることを確認します。
++
+[cols="4"]
+|===
+| ソース | デスティネーション | ポート | 詳細 
+
+
+| Amazon FSxN | オンプレミス ONTAP | TCP 11104、11105、ICMP | SnapMirror 
+
+
+| オンプレミス ONTAP | Amazon FSxN | TCP 11104、11105、ICMP | SnapMirror 
+
+
+| NetApp Console エージェント | オンプレミス ONTAP | TCP 443、ICMPのみ | API呼び出し 
+
+
+| NetApp Console エージェント | Amazon FSxN | TCP 441、ICMPのみ | API呼び出し 
+
+
+| NetApp Console エージェント | vCenter（オンプレミス、EVS）、ESXiホスト（オンプレミス、EVS） | 443 | API呼び出し、スクリプト実行 
+|===
 

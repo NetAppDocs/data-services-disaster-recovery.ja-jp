@@ -357,7 +357,6 @@
   <block id="04611b209933eb29e1f8fdaec6553eaa" category="section-title">NetApp Consoleエージェントを作成する</block>
   <block id="9703473550a81b3fd3679dafa7c81b5c" category="paragraph">NetApp Consoleにコンソール エージェントを設定する必要があります。エージェントを使用すると、災害復旧サービスに適切な機能が含まれるようになります。</block>
   <block id="c8838dcf38d330918fef4cc55c1d8bda" category="inline-link">NetApp Consoleの標準モードでの使用開始</block>
-  <block id="60fef96933d93f92aac90515fdde5cdb" category="list-text">ソース vCenter とターゲット vCenter の両方で同じコンソール エージェントが使用されていることを確認します。</block>
   <block id="15d628067243085634a88cba0c9fd55b" category="list-text">必要なコンソール エージェントの種類:</block>
   <block id="6e45b3ccf0fe4c67d798d465f04ffc2b" category="inline-link">オンプレミスでコンソールエージェントをインストールしてセットアップする</block>
   <block id="7ff9f8e2467774df163161a38d2d5040" category="inline-link">AWS のコンソールエージェントのインストールオプション</block>
@@ -576,14 +575,7 @@
   <block id="370a8ca7e6b2cca92199c233522a1698" category="inline-link-macro">NetApp Disaster Recoveryに vCenter クラスタを追加する</block>
   <block id="80b788a7dab3609635ead698a8ecf978" category="list-text"><block ref="80b788a7dab3609635ead698a8ecf978" category="inline-link-macro-rx"></block></block>
   <block id="6345fa92d7a42c074c54b52f4c7ab432" category="summary">NetApp Disaster Recoveryを使用して Amazon EVS の設定を続行する前に、いくつかの前提条件が満たされていることを確認する必要があります。</block>
-  <block id="3cfd631225e4a5cd11bb7f070aa490d3" category="paragraph">具体的には、次の操作を実行します。</block>
   <block id="c054f75f836c29b129413caadf92e76a" category="list-text">NetApp Disaster Recovery が必要な操作を実行するために必要な特定の VMware 権限を持つ vCenter ユーザー アカウントを作成します。</block>
-  <block id="b7d4f3a752a8b38de81fde9de63da3a5" category="admonition">デフォルトの「\administrator@vsphere.com」管理者アカウントの使用はお勧めしません。代わりに、DR プロセスに参加するすべての vCenter クラスタにNetApp Disaster Recovery専用のユーザー アカウントを作成する必要があります。必要な特定の権限のリストについては、<block ref="efdd112b209053b66d06020632d7d4cc" category="inline-link-macro-rx"></block> 。</block>
-  <block id="c637df77242838dd7768d498b05c71d0" category="list-text">NetApp Disaster Recoveryによって保護される VM をホストするすべての vCenter データストアが、 NetApp ONTAPストレージ リソース上に配置されていることを確認します。</block>
-  <block id="8fc09ae0803e50a45a94b04ffd9379bf" category="paragraph">このサービスは、 NetApp ONTAPでAmazon FSxを使用する場合、iSCSI 上の NFS および VMFS (FC はサポートされません) をサポートします。このサービスは FC をサポートしていますが、 Amazon FSx for NetApp ONTAP はFC をサポートしていません。</block>
-  <block id="aaa40fdffdb9b8b6db1fa18723bcd15b" category="list-text">Amazon EVS vCenter がAmazon FSx for NetApp ONTAPストレージクラスターに接続されていることを確認します。</block>
-  <block id="9709c4e90ccd66fb37391b201a587f74" category="list-text">保護されているすべての VM に VMware ツールがインストールされていることを確認します。</block>
-  <block id="77bc05bf2afea788cd5090d62741ed3d" category="list-text">Amazon が承認した接続方法を使用して、オンプレミス ネットワークが AWS VPC ネットワークに接続されていることを確認します。  AWS Direct Connect、AWS Private Link、または AWS サイト間 VPN を使用することをお勧めします。</block>
   <block id="17c945d2315cf61f16352ef1cfbd5558" category="summary">まず、 NetApp Disaster Recoveryを使用してレプリケーション プラン名を指定し、レプリケーションのソース vCenter とターゲット vCenter を選択します。</block>
   <block id="528a5f3a334edc5d0050d997c54ff6d3" category="doc">レプリケーションプランの作成: ステップ 1 - NetApp Disaster Recoveryで vCenter を選択する</block>
   <block id="4b7711bd320359bdedba0eba611c4063" category="paragraph">まず、 NetApp Disaster Recoveryを使用して、レプリケーション プラン名を指定し、レプリケーションのソース vCenter とターゲット vCenter を選択します。</block>
@@ -744,13 +736,7 @@
   <block id="1ff9a32fef93210368127dde7732e38d" category="paragraph">NetApp Disaster Recovery は、すべてのONTAPストレージ効率が適用された後にライセンスの目的で容量を計算するため、これは有益です。たとえば、サービスを使用して保護する 100 台の仮想マシンをホストするために、vCenter 内に 100 テラバイト (TiB) の NFS データストアをプロビジョニングしたとします。さらに、データがONTAPボリュームに書き込まれるときに、自動的に適用されるストレージ効率化技術により、これらの VM が消費するストレージ効率は 33TiB のみ (3:1 のストレージ効率) になると仮定します。 NetApp Disaster Recovery のライセンスは、100TiB ではなく 33TiB のみ必要です。これは、他の DR ソリューションと比較した場合、DR ソリューションの総所有コストにとって非常に大きなメリットとなります。</block>
   <block id="1cac620f7757c79970587895922abdb9" category="list-text">保護対象の VMware データストアをホストしている各ボリュームで消費されているデータ量を確認するには、各ボリュームに対してONTAP CLI コマンドを実行して、ディスク上の容量消費量を確認します。<block ref="5dcefe180a68e24e1f2547c10ed74406" prefix=" " category="inline-code"></block> 。</block>
   <block id="cdda12340d624273bd9002f62fb54d72" category="list-text">各ボリュームの*Total Physical Used*の値をメモします。これは、 NetApp Disaster Recovery が保護する必要があるデータの量であり、ライセンスが必要な容量を決定するために使用する値です。</block>
-  <block id="ba836a901514bb33e4b8e439edfc9553" category="summary">Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介。コネクタはネットワーク上の任意の場所にインストールできますが、 NetApp Disaster Recoveryの場合は、コネクタを DR サイトにインストールすることをお勧めします。これにより、プライマリ サイトに障害が発生した場合でも、 NetAppコンソール UI はコンソール エージェントとの接続を維持し、その DR サイト内でリカバリ プロセスを調整できるようになります。</block>
   <block id="eafff2953feecf7337f42b0ed8618a50" category="doc">NetApp Disaster Recovery用のNetApp Consoleエージェントをインストールする</block>
-  <block id="fc4a391c0a58b66db6357158ead085ca" category="paragraph">NetApp Consoleエージェントは、クラウドまたはオンプレミス ネットワークで実行されるNetAppソフトウェアです。 NetApp Consoleがデータ インフラストラクチャを管理するために実行する必要があるアクションを実行します。コンソール エージェントは、実行する必要があるアクションがあるかどうか、NetApp Disaster Recoveryソフトウェアをサービス レイヤーとして継続的にポーリングします。</block>
-  <block id="44c1129cf47adfaefa0605f58d53c810" category="paragraph">NetApp Disaster Recoveryの場合、実行されるアクションは、それぞれのサービスごとにネイティブ API を使用して VMware vCenter クラスターとONTAPストレージ インスタンスをオーケストレーションし、オンプレミスの場所で実行されている本番環境の VM を保護します。コンソール エージェントはネットワーク上の任意の場所にインストールできますが、 NetApp Disaster Recoveryの場合は、コンソール エージェントを DR サイトにインストールすることをお勧めします。これにより、プライマリ サイトに障害が発生した場合でも、 NetAppクラウドベースのコンソール UI はコンソール エージェントとの接続を維持し、その DR サイト内でリカバリ プロセスを調整できるようになります。</block>
-  <block id="f495e7db7cb2a546534fe711f0127e3d" category="inline-link">NetApp Consoleの導入モードについて学ぶ | NetAppドキュメント</block>
-  <block id="dd0b929797a2918fb91fe0b43cb02f42" category="paragraph">コンソール エージェントはサービスを使用する上で重要ですが、コンソール エージェントをインストールする手順は、ニーズとネットワーク構成によって異なります。インストールに関する具体的な手順を説明することは、この情報の範囲外です。</block>
-  <block id="ed8f1435250d71b466ec4682ae30820f" category="inline-link">AWS Marketplace からコンソールエージェントを作成する | NetAppドキュメント</block>
   <block id="06034a243ae2009d8ded7acc9689b052" category="summary">Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介。</block>
   <block id="562ef4025c5a60ba97f47d8285729a0b" category="paragraph">顧客は、実稼働コンピューティング ワークロード用の VMware vSphere ベースの仮想化インフラストラクチャにますます依存するようになっています。これらの仮想マシン (VM) がビジネスにとってより重要になるにつれ、顧客はこれらの VM を物理コンピューティング リソースと同じ種類の災害から保護する必要があります。現在提供されている災害復旧 (DR) ソリューションは複雑で高価であり、多くのリソースを必要とします。仮想化インフラストラクチャに使用される最大のストレージ プロバイダーであるNetApp は、 ONTAPストレージでホストされるあらゆる種類のデータを保護するのと同じ方法で、自社の顧客の VM を確実に保護することに強い関心を持っています。この目標を達成するために、 NetApp はNetApp Disaster Recoveryサービスを作成しました。</block>
   <block id="a3fe2ebdabea83ec0809c3eaabe8b916" category="paragraph">あらゆる DR ソリューションの主な課題の 1 つは、DR レプリケーションおよびリカバリ インフラストラクチャを提供するためだけに、追加のコンピューティング、ネットワーク、およびストレージ リソースを購入、構成、維持するための増分コストを管理することです。重要なオンプレミスの仮想リソースを保護するための一般的なオプションの 1 つは、クラウドでホストされる仮想リソースを DR レプリケーションおよびリカバリ インフラストラクチャとして使用することです。  Amazon は、 NetApp ONTAPがホストする VM インフラストラクチャと互換性のあるコスト効率の高いリソースを提供できるソリューションの一例です。</block>
@@ -1798,7 +1784,6 @@
   <block id="8086884cdea0ea24d9f6308a19cdf043" category="list-text">レプリケーション プランに追加できるボリュームまたはデータストアは 1 つだけです。</block>
   <block id="0cad1bab03dc44ec351d2de019d82607" category="list-text">レビュー<block ref="8f7fb2d6ad43669f8a59b96f07943aee" category="inline-link-macro-rx"></block>。</block>
   <block id="b6c17338accc8d99b423f332451f50ad" category="paragraph">**フェイルオーバーの考慮事項**</block>
-  <block id="f8772b1ca9ad18417bf5318a8f27afba" category="list-text">フェイルオーバーは最新のスナップショットを使用した場合にのみサポートされます。必要に応じて、スナップショット中に新しいスナップショットを作成できます (つまり、選択スナップショット オプションを無効にする必要があります)。</block>
   <block id="242733299daaca561039b733176ac1b7" category="list-text">フェイルオーバー後に新しいスナップショットを作成することはできません。</block>
   <block id="c05df755e6c0a942398c7fcd1eb14679" category="list-text">フェイルオーバー後にスナップショットを保持および調整することはできません。</block>
   <block id="a6b1001c218e39c86bcccb2fe9813de3" category="paragraph">**フェイルバックの考慮事項**</block>
@@ -1825,12 +1810,9 @@
   <block id="94c02ddd984f67eb8b79c11dbd8b654a" category="list-text"><block ref="94c02ddd984f67eb8b79c11dbd8b654a" category="inline-link-macro-rx"></block></block>
   <block id="4dc42c993e8bd7091a49f3fe75b4cc7f" category="paragraph">まだお済みでない場合は、<block ref="94e30243c99a58315474317c40996996" category="inline-link-rx"></block> 。</block>
   <block id="c6d4ec9aebbd9adbd6cd055b1e2ef0b4" category="list-text">NetApp Disaster Recovery は、標準モード エージェントの展開でのみ機能します。見る<block ref="1dca0eb7ce67e238dc32613ea2fd1e70" category="inline-link-rx"></block>。</block>
-  <block id="d79ddc5d144ac6cb3cc81d1fd8bbf16b" category="list-text">*オンプレミスからオンプレミスへの災害復旧*: 災害復旧サイトにコンソールのオンプレミス エージェントをインストールします。この方法を使用すると、プライマリ サイトに障害が発生しても、サービスが DR サイトで仮想リソースを再起動できなくなります。参照<block ref="aa1d5488876933382cbfe9d426d413f9" category="inline-link-rx"></block>。</block>
   <block id="229e27e5e98d46ffabb19ff45325734b" category="list-text">*オンプレミスから AWS*: AWS VPC に AWS 用コンソールエージェントをインストールします。参照<block ref="1169d6a654f5038ebfa8fc4462054b47" category="inline-link-rx"></block>。</block>
   <block id="db93e33cfb5094bef5af78afec2a318a" category="paragraph">見る<block ref="7710287f166c6260d467d0ffbd4c652b" category="inline-link-rx"></block>。</block>
   <block id="9fb45d8b59f2c406ddf7a9711c1391c2" category="list-text">以下の手順に従ってください<block ref="69ac71aae3c3019102e9a90ab4fd3799" category="inline-link-rx"></block>そして<block ref="3f510c006b92994b3ccaf7ccb9cc0351" category="inline-link-rx"></block>FSx for ONTAPをプロビジョニングおよび構成します。</block>
-  <block id="5280fea1000838e74051510a8adb21e9" category="paragraph">サービスを使用するには、コンソール エージェントを標準モードでインストールします。コンソールエージェントのインストールの種類の詳細については、次のサイトをご覧ください。<block ref="e87d59187940f672670f4b294a02b363" category="inline-link-rx"></block> 。</block>
-  <block id="b567b746a04d21aaaa45a342f69073cb" category="paragraph">Amazon AWS を使用してコンソールエージェントをインストールする最も簡単な方法は、AWS Marketplace を使用することです。AWS Marketplaceを使用したコンソールエージェントのインストールの詳細については、以下を参照してください。<block ref="7f4733cc86c855f6efc0e6a18921c741" category="inline-link-rx"></block> 。</block>
   <block id="52f0067dfdeb72bf780f9e3a808fbb01" category="paragraph">参照<block ref="d83a9ddc5356a460fd8c8bdc5b02cf7f" category="inline-link-rx"></block>。</block>
   <block id="ea22e49b05f0c437898dd362ac3cb582" category="section-title">Google Cloud NetApp Volumesの制限</block>
   <block id="0b3bf876c8f0155fffe01bfe66919ae7" category="list-text">フェイルオーバー テストを実行した後、クローン ボリュームを削除するには少なくとも 52 時間待つ必要があります。ボリュームを手動で削除する必要があります。  52 時間後に、フェイルオーバーを再度テストできます。</block>
@@ -1893,7 +1875,6 @@
   <block id="705a20699e1039fa52632f889e10a673" category="admonition">フェイルオーバー テスト用に専用のマッピング セットを別途作成し、同じ IP アドレスを使用して VMS が本番環境ネットワークに接続されるのを防ぎます。</block>
   <block id="5f4825a97c910dc2ee0d9eb1107f19d9" category="section-title">マップリソース &gt; 仮想マシンセクション</block>
   <block id="06596d9f3a6cac6c36599f4c1598f756" category="sidebar">災害復旧に必要な vCenter 権限</block>
-  <block id="2b1806d17c0606f8caa4232aa6a3c113" category="sidebar">スイッチコンソールエージェント</block>
   <block id="ad4891bd95428a3a61372e6cb7c1e8db" category="paragraph">詳細については、 <block ref="46afb87ea9ab52c50c55f4a3ee88e9ae" category="inline-link-macro-rx"></block>。</block>
   <block id="8b398f79cbc8bafdd3d60b15c90e7f01" category="paragraph">詳細については、 <block ref="9816d86fb07a6c2043bc508d566ad539" category="inline-link-macro-rx"></block>。</block>
   <block id="6da53899225555a506524070f96e33df" category="doc">オンプレミス環境での複数のコンソール エージェントのサポート</block>
@@ -2086,4 +2067,44 @@
   <block id="e09864970107f53b95b27d59844fe8a3" category="cell">VirtualMachine.State.RevertToSnapshot</block>
   <block id="e2a5f777b44916836fdc3739a3964e98" category="cell">Revert to snapshot</block>
   <block id="f82e780d3c4a5f7f4bf54aabdabdd223" category="cell">VM を特定のスナップショットの状態に戻すことを許可します。</block>
+  <block id="d2dcf6ed6e5c29ab53931601f3745b58" category="list-text">フェイルオーバーは最新のスナップショットを使用した場合にのみサポートされます。必要に応じて、フェイルオーバー中に新しいスナップショットを作成できます（つまり、選択スナップショット オプションを無効にする必要があります）。</block>
+  <block id="95857ccbc14e3129d72a5e3b2a9ea093" category="list-text">送信元と送信先の両方のvCenterクラスタが同じConsoleエージェントを使用していることを確認します。</block>
+  <block id="e7c6b03acd24bdb46e3ebc9db2271af4" category="list-text">*オンプレミスからオンプレミスへのディザスタリカバリ*：ディザスタリカバリサイトにオンプレミスの Console エージェントをインストールします。この方法を使用すると、プライマリサイトに障害が発生しても、サービスが DR サイトで仮想リソースを再起動することを妨げません。<block ref="aa1d5488876933382cbfe9d426d413f9" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="0993f38ff744157834a941d4a95a1c9b" category="inline-xref-macro">必須のvCenter権限</block>
+  <block id="e5687f2773f6f6b8a300b70ff0ed5f08" category="list-text"><block ref="e5687f2773f6f6b8a300b70ff0ed5f08" category="inline-xref-macro-rx"></block></block>
+  <block id="3c596c027e95d93780e84a69b6da660a" category="list-text"><block ref="3c596c027e95d93780e84a69b6da660a" category="inline-xref-macro-rx"></block></block>
+  <block id="c4342fa27fe9324eb1ac1c89b0f10923" category="paragraph">Amazon EVSをNetApp Disaster Recoveryで構成するための要件を確認し、満たしていることを確認してください。</block>
+  <block id="c9eefbd632f55f15922ec2a67ceecd81" category="inline-link-macro">Disaster Recovery の一般的な前提条件</block>
+  <block id="8bc4be62934b53e69c9b81bff1de1f0d" category="list-text"><block ref="99d15c44c2397213a4572e5e72b0ce99" category="inline-link-macro-rx"></block>を確認します。</block>
+  <block id="b232b2686ea4af18cdf799d03f5c0709" category="admonition">デフォルトの「\administrator@vsphere.com」管理者アカウントは使用しないことを推奨します。代わりに、ディザスタリカバリプロセスに参加するすべてのvCenterクラスタ上で、NetApp Disaster Recovery専用のユーザーアカウントを作成してください。必要な特定の権限の一覧については、<block ref="efdd112b209053b66d06020632d7d4cc" category="inline-link-macro-rx"></block>をご参照ください。</block>
+  <block id="76c4a74ea7e2c38908b8f0de658cdf2c" category="list-text">Disaster Recoveryで保護されるVMをホストするすべてのvCenterデータストアが、NetApp ONTAPストレージリソース上に配置されていることを確認してください。</block>
+  <block id="fccca3a5829253b726912e9af8eccf51" category="paragraph">Disaster Recoveryは、Amazon FSx for NetApp ONTAP使用時に、iSCSI上のNFSとVMFS（FCではない）をサポートします。Disaster RecoveryはFCをサポートしていますが、Amazon FSx for NetApp ONTAPはサポートしていません。</block>
+  <block id="6683d3fd667353df6eb18d8c37a59d26" category="list-text">Amazon EVS vCenterがAmazon FSx for NetApp ONTAPストレージクラスタに接続されていることを確認してください。</block>
+  <block id="a3f678b7d2f048c131821a342cf0bb33" category="list-text">保護されているすべての VM に VMware Tools がインストールされていることを確認します。</block>
+  <block id="5cf3ae319de1b41c84ea40a888e16487" category="list-text">オンプレミスネットワークが、Amazon が承認した接続方法を使用して AWS VPC ネットワークに接続されていることを確認してください。AWS Direct Connect、AWS Private Link、または AWS Site-to-Site VPN を使用することをお勧めします。</block>
+  <block id="10baca09fc866108786c7a0324846bcb" category="list-text">Disaster Recovery を使用した EVS の接続およびポート要件を確認し、準拠していることを確認します。</block>
+  <block id="f31bbdd1b3e85bccd652680e16935819" category="cell">ソース</block>
+  <block id="12007e1d59f4d09c87dbe2c438256244" category="cell">デスティネーション</block>
+  <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">ポート</block>
+  <block id="3ec365dd533ddb7ef3d1c111186ce872" category="cell">詳細</block>
+  <block id="86b0c8b8054d40bc89481fe7a497df7e" category="cell">Amazon FSxN</block>
+  <block id="10eaa67ba3824a947cec2803e682249a" category="cell">オンプレミス ONTAP</block>
+  <block id="c077081eae33eee10e1ba19434e1c515" category="cell">TCP 11104、11105、ICMP</block>
+  <block id="794cb725c5631ad99b5b7c000307f0df" category="cell">SnapMirror</block>
+  <block id="9d7ef2f46b4da993716f9b0b9bdfc399" category="cell">NetApp Console エージェント</block>
+  <block id="03510cbdbd6e9e3e6b1f72a763c1337f" category="cell">TCP 443、ICMPのみ</block>
+  <block id="22043367a89ddcf3eb99eec509a967ba" category="cell">API呼び出し</block>
+  <block id="ef250585f20688efb904641e7a1780df" category="cell">TCP 441、ICMPのみ</block>
+  <block id="d07940c9cf4f1ef1b3c28d3f960170da" category="cell">vCenter（オンプレミス、EVS）、ESXiホスト（オンプレミス、EVS）</block>
+  <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
+  <block id="e3685e9b39c4dbfec3a5462455b43f7d" category="cell">API呼び出し、スクリプト実行</block>
+  <block id="ca5d68ad717b18cefbfd5ba03db7fc9c" category="summary">NetApp Console エージェントは、NetApp Console とクラウドまたはオンプレミスのストレージリソース間の接続と管理を調整します。</block>
+  <block id="54c585a071d1c4db16522ba27cc6a191" category="paragraph">NetApp Console エージェントを使用すると、NetApp Console の導入をインフラストラクチャに接続して、AWS、Azure、Google Cloud、またはオンプレミス環境全体でソリューションを安全にオーケストレーションできます。Console エージェントは、NetApp Console がデータインフラストラクチャを管理するために実行する必要があるアクションを実行します。Console エージェントは、NetApp Disaster Recovery の SaaS レイヤーを常にポーリングして、実行する必要があるアクションを確認します。</block>
+  <block id="0ed93f213541543ce11a5a41955fdb61" category="paragraph">NetApp Disaster Recoveryでは、実行されるアクションは、各サービスのネイティブAPIを使用してVMware vCenterクラスタとONTAPストレージインスタンスをオーケストレーションし、オンプレミスの場所で実行されている本番VMを保護します。Console agentはネットワーク上の任意の場所にインストールできますが、NetApp Disaster Recoveryの災害復旧サイトにConsole agentをインストールすることをお勧めします。DRサイトにインストールすることで、プライマリサイトに障害が発生した場合でも、NetApp Console UIはConsole agentへの接続を維持し、そのDRサイト内でリカバリプロセスをオーケストレーションできます。</block>
+  <block id="7cd8fb6e31cc946c078d2740c76a9899" category="section-title">インストール</block>
+  <block id="09e422c729719f602773531e14c7fdcb" category="inline-link">NetApp Console の導入モードについて</block>
+  <block id="9787e79ead7b319f8e8361fc7821dd0c" category="list-text">Disaster Recoveryを使用するには、Consoleエージェントを標準モードでインストールします。Consoleエージェントのインストールの種類の詳細については、<block ref="176f6de3ac91258383588e87ceb2df5f" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="29526e6f5f21e46912fe5e749afaadeb" category="paragraph">コンソールエージェントの具体的なインストール手順は、導入タイプによって異なります。詳細については、<block ref="60ce1b0a0c322e03a03b2c2641ba72c3" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="1515391ee07716093ddb994cd9906006" category="inline-link">AWS MarketplaceからConsoleエージェントを作成する</block>
+  <block id="7f9f446a286afe8acb3ad25ae1a89a13" category="admonition">Amazon AWS を使用して Console エージェントをインストールする最も簡単な方法は、AWS Marketplace を使用することです。AWS Marketplace を使用した Console エージェントのインストールの詳細については、<block ref="f267bc5cc8f7e48efa7f9b5434e2039f" category="inline-link-rx"></block>を参照してください。</block>
 </blocks>

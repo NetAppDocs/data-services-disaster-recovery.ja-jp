@@ -2,19 +2,25 @@
 sidebar: sidebar 
 permalink: reference/evs-deploy-guide-install-connector.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
-summary: Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介。コネクタはネットワーク上の任意の場所にインストールできますが、 NetApp Disaster Recoveryの場合は、コネクタを DR サイトにインストールすることをお勧めします。これにより、プライマリ サイトに障害が発生した場合でも、 NetAppコンソール UI はコンソール エージェントとの接続を維持し、その DR サイト内でリカバリ プロセスを調整できるようになります。 
+summary: NetApp Console エージェントは、NetApp Console とクラウドまたはオンプレミスのストレージリソース間の接続と管理を調整します。 
 ---
 = NetApp Disaster Recovery用のNetApp Consoleエージェントをインストールする
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp Consoleエージェントは、クラウドまたはオンプレミス ネットワークで実行されるNetAppソフトウェアです。 NetApp Consoleがデータ インフラストラクチャを管理するために実行する必要があるアクションを実行します。コンソール エージェントは、実行する必要があるアクションがあるかどうか、NetApp Disaster Recoveryソフトウェアをサービス レイヤーとして継続的にポーリングします。
+NetApp Console エージェントを使用すると、NetApp Console の導入をインフラストラクチャに接続して、AWS、Azure、Google Cloud、またはオンプレミス環境全体でソリューションを安全にオーケストレーションできます。Console エージェントは、NetApp Console がデータインフラストラクチャを管理するために実行する必要があるアクションを実行します。Console エージェントは、NetApp Disaster Recovery の SaaS レイヤーを常にポーリングして、実行する必要があるアクションを確認します。
 
-NetApp Disaster Recoveryの場合、実行されるアクションは、それぞれのサービスごとにネイティブ API を使用して VMware vCenter クラスターとONTAPストレージ インスタンスをオーケストレーションし、オンプレミスの場所で実行されている本番環境の VM を保護します。コンソール エージェントはネットワーク上の任意の場所にインストールできますが、 NetApp Disaster Recoveryの場合は、コンソール エージェントを DR サイトにインストールすることをお勧めします。これにより、プライマリ サイトに障害が発生した場合でも、 NetAppクラウドベースのコンソール UI はコンソール エージェントとの接続を維持し、その DR サイト内でリカバリ プロセスを調整できるようになります。
+NetApp Disaster Recoveryでは、実行されるアクションは、各サービスのネイティブAPIを使用してVMware vCenterクラスタとONTAPストレージインスタンスをオーケストレーションし、オンプレミスの場所で実行されている本番VMを保護します。Console agentはネットワーク上の任意の場所にインストールできますが、NetApp Disaster Recoveryの災害復旧サイトにConsole agentをインストールすることをお勧めします。DRサイトにインストールすることで、プライマリサイトに障害が発生した場合でも、NetApp Console UIはConsole agentへの接続を維持し、そのDRサイト内でリカバリプロセスをオーケストレーションできます。
 
-サービスを使用するには、コンソール エージェントを標準モードでインストールします。コンソールエージェントのインストールの種類の詳細については、次のサイトをご覧ください。 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの導入モードについて学ぶ | NetAppドキュメント"^] 。
 
-コンソール エージェントはサービスを使用する上で重要ですが、コンソール エージェントをインストールする手順は、ニーズとネットワーク構成によって異なります。インストールに関する具体的な手順を説明することは、この情報の範囲外です。
 
-Amazon AWS を使用してコンソールエージェントをインストールする最も簡単な方法は、AWS Marketplace を使用することです。AWS Marketplaceを使用したコンソールエージェントのインストールの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-marketplace.html["AWS Marketplace からコンソールエージェントを作成する | NetAppドキュメント"^] 。
+== インストール
+
+* Disaster Recoveryを使用するには、Consoleエージェントを標準モードでインストールします。Consoleエージェントのインストールの種類の詳細については、 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console の導入モードについて"^]を参照してください。
+
+
+コンソールエージェントの具体的なインストール手順は、導入タイプによって異なります。詳細については、link:https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html["コンソールエージェントについて学ぶ"^]を参照してください。
+
+
+TIP: Amazon AWS を使用して Console エージェントをインストールする最も簡単な方法は、AWS Marketplace を使用することです。AWS Marketplace を使用した Console エージェントのインストールの詳細については、 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-marketplace.html["AWS MarketplaceからConsoleエージェントを作成する"^]を参照してください。
