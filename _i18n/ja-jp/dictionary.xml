@@ -2107,4 +2107,12 @@
   <block id="29526e6f5f21e46912fe5e749afaadeb" category="paragraph">コンソールエージェントの具体的なインストール手順は、導入タイプによって異なります。詳細については、<block ref="60ce1b0a0c322e03a03b2c2641ba72c3" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="1515391ee07716093ddb994cd9906006" category="inline-link">AWS MarketplaceからConsoleエージェントを作成する</block>
   <block id="7f9f446a286afe8acb3ad25ae1a89a13" category="admonition">Amazon AWS を使用して Console エージェントをインストールする最も簡単な方法は、AWS Marketplace を使用することです。AWS Marketplace を使用した Console エージェントのインストールの詳細については、<block ref="f267bc5cc8f7e48efa7f9b5434e2039f" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="83babe62c403f56e76ef6809d4508f91" category="doc">ユーザーインターフェースの改善</block>
+  <block id="438ce765c897095715b03fca4b860a61" category="paragraph">フィードバックに基づいてパフォーマンスとユーザーエクスペリエンスを向上させるために、災害復旧 UI が更新されました。</block>
+  <block id="c99f25325f86d3f0c79c43f7e35c908e" category="section-title">API Swaggerドキュメント</block>
+  <block id="4dc69d78f0442e6b664baa4e0d9bd594" category="inline-image-macro">アクションアイコン</block>
+  <block id="c75d11eee9117155e14ba1fe4d4e9609" category="inline-link-macro">URLをブックマークする</block>
+  <block id="1ed2e3ee9da6a94c882b1fde4a104444" category="paragraph">Disaster Recovery API Swagger ドキュメントに通常のブラウザからアクセスできるようになり、シークレット モードは不要になりました。API ドキュメントにアクセスするには、Disaster Recovery ダッシュボードにアクセスし、右上のコンテキスト メニュー <block ref="9bb01c837d73cae62964f6b5d76c3c64" category="inline-image-macro-rx" type="image"></block> を選択してから **API Documentation** を選択して Swagger ドキュメントを開きます。また、<block ref="1a92440ed6b8c60f65d4cdda7009f427" category="inline-link-macro-rx"></block>こともできます。</block>
+  <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">2026年2月16日</block>
+  <block id="699554d8d02429739cd0995ec1ec3ab8" category="paragraph">バージョン4.3.0</block>
 </blocks>

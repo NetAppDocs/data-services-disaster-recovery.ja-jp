@@ -1,0 +1,15 @@
+= ユーザーインターフェースの改善
+:allow-uri-read: 
+
+
+
+
+=== ユーザーインターフェースの改善
+
+フィードバックに基づいてパフォーマンスとユーザーエクスペリエンスを向上させるために、災害復旧 UI が更新されました。
+
+
+
+=== API Swaggerドキュメント
+
+Disaster Recovery API Swagger ドキュメントに通常のブラウザからアクセスできるようになり、シークレット モードは不要になりました。API ドキュメントにアクセスするには、Disaster Recovery ダッシュボードにアクセスし、右上のコンテキスト メニュー image:../media/use/icon-vertical-dots.png["アクションアイコン"] を選択してから **API Documentation** を選択して Swagger ドキュメントを開きます。また、link:https://api.bluexp.netapp.com/v1/services/draas/api/api-doc/draas["URLをブックマークする"^]こともできます。
