@@ -26,7 +26,7 @@ NetApp Disaster Recoveryの新機能について説明します。
 
 Disaster でレプリケーションプランを作成するときに、特定のデータストアをレプリケーションから除外できるようになりました。VM が複数のデータストアを使用するように構成されている場合、これにより、レプリケートされるデータストアを制限できます。
 
-詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.adoc["レプリケーションプランを作成する"^]を参照してください。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]を参照してください。
 
 
 
@@ -295,7 +295,8 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles
 ** vCenter でクラスタ、ホスト、またはデータセンターが削除されると、 NetApp Disaster Recoveryによってレプリケーション プランとリソース グループからそれが削除されるようになりました。
 
 
-* ブラウザのシークレット モードで Swagger ドキュメントにアクセスできるようになりました。NetApp Disaster Recovery内の [設定] オプション > [API ドキュメント] からアクセスするか、ブラウザのシークレット モードで次の URL から直接アクセスできます。 https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["Swaggerドキュメント"^] 。
+
+
 * 状況によっては、フェイルバック操作後に、操作の完了後に iGroup が残されることがあります。このアップデートでは、古くなった iGroup が削除されます。
 * レプリケーション プランで NFS FQDN が使用されていた場合、 NetApp Disaster Recovery はそれを IP アドレスに解決するようになりました。この更新は、災害復旧サイトで FQDN を解決できない場合に役立ちます。
 * UIの配置の改善

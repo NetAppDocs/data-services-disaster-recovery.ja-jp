@@ -8,7 +8,7 @@
 
 Disaster でレプリケーションプランを作成するときに、特定のデータストアをレプリケーションから除外できるようになりました。VM が複数のデータストアを使用するように構成されている場合、これにより、レプリケートされるデータストアを制限できます。
 
-詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.adoc["レプリケーションプランを作成する"^]を参照してください。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]を参照してください。
 
 
 

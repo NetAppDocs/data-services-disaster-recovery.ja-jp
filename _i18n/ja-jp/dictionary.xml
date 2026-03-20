@@ -119,8 +119,6 @@
   <block id="2b077b3d88dcc4adb54c2a11c5463fae" category="list-text">vCenter で VM が削除されると、 NetApp Disaster Recoveryによってその VM がレプリケーション プランから自動的に削除されるようになりました。</block>
   <block id="7fb8e5a4929cd35fd131ad1f5533d144" category="list-text">vCenter でデータストアまたはネットワークが削除されると、 NetApp Disaster Recoveryによってレプリケーション プランとリソース グループからそれが削除されるようになりました。</block>
   <block id="1b838198508b4c30761cfb90615db038" category="list-text">vCenter でクラスタ、ホスト、またはデータセンターが削除されると、 NetApp Disaster Recoveryによってレプリケーション プランとリソース グループからそれが削除されるようになりました。</block>
-  <block id="24ed933119d9ba78138d2119f9ebbdac" category="inline-link">Swaggerドキュメント</block>
-  <block id="cec5123afb166f0c68f7ddc85e5b41e4" category="list-text">ブラウザのシークレット モードで Swagger ドキュメントにアクセスできるようになりました。NetApp Disaster Recovery内の [設定] オプション &gt; [API ドキュメント] からアクセスするか、ブラウザのシークレット モードで次の URL から直接アクセスできます。<block ref="fbeb63b8afb1564cb8457db3650e3513" category="inline-link-rx"></block> 。</block>
   <block id="07249132999164b31d31db024261d558" category="list-text">状況によっては、フェイルバック操作後に、操作の完了後に iGroup が残されることがあります。このアップデートでは、古くなった iGroup が削除されます。</block>
   <block id="5b6034f39325a10d9f5315c86847a208" category="list-text">レプリケーション プランで NFS FQDN が使用されていた場合、 NetApp Disaster Recovery はそれを IP アドレスに解決するようになりました。この更新は、災害復旧サイトで FQDN を解決できない場合に役立ちます。</block>
   <block id="bd9a0211a986e2ba720cbe54530cd5c5" category="list-text">UIの配置の改善</block>
@@ -1146,42 +1144,23 @@
   <block id="d813bc25d25a7f816dde51c17f6c6ba0" category="list-text">ソース環境のリソースが宛先にどのようにマップされるかをマップします。</block>
   <block id="5971ed413328372ff42391caae30a427" category="list-text">プランの実行頻度を設定し、ゲストホスト スクリプトを実行し、ブート順序を設定し、回復ポイントの目標を選択します。</block>
   <block id="1c10305a999dce53cb52dd4f6b8d89ff" category="list-text">計画を見直します。</block>
-  <block id="50e34508d81a64564e31500b942aef1c" category="paragraph">計画を作成するときは、次のガイドラインに従う必要があります。</block>
   <block id="05bbe166de3c0c72c8dde33285c35767" category="list-text">プラン内のすべての VM に同じ資格情報を使用します。</block>
   <block id="98ce844145386e78d8c9d936d1b8591b" category="list-text">プラン内のすべての VM に同じスクリプトを使用します。</block>
   <block id="970b99aab999d5cc3afca09ebfb3ae92" category="list-text">プラン内のすべての VM に同じサブネット、DNS、ゲートウェイを使用します。</block>
   <block id="8705d6076cb452e919a6e22862427440" category="section-title">vCenterサーバーを選択</block>
   <block id="c456b58190fd5c21d84750f126197baf" category="paragraph">まず、ソース vCenter を選択し、次に宛先 vCenter を選択します。</block>
-  <block id="e7110f21716af9e270340e4ab663e36c" category="list-text">NetApp Disaster Recoveryメニューから、*レプリケーション プラン* を選択し、*追加* を選択します。または、サービスを使い始めたばかりの場合は、ダッシュボードから [*レプリケーション プランの追加*] を選択します。</block>
-  <block id="d72f4a94d857178ae5cb1420995137e4" category="inline-image-macro">レプリケーション プランの追加 &amp;gt; プランの追加ページを示すスクリーンショット</block>
-  <block id="1f0f1a8ff517bead0b08cc0da5d50e4f" category="paragraph"><block ref="58b57a8b9c6929a404002fa01b315144" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="466ea193e548e9ef8d853f2da4829a3e" category="list-text">レプリケーション プランの名前を作成します。</block>
-  <block id="ad05d9be76290e8ea731306ed4911c41" category="list-text">ソース vCenter およびターゲット vCenter リストからソース vCenter とターゲット vCenter を選択します。</block>
   <block id="f17de33c8bac2ab69dd89149aac16c6c" category="paragraph">次のステップは、必要な VM またはデータストアを機能リソース グループにグループ化することです。リソース グループを使用すると、共通のスナップショットを使用して一連の VM またはデータストアを保護できます。</block>
-  <block id="418330af51c4a26653da43f1476e3d4f" category="paragraph">レプリケーション プランでアプリケーションを選択すると、プラン内の各 VM またはデータストアのオペレーティング システムが表示されます。これは、VM またはデータストアをリソース グループにグループ化する方法を決定するのに役立ちます。</block>
   <block id="516dbf8e2c43d00664357bb38d1575a6" category="admonition">各リソース グループには、1 つ以上の VM またはデータストアを含めることができます。</block>
   <block id="5e90d93870eb5779de0b40ced0f92445" category="paragraph">リソース グループを作成するときは、次の点を考慮してください。</block>
   <block id="de634b3bd311c5e5e1c0b9d53d9d242f" category="list-text">データストアをリソース グループに追加する前に、まず VM の手動検出またはスケジュールされた検出を開始します。これにより、VM が検出され、リソース グループにリストされるようになります。手動検出をトリガーしないと、VM がリソース グループにリストされない可能性があります。</block>
-  <block id="312258bdb1152123e04c06cf90952de2" category="list-text">データストアに少なくとも 1 つの VM があることを確認します。データストアに VM がない場合、データストアは検出されません。</block>
   <block id="9fa2d89f680762c7614753f04e0aad6b" category="list-text">単一のデータストアは、複数のレプリケーション プランによって保護されている VM をホストしないでください。</block>
   <block id="dfbb0d3c710884104551edbd929afe76" category="list-text">保護された VM と保護されていない VM を同じデータストアにホストしないでください。保護された VM と保護されていない VM が同じデータストアでホストされている場合、次の問題が発生する可能性があります。</block>
   <block id="84c62302deac0be1dd475a0a0a91a4fa" category="list-text">NetApp Disaster Recovery はSnapMirrorを使用し、システムがONTAPボリューム全体を複製するため、そのボリュームの使用容量がライセンスの考慮に使用されます。この場合、保護された VM と保護されていない VM の両方によって消費されるボリューム スペースがこの計算に含まれます。</block>
   <block id="4e7a12dab0e91d1fb0221d782eacf1e5" category="list-text">リソース グループとそれに関連付けられたデータストアを災害復旧サイトにフェイルオーバーする必要がある場合、保護されていない VM (リソース グループの一部ではないが、 ONTAPボリュームでホストされている VM) はフェイルオーバー プロセスによってソース サイトに存在しなくなり、その結果、ソース サイトで保護されていない VM に障害が発生します。また、 NetApp Disaster Recovery、フェールオーバー vCenter サイトで保護されていない VM を起動しません。</block>
   <block id="8a63c65b056310ba2a8c9f7b25cb1011" category="list-text">VM を保護するには、VM をリソース グループに含める必要があります。</block>
-  <block id="6f9c40e36ae73e33332b46ebad53611b" category="list-text">*仮想マシン*または*データストア*を選択します。</block>
-  <block id="1e37304672f6f6f473c93804e891eacb" category="list-text">必要に応じて、特定の VM またはデータストアを名前で検索します。</block>
-  <block id="b3736de6232ff120d2109e988d051825" category="list-text">「アプリケーション」ページの左側で、保護する VM またはデータストアを選択し、選択したグループに割り当てます。</block>
-  <block id="08c396946743aa0cf55cd76038c264b7" category="paragraph">選択したリソースは自動的にグループ 1 に追加され、新しいグループ 2 が開始されます。最後のグループにリソースを追加するたびに、別のグループが追加されます。</block>
   <block id="4039eb9aa82f9a49f8096e652825e9c9" category="inline-image-macro">「レプリケーション プランの追加」&amp;gt;「レプリケーションするアプリケーション」ページを示すスクリーンショット</block>
   <block id="0f71807fe3313792a56d8deaefc042cd" category="paragraph"><block ref="fe2b15a06d13ce51dd26ce76b278185c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9614731ca9a6da0007a983f0a2437843" category="paragraph">または、データストアの場合:</block>
   <block id="07445ca0ae375259d669e5ff34c73c99" category="paragraph"><block ref="0900e5e3c0a693c1efb9cc1c9f020053" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f60de6a7e37982bbcf6e675308bbbeb8" category="list-text">必要に応じて、次のいずれかを実行します。</block>
-  <block id="caa1e25984e775c1ab44cfd42620d720" category="inline-image-macro">鉛筆アイコン</block>
-  <block id="bcc94af8bc9c7e6ef8fd57214884e7f1" category="list-text">グループの名前を変更するには、グループの*編集*をクリックします。<block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block>アイコン。</block>
-  <block id="8d2514ca702dd19c69d05151f9ca0dde" category="list-text">グループからリソースを削除するには、リソースの横にある *X* を選択します。</block>
-  <block id="f0a0692b11f1b8e73cde7a3fa59cce87" category="list-text">リソースを別のグループに移動するには、新しいグループにドラッグ アンド ドロップします。</block>
-  <block id="d92fbdb4e21242a727db9edab622f2e7" category="admonition">データストアを別のリソース グループに移動するには、不要なデータストアの選択を解除し、レプリケーション プランを送信します。次に、他のレプリケーション プランを作成または編集し、データストアを再度選択します。</block>
   <block id="94884044f731a17cf6d266f3acc71d30" category="section-title">ソースリソースをターゲットにマッピングする</block>
   <block id="b09b7f24f5b2d0187b19263b47fb2cdf" category="paragraph">リソース マッピング ステップでは、ソース環境のリソースをターゲットにどのようにマッピングするかを指定します。レプリケーション プランを作成するときに、プラン内の各 VM のブート遅延と順序を設定できます。これにより、VM の起動順序を設定できます。</block>
   <block id="8347a9e8f0404960a1eb7ad71a74e635" category="paragraph">DR 計画の一環としてテスト フェールオーバーを実行する予定の場合は、フェールオーバー テスト中に起動された VM が運用 VM に干渉しないように、一連のテスト フェールオーバー マッピングを提供する必要があります。これを実現するには、テスト VM に異なる IP アドレスを提供するか、テスト VM の仮想 NIC を、運用環境から分離されているが同じ IP 構成を持つ別のネットワーク (_バブル_ または _テスト ネットワーク_ と呼ばれる) にマッピングします。</block>
@@ -1192,7 +1171,6 @@
   <block id="671f7938870f01967b2e491f4c0ea912" category="list-text">フェールオーバー マッピング タブで、各リソースの右側にある下矢印を選択し、各セクションのリソースをマッピングします。</block>
   <block id="137f19e6e2dc1219f33553b812627bc2" category="list-text">仮想マシン</block>
   <block id="eff845e03ea7f765e5646b3de0aa3188" category="list-text">データストア</block>
-  <block id="ddbdc0fdada8e6466e651115cefbafee" category="section-title">マップリソース &gt; コンピューティングリソースセクション</block>
   <block id="7cf17a4502ca68d3226875e2a729fc55" category="paragraph">コンピューティング リソース セクションでは、フェイルオーバー後に VM が復元される場所を定義します。ソース vCenter データセンターとクラスタをターゲット データセンターとクラスタにマップします。</block>
   <block id="5e076e09da1cdcb61e77ca7391027eed" category="paragraph">オプションで、特定の vCenter ESXi ホストで VM を再起動できます。  VMWare DRS が有効になっている場合は、DR で構成されたポリシーを満たすために必要に応じて、VM を代替ホストに自動的に移動できます。</block>
   <block id="08f13ccfaa019ccfc0c98a80108c779a" category="paragraph">オプションで、このレプリケーション プラン内のすべての VM を vCenter の一意のフォルダーに配置できます。これにより、vCenter 内でフェールオーバーされた VM をすばやく整理する簡単な方法が提供されます。</block>
@@ -1201,7 +1179,6 @@
   <block id="7067fdfe055fabd950bd45a1a17e1642" category="list-text">*ターゲットクラスター*</block>
   <block id="2c0a2cae30cf923c64bbed704e923521" category="list-text">*ターゲット ホスト* (オプション): クラスターを選択した後、この情報を設定できます。</block>
   <block id="4cf53d6d28e4261f2397f16ccd7a5a18" category="admonition">vCenter にクラスタ内の複数のホストを管理するように構成された Distributed Resource Scheduler (DRS) がある場合は、ホストを選択する必要はありません。ホストを選択すると、 NetApp Disaster Recovery はすべての VM を選択したホストに配置します。  * *ターゲット VM フォルダー* (オプション): 選択した VM を保存するための新しいルート フォルダーを作成します。</block>
-  <block id="74b0088eeb9a4fc43afd0ad0e9f1ef57" category="section-title">マップリソース &gt; 仮想ネットワークセクション</block>
   <block id="d757ba122f1f3d62b9a13da2a3e1b64c" category="admonition">複数のソース仮想ネットワークを同じターゲット仮想ネットワークに割り当てることができます。ただし、これにより IP ネットワーク構成の競合が発生する可能性があります。複数のソース ネットワークを単一のターゲット ネットワークにマップして、すべてのソース ネットワークの構成が同じになるようにすることができます。</block>
   <block id="21538d8465027f7c4a2d65593552875c" category="paragraph">フェールオーバー マッピング タブで、*仮想ネットワーク* の横にある下矢印を選択します。ソース仮想 LAN とターゲット仮想 LAN を選択します。</block>
   <block id="02453bc953d0b6e10f85235da7a8cca7" category="paragraph">適切な仮想 LAN へのネットワーク マッピングを選択します。仮想 LAN はすでにプロビジョニングされているはずなので、適切な仮想 LAN を選択して VM をマップします。</block>
@@ -1236,17 +1213,11 @@
   <block id="642ce7c45318092be76df71ca359c694" category="paragraph">*Linux を実行する VM*: VM で使用される Linux バージョンでサポートされている任意のシェル スクリプト (.sh) を実行できます。 Linux スクリプトではコマンドライン引数を使用できます。セミコロンで区切られた値のリストで引数を指定します。名前付き引数はサポートされていません。各引数を<block ref="cc0acde0fc5708ea40075a08730fb2e7" prefix=" " category="inline-code"></block>引数リストとポインタを使用して各値を参照します。<block ref="cc0acde0fc5708ea40075a08730fb2e7" prefix=" " category="inline-code"></block>配列、例えば、<block ref="08af2426c7af475c1f6703fed4ed1dd0" prefix=" " category="inline-code"></block> 。</block>
   <block id="6cc5c6ac8b3db105ac7cb142b8d8b7b2" category="list-text">*ターゲット VM のプレフィックスとサフィックス*: 仮想マシンの詳細で、フェールオーバーされた各 VM 名にプレフィックスとサフィックスをオプションで追加できます。これは、フェールオーバーされた VM と、同じ vCenter クラスター上で実行されている本番環境の VM を区別するのに役立ちます。たとえば、VM 名にプレフィックス「DR-」とサフィックス「-failover」を追加できます。災害発生時に別のサイトで一時的に VM をホストするために、2 番目の本番 vCenter を追加する人もいます。プレフィックスまたはサフィックスを追加すると、フェールオーバーされた VM をすばやく識別できるようになります。カスタム スクリプトでプレフィックスまたはサフィックスを使用することもできます。</block>
   <block id="fc8e3522d10b0e18c7fc7763ef0789a1" category="paragraph">コンピューティング リソース セクションでターゲット VM フォルダーを設定する別の方法を使用することもできます。</block>
-  <block id="230dc85a08275a2466390ae799703f92" category="list-text">*ソース VM の CPU と RAM*: 仮想マシンの詳細で、必要に応じて VM の CPU と RAM のパラメータのサイズを変更できます。</block>
   <block id="cd9b7d7dfe576f566d279960505b56d9" category="admonition">DRAM はギガバイト (GiB) またはメガバイト (MiB) で構成できます。各 VM に少なくとも 1 MiB の RAM が必要ですが、実際の量は VM ゲスト OS と実行中のアプリケーションが効率的に動作できるようにする必要があります。</block>
-  <block id="97bbe2658500151382594a4fae0afc57" category="paragraph"><block ref="1dcb46a6f5cf6fb93122072f061a9e9e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="983a4203041e2ae3715f09be44011da8" category="list-text">*ブート順序*: フェールオーバー後に、リソース グループ全体で選択したすべての仮想マシンのブート順序を変更できます。デフォルトでは、すべての VM が同時に並行して起動しますが、この段階で変更を加えることができます。これは、後続の優先度の VM が起動される前に、優先度 1 の VM がすべて実行されていることを確認するのに役立ちます。</block>
   <block id="354a69710d188806a2240038216a8fe4" category="list-text">シーケンシャル ブート: 各 VM に一意の番号を割り当てて、割り当てられた順序 (例: 1、2、3、4、5) で VM を起動します。</block>
   <block id="917743345c16934d4f46d0d5f7c82682" category="list-text">同時起動: 同時に起動するには、すべての VM に同じ番号を割り当てます (例: 1、1、1、1、2、2、3、4、4)。</block>
   <block id="8a1eaa44f33649f4a55add8e5df848ec" category="list-text">*ブート遅延*: ブートアクションの遅延を分単位で調整し、VM が電源オンプロセスを開始する前に待機する時間を示します。  0～10 分までの値を入力します。</block>
-  <block id="517ed43dc67f057cadcb1c29ecbd75ef" category="admonition">起動順序をデフォルトにリセットするには、[*VM 設定をデフォルトにリセット*] を選択し、デフォルトに戻す設定を選択します。</block>
-  <block id="ac8444310c066ee8f680bbbaddb637cb" category="list-text">*アプリケーション整合性のあるレプリカを作成する*: アプリケーション整合性のあるスナップショット コピーを作成するかどうかを示します。サービスはアプリケーションを静止させ、スナップショットを取得してアプリケーションの一貫した状態を取得します。この機能は、Windows および Linux 上で実行されている Oracle と、Windows 上で実行されている SQL Server でサポートされています。次に詳細をご覧ください。</block>
-  <block id="6262500729b6f197aa6e4ad6b2b8e85e" category="list-text">*Windows LAPS を使用する*: Windows ローカル管理者パスワード ソリューション (Windows LAPS) を使用している場合は、このボックスをオンにします。このオプションは、「静的 IP」オプションを選択した場合にのみ使用できます。このボックスをチェックすると、仮想マシンごとにパスワードを入力する必要がなくなります。代わりに、ドメイン コントローラーの詳細を提供します。</block>
-  <block id="4fd3e179011cd215b45b25dbfb0cc8d2" category="paragraph">Windows LAPS を使用しない場合、VM は Windows VM であり、VM 行の資格情報オプションが有効になります。  VM の資格情報を提供できます。</block>
   <block id="085a5b8a90c0ae4c360aae1b0abff664" category="section-title">アプリケーション整合性のあるレプリカを作成する</block>
   <block id="141df2d4721129ff39a3558ae90deae3" category="paragraph">多くの VM は、Oracle や Microsoft SQL Server などのデータベース サーバーをホストします。これらのデータベース サーバーでは、スナップショットが取得されたときにデータベースが一貫した状態であることを保証するために、アプリケーション整合性のあるスナップショットが必要です。</block>
   <block id="a4b7a096ee2c331ab1151c62b05a14d7" category="paragraph">アプリケーション整合性スナップショットにより、スナップショットが取得されたときにデータベースが整合性のある状態であることが保証されます。これは、フェイルオーバーまたはフェイルバック操作後にデータベースを一貫した状態に復元できることを保証するため重要です。</block>
@@ -1265,7 +1236,6 @@
   <block id="3670d8f515aeb4d6181706c8e4bda00d" category="list-text">Windows VM の場合、サービスは Microsoft ボリューム シャドウ コピー サービス (VSS) を使用していずれかのデータベース サーバーと調整します。</block>
   <block id="17118d5c40a4db7a930eaa6bd6772347" category="list-text">Linux VM の場合、サービスは一連のスクリプトを使用して Oracle サーバーをバックアップ モードにします。</block>
   <block id="b023c75e908be8b918df8d4029c40bbb" category="paragraph">VM とそのホスティング データストアのアプリケーション整合性レプリカを有効にするには、各 VM の [*アプリケーション整合性レプリカを作成する*] の横にあるチェックボックスをオンにし、適切な権限を持つゲスト ログイン資格情報を提供します。</block>
-  <block id="64a2a2b78e563e79f2c42c8e9d160e0e" category="section-title">マップリソース &gt; データストアセクション</block>
   <block id="848817103272774cc04857999310abc9" category="paragraph">VMware データストアは、 ONTAP FlexVolボリューム、または VMware VMFS を使用するONTAP iSCSI または FC LUN 上でホストされます。データストア セクションを使用して、ディスク上のデータを宛先に複製するためのターゲットONTAPクラスタ、ストレージ仮想マシン (SVM)、およびボリュームまたは LUN を定義します。</block>
   <block id="923805befcdde4aa8fa4752b9e9a277f" category="paragraph">*データストア*の横にある下矢印を選択します。VM の選択に基づいて、データストア マッピングが自動的に選択されます。</block>
   <block id="210dfd955522333f74e13d0843ab02ff" category="paragraph">このセクションは、選択内容に応じて有効または無効になります。</block>
@@ -1273,18 +1243,12 @@
   <block id="7b6735057ec599457ce14b0629d098bf" category="paragraph"><block ref="383fd741f178abe8be4920d498113a6c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="66567f18828dfaf896a5c34da4af6cbb" category="list-text">*プラットフォーム管理のバックアップと保持スケジュールを使用する*: 外部のスナップショット管理ソリューションを使用している場合は、このチェックボックスをオンにします。 NetApp Disaster Recovery は、ネイティブのONTAP SnapMirrorポリシー スケジューラやサードパーティ統合などの外部スナップショット管理ソリューションの使用をサポートしています。レプリケーション プラン内のすべてのデータストア (ボリューム) に、別の場所で管理されているSnapMirror関係がすでに存在する場合は、それらのスナップショットをNetApp Disaster Recoveryのリカバリ ポイントとして使用できます。</block>
   <block id="d22ee3234903873cb3dfd07b3999a93c" category="paragraph">このオプションを選択すると、 NetApp Disaster Recovery はバックアップ スケジュールを構成しません。ただし、テスト、フェイルオーバー、フェイルバック操作のためにスナップショットが作成される可能性があるため、保持スケジュールを構成する必要があります。</block>
-  <block id="23c4ec9f7f759cf6773cc360abd2a7ec" category="list-text">*開始時刻*: バックアップと保持の実行を開始する日時を入力します。</block>
-  <block id="7a565b2606e153ac342f6305eef26c26" category="list-text">*実行間隔*: 時間間隔を時間と分で入力します。たとえば、1 時間を入力すると、サービスは 1 時間ごとにスナップショットを作成します。</block>
-  <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保持数*: 保持するスナップショットの数を入力します。</block>
   <block id="a7cb9d7cf359ecc9e5cef81ecdd91cd1" category="admonition">保持されるスナップショットの数と各スナップショット間のデータ変更率によって、ソースと宛先の両方で消費されるストレージ容量が決まります。保持するスナップショットの数が増えるほど、消費されるストレージ容量も増えます。</block>
   <block id="63882377431b20b814641f0190aa1986" category="list-text">*ソースおよびターゲット データストア*: 複数の (ファンアウト) SnapMirror関係が存在する場合は、使用する宛先を選択できます。ボリュームにSnapMirror関係がすでに確立されている場合は、対応するソース データストアとターゲット データストアが表示されます。ボリュームにSnapMirror関係がない場合は、ターゲット クラスタを選択し、ターゲット SVM を選択して、ボリューム名を指定することで、今すぐ SnapMirror 関係を作成できます。サービスはボリュームとSnapMirror の関係を作成します。</block>
   <block id="950fa88679103c3c7c4e449423d8bfcc" category="list-text">VM が同じボリュームと同じ SVM からのものである場合、サービスは標準のONTAPスナップショットを実行し、セカンダリ デスティネーションを更新します。</block>
   <block id="a47d6910008cc9bb73921a36d6609a08" category="list-text">VM が異なるボリュームと同じ SVM からのものである場合、サービスはすべてのボリュームを含めて整合性グループのスナップショットを作成し、セカンダリ デスティネーションを更新します。</block>
   <block id="3cc1e8e247fa51b1c7d6f2a7c029a515" category="list-text">VM が異なるボリュームおよび異なる SVM からのものである場合、サービスは同じまたは異なるクラスター内のすべてのボリュームを含めて、整合性グループ開始フェーズおよびコミット フェーズのスナップショットを実行し、セカンダリ デスティネーションを更新します。</block>
   <block id="7fdb47d52c8257466211bbfeff754a21" category="list-text">フェイルオーバー中は、任意のスナップショットを選択できます。最新のスナップショットを選択した場合、サービスはオンデマンド バックアップを作成し、宛先を更新し、そのスナップショットをフェールオーバーに使用します。</block>
-  <block id="10c490bdf4b14320b22d49a659b33c9b" category="list-text">*優先 NFS LIF* と *エクスポート ポリシー*: 通常、サービスによって優先 NFS LIF とエクスポート ポリシーが選択されます。特定の NFS LIF またはエクスポート ポリシーを使用する場合は、各フィールドの横にある下矢印を選択し、適切なオプションを選択します。</block>
-  <block id="3a34b1c612fbfa5151b5f75fa3b7f4d8" category="paragraph">オプションで、フェイルオーバー イベント後にボリュームの特定のデータ インターフェイス (LIF) を使用することもできます。これは、ターゲット SVM に複数の LIF がある場合に、データ トラフィックのバランスをとるのに役立ちます。</block>
-  <block id="80b4d61db95d764d9478be9bd5dce2ba" category="paragraph">NAS データ アクセス セキュリティをさらに制御するために、このサービスでは、異なるデータストア ボリュームに固有の NAS エクスポート ポリシーを割り当てることができます。エクスポート ポリシーは、データストア ボリュームにアクセスする NFS クライアントのアクセス制御ルールを定義します。エクスポート ポリシーを指定しない場合、サービスは SVM のデフォルトのエクスポート ポリシーを使用します。</block>
   <block id="49511806f0e60c638845968f2dbb17f7" category="section-title">テストフェイルオーバーマッピングを追加する</block>
   <block id="a8c55ad0456d667323e1ede0b2d4845d" category="list-text">テスト環境に異なるマッピングを設定するには、ボックスのチェックを外して、[テスト マッピング] タブを選択します。</block>
   <block id="3d2d89948829d5041f9ae015297d638b" category="list-text">前と同じように各タブを確認しますが、今回はテスト環境です。</block>
@@ -1681,7 +1645,6 @@
   <block id="bb05f5a972177b632dbf8088c480f305" category="paragraph">バックアップを作成する前に実行するカスタム スクリプトをフェイルオーバー ワークフローに挿入できるようになりました。バックアップ前のスクリプトを使用すると、スナップショットが複製される前に VM の状態を制御し、VM を移行用に準備することができます。たとえば、フェイルオーバー後に別のスクリプトを使用して再マウントされる NFS マウントをアンマウントするスクリプトを挿入できます。</block>
   <block id="77750efa6f5ff153acdc42067058017f" category="section-title">2025年11月10日</block>
   <block id="67d901d806b31ec45748075cf6b4b785" category="list-text">*VM ハードウェア バージョンをダウングレードして登録*: 登録時に一致するように、宛先 ESX ホストのバージョンがソースのバージョンよりも古い場合はこれを選択します。</block>
-  <block id="c41917a6c517c418de809b1e4f43f537" category="admonition">保護された VM をホストするソースとターゲットの vCenter ESXi ホストのみにボリューム アクセスを制限する専用のエクスポート ポリシーを作成することをお勧めします。これにより、外部エンティティが NFS エクスポートにアクセスできなくなります。</block>
   <block id="11decf8e913c8fbeb5d947338d43e3b0" category="paragraph">詳細については、 <block ref="bf6dbdf786c7323ca961bfd2e12103c6" category="inline-link-macro-rx"></block>。</block>
   <block id="2feeca48692986e9cc471ec61f847fca" category="paragraph">NetApp は、 NetApp Consoleとそのクラウド サービスをさまざまな方法でサポートします。ナレッジ ベース (KB) 記事やコミュニティ フォーラムなど、豊富な無料のセルフ サポート オプションが 24 時間 365 日ご利用いただけます。サポート登録には、Webチケットによるリモートテクニカルサポートも含まれます。</block>
   <block id="317cbd2c4fdbfd06a6c66bcd3f57d7ad" category="paragraph">クラウド プロバイダーのファイル サービス、そのインフラストラクチャ、またはサービスを使用するソリューションに関連するテクニカル サポートについては、その製品のドキュメントを参照してください。</block>
@@ -1865,7 +1828,6 @@
   <block id="c0655d6a3a66f2180cdf2e00c1930e7c" category="list-text">Google Cloud では、レプリケーション プランに追加できるボリュームまたはデータストアは 1 つだけです。</block>
   <block id="7bcd913022459926bf1a00069a8fb8f6" category="admonition">NetApp Disaster Recoveryを導入する前に VM を整理し、「データストアの無秩序な増加」を最小限に抑えます。保護が必要な VM をデータストアのサブセットに配置し、保護する必要のない VM をデータストアの別のサブセットに配置します。データストアベースの保護を使用して、特定のデータストア上の VM が確実に保護されるようにします。</block>
   <block id="705a20699e1039fa52632f889e10a673" category="admonition">フェイルオーバー テスト用に専用のマッピング セットを別途作成し、同じ IP アドレスを使用して VMS が本番環境ネットワークに接続されるのを防ぎます。</block>
-  <block id="5f4825a97c910dc2ee0d9eb1107f19d9" category="section-title">マップリソース &gt; 仮想マシンセクション</block>
   <block id="06596d9f3a6cac6c36599f4c1598f756" category="sidebar">災害復旧に必要な vCenter 権限</block>
   <block id="ad4891bd95428a3a61372e6cb7c1e8db" category="paragraph">詳細については、 <block ref="46afb87ea9ab52c50c55f4a3ee88e9ae" category="inline-link-macro-rx"></block>。</block>
   <block id="8b398f79cbc8bafdd3d60b15c90e7f01" category="paragraph">詳細については、 <block ref="9816d86fb07a6c2043bc508d566ad539" category="inline-link-macro-rx"></block>。</block>
@@ -1897,7 +1859,6 @@
   <block id="2a5d29dc0e8c9fb1d01f9e388b1b0b74" category="paragraph">バージョン4.2.9</block>
   <block id="0c798cc11f8ddc52d0bd3006eaa122fc" category="summary">NetApp はさまざまな方法でコンソールのサポートを提供します。ナレッジベース (KB) 記事やコミュニティ フォーラムなど、広範な無料のセルフサポート オプションが 24 時間 365 日ご利用いただけます。サポート登録には、Web チケットによるリモート テクニカル サポートが含まれます。</block>
   <block id="512fd5eb37bb5d3f000a423886a72dd0" category="summary">NetAppテクニカル サポートでサポート ケースを開く前に、 NetAppサポート サイト アカウントをNetApp Consoleに追加し、サポートに登録する必要があります。</block>
-  <block id="71e1bea6c178dd06aa64cb971b0a7ab6" category="paragraph">ソース vCenter はオンプレミスのvCenter 上に存在している必要があります。ターゲット vCenter は、同じサイトまたはリモート サイト内の 2 番目のオンプレミスvCenter、または VMware Cloud on AWS などのクラウドベースのソフトウェア定義データセンター (SDDC) にすることができます。両方の vCenter はすでに災害復旧作業環境に追加されているはずです。</block>
   <block id="5ac1f8de819731380d7b9bbae3ae1d60" category="list-text">リソース マッピング ページで、フェールオーバー操作とテスト操作の両方に同じマッピングを使用するには、ボックスをオンにします。</block>
   <block id="b48e099c4fc62f3d87b3ba0f45c91635" category="list-text">*スクリプト*: .sh、.bat、または .ps1 形式のカスタム ゲスト OS ホスト スクリプトをポスト プロセスとして含めることができます。カスタム スクリプトを使用すると、ディザスタ リカバリは、フェイルオーバー、フェイルバック、および移行プロセスの後にスクリプトを実行できます。たとえば、フェイルオーバーが完了した後、カスタム スクリプトを使用してすべてのデータベース トランザクションを再開できます。このサービスは、Microsoft Windows またはコマンドライン パラメータがサポートされている任意の Linux バリアントを実行している VM 内でスクリプトを実行できます。スクリプトを個々の VM に割り当てることも、レプリケーション プラン内のすべての VM に割り当てることもできます。</block>
   <block id="beab47c47d07d73986a2773b714728e8" category="list-text">*元のフォルダ階層を保持*: デフォルトでは、ディザスタ リカバリはフェールオーバー時に VM インベントリ階層 (フォルダ構造) を保持します。リカバリ対象に元のフォルダ階層がない場合、Disaster Recovery によってそれが作成されます。</block>
@@ -2108,7 +2069,6 @@
   <block id="699554d8d02429739cd0995ec1ec3ab8" category="paragraph">バージョン4.3.0</block>
   <block id="b57381f68dbba13b31fa8aa68f6b0b91" category="doc">レプリケーションプランからデータストアを除外する</block>
   <block id="97a6d5c9da6b211dcdf5d581e247e960" category="paragraph">Disaster でレプリケーションプランを作成するときに、特定のデータストアをレプリケーションから除外できるようになりました。VM が複数のデータストアを使用するように構成されている場合、これにより、レプリケートされるデータストアを制限できます。</block>
-  <block id="1783ee76cf8532a6df415b4e239a23d9" category="paragraph">詳細については、<block ref="c2741b2e4bc1013bb2e1908f9c4eb243" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="ec6c483e852913b786ae872f19efd121" category="section-title">vCenter パスワードからパスワード検証を削除</block>
   <block id="8cca1120916820e14384f393325831ff" category="paragraph">ディザスタリカバリでは、vCenter パスワードのパスワード制限が削除され、スペースを含むパスワードが許可されるようになりました。</block>
   <block id="32530c1a1edb0706f8c34b61bf263957" category="paragraph">詳細については、<block ref="0d43ad8ffb310486762e1912aeac4ebc" category="inline-link-macro-rx"></block>を参照してください。</block>
@@ -2127,4 +2087,32 @@
   <block id="87c116e357fbcba643eb3c034af4b9f0" category="paragraph">vCenterサイトを追加したら、VMまたはデータストアのグループを単一のユニットとしてまとめたリソースグループを作成できます。リソースグループを使用すると、依存する一連のVMを、要件を満たす論理グループに編成できます。たとえば、1つのアプリケーションに関連付けられたVMをグループ化したり、同様の層を持つアプリケーションをグループ化したりすることができます。別の例として、グループにはリカバリ時に実行できる遅延ブート順序が含まれる場合があります。</block>
   <block id="637fada88b0b3ac0031b3d726a3ffa4c" category="paragraph">リソースグループを使用すると、VM またはデータストアを 1 つのユニットに結合できます。</block>
   <block id="2273ca98b904e703bc39a6bc79871562" category="paragraph">NetApp Disaster recoveryを初めて使用する場合は、vCenter情報を追加する必要があります。すでにvCenter情報を追加している場合は、ダッシュボードが表示されます。</block>
+  <block id="855f6640322147511d2bad1c3ef67a01" category="paragraph">詳細については、<block ref="5e71e4e6b8c5e7bff47e3e8fc9f8f4a2" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="a7f0ae2d9bf264f3b8a764e25f427249" category="paragraph">計画を作成する際は、以下のガイドラインに従ってください：</block>
+  <block id="9c1fea18f8c5a2e7dbfc597cff63bcda" category="list-text">NetApp Disaster Recoveryメニューから、*レプリケーションプラン*を選択し、*追加*を選択します。レプリケーションプランを初めて作成する場合は、ダッシュボードから*レプリケーションプランの追加*を選択します。</block>
+  <block id="a29968d7a7e40c3abadb4a3a66650aa2" category="list-text">レプリケーションプランの名前を入力します。</block>
+  <block id="c8f30cd4b86e358883441ae183002de2" category="list-text">*ソースvCenter*で、ドロップダウンメニューからデータが存在するvCenterを選択します。*ターゲットvCenter*で、ドロップダウンメニューからデータの複製先となるvCenterを選択します。</block>
+  <block id="8e1ca61f41962bbab3b0edc4e77ec792" category="inline-image-macro">vCenter サーバーページを示すスクリーンショット</block>
+  <block id="37fc88b8b1530f40d0ce4e2d7ca691dc" category="paragraph"><block ref="37fc88b8b1530f40d0ce4e2d7ca691dc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="10296271f8e5d29ec10e8b2edad00c6b" category="list-text">データストア内に少なくとも1つのVMが存在することを確認してください。データストア内にVMが存在しない場合、データストアは検出されません。</block>
+  <block id="7c4632e0e4a0098db96e92264fac9557" category="list-text">保護された仮想マシンと保護されていない仮想マシンを同じデータストア上にホストしないでください。保護された仮想マシンと保護されていない仮想マシンが同じデータストアでホストされている場合、次のような問題が発生する可能性があります：</block>
+  <block id="d9cbe60deafc2c2262ab4d07b9131f6a" category="list-text">そのボリュームの使用容量は、Disaster RecoveryがSnapMirrorを使用するため、ライセンス計算に寄与する可能性があります。つまり、システムはONTAPボリューム全体を複製します。この場合、保護された仮想マシンと保護されていない仮想マシンの両方が消費するボリューム容量が計算に含まれます。</block>
+  <block id="0995033be79b231587fd5dd53a2a94c9" category="list-text">既存のリソースグループがある場合は、**Resource groups**を選択し、リソースグループを選択してから**Next**をクリックします。</block>
+  <block id="ed4f95c7ecb7ed1087c4e69b67bc15c0" category="paragraph">既存のリソースグループがない場合、またはリソースを既存のリソースグループに追加する必要がある場合は、*仮想マシン*または*データストア*を選択してください。</block>
+  <block id="9e789b98de8f3895acb993bdec773003" category="list-text">自動生成されたリストから、レプリケーションプランに追加する仮想マシンまたはデータストアを選択します。仮想マシンについては、データストアでフィルタリングできます。データストアまたはVMを選択すると、自動的にリソースグループに追加されます。</block>
+  <block id="11fce3579cd1b24abe9062137cfd5016" category="list-text">ページの右半分で、選択した VM またはデータストアを確認します。</block>
+  <block id="4fa21384871ccd830dad7c53fe8ad15a" category="list-text">VMまたはデータストアを削除するには、データソースの名前にカーソルを合わせ、*X*を選択します。</block>
+  <block id="9048a14e005d230c845b3098a8bdf4a4" category="list-text">リソースを複数のリソースグループに整理するには、*Click to add another resource group*を選択します。リソースグループを追加した後は、グループ間でリソースをドラッグアンドドロップできます。リソースグループの名前を編集するには、鉛筆アイコンを選択します。</block>
+  <block id="7ddea6f727802bf5d58c1c6fc1200d0b" category="section-title">コンピューティングリソースセクション</block>
+  <block id="55290e3407e3be9abd668def1fc094f0" category="list-text">*フォルダ*（オプション）</block>
+  <block id="3327cd0621dd5ede196b9e097644e871" category="admonition">詳細設定を切り替えて、*Scripts*と*Application consistency*の設定を追加します。</block>
+  <block id="72391e5d470b580e6491b3647580e58f" category="list-text">*CPU* と *メモリ (GB)*: 仮想マシンの詳細で、VM の CPU とメモリを任意にサイズ変更できます。</block>
+  <block id="5bb5f5ed113c90d31da88b6596b25520" category="list-text">*アプリケーション整合性*：アプリケーション整合性のあるスナップショットコピーを作成するかどうかを指定します。このサービスはアプリケーションを休止状態にしてからスナップショットを作成し、アプリケーションの整合性のある状態を取得します。この機能は、WindowsおよびLinux上で実行されるOracleと、Windows上で実行されるSQL Serverでサポートされています。詳細については、次を参照してください。</block>
+  <block id="4207cdc216537468251be88bbe3d2194" category="paragraph">このオプションを使用するには、*詳細設定*のトグルスイッチをオンにする必要があります。アプリケーションの一貫性を有効にする場合は、ユーザー名とパスワードの形式で認証情報を入力する必要があります。</block>
+  <block id="6ffba2842dbe195b31043c058ec4a8b1" category="inline-image-macro">リソースマッピングの仮想マシンセクションを示すスクリーンショット</block>
+  <block id="19c52774fb01f872c0f95a233173a1de" category="paragraph"><block ref="19c52774fb01f872c0f95a233173a1de" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7f78326f10957ba33aba302d329ac33e" category="section-title">データストアセクション</block>
+  <block id="141ae0745aa19a71f0ba80e5ba754682" category="list-text">*バックアップとデータ保持の開始時刻*：バックアップとデータ保持の実行を開始する日時を入力してください。</block>
+  <block id="92cd787be79720ebbf8f89f517b891c9" category="list-text">*バックアップと保持頻度*：時間間隔を時間と分で入力してください。例えば、1時間と入力すると、サービスは1時間ごとにスナップショットを取得します。</block>
+  <block id="81b2d5bd2343a78b10f138613228f4b2" category="list-text">*すべてのデータストアの保持数*：保持するスナップショットの数を入力してください。</block>
 </blocks>
