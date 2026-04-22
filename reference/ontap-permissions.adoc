@@ -1,0 +1,212 @@
+---
+sidebar: sidebar 
+permalink: reference/ontap-permissions.html 
+keywords: disaster recovery, ontap, requirements, configure permissions, roles, IAM 
+summary: NetApp Disaster Recoveryを使用する際は、適切に機能するようにONTAPで正しい権限が設定されていることを確認してください。 
+---
+= NetApp Disaster Recovery の ONTAP 権限を設定
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+NetApp Disaster Recoveryを使用する際は、適切に機能するようにONTAPで正しい権限が設定されていることを確認してください。
+
+
+
+== 最小ONTAP権限
+
+Disaster Recoveryには次のONTAP権限が必要です。
+
+[cols="3,1"]
+|===
+| API | アクセス レベル 
+
+
+| /api | read-only 
+
+
+| /api/application/applications | 読み取り / 書き込み 
+
+
+| /api/application/consistency-groups | 読み取り / 書き込み 
+
+
+| /api/cluster | read-only 
+
+
+| /api/cluster/jobs | read-only 
+
+
+| /api/cluster/peers | 読み取り/作成/変更 
+
+
+| /api/cluster/schedules | 読み取り/作成 
+
+
+| /api/network/ip/interfaces | read-only 
+
+
+| /api/network/ipspaces | read-only 
+
+
+| /api/protocols/cifs/services | 読み取り / 書き込み 
+
+
+| /api/protocols/nfs/export-policies | 読み取り / 書き込み 
+
+
+| /api/protocols/nfs/services | read-only 
+
+
+| /api/protocols/san/igroups | 読み取り / 書き込み 
+
+
+| /api/protocols/san/iscsi/sessions | read-only 
+
+
+| /api/protocols/san/lun-maps | 読み取り / 書き込み 
+
+
+| /api/security/certificates | read-only 
+
+
+| /api/snapmirror/policies | 読み取り/作成/変更 
+
+
+| /api/snapmirror/relationships | 読み取り / 書き込み 
+
+
+| /api/storage/aggregates | read-only 
+
+
+| /api/storage/file/clone | 読み取り/作成 
+
+
+| /api/storage/flexcache/flexcaches | 読み取り/作成 
+
+
+| /api/storage/luns | 読み取り / 書き込み 
+
+
+| /api/storage/qtrees | 読み取り/変更 
+
+
+| /api/storage/snapshot-policies | read-only 
+
+
+| /api/storage/volumes | 読み取り / 書き込み 
+
+
+| /api/svm/peers | 読み取り/作成/変更 
+
+
+| /api/svm/svms | read-only 
+|===
+
+
+== ONTAP で権限を追加する
+
+ONTAP で権限を追加するには、必要な権限を持つロールを作成し、そのロールをユーザに割り当てる必要があります。このタスクは、ONTAP で System Manager または ONTAP CLI を使用して実行できます。
+
+[role="tabbed-block"]
+====
+.System Manager
+--
+このプロセスは、ソース クラスタとデスティネーション クラスタそれぞれに対して個別に実行する必要があります。
+
+.ロールを作成する
+. 管理者クレデンシャルを使用して ONTAP クラスタにログインします。
+. *クラスター* ＞ *設定* に移動します。
+. *Security*で、*Users and roles*を選択します。
+. *+ 追加*を選択して、新しいロールを作成します。
+. *Role name*を入力します。link:#minimum-ontap-permissions["テーブル"]に従って、*REST API path*、*Secondary path*、および*Access level*を割り当てます。
+. 必要な権限をすべて追加したら、*追加*を選択します。
+
+
+.ユーザーにロールを割り当てる
+. セクションメニューの*ユーザーと役割*セクションに戻ります。
+. *Users* で *Add* を選択します。
+. *User name* を入力し、以前作成した *Role* を選択します。
+. 「ユーザーログイン方法」で、必要なログイン方法がすべて設定されるまで「追加」をクリックします。
+. ユーザーの*パスワード*を作成し、パスワードを確認します。
+. *保存*を選択します。
+
+
+--
+.CLI
+--
+ONTAP でロールとユーザーを作成するには、管理者クレデンシャルを使用して、適切な ONTAP クラスタの CLI で認証される必要があります。このプロセスは、ソースクラスタとデスティネーション クラスタに対して個別に実行する必要があります。
+
+.必要な権限を持つロールを作成します
+. コマンドを実行して `security login rest-role create -role <rolename> -api <api> -access <access>`必要な権限を持つロールを作成します。ロールを作成するスクリプトで使用するコマンド一式をコピーできます `dr_privileges`。
++
+[listing]
+----
+security login rest-role create -role dr_privileges -api /api -access readonly
+security login rest-role create -role dr_privileges -api /api/application/applications -access all
+security login rest-role create -role dr_privileges -api /api/application/consistency-groups -access all
+security login rest-role create -role dr_privileges -api /api/cluster -access readonly
+security login rest-role create -role dr_privileges -api /api/cluster/jobs -access readonly
+security login rest-role create -role dr_privileges -api /api/cluster/peers -access read_create_modify
+security login rest-role create -role dr_privileges -api /api/cluster/schedules -access read_create
+security login rest-role create -role dr_privileges -api /api/network/ip/interfaces -access readonly
+security login rest-role create -role dr_privileges -api /api/network/ipspaces -access readonly
+security login rest-role create -role dr_privileges -api /api/protocols/cifs/services -access all
+security login rest-role create -role dr_privileges -api /api/protocols/nfs/export-policies -access all
+security login rest-role create -role dr_privileges -api /api/protocols/nfs/services -access readonly
+security login rest-role create -role dr_privileges -api /api/protocols/san/igroups -access all
+security login rest-role create -role dr_privileges -api /api/protocols/san/iscsi/sessions -access readonly
+security login rest-role create -role dr_privileges -api /api/protocols/san/lun-maps -access all
+security login rest-role create -role dr_privileges -api /api/security/certificates -access readonly
+security login rest-role create -role dr_privileges -api /api/snapmirror/policies -access read_create_modify
+security login rest-role create -role dr_privileges -api /api/snapmirror/relationships -access all
+security login rest-role create -role dr_privileges -api /api/storage/aggregates -access readonly
+security login rest-role create -role dr_privileges -api /api/storage/file/clone -access read_create
+security login rest-role create -role dr_privileges -api /api/storage/flexcache/flexcaches -access read_create
+security login rest-role create -role dr_privileges -api /api/storage/luns -access all
+security login rest-role create -role dr_privileges -api /api/storage/qtrees -access read_modify
+security login rest-role create -role dr_privileges -api /api/storage/snapshot-policies -access readonly
+security login rest-role create -role dr_privileges -api /api/storage/volumes -access all
+security login rest-role create -role dr_privileges -api /api/svm/peers -access read_create_modify
+security login rest-role create -role dr_privileges -api /api/svm/svms -access readonly
+----
+
+
+.ユーザを作成する
+. ユーザーを作成するには、次のコマンドを実行します：
++
+`security login create -vserver <SVM> -user-or-group-name <user-name> -application amqp -authentication-method password -role <role-name>`
+
++
+プロンプトが表示されたら、ユーザーのパスワードを入力してください。
+
+. 必要な認証方法をすべて追加するには、以下のコマンドを実行してください：
++
+[listing]
+----
+security login create -vserver <SVM> -user-or-group-name <user-name> -application amqp -authentication-method password -role <role-name>
+
+security login create -vserver <SVM> -user-or-group-name <user-name> -application console -authentication-method password -role <role-name>
+
+security login create -vserver <SVM> -user-or-group-name <user-name> -application http -authentication-method password -role <role-name>
+
+security login create -vserver <SVM> -user-or-group-name <user-name> -application ontapi -authentication-method password -role <role-name>
+
+security login create -vserver <SVM> -user-or-group-name <user-name> -application rsh -authentication-method password -role <role-name>
+
+security login create -vserver <SVM> -user-or-group-name <user-name> -application ssh -authentication-method password -role <role-name>
+
+security login create -vserver <SVM> -user-or-group-name <user-name> -application telnet -authentication-method password -role <role-name>
+----
+
+
+--
+====
+
+
+== ディザスタリカバリの設定
+
+ONTAP ロールを作成したら、link:https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html#step-3-discover-a-cluster["コンソールで ONTAP クラスタを検出する"^]する必要があります。クラスタを検出する際には、ONTAP クラスタの IP アドレス、作成したユーザー名、およびこの手順で使用するパスワードが必要です。Disaster Recovery では、ソースとデスティネーション クラスタの両方で検出を実行する必要があります。
