@@ -108,7 +108,7 @@ TIP: フェイルオーバーが開始すると、災害復旧サイトの vCent
 .手順
 . NetApp Disaster Recoveryメニューから、*レプリケーション プラン* を選択します。
 . レプリケーション プランを選択します。
-. 右側で*アクション*オプションを選択しますimage:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"]*フェイルオーバー*を選択します。
+. 右側で、*Actions*オプションimage:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"]を選択し、*Recover*にカーソルを合わせて*Fail over*を選択します。
 +
 image:dr-plan-failover3.png["フェイルオーバーページ"]
 
