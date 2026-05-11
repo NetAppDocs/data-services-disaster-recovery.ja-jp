@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: get-started/dr-intro.html 
 keywords: how netapp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back, vmware cloud, netapp intelligent services 
-summary: クラウドへの災害復旧は、サイトの停止やデータ破損イベントからワークロードを保護する、回復力がありコスト効率に優れた方法です。  NetApp Disaster Recovery for VMware を使用すると、 ONTAPストレージを実行しているオンプレミスの VMware ワークロードを、 NetAppクラウド ストレージを使用してパブリック クラウド内の VMware ソフトウェア定義データセンターにレプリケートしたり、 ONTAPストレージをディザスタ リカバリ サイトとして使用している別のオンプレミスの VMware 環境にレプリケートしたりできます。 
+summary: クラウドへのディザスタリカバリは、サイト停止やデータ破損イベントからワークロードを保護する、回復力があり対費用効果の高い方法です。NetApp Disaster Recoveryを使用すると、ONTAPストレージで実行されているオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してパブリッククラウド内のVMwareソフトウェアで定義されるデータセンターに、またはディザスタリカバリサイトとしてONTAPストレージを使用する別のオンプレミスVMware環境にレプリケートできます。 
 ---
 = NetApp Disaster Recoveryについて学ぶ
 :hardbreaks:
@@ -12,9 +12,9 @@ summary: クラウドへの災害復旧は、サイトの停止やデータ破�
 
 
 [role="lead"]
-クラウドへの災害復旧は、サイトの停止やデータ破損イベントからワークロードを保護する、回復力がありコスト効率に優れた方法です。 NetApp Disaster Recovery for VMware を使用すると、 ONTAPストレージを実行しているオンプレミスの VMware VM またはデータストアのワークロードを、 NetAppクラウド ストレージを使用してパブリック クラウド内の VMware ソフトウェア定義データセンターにレプリケートしたり、 ONTAPストレージをディザスタ リカバリ サイトとして使用している別のオンプレミスの VMware 環境にレプリケートしたりできます。ディザスタ リカバリを使用して、VM ワークロードをあるサイトから別のサイトに移行することもできます。
+クラウドへのディザスタリカバリは、サイト停止やデータ破損イベントからワークロードを保護する、回復力があり対費用効果の高い方法です。NetApp Disaster Recoveryを使用すると、ONTAPストレージで実行されているオンプレミスのVMware VMまたはデータストアのワークロードを、NetAppクラウド ストレージを使用してパブリック クラウド内のVMwareソフトウェアで定義されるデータセンターに、またはディザスタリカバリサイトとしてONTAPストレージを使用する別のオンプレミスVMware環境にレプリケートできます。Disaster Recoveryを使用して、VMワークロードをあるサイトから別のサイトに移行することもできます。
 
-NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。  NetApp Disaster Recoveryを使用すると、オンプレミスの NFS ベースのワークロードと、iSCSI および FC で実行されるNetAppストレージの VMware vSphere 仮想マシン ファイル システム (VMFS) データストアを次のいずれかに保護できます。
+NetApp Disaster Recoveryは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。NetApp Disaster Recoveryを使用すると、NetAppストレージを実行しているオンプレミスのKubernetesクラスタ、NFSベースのワークロード、およびiSCSIとFC向けのVMware vSphere仮想マシンファイルシステム（VMFS）データストアを、次のいずれかに保護できます：
 
 * Amazon Elastic VMware Service (EVS) とAmazon FSx for NetApp ONTAP の詳細については、link:../reference/evs-deploy-guide-introduction.html["Amazon Elastic VMware Service とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介"] 。
 * VMware Cloud (VMC) on AWS とAmazon FSx for NetApp ONTAP
@@ -25,7 +25,7 @@ NetApp Disaster Recovery は、災害復旧ワークフローを自動化する�
 
 NetApp Disaster Recovery は、統合されたネイティブ VMware オーケストレーションを備えたONTAP SnapMirrorテクノロジーを使用して、 ONTAPのすべてのストレージ効率の利点を維持しながら、VMware VM とそれに関連付けられたディスク上の OS イメージを保護します。災害復旧では、これらのテクノロジを災害復旧サイトへのレプリケーション トランスポートとして使用します。これにより、プライマリ サイトとセカンダリ サイトで業界最高のストレージ効率 (圧縮と重複排除) が実現されます。
 
-image:../use/evs-console-architecture.png["NetApp Disaster Recovery for VMware のコンポーネントを示す図"]
+image:../use/evs-console-architecture.png["NetApp Disaster Recoveryのコンポーネントを示す図"]
 
 
 
@@ -35,13 +35,13 @@ NetApp Disaster Recovery には、NetApp Consoleからアクセスできます�
 
 NetApp Consoleは、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとデータ サービスの集中管理を提供します。NetAppデータ サービスにアクセスして使用するには、コンソールが必要です。管理インターフェースとして、1 つのインターフェースから多数のストレージ リソースを管理できます。コンソール管理者は、企業内のすべてのシステムのストレージとサービスへのアクセスを制御できます。
 
-NetApp Consoleの使用を開始するためにライセンスやサブスクリプションは必要ありません。ストレージ システムまたはNetAppデータ サービスへの接続を確保するためにクラウドにコンソール エージェントを展開する必要がある場合にのみ料金が発生します。ただし、コンソールからアクセスできる一部のNetAppデータ サービスは、ライセンスまたはサブスクリプションベースです。
+NetApp Console の使用を開始するためにライセンスやサブスクリプションは必要ありません。ストレージ システムや NetApp データ サービスへの接続を確保するためにクラウドに Console エージェントをデプロイする必要がある場合にのみ料金が発生します。ただし、Console からアクセスできる一部の NetApp データ サービスは、ライセンスまたはサブスクリプションが必要です。
 
 詳細はこちら https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console"]。
 
 
 
-== NetApp Disaster Recovery for VMware を使用するメリット
+== NetApp Disaster Recoveryを使用するメリット
 
 NetApp Disaster Recoveryには次のような利点があります。
 
@@ -55,22 +55,22 @@ NetApp Disaster Recoveryには次のような利点があります。
 
 
 
-== NetApp Disaster Recovery for VMwareでできること
+== NetApp Disaster Recoveryの機能
 
 NetApp Disaster Recoveryでは、いくつかのNetAppテクノロジーをフル活用して、次の目標を達成できます。
 
 * SnapMirrorレプリケーションを使用して、オンプレミスの運用サイトにある VMware アプリケーションをクラウドまたはオンプレミスの災害復旧リモート サイトにレプリケートします。
 * VMware ワークロードを元のサイトから別のサイトに移行します。
-* フェイルオーバー テストを実行します。これを行うと、サービスによって一時的な仮想マシンが作成されます。ディザスタ リカバリでは、選択したスナップショットから新しいFlexCloneボリュームが作成され、 FlexCloneボリュームによってバックアップされる一時データストアが ESXi ホストにマップされます。このプロセスでは、オンプレミスのONTAPストレージまたは AWS の FSx for NetApp ONTAPストレージの追加の物理容量は消費されません。元のソース ボリュームは変更されず、災害復旧中でもレプリカ ジョブを続行できます。
+* フェイルオーバーテストを実施してください。この操作を行うと、サービスは一時的な仮想マシンを作成します。Disaster Recoveryは、選択されたスナップショットから新しいFlexCloneボリュームを作成し、FlexCloneボリュームによってバックアップされる一時的なデータストアがESXiホストにマッピングされます。このプロセスでは、オンプレミスのONTAPストレージやAWSのFSx for NetApp ONTAPストレージで追加の物理容量を消費しません。元のソースボリュームは変更されず、レプリカジョブはディザスタリカバリ中でも継続できます。
 * 災害が発生した場合は、プライマリサイトをオンデマンドで災害復旧サイトにフェイルオーバーします。災害復旧サイトには、 Amazon FSx for NetApp ONTAPを使用した VMware Cloud on AWS またはONTAPを使用したオンプレミスの VMware 環境を使用できます。
 * 災害が解決したら、要求に応じて災害復旧サイトからプライマリ サイトにフェールバックします。
 * 効率的な管理のために、VM またはデータストアを論理リソース グループにグループ化します。
 
 
-image:../use/evs-use-cases.png["NetApp Disaster Recovery for VMware のユースケースを示す図"]
+image:../use/evs-use-cases.png["NetApp Disaster Recoveryのユースケースを示す図"]
 
 
-NOTE: vSphere サーバーの構成は、vSphere Server のNetApp Disaster Recoveryの外部で行われます。
+NOTE: vSphere Server で NetApp Disaster Recovery の外部にある vSphere サーバを設定する必要があります。
 
 
 
@@ -96,7 +96,7 @@ IMPORTANT: 一部のリリースにはテクノロジープレビューが含ま
 
 すべてのNetAppデータ サービスのライセンスは、 NetApp Consoleのサブスクリプションを通じて管理されます。  BYOL を設定すると、コンソールでサービスのアクティブなライセンスを確認できます。
 
-このサービスは、保護されたONTAPボリュームでホストされるデータの量に基づいてライセンスされます。このサービスは、保護された VM を vCenter データストアにマッピングすることで、ライセンスの対象となるボリュームを決定します。各データストアは、 ONTAPボリュームまたは LUN 上でホストされます。そのボリュームまたは LUN についてONTAPによって報告された使用容量は、ライセンスの決定に使用されます。
+ディザスタリカバリは、保護対象の ONTAP ボリュームでホストされているデータの量に基づいてライセンスされます。このサービスは、保護対象の VM を vCenter データストアにマッピングすることにより、ライセンス目的で考慮するボリュームを決定します。各データストアは、ONTAP ボリュームまたは LUN でホストされます。そのボリュームまたは LUN について ONTAP から報告される使用容量が、ライセンス判定に使用されます。
 
 保護されたボリュームは多数の VM をホストできます。一部はNetApp Disaster Recoveryリソース グループの一部ではない可能性があります。いずれにしても、そのボリュームまたは LUN 上のすべての VM によって消費されるストレージは、ライセンスの最大容量に対して使用されます。
 
@@ -109,9 +109,9 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 == 30日間無料トライアル
 
-30 日間の無料トライアルを使用して、 NetApp Disaster Recovery を試すことができます。
+NetApp Disaster Recoveryは30日間の無料トライアルでお試しいただけます。
 
-30 日間の試用期間後に継続するには、クラウド プロバイダーから従量課金制 (PAYGO) サブスクリプションを取得するか、 NetAppから BYOL ライセンスを購入する必要があります。
+30日間の無料トライアル期間終了後も継続するには、クラウド プロバイダから従量課金制（PAYGO）のサブスクリプションを取得するか、NetAppからBYOLライセンスを購入する必要があります。
 
 ライセンスはいつでも購入でき、30 日間の試用期間が終了するまで料金は発生しません。
 
@@ -123,7 +123,7 @@ NetApp Disaster Recoveryは、 NetApp Consoleのソフトウェア アズ ア �
 
 NetApp Disaster Recovery は、非常に効率的なレプリケーションを提供し、 ONTAP の永久増分スナップショットの効率を維持するONTAP SnapMirrorテクノロジーを使用します。  SnapMirrorレプリケーションにより、アプリケーション整合性のあるスナップショット コピーが常に同期され、フェイルオーバー後すぐにデータが使用できるようになります。
 
-image:dr-architecture-diagram-70-2.png["NetApp Disaster Recovery for VMware サービス インフラストラクチャのアーキテクチャを示す図"]
+image:dr-architecture-diagram-70-2.png["NetApp Disaster Recovery サービス インフラのアーキテクチャを示す図"]
 
 災害が発生した場合、このサービスは、 SnapMirror関係を解除し、宛先サイトをアクティブにすることで、他のオンプレミスの VMware 環境または VMC 内の仮想マシンを復旧するのに役立ちます。
 
@@ -134,7 +134,7 @@ image:dr-architecture-diagram-70-2.png["NetApp Disaster Recovery for VMware サ�
 
 *災害復旧の構成要素*
 
-ディザスタ リカバリでは、次のコンポーネントを使用して VMware ワークロードのディザスタ リカバリを提供します。
+ディザスタリカバリは、ディザスタリカバリワークロードを提供するために次のコンポーネントを使用します：
 
 * * NetApp Console*: 災害復旧計画を管理するためのユーザー インターフェイス。  NetApp Consoleを使用すると、オンプレミス環境とクラウド環境全体でレプリケーション プラン、リソース グループ、フェイルオーバー操作を作成および管理できます。
 * *コンソール エージェント*: クラウドでホストされるネットワークまたはオンプレミスの VMware 環境で実行される軽量のソフトウェア コンポーネント。 NetApp Consoleと通信し、オンプレミス環境とディザスタ リカバリ サイト間のデータのレプリケーションを管理します。コンソール エージェントは、VMware 環境内の仮想マシンにインストールされます。

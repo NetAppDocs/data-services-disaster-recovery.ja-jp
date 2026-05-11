@@ -105,37 +105,15 @@ NetApp Consoleユーザーには次のロールが必要です。
 
 == ONTAPストレージの前提条件
 
-これらの前提条件は、 ONTAPまたは Amazon FSX for NetApp ONTAPインスタンスに適用されます。
+これらの前提条件は、ONTAPおよびAmazon FSX for NetApp ONTAPインスタンスに適用されます。
 
 * ソース クラスターと宛先クラスターにはピア関係が必要です。
 * ディザスタ リカバリ ボリュームをホストする SVM が宛先クラスタ上に存在している必要があります。
 * ソース SVM と宛先 SVM にはピア関係が必要です。
+* link:task-kubernetes-requirements.html["Kubernetes クラスタの追加要件を確認"]。
 * Amazon FSx for NetApp ONTAPを使用してデプロイする場合は、次の前提条件が適用されます。
 +
 ** VMware DR データストアをホストするAmazon FSx for NetApp ONTAPインスタンスが VPC 内に存在している必要があります。始めるには、link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["Amazon FSx for ONTAPドキュメント"^] 。
-
-
-
-
-
-
-== VMware vCenter クラスタの前提条件
-
-これらの前提条件は、オンプレミスの vCenter クラスタと VMware Cloud for AWS ソフトウェア定義データセンター (SDDC) の両方に適用されます。
-
-* レビューlink:../reference/vcenter-privileges.html["vCenter 権限"]NetApp Disaster Recoveryに必要です。
-* NetApp Disaster Recoveryで管理するすべての VMware クラスターは、保護する VM をホストするためにONTAPボリュームを使用します。
-* NetApp Disaster Recoveryによって管理されるすべての VMware データストアでは、次のいずれかのプロトコルを使用する必要があります。
-+
-** NFS
-** iSCSI または FC プロトコルを使用した VMFS
-
-
-* VMware vSphere バージョン 7.0 Update 3 (7.0v3) 以降
-* VMware Cloud SDDC を使用している場合は、次の前提条件が適用されます。
-+
-** VMware Cloud コンソールでは、管理者および NSX Cloud 管理者のサービス ロールを使用します。組織ロールには組織の所有者も使用します。参照 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["VMware Cloud Foundations と AWS FSx for NetApp ONTAP の使用に関するドキュメント"^]。
-** VMware Cloud SDDC をAmazon FSx for NetApp ONTAPインスタンスにリンクします。参照 https://vmc.techzone.vmware.com/fsx-guide#overview["VMware Cloud on AWS とAmazon FSx for NetApp ONTAP の統合の展開情報"^]。
 
 
 
@@ -202,6 +180,9 @@ TIP: オンプレミスからオンプレミスへの接続には、オンプレ
 * Microsoft SQL Server、Oracle Database、またはその両方を実行している Windows VM の場合、データベースで VSS ライターが有効になっている必要があります。
 * Linux オペレーティング システムで実行されている Oracle データベースでは、Oracle データベース SYSDBA ロールに対してオペレーティング システム ユーザー認証が有効になっている必要があります。
 
+
+
+IMPORTANT: 展開タイプに応じて、link:reference-vmware-prerequisites.html["VMware クラスタの前提条件"]とlink:task-kubernetes-requirements.html["Kubernetesクラスタの前提条件"]を確認してください。
 
 
 

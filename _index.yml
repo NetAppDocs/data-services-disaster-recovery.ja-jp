@@ -1,12 +1,10 @@
 ---
 indexpage:
   title: NetApp Disaster Recoveryドキュメント
-  summary: NetApp Disaster Recovery for VMware を使用すると、 ONTAPストレージを実行しているオンプレミスの VMware
-    ワークロードを、 NetAppクラウド ストレージを使用して、災害復旧サイトとしてパブリック クラウド内の VMware ソフトウェア定義データセンターに複製できます。
+  summary: NetApp Disaster Recoveryを使用すると、ONTAPストレージで実行されているオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用して、災害復旧サイトとしてパブリッククラウドのソフトウェアで定義されるVMwareデータセンターにレプリケートできます。
   keywords: disaster, disaster recovery, bluexp, replicate, replication, cloud storage
-  lead: クラウドへの災害復旧は、サイトの停止やデータ破損イベント (ランサムウェアなど) からワークロードを保護する、回復力がありコスト効率に優れた方法です。  NetApp
-    Disaster Recovery for VMware を使用すると、 ONTAPストレージを実行しているオンプレミスの VMware ワークロードを、パブリック
-    クラウド内の VMware ソフトウェア定義データセンター、または災害復旧サイトとして別のオンプレミス サイトに複製できます。
+  lead: クラウドへのディザスタリカバリは、サイト停止やデータ破損イベント（ランサムウェアなど）からワークロードを保護する、回復力があり対費用効果の高い方法です。NetApp
+    Disaster Recoveryを使用すると、ONTAPストレージで実行されているオンプレミスのVMwareワークロードを、パブリッククラウド内のVMwareソフトウェアで定義されるデータセンター、または別のオンプレミスサイトにディザスタリカバリサイトとしてレプリケートできます。
   tiles:
   - title: 始めましょう
     links:

@@ -20,4 +20,4 @@ summary: 質問に対する簡単な回答を探している場合は、この F
 
 NetApp Disaster Recoveryのライセンス設定の詳細については、以下を参照してください。link:../get-started/dr-licensing.html["NetApp Disaster Recoveryライセンスを設定する"] 。
 
-* NetApp Disaster Recoveryにどのようにアクセスしますか?* NetApp Disaster Recovery有効化は必要ありません。災害復旧オプションは、NetApp Consoleの左側のナビゲーションに自動的に表示されます。
+*NetApp Disaster Recoveryにはどのようにアクセスしますか？*NetApp Disaster Recoveryには、特別な設定は必要ありません。Disaster Recoveryは自動的にNetApp Consoleの左側のナビゲーションに表示されます。

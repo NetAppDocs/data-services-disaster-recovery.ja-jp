@@ -5,7 +5,13 @@ entries:
 - title: NetApp Disaster Recoveryについて学ぶ
   url: "/get-started/dr-intro.html"
 - title: 前提条件
-  url: "/get-started/dr-prerequisites.html"
+  entries:
+  - title: システムの前提条件
+    url: "/get-started/dr-prerequisites.html"
+  - title: VMwareの前提条件
+    url: "/get-started/reference-vmware-prerequisites.html"
+  - title: Kubernetesの前提条件
+    url: "/get-started/task-kubernetes-requirements.html"
 - title: クイック スタート
   url: "/get-started/dr-quick-start.html"
 - title: NetApp Disaster Recovery用のインフラストラクチャをセットアップする

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: release-notes/dr-whats-new.html 
 keywords: disaster recovery, bluexp, disaster recovery, vmware, vcenter, draas, disaster 
-summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。  NetApp Disaster Recovery for VMware を使用すると、 ONTAPストレージを実行しているオンプレミスの VMware ワークロードを、 NetAppクラウド ストレージを使用して、災害復旧サイトとしてパブリック クラウド内の VMware ソフトウェア定義データセンターに複製できます。 
+summary: NetApp Disaster Recoveryは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。NetApp Disaster Recoveryを使用すると、NetAppクラウドストレージを使用して、ONTAPストレージを実行しているオンプレミスのVMwareワークロードを、ディザスタリカバリサイトとしてパブリッククラウド内のVMwareのソフトウェアで定義されるデータセンターにレプリケートできます。 
 ---
 = NetApp Disaster Recoveryの新機能
 :hardbreaks:
@@ -13,6 +13,27 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 [role="lead"]
 NetApp Disaster Recoveryの新機能について説明します。
+
+
+
+== 2026年5月15日
+
+バージョン4.3.3
+
+
+
+=== Kubernetesベースのワークロードサポート（プレビュー）
+
+NetApp Disaster Recoveryに、Kubernetesベースのワークロードのサポートが追加されました。Kubernetesサポートにより、OpenShift仮想化環境を含むKubernetesクラスタで実行されているアプリケーションを保護できます。Disaster Recoveryはlink:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["現在 Trident Protect でサポートされている Kubernetes のいずれかのバージョン"^]をサポートし、コンテナ化されたアプリケーションのシームレスな統合と堅牢なディザスタリカバリ機能を保証します。
+
+Kubernetesベースのワークロードサポートの主な機能：
+
+* **幅広い互換性**：Disaster Recovery は、Red Hat OpenShift Virtualization を含む、Trident Protect と互換性のあるすべての Kubernetes バージョンをサポートしています。
+* **アプリケーション中心の保護**：アプリケーションレベルでKubernetesワークロードを保護できるようになり、フェイルオーバー発生時に重要なサービスの復旧が保証されます。
+* **簡素化されたオーケストレーション**：Disaster Recoveryは、Kubernetesワークロードのバックアップとレプリケーションを自動化する直感的なワークフローを提供し、VMware環境で使用されるのと同じ効率的なSnapMirrorテクノロジを活用します。
+
+
+Kubernetesベースのワークロードのサポートは現在プレビュー段階です。Kubernetesベースのワークロードの保護を開始するには、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/task-kubernetes-requirements.html["NetApp Disaster Recoveryに関するKubernetesの要件"^]を参照してください。
 
 
 

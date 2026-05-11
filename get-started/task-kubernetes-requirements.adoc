@@ -1,0 +1,213 @@
+---
+sidebar: sidebar 
+permalink: get-started/task-kubernetes-requirements.html 
+keywords: kubernetes cluster prerequisites, kubernetes cluster, trident protect 
+summary: NetApp Disaster Recoveryを使用する前に、Kubernetesクラスタが要件を満たしていることを確認してください。 
+---
+= NetApp Disaster Recoveryに関するKubernetesクラスタの要件
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+Kubernetes クラスタ用の NetApp Disaster Recovery を設定する前に、各 Kubernetes クラスタを準備する必要があります。通常、保護はソースと別のデスティネーション クラスタに適用されます。つまり、これらの手順はペア内の各クラスタに適用する必要があります。
+
+
+
+== 前提条件
+
+Kubernetes クラスターの要件を設定する前に、Kubernetes クラスタと ONTAP クラスタを設定済みであることを確認してください。
+
+ディザスタリカバリはlink:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["現在 Trident Protect でサポートされている Kubernetes のいずれかのバージョン"^]をサポートします。
+
+
+
+=== Kubernetesクラスター
+
+各 Kubernetes クラスタについて、以下を確認してください：
+
+* 各Kubernetesクラスタへの管理者 `kubectl`アクセス権があること。
+* Helm 3 は、インストール コマンドを実行する場所で利用できます。
+
+
+
+
+=== ONTAPの要件
+
+各ONTAPクラスタについて、次のリソースが設定されていることを確認してください：
+
+* **管理LIF** - これはTridentが管理APIアクセスに使用します
+* **データ（NFS）LIF** - ボリュームのNFSトラフィックに使用されます
+* **SVM名** - ボリュームをホストするストレージVM
+* **認証情報** - Tridentが使用するアカウント（一般的に、 `admin`またはSVMスコープのアカウント）
+* ワーカーノードは ONTAP 管理 LIF とデータ LIF に到達できる必要があります。
+*  `autoExportPolicy`をCIDR制限付きで使用する場合は、ノードサブネットを含めてください。
+
+
+
+
+== NetApp Trident CSIをインストール
+
+link:https://docs.netapp.com/us-en/trident/trident-install/kubernetes-deploy-helm.html#deploy-the-trident-operator-and-install-trident-using-helm["各クラスタに Trident オペレータをインストールします。"]
+
+既に Trident をインストール済みの場合は、次のコマンドでインストールを確認してください
+`kubectl get pods -n trident`。インストールが成功すると、数分後に Trident コントローラー、ノード ポッド（DaemonSet）、およびオペレータの状態が `Running`状態になります。
+
+
+
+== ONTAP バックエンドと Trident StorageClass を設定
+
+
+
+=== Kubernetesシークレットを作成する
+
+名前空間に Kubernetes シークレットを作成します：
+
++
+
+[source, bash]
+----
+kubectl create secret generic trident-ontap-secret -n <namespace> \
+  --from-literal=username=<adminOrOtherUsername> \
+  --from-literal=password='<YOUR_ONTAP_PASSWORD>'
+----
+詳細については、link:https://docs.netapp.com/us-en/trident/trident-use/backend-kubectl.html#step-1-create-a-kubernetes-secret["ネームスペースにKubernetesシークレットを作成します"^]を参照してください。
+
+
+
+=== TridentBackendConfigを作成します
+
+次のことができます
+
+[source, yaml]
+----
+apiVersion: trident.netapp.io/v1
+kind: TridentBackendConfig
+metadata:
+  name: <name>
+  namespace: <trident>
+spec:
+  version: 1
+  backendName: <name>
+  storageDriverName: <driverName>
+  managementLIF: <MANAGEMENT_LIF_IP>
+  dataLIF: <DATA_LIF_IP>
+  svm: <SVM_NAME>
+  autoExportPolicy: true
+  autoExportCIDRs:
+    - 0.0.0.0/0
+  credentials:
+    name: trident-ontap-secret
+----
+設定は `kubectl get TridentBackendConfig -n trident`コマンドで確認できます。設定が成功した場合、 `phase`出力には**Bound**と表示され、 `status`には**Success**と表示されます。ステータスが**Failed**の場合は、link:https://docs.netapp.com/us-en/trident/trident-use/backend-kubectl.html#optional-step-4-get-more-details["詳細はこちら"^]の手順を確認してから、認証情報の誤りやネットワーク到達性の問題などを解決してください。
+
+
+
+=== ストレージクラスを設定する
+
+link:https://docs.netapp.com/us-en/trident/trident-use/create-stor-class.html["ストレージクラスオブジェクトを作成します"^]。プロビジョナー `csi.trident.netapp.io`を使用します。例：
+
+[source, yaml]
+----
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: <name>
+provisioner: csi.trident.netapp.io
+parameters:
+  backendType: "<type>"
+  storagePools: "<pool>:.*"
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+----
+ストレージクラスを1つ、クラスタのデフォルトとして任意で指定できます。クラスタごとに指定できるデフォルト値は1つだけです。
+
+[source, bash]
+----
+kubectl patch storageclass ontap-backend \
+  -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+----
+Trident Protect がレプリケートするアプリケーション PVC は、Trident を通じてプロビジョニングされたストレージを使用する必要があります（この StorageClass または正しい `storagePools` / セレクターで定義された別のもの）。
+
+Trident Protectでアプリケーションデータをレプリケートするには、アプリケーションがTridentで管理されるONTAPボリュームのストレージを使用する必要があります。このストレージクラスまたは別のストレージクラスを使用できますが、Tridentを通じてONTAPバックエンドを使用するように設定する必要があります。
+
+
+
+== ボリュームグループスナップショットのカスタムリソース定義（CRD）を設定する
+
+link:https://docs.netapp.com/us-en/trident/trident-use/vol-group-snapshots.html#deploy-a-volume-snapshot-controller["スナップショットCRDとスナップショットコントローラをインストールします。"^]。これらのインストールは、Trident Protectのボリュームスナップショットに必要です。
+
+次のコマンドを使用して、カスタムリソース定義を確認します：
+
+[source, bash]
+----
+kubectl get crd volumesnapshots.snapshot.storage.k8s.io
+kubectl get crd volumesnapshotcontents.snapshot.storage.k8s.io
+kubectl get crd volumesnapshotclasses.snapshot.storage.k8s.io
+----
+
+
+=== ボリューム グループ Snapshot を設定する
+
+link:https://docs.netapp.com/us-en/trident/trident-use/vol-group-snapshots.html#create-volume-group-snapshots["Trident の VolumeSnapshotClass を設定します。"^]
+
+[source, bash]
+----
+kubectl patch volumesnapshotclasses.snapshot.storage.k8s.io trident-snapshotclass \
+  -p '{"metadata": {"annotations":{"snapshot.storage.kubernetes.io/is-default-class":"true"}}}' \
+  --type=merge
+----
+ボリューム Snapshot クラスをデフォルトクラスとして指定することもできます。孤立した Kubernetes Snapshot オブジェクトを ONTAP に残しておく必要がある場合は、 `deletionPolicy: Retain`を使用します。
+
+
+
+== 検証の概要
+
+|===
+| チェック | コマンド | 期待される出力 
+
+
+| Tridentが実行されています | `kubectl get pods -n trident` | Tridentが正常に実行されています 
+
+
+| バックエンドは正常です | `kubectl get TridentBackendConfig -n trident` | バインド/成功 
+
+
+| ストレージが公開されている | `kubectl get storageclass` | 出力には Trident クラスが含まれます 
+
+
+| Snapshot API | `kubectl get volumesnapshotclass` | CRDが存在する。Tridentドライバをリスト表示 
+|===
+すべてのリソースのステータスを確認したら、Trident StorageClassを使用してワークロードをデプロイまたはlink:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-migrate-apps.html#migrate-applications-from-one-storage-class-to-another-storage-class["マイグレート"^]します。link:../use/sites-add.adoc["サイトにKubernetesクラスタを追加する"]すると、Disaster Recoveryでは、クラスタにTrident Protectをインストールし、Disaster Recovery環境に登録する手順が表示されます。
+
+.Trident Protectのインストール手順を確認してください。
+[%collapsible]
+====
+. Trident保護ネームスペースを作成する：
++
+`kubectl create namespace trident-protect`
+
+. クライアント ID とクライアント シークレットを使用して Kubernetes シークレットを作成し、OCCM 認証クレデンシャルを作成します。
++
+`kubectl create secret generic occmauthcreds --namespace=trident-protect --from-literal=client_id=<clidentID> --from-literal=<clientSecret>`
+
+. helmリポジトリを追加または更新します。
++
+`helm repo add --force-update netapp-trident-protect https://netapp.github.io/trident-protect-helm-chart`
+
+. Trident ProtectおよびTrident Protect Connectorをインストールまたはアップグレードします：
+`helm upgrade --install trident-protect netapp-trident-protect/trident-protect-console \
+  --version 100.2605.0-console --namespace trident-protect --set clusterName=<clusterName> --set trident-protect.cbs.accountID=<accountID> --set trident-protect.cbs.agentID=<agentID> --set trident-protect.cbs.proxySecretName=occmauthcreds --set trident-protect.cbs.proxyHostIP=<IPaddress>`
+
+
+====
+
+
+== 詳細情報
+
+* link:https://docs.netapp.com/us-en/trident/trident-protect/learn-about-trident-protect.html["Trident Protectについて学ぶ"^]
+* link:../use/sites-add.adoc["Disaster Recovery にサイトを追加する"]
+

@@ -6,7 +6,7 @@ entries:
   url: "/use/use-overview.html"
 - title: ダッシュボードで災害復旧計画の健全性を確認する
   url: "/use/dashboard-view.html"
-- title: サイトにvCenterを追加する
+- title: サイトにリソースを追加する
   url: "/use/sites-add.html"
 - title: リソースグループを作成する
   url: "/use/resource-group.html"

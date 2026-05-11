@@ -11,7 +11,7 @@ summary: Amazon EVS と Amazon FSxN を使用したNetApp Disaster Recoveryの�
 [role="lead"]
 NetApp Disaster Recoveryは、 NetApp Consoleのコア アーキテクチャに依存する、NetAppNetApp Consoleのソフトウェア アズ ア サービス環境内でホストされる付加価値サービスです。コンソール内の VMware 保護の DR サービスは、いくつかの主要コンポーネントで構成されています。
 
-NetApp Disaster Recoveryソリューションの完全な概要については、以下を参照してください。link:../get-started/dr-intro.html["NetApp Disaster Recoveryについて学ぶ"] 。
+NetApp Disaster Recoveryソリューションの完全な概要については、link:../get-started/dr-intro.html["NetApp Disaster Recoveryについて学ぶ"]を参照してください。
 
 オンプレミスの VMware がホストする仮想マシンを Amazon AWS に保護する場合は、 Amazon FSx for NetApp ONTAPストレージがホストするデータストアを使用して Amazon EVS にバックアップするサービスを使用します。
 

@@ -1,0 +1,18 @@
+= Kubernetesベースのワークロードサポート（プレビュー）
+:allow-uri-read: 
+
+
+
+
+=== Kubernetesベースのワークロードサポート（プレビュー）
+
+NetApp Disaster Recoveryに、Kubernetesベースのワークロードのサポートが追加されました。Kubernetesサポートにより、OpenShift仮想化環境を含むKubernetesクラスタで実行されているアプリケーションを保護できます。Disaster Recoveryはlink:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["現在 Trident Protect でサポートされている Kubernetes のいずれかのバージョン"^]をサポートし、コンテナ化されたアプリケーションのシームレスな統合と堅牢なディザスタリカバリ機能を保証します。
+
+Kubernetesベースのワークロードサポートの主な機能：
+
+* **幅広い互換性**：Disaster Recovery は、Red Hat OpenShift Virtualization を含む、Trident Protect と互換性のあるすべての Kubernetes バージョンをサポートしています。
+* **アプリケーション中心の保護**：アプリケーションレベルでKubernetesワークロードを保護できるようになり、フェイルオーバー発生時に重要なサービスの復旧が保証されます。
+* **簡素化されたオーケストレーション**：Disaster Recoveryは、Kubernetesワークロードのバックアップとレプリケーションを自動化する直感的なワークフローを提供し、VMware環境で使用されるのと同じ効率的なSnapMirrorテクノロジを活用します。
+
+
+Kubernetesベースのワークロードのサポートは現在プレビュー段階です。Kubernetesベースのワークロードの保護を開始するには、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/task-kubernetes-requirements.html["NetApp Disaster Recoveryに関するKubernetesの要件"^]を参照してください。
