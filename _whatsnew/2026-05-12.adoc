@@ -15,4 +15,4 @@ Kubernetesベースのワークロードサポートの主な機能：
 * **簡素化されたオーケストレーション**：Disaster Recoveryは、Kubernetesワークロードのバックアップとレプリケーションを自動化する直感的なワークフローを提供し、VMware環境で使用されるのと同じ効率的なSnapMirrorテクノロジを活用します。
 
 
-Kubernetesベースのワークロードのサポートは現在プレビュー段階です。Kubernetesベースのワークロードの保護を開始するには、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/task-kubernetes-requirements.html["NetApp Disaster Recoveryに関するKubernetesの要件"^]を参照してください。
+Kubernetesベースのワークロードのサポートは現在プレビュー段階です。Kubernetesベースのワークロードの保護を開始するには、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/task-kubernetes-requirements.html["NetApp Disaster Recoveryに関するKubernetesの要件"^]を参照してください。

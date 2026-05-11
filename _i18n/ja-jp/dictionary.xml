@@ -2106,7 +2106,6 @@
   <block id="3dbc5485bf1aa588640ee699337e0892" category="list-text">**アプリケーション中心の保護**：アプリケーションレベルでKubernetesワークロードを保護できるようになり、フェイルオーバー発生時に重要なサービスの復旧が保証されます。</block>
   <block id="6124980497de7eeb616c27d599b53c84" category="list-text">**簡素化されたオーケストレーション**：Disaster Recoveryは、Kubernetesワークロードのバックアップとレプリケーションを自動化する直感的なワークフローを提供し、VMware環境で使用されるのと同じ効率的なSnapMirrorテクノロジを活用します。</block>
   <block id="082f6fbdb4843c5f374a215502f493b9" category="inline-link-macro">NetApp Disaster Recoveryに関するKubernetesの要件</block>
-  <block id="84b0e3d023f875f2669a5f0d72922238" category="paragraph">Kubernetesベースのワークロードのサポートは現在プレビュー段階です。Kubernetesベースのワークロードの保護を開始するには、<block ref="343bf0d5acc46def5b744dcb13640f63" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="3723578e9eec661a364d573c9d930dd2" category="paragraph">*NetApp Disaster Recoveryにはどのようにアクセスしますか？*NetApp Disaster Recoveryには、特別な設定は必要ありません。Disaster Recoveryは自動的にNetApp Consoleの左側のナビゲーションに表示されます。</block>
   <block id="617eb16cadcea920c3756320dc74fccf" category="summary">クラウドへのディザスタリカバリは、サイト停止やデータ破損イベントからワークロードを保護する、回復力があり対費用効果の高い方法です。NetApp Disaster Recoveryを使用すると、ONTAPストレージで実行されているオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してパブリッククラウド内のVMwareソフトウェアで定義されるデータセンターに、またはディザスタリカバリサイトとしてONTAPストレージを使用する別のオンプレミスVMware環境にレプリケートできます。</block>
   <block id="3348cad21942b5f1082fd6256085c2ba" category="paragraph">クラウドへのディザスタリカバリは、サイト停止やデータ破損イベントからワークロードを保護する、回復力があり対費用効果の高い方法です。NetApp Disaster Recoveryを使用すると、ONTAPストレージで実行されているオンプレミスのVMware VMまたはデータストアのワークロードを、NetAppクラウド ストレージを使用してパブリック クラウド内のVMwareソフトウェアで定義されるデータセンターに、またはディザスタリカバリサイトとしてONTAPストレージを使用する別のオンプレミスVMware環境にレプリケートできます。Disaster Recoveryを使用して、VMワークロードをあるサイトから別のサイトに移行することもできます。</block>
@@ -2351,4 +2350,5 @@
   <block id="5069d199ba6ca379f339c144214cb9f0" category="sidebar">システムの前提条件</block>
   <block id="a79ae1fa6b9efc331842efa8d96937c5" category="sidebar">VMwareの前提条件</block>
   <block id="ffc29f7e69eb606c4fc0ff797755e240" category="sidebar">Kubernetesの前提条件</block>
+  <block id="e5d56575e494e873c5ded63467d12e44" category="paragraph">Kubernetesベースのワークロードのサポートは現在プレビュー段階です。Kubernetesベースのワークロードの保護を開始するには、<block ref="d1415fee440f8c1c4acbcf4ee7535778" category="inline-link-macro-rx"></block>を参照してください。</block>
 </blocks>
