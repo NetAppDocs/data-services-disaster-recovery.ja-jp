@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: get-started/reference-vmware-prerequisites.html 
-keywords: vmware cluster prerequisites, vmware 
+keywords: vmware cluster prerequisites, vmware, vcenter, requirements 
 summary: NetApp Disaster Recoveryを使用する前に、環境がVMware vCenterクラスタの要件を満たしていることを確認してください。 
 ---
-= NetApp Disaster Recovery向けのVMware vCenterクラスタの前提条件
+= NetApp Disaster RecoveryにおけるVMware vCenterクラスタの前提条件
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

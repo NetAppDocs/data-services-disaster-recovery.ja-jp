@@ -12,7 +12,7 @@ summary: NetApp Disaster Recoveryを使用して Amazon EVS の設定を続行�
 Amazon EVSをNetApp Disaster Recoveryで構成するための要件を確認し、満たしていることを確認してください。
 
 .前提条件
-* link:../get-started/dr-prerequisites["Disaster Recovery の一般的な前提条件"]を確認します。
+* link:../get-started/dr-prerequisites.html["Disaster Recovery の一般的な前提条件"]を確認します。
 * NetApp Disaster Recovery が必要な操作を実行するために必要な特定の VMware 権限を持つ vCenter ユーザー アカウントを作成します。
 +
 

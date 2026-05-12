@@ -17,8 +17,6 @@ summary: 災害復旧計画を作成する前に、 NetApp Disaster Recoveryで�
 
 TIP: 送信元と送信先の両方で同じNetApp Console エージェントを使用するようにしてください。
 
-vCenter が追加されると、 NetApp Disaster Recovery は、vCenter クラスタ、ESXi ホスト、データストア、ストレージ フットプリント、仮想マシンの詳細、 SnapMirrorレプリカ、仮想マシン ネットワークなどの vCenter 環境の詳細な検出を実行します。
-
 *必要なNetApp Consoleロール* 組織管理者、フォルダまたはプロジェクト管理者、またはディザスタ リカバリ管理者。
 
 link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
@@ -31,7 +29,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 .手順
 . Disaster Recovery で、サイドバーの **Sites** を選択します。
-. ドロップダウンメニューで、サイトの種類を選択してください：**vCenter** または **Kubernetes**。
+. ドロップダウンメニューから、サイトの種類（**VMware**または**Kubernetes**）を選択してください。
 +
 image::site-type-toggle.png[サイトタイプ切り替えのスクリーンショット]
 
@@ -84,7 +82,7 @@ NOTE: このサービスは、自己署名セキュリティ証明書または�
 
 .手順
 . Disaster Recovery で、サイドバーの **Sites** を選択します。
-. ドロップダウンメニューで、フィルタを *Kubernetes* に設定します。
+. ドロップダウンメニューで、フィルタを *VMware* に設定します。
 +
 image::site-type-toggle.png[サイトタイプ切り替えのスクリーンショット]
 
@@ -126,6 +124,8 @@ image:sites-list2.png["サイトページのスクリーンショット"]
 
 
 
+
+vCenter が追加されると、 NetApp Disaster Recovery は、vCenter クラスタ、ESXi ホスト、データストア、ストレージ フットプリント、仮想マシンの詳細、 SnapMirrorレプリカ、仮想マシン ネットワークなどの vCenter 環境の詳細な検出を実行します。
 
 --
 .Kubernetes

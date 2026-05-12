@@ -12,9 +12,7 @@ summary: クラウドへのディザスタリカバリは、サイト停止や�
 
 
 [role="lead"]
-クラウドへのディザスタリカバリは、サイト停止やデータ破損イベントからワークロードを保護する、回復力があり対費用効果の高い方法です。NetApp Disaster Recoveryを使用すると、ONTAPストレージで実行されているオンプレミスのVMware VMまたはデータストアのワークロードを、NetAppクラウド ストレージを使用してパブリック クラウド内のVMwareソフトウェアで定義されるデータセンターに、またはディザスタリカバリサイトとしてONTAPストレージを使用する別のオンプレミスVMware環境にレプリケートできます。Disaster Recoveryを使用して、VMワークロードをあるサイトから別のサイトに移行することもできます。
-
-NetApp Disaster Recoveryは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。NetApp Disaster Recoveryを使用すると、NetAppストレージを実行しているオンプレミスのKubernetesクラスタ、NFSベースのワークロード、およびiSCSIとFC向けのVMware vSphere仮想マシンファイルシステム（VMFS）データストアを、次のいずれかに保護できます：
+クラウドへのディザスタリカバリは、サイト停止やデータ破損イベントからワークロードを保護する、回復力があり対費用効果の高い方法です。NetApp Disaster Recoveryは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。NetApp Disaster Recoveryを使用すると、NetAppストレージを実行しているオンプレミスのKubernetesクラスタ、NFSベースのワークロード、およびiSCSIとFC向けのVMware vSphere仮想マシンファイルシステム（VMFS）データストアを、次のいずれかに保護できます：
 
 * Amazon Elastic VMware Service (EVS) とAmazon FSx for NetApp ONTAP の詳細については、link:../reference/evs-deploy-guide-introduction.html["Amazon Elastic VMware Service とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介"] 。
 * VMware Cloud (VMC) on AWS とAmazon FSx for NetApp ONTAP
@@ -134,7 +132,7 @@ image:dr-architecture-diagram-70-2.png["NetApp Disaster Recovery サービス �
 
 *災害復旧の構成要素*
 
-ディザスタリカバリは、ディザスタリカバリワークロードを提供するために次のコンポーネントを使用します：
+Disaster Recoveryには以下のコンポーネントが使用されます：
 
 * * NetApp Console*: 災害復旧計画を管理するためのユーザー インターフェイス。  NetApp Consoleを使用すると、オンプレミス環境とクラウド環境全体でレプリケーション プラン、リソース グループ、フェイルオーバー操作を作成および管理できます。
 * *コンソール エージェント*: クラウドでホストされるネットワークまたはオンプレミスの VMware 環境で実行される軽量のソフトウェア コンポーネント。 NetApp Consoleと通信し、オンプレミス環境とディザスタ リカバリ サイト間のデータのレプリケーションを管理します。コンソール エージェントは、VMware 環境内の仮想マシンにインストールされます。

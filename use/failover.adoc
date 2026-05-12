@@ -145,6 +145,7 @@ image::site-type-toggle.png[サイトタイプ切り替えのスクリーンシ�
 . レプリケーション プランを選択します。
 . 右側で、*Actions*オプションimage:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"]を選択し、*Recover*にカーソルを合わせて*Fail over*を選択します。
 . フェイルオーバーに使用する Snapshot コピーを選択します。*今すぐ Snapshot を作成* して、デスティネーション クラスタにコピーされる新しい Snapshot を作成するか、*最新の Snapshot を使用* して、デスティネーション クラスタで使用可能な最新の Snapshot を使用できます。
+. レプリケーション計画のフェイルオーバー後にサービスがリバースSnapMirror保護関係を自動的に作成しないようにする場合は、*保護をスキップ*を選択します。これは、NetApp Disaster Recovery内でサイトをオンラインに戻す前に、リストアしたサイトで追加の操作を実行する場合に便利です。
 . 操作を確定するには「Failover」と入力し、次に * Failover * を選択してください。
 
 

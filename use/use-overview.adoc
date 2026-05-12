@@ -20,7 +20,7 @@ NetApp Disaster Recovery を使用すると、次の目標を達成できます�
 * link:../use/drplan-create.html["災害復旧計画を作成する"]
 * link:../use/replicate.html["VMwareアプリを複製する"]プライマリサイトからクラウド上の災害復旧リモートサイトへSnapMirrorレプリケーションを使用
 * link:../use/migrate.html["アプリケーションの移行"]プライマリサイトから別のサイトへ
-* link:../use/failover.html["フェイルオーバーをテストする"] リソースを中断することなく
+* link:../use/failover.html["フェイルオーバーをテストする"]リソースを中断することなく
 * 災害時には、link:../use/failover.html["プライマリサイトをフェイルオーバーする"]
 * 災害が解決した後、災害復旧サイトからプライマリサイトへlink:../use/failback.html["フェイルバック"]
 * ジョブモニタリングページでlink:../use/monitor-jobs.html["災害復旧オペレーションの監視"]

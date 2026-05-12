@@ -36,7 +36,7 @@
 
 === Swaggerの改善
 
-これで、Disaster Recovery 内から Swagger ドキュメントにアクセスできるようになりました。災害復旧で、**設定** を選択し、次に **API ドキュメント** を選択して Swagger にリンクするか、ブラウザのシークレット/プライベート モードで次の URL にアクセスします。 link:https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas"^]。
+NetApp Disaster Recovery内からSwaggerのドキュメントにアクセスできるようになりました。NetApp Disaster Recoveryで、**設定**を選択してから**APIドキュメント**を選択します。link:https://api.bluexp.netapp.com/v1/services/draas/api/api-doc/draas["リンク"^]にアクセスするには、プライベートモードまたはシークレットモードにする必要があります。
 
 
 
