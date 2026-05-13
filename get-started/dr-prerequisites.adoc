@@ -140,6 +140,9 @@ NetApp Consoleユーザーには次のロールが必要です。
 
 
 
+TIP: Amazon Elastic VMware Service（EVS）でディザスタリカバリを使用するには、link:../reference/evs-deploy-guide-config-prereqs.html["追加の前提条件と構成に関するガイダンス"^]を参照してください。
+
+
 
 === NetApp Consoleエージェントを作成する
 
