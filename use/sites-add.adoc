@@ -17,9 +17,7 @@ summary: 災害復旧計画を作成する前に、 NetApp Disaster Recoveryで�
 
 TIP: 送信元と送信先の両方で同じNetApp Console エージェントを使用するようにしてください。
 
-*必要なNetApp Consoleロール* 組織管理者、フォルダまたはプロジェクト管理者、またはディザスタ リカバリ管理者。
-
-link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須NetApp Consoleロール* このタスクを実行するには、Super adminまたはDisaster recovery adminが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 
 

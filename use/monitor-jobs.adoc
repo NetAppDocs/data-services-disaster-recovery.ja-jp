@@ -18,7 +18,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 == ジョブの表示
 
-*必要なNetApp Consoleロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、ディザスタ リカバリ アプリケーション管理者、またはディザスタ リカバリ ビューア ロール。
+*必要なNetApp Consoleのロール* スーパー管理者、ディザスタリカバリ管理者、ディザスタリカバリアプリケーション管理者、またはディザスタリカバリビューアーのロール。
 
 link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
@@ -37,7 +37,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 ジョブが進行中またはキュー状態にあり、続行したくない場合は、キャンセルできます。ジョブが同じ状態のまま停止し、キュー内の次の操作を解放したい場合は、ジョブをキャンセルする必要があります。タイムアウトする前にジョブをキャンセルする必要がある場合があります。
 
-*必要なNetApp Consoleロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、ディザスタ リカバリ フェールオーバー管理者、またはディザスタ リカバリ アプリケーション管理者のロール。
+*必須のNetApp Consoleロール* スーパー管理者、ディザスタリカバリ管理者、ディザスタリカバリフェイルオーバー管理者、またはディザスタリカバリアプリケーション管理者ロール。
 
 link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 

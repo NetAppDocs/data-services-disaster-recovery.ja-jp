@@ -14,9 +14,7 @@ summary: リソースグループを使用すると、依存リソースのセ�
 [role="lead"]
 サイトにリソースを追加した後、リソースグループを作成して、VM、データストア、またはKubernetesクラスタを単一のユニットとして整理できます。リソースグループを使用すると、依存関係のあるリソースのセットを、要件を満たす論理グループに整理できます。たとえば、1つのアプリケーションに関連付けられたVMをグループ化したり、同様の階層を持つアプリケーションをグループ化したりできます。別の例として、グループにはリカバリ時に実行できる遅延ブート順序を含めることができます。
 
-*必要なNetApp Consoleロール* 組織管理者、フォルダまたはプロジェクト管理者、ディザスタ リカバリ管理者、またはディザスタ リカバリ アプリケーション管理者のロール。
-
-link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、または災害復旧アプリケーション管理者ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 *このタスクについて*
 
