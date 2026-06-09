@@ -1,0 +1,61 @@
+= Kubernetesのアップデート
+:allow-uri-read: 
+
+
+
+
+=== Kubernetesのアップデート
+
+ディザスタリカバリでは、Kubernetesベースのワークロードに対して以下の変更が導入されました：
+
+
+
+==== Kubernetes ワークロードのフェイルオーバー サポートをテストする
+
+ディザスタリカバリで、Kubernetesワークロードのフェイルオーバープロセスのテストがサポートされるようになりました。フェイルオーバーをテストすることで、ディザスタリカバリ計画を検証できます。テストが完了したら、テストフェイルオーバーをクリーンアップすることで、システムが自動的にテストリソースをクリーンアップし、オーバーヘッドを削減して環境の整合性を確保できます。
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html#test-the-failover-process["フェイルオーバープロセスをテストする"^]を参照してください。
+
+
+
+==== スケジュールされたテストフェイルオーバー
+
+テストフェイルオーバーをスケジュールすることで、災害復旧テストを自動化できるようになりました。定期的なテストフェイルオーバーのスケジュールを設定することで、手動による介入なしに復旧計画を継続的に検証でき、復旧目標に対する信頼性を維持し、コンプライアンス要件を満たすのに役立ちます。
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html#manage-replication-plans["レプリケーションプランの管理"^]を参照してください。
+
+
+
+==== Kubernetes ワークロードのスケジュール検出
+
+スケジュールされた検出機能を使用すると、Disaster Recoveryが新しいKubernetesワークロードをスキャンする頻度を制御できます。検出間隔を運用サイクルに合わせて設定することで、不要なシステム負荷を削減しつつ、新しいワークロードをタイムリーに検出して保護することができます。
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/sites-add.html#edit-the-site-and-customize-the-discovery-schedule["検出スケジュールをカスタマイズする"^]を参照してください。
+
+
+
+=== VMware のアップデート
+
+
+
+==== 空のデータストアの保護
+
+ディザスタリカバリでは、仮想マシン（VM）を含まないデータストアの保護を設定できるようになりました。その後データストアに追加されたVMは、ディザスタリカバリによって自動的に検出されます。その時点で、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/sites-add.html#add-subnet-mapping-for-a-vcenter-site["マッピング情報"^]を指定する必要があります。
+
+空のデータストアを保護プランに追加した場合、フェイルオーバーを実行する前に、そのデータストアを保護プランから削除するか、強制フェイルオーバーを実行する必要があります。詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["リモートサイトへのフェイルオーバー"^]を参照してください。
+
+
+
+==== 以前に除外されたデータストアを保護プランに復元する
+
+これまで保護対象から除外されていたデータストアを、再度保護対象に含めることができるようになりました。この機能強化により、災害復旧構成の管理と更新を長期的に行う際の柔軟性が向上します。
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["サイト、リソース グループ、レプリケーション プランを管理する"^]を参照してください。
+
+
+
+==== VMFS ベースのデータストアの高速フェイルオーバー
+
+ディザスタリカバリにより、VMFSベースのデータストアのフェイルオーバーパフォーマンスが向上しました。ホストバスアダプタ（HBA）の再スキャンとデータストアのマウント操作が並行して実行されるようになり、フェイルオーバー全体の時間が短縮され、リカバリイベント中のダウンタイムが最小限に抑えられます。
+
+フェイルオーバーの詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["ディザスタリカバリによるフェイルオーバー"^]を参照してください。

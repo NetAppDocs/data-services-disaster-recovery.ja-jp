@@ -17,7 +17,7 @@ summary: 災害復旧計画を作成する前に、 NetApp Disaster Recoveryで�
 
 TIP: 送信元と送信先の両方で同じNetApp Console エージェントを使用するようにしてください。
 
-*必須NetApp Consoleロール* このタスクを実行するには、Super adminまたはDisaster recovery adminが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
+*必須NetApp Consoleロール* このタスクを実行するには、Super adminまたはDisaster recovery adminロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 
 
@@ -129,7 +129,7 @@ vCenter が追加されると、 NetApp Disaster Recovery は、vCenter クラ�
 .Kubernetes
 --
 . Disaster Recovery で、サイドバーの **Sites** を選択します。
-. ドロップダウンメニューで、フィルタを *Kubernetes* に設定します。
+. ワークロードのドロップダウンメニューで、フィルタを *Kubernetes* に設定します。
 +
 image::site-type-toggle.png[サイトタイプ切り替えのスクリーンショット]
 
@@ -245,6 +245,8 @@ vCenter Server サイトを編集して検出スケジュールをカスタマ�
 . NetApp Disaster Recoveryメニューから、*サイト* を選択します。
 . 編集したいサイトを選択します。
 . アクションを選択image:icon-vertical-dots.png["アクションアイコン"]右側のアイコンをクリックし、[編集] を選択します。
+. Settings ウィンドウで、必要に応じてフィールドを編集します。
+. 検出スケジュールをカスタマイズするには、*スケジュールされた検出を有効にする*チェックボックスをオンにします。検出を開始する日付と、検出の間隔を時間と分で選択します。
 . 「vCenter サーバーの編集」ページで、必要に応じてフィールドを編集します。
 . 検出スケジュールをカスタマイズするには、[*スケジュールされた検出を有効にする*] ボックスをオンにして、必要な日付と時刻間隔を選択します。
 +

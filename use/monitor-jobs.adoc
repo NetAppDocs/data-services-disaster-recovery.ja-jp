@@ -18,9 +18,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 == ジョブの表示
 
-*必要なNetApp Consoleのロール* スーパー管理者、ディザスタリカバリ管理者、ディザスタリカバリアプリケーション管理者、またはディザスタリカバリビューアーのロール。
-
-link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーのロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .手順
 . ログイン https://console.netapp.com/["NetApp Console"^]。
@@ -35,11 +33,9 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 == ジョブをキャンセルする
 
-ジョブが進行中またはキュー状態にあり、続行したくない場合は、キャンセルできます。ジョブが同じ状態のまま停止し、キュー内の次の操作を解放したい場合は、ジョブをキャンセルする必要があります。タイムアウトする前にジョブをキャンセルする必要がある場合があります。
+進行中またはキューに入っているジョブが停止している場合、あるいは保留中の操作を優先するために、ジョブをキャンセルすることができます。
 
-*必須のNetApp Consoleロール* スーパー管理者、ディザスタリカバリ管理者、ディザスタリカバリフェイルオーバー管理者、またはディザスタリカバリアプリケーション管理者ロール。
-
-link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須のNetApp Consoleロール* このタスクを実行するには、Super admin、Disaster recovery admin、Disaster recovery failover admin、またはDisaster recovery application adminロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 .手順
 . NetApp Consoleの左側のナビゲーション バーから、*保護* > *災害復旧* を選択します。

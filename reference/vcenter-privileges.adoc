@@ -30,6 +30,15 @@ NetApp Disaster Recoveryがサービスを実行するには、vCenterアカウ�
 | Datastore.Rename | Rename datastore | データストアの名前の変更を許可します。 
 
 
+.2+| ホスト | Host.Config.AdvancedConfig | 詳細設定 | ホストの高度な設定オプションを設定できます。 
+
+
+| Host.Config.Storage | Storage partition configuration | 新しいストレージデバイスのスキャンと iSCSI の管理を可能にします。 
+
+
+| リソース | Resource.AssignVMToPool | リソース プール | VM のリソース プールへの割り当てを許可します 
+
+
 .3+| フォルダ | フォルダー作成 | フォルダを作成 | 新しいフォルダーの作成を許可します。 
 
 
@@ -45,7 +54,16 @@ NetApp Disaster Recoveryがサービスを実行するには、vCenterアカウ�
 | Network.Config | 設定 | ネットワークの構成を許可します。 
 
 
-.9+| 仮想マシンの構成 | VirtualMachine.Config.AdvancedConfig | 高度な設定 | VM の構成ファイル内の高度なパラメータを追加または変更することを許可します。 
+.12+| 仮想マシンの構成 | VirtualMachine.Config.AdvancedConfig | 高度な設定 | VM の構成ファイル内の高度なパラメータを追加または変更することを許可します。 
+
+
+| VirtualMachine.Config.AddExistingDisk | Add existing disk | 既存の仮想ディスクを VM に追加できます。 
+
+
+| VirtualMachine.Config.AddNewDisk | Add new disk | 仮想マシンに追加する新しい仮想ディスクを作成できます。 
+
+
+| VirtualMachine.Config.RemoveDisk | Remove disk | 仮想ディスクデバイスの削除を許可します。 
 
 
 | VirtualMachine．Config．Settings | 設定の変更 | 一般的な VM 設定の変更を許可します。 

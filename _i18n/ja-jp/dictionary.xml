@@ -1254,7 +1254,6 @@
   <block id="0e00f106592672a761fa0dcf1949901f" category="list-text">「アプリケーション整合性」と示されている VM 内のサポートされているデータベース アプリケーションを静止解除します。</block>
   <block id="89b3318439959d14598bf04d917486ea" category="list-text">ソース vCenter およびONTAPクラスタがまだアクティブな場合は、逆方向のSnapMirror関係を作成し、フェイルオーバー状態中に行われた変更を元のソース サイトに複製します。</block>
   <block id="262b346523c2b98a9b37923882f4fa94" category="list-text">右側で*アクション*オプションを選択します<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>*フェイルオーバーのテスト*を選択します。</block>
-  <block id="b5a4a47da1665893dbfd001a41980991" category="list-text">テスト フェイルオーバー ページで、「テスト フェイルオーバー」と入力し、*テスト フェイルオーバー* を選択します。</block>
   <block id="625033464ccff58d2815930ae362a422" category="list-text">テストが完了したら、テスト環境をクリーンアップします。</block>
   <block id="302bf3ef5d8e942b185e4b4d03884ff4" category="section-title">フェイルオーバーテスト後にテスト環境をクリーンアップする</block>
   <block id="b22e9cc3eebab01136ffe8d3f7e201ca" category="paragraph">フェイルオーバー テストが終了したら、テスト環境をクリーンアップする必要があります。このプロセスでは、テスト場所、FlexClone、および一時データストアから一時 VM が削除されます。</block>
@@ -1280,7 +1279,6 @@
   <block id="41629e76e0d378b59baf8095f22e3e66" category="paragraph">タスクには異なるNetApp Consoleロールが必要です。詳細については、各タスクの *必要なNetApp Consoleロール* セクションを参照してください。</block>
   <block id="0acfc5a5ce6523c8fad77ea0b4d65862" category="section-title">vCenter サイトの管理</block>
   <block id="f6384b4b10f3ca7cfac8402cfb23ef7f" category="paragraph">vCenter サイト名とサイト タイプ (オンプレミスまたは AWS) を編集できます。</block>
-  <block id="ee96f26f36e356a1f6ec9037ad76ba51" category="paragraph">*必要なNetApp Consoleロール* 組織管理者、フォルダまたはプロジェクト管理者、またはディザスタ リカバリ管理者のロール。</block>
   <block id="d11708747a513e148a12f02e4e603105" category="list-text">メニューから*サイト*を選択します。</block>
   <block id="b2209ab446f654c29ab1bfca5d8d2693" category="list-text">*アクション*オプションを選択します<block ref="b571b46a13691830124ae7cdd5a7ca96" category="inline-image-macro-rx" type="image"></block>vCenter 名の右側にある [*編集*] を選択します。</block>
   <block id="c4b621211240f640df1e2cfcc6cc5bec" category="list-text">vCenter サイトの名前と場所を編集します。</block>
@@ -1342,7 +1340,6 @@
   <block id="a2628e207373ba02728e8a48a677eca6" category="list-text">特定のジョブの詳細を表示するには、その行を選択します。</block>
   <block id="19a2cef623f0e702dd97e37e1bddd114" category="list-text">情報を更新するには、[*更新*] を選択します。</block>
   <block id="24391a0c4e58147fa07febdb32887a1a" category="section-title">ジョブをキャンセルする</block>
-  <block id="eead8518396b0c1b849be084fbe4f31a" category="paragraph">ジョブが進行中またはキュー状態にあり、続行したくない場合は、キャンセルできます。ジョブが同じ状態のまま停止し、キュー内の次の操作を解放したい場合は、ジョブをキャンセルする必要があります。タイムアウトする前にジョブをキャンセルする必要がある場合があります。</block>
   <block id="860b70267867fe6caf0f4adfd247b3e2" category="list-text">NetApp Consoleの左側のナビゲーション バーから、*保護* &gt; *災害復旧* を選択します。</block>
   <block id="26abc41be60bda806b144bd6ecedad10" category="list-text">ジョブ モニター ページで、キャンセルするジョブの ID をメモします。</block>
   <block id="49e474835558193a9bed54c7dadf777e" category="paragraph">ジョブは「進行中」または「キューに登録済み」の状態である必要があります。</block>
@@ -1532,7 +1529,6 @@
   <block id="3c843649a94855e3901bd423ac9ca414" category="paragraph">レプリケーション プランを削除すると、そのプランによって作成されたプライマリ スナップショットとセカンダリ スナップショットも削除できます。</block>
   <block id="75c34b3422e5baaae429a2d21a62a9d8" category="list-text">プライマリ スナップショット、セカンダリ スナップショット、またはプランによって作成されたメタデータのみを削除するかどうかを選択します。</block>
   <block id="8e15489db6e2853bdefe4e39cf285c3d" category="list-text">削除を確認するには「delete」と入力します。</block>
-  <block id="c1ba23522836b9d395a79f30f4da96b4" category="paragraph">保持数を変更すると、保存されるデータストアの数を増減できます。</block>
   <block id="506d82cb3cd3b9175af419eb19bc5740" category="list-text">レプリケーション プランを選択し、次に *フェールオーバー マッピング* タブを選択します。*編集* 鉛筆アイコンを選択します。</block>
   <block id="58777a5460ab56ac04a8fc9d5cb1b259" category="list-text">*データストア* 行の下矢印を選択して展開します。</block>
   <block id="2d3c0c55028659ea4dd39b2fd1ee9a30" category="list-text">**すべてのデータストアの保持数** の値を変更します。</block>
@@ -2244,7 +2240,6 @@
   <block id="fe2070975262fdb1507084ad02d139e7" category="paragraph"><block ref="fe2070975262fdb1507084ad02d139e7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ec5c6f08ada454e9670285c835649f45" category="list-text">操作を確定するには「フェイルバック」と入力し、次に * フェイルバック * を選択してください。</block>
   <block id="2d518d2a0701e8e4560cbcf883ee4f3a" category="list-text">ドロップダウンメニューで、* Kubernetes *レプリケーションプランに絞り込みます。</block>
-  <block id="cf3a1b459cc4424970f17bd247150364" category="paragraph">フェイルオーバーを開始する前に、プロセスをテストすることができます。このテストでは、VMはオフラインになりません。</block>
   <block id="1125e3b29e278ae1d41547291cfcb9fb" category="paragraph">フェイルオーバーテスト中、Disaster Recoveryは一時的に仮想マシンを作成します。Disaster Recoveryは、FlexCloneボリュームをバッキングする一時的なデータストアをESXiホストにマッピングします。</block>
   <block id="1d235eca89fa1ce9ae2c129b3459f24d" category="paragraph">テストが完了したら、*テストのクリーンアップ*オプションを使用して仮想マシンをリセットしてください。これは推奨されるものの、必須ではありません。</block>
   <block id="1ce56da10e5d8a1c98a950af6b3aa8f0" category="list-text">ターゲット VM を vCenter 内に新しいデータストアとして登録します。</block>
@@ -2281,7 +2276,6 @@
   <block id="7abaaec8330e6093848e8ad2b5fc55ad" category="admonition">NetApp Disaster Recoveryは、24時間に1回検出を実行します。サイトのセットアップ後、後でvCenterまたはKubernetesクラスターを編集して、ニーズに合わせて検出スケジュールをカスタマイズできます。たとえば、VMの数が多い場合は、検出スケジュールを23時間59分ごとに実行するように設定できます。VMの数が少ない場合は、検出スケジュールを12時間ごとに実行するように設定できます。最小間隔は30分、最大間隔は24時間です。</block>
   <block id="3df06dfecbba3cf48d3e0f796002cd30" category="paragraph">リソースを保護できるのは、レプリケーション計画が以下のいずれかの状態にある場合のみです：</block>
   <block id="3feb9d576508e0f0d5b31b94130afff9" category="paragraph">サイトにvCenterクラスタを追加するには、次の情報が必要です。</block>
-  <block id="95a40723328d7973d1b42377e4a9279b" category="list-text">ドロップダウンメニューで、フィルタを *Kubernetes* に設定します。</block>
   <block id="6ec607d90131ba368742b9a99a146722" category="list-text">Kubernetesクラスタを追加するサイトを選択します。サイトのアクションメニューを選択し、**クラスタの追加**を選択します。</block>
   <block id="7e592170164af97cef86b80a254c840b" category="list-text">サイトページで、サイトのアクションメニューを選択し、*vCenterの追加*を選択します。</block>
   <block id="ff3b9c54386661390d0a394f4a1d50c4" category="list-text">*サイト*が正しいことを確認してください。ドロップダウンメニューから*コンソールエージェント*を選択してください。</block>
@@ -2356,10 +2350,64 @@
   <block id="78a1d5987eca33284817a9dca555eece" category="paragraph">*必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、または災害復旧フェイルオーバー管理者ロールが必要です。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>。<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>。</block>
   <block id="6505512d1e3705256403aea56cc17f65" category="paragraph">*必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、または災害復旧アプリケーション管理者ロールが必要です。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>。<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>。</block>
   <block id="16f190cf7635b199438ae35b0fe59f2c" category="paragraph">*必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーのロールが必要です。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>。<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>。</block>
-  <block id="471f9859d1f2a18f91bcac6a9a7a7cdf" category="paragraph">*必須のNetApp Consoleロール* スーパー管理者、ディザスタリカバリ管理者、ディザスタリカバリフェイルオーバー管理者、またはディザスタリカバリアプリケーション管理者ロール。</block>
-  <block id="1f78a1c33aa4c1ac6fb7d77efb19a5f4" category="paragraph">*必須 NetApp Console ロール* このタスクを実行するには、Super admin、Disaster recovery admin、または Disaster recovery application admin ロールが必要です。</block>
-  <block id="bf857d514ad33034eb60ee79c8a3aa99" category="paragraph">*必須のNetApp Consoleロール* このタスクを実行するには、Super admin、Disaster recovery admin、Disaster recovery failover admin、またはDisaster recovery application adminロールが必要です。</block>
-  <block id="be5c474e990158548482b3a953022881" category="paragraph">*必須 NetApp Console ロール* Super admin、Disaster recovery admin、Disaster recovery failover admin、Disaster recovery application admin、または Disaster recovery viewer ロール。</block>
-  <block id="8e745eb6a2225b985f69a165c4ffe3a6" category="paragraph">*必要なNetApp Consoleのロール* スーパー管理者、ディザスタリカバリ管理者、ディザスタリカバリアプリケーション管理者、またはディザスタリカバリビューアーのロール。</block>
-  <block id="e509f2e4181583fe783409b5fef67c2d" category="paragraph">*必須NetApp Consoleロール* このタスクを実行するには、Super adminまたはDisaster recovery adminが必要です。<block ref="31accac3325320cbdf81ca4694a5591c" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
+  <block id="612649a00367a8c0d47c862b2609f91a" category="paragraph">*必須NetApp Consoleロール* このタスクを実行するには、Super adminまたはDisaster recovery adminロールが必要です。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>。<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>。</block>
+  <block id="84673f07cefbab42e915cbd959f8f20f" category="paragraph">*必須のNetApp Consoleロール* このタスクを実行するには、Super admin、Disaster recovery admin、Disaster recovery failover admin、またはDisaster recovery application adminロールが必要です。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>.<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>.</block>
+  <block id="f30e78142cdfb38729492098fb4e8de0" category="paragraph">*必須NetApp Consoleロール* このタスクを実行するには、組織管理者、フォルダーまたはプロジェクト管理者、または災害復旧管理者ロールが必要です。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>。<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>。</block>
+  <block id="a986e84430ee60de89573d632903e271" category="paragraph">*必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、災害復旧フェイルオーバー管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーの役割が必要です。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>.<block ref="e5d24b6c28284fa38e3f4f0358d9e595" category="inline-link-macro-rx"></block>.</block>
+  <block id="332fe49e1772f15dfec47321d1f86499" category="doc">Kubernetesのアップデート</block>
+  <block id="c0471f20c72304b23fb6eb762ed470b8" category="paragraph">ディザスタリカバリでは、Kubernetesベースのワークロードに対して以下の変更が導入されました：</block>
+  <block id="b1f52bc1b1d4ff2b36103a44b4128f19" category="section-title">Kubernetes ワークロードのフェイルオーバー サポートをテストする</block>
+  <block id="7e284075cd571fe0081cd386d1d3493c" category="paragraph">ディザスタリカバリで、Kubernetesワークロードのフェイルオーバープロセスのテストがサポートされるようになりました。フェイルオーバーをテストすることで、ディザスタリカバリ計画を検証できます。テストが完了したら、テストフェイルオーバーをクリーンアップすることで、システムが自動的にテストリソースをクリーンアップし、オーバーヘッドを削減して環境の整合性を確保できます。</block>
+  <block id="6031837c36096c58788ef48c962f6ff8" category="paragraph">詳細については、<block ref="a8818044286b10a3ca635d0b39faff78" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="9be7f1264301a801add3868ed7829904" category="section-title">スケジュールされたテストフェイルオーバー</block>
+  <block id="2cb1fc25b0b81893e3832eea3384812d" category="paragraph">テストフェイルオーバーをスケジュールすることで、災害復旧テストを自動化できるようになりました。定期的なテストフェイルオーバーのスケジュールを設定することで、手動による介入なしに復旧計画を継続的に検証でき、復旧目標に対する信頼性を維持し、コンプライアンス要件を満たすのに役立ちます。</block>
+  <block id="35bd874c9b191a5ec4ef2620bcba1d01" category="paragraph">詳細については、<block ref="5e1f430868dd2493a6125e8cf919005e" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="61a19574e3bdebdbc07d7daaaf8f76e1" category="section-title">Kubernetes ワークロードのスケジュール検出</block>
+  <block id="d45fce8600e6e092745f48fddf5cd172" category="paragraph">スケジュールされた検出機能を使用すると、Disaster Recoveryが新しいKubernetesワークロードをスキャンする頻度を制御できます。検出間隔を運用サイクルに合わせて設定することで、不要なシステム負荷を削減しつつ、新しいワークロードをタイムリーに検出して保護することができます。</block>
+  <block id="d5500e4522bde3536eb21086a6278cb6" category="inline-link-macro">検出スケジュールをカスタマイズする</block>
+  <block id="58b54ef9bb1184e1a76831a4c8532cdf" category="paragraph">詳細については、<block ref="00c64813bfb7d5f31a94dc7f7401aec7" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="49bc059dcf19f0a0115deba3b42c6932" category="section-title">VMware のアップデート</block>
+  <block id="239000f59be4987b700a238e8ca4cbac" category="section-title">空のデータストアの保護</block>
+  <block id="9a870179d2b3e04319fde1e2148bdde1" category="inline-link-macro">マッピング情報</block>
+  <block id="386068b3c8ab30655c493a434548a956" category="paragraph">ディザスタリカバリでは、仮想マシン（VM）を含まないデータストアの保護を設定できるようになりました。その後データストアに追加されたVMは、ディザスタリカバリによって自動的に検出されます。その時点で、<block ref="96f22499fac7fb5ec06f64e20472e919" category="inline-link-macro-rx"></block>を指定する必要があります。</block>
+  <block id="8ea79c5d84513219216b19fc3aa62033" category="inline-link-macro">リモートサイトへのフェイルオーバー</block>
+  <block id="fcf6f6ded14457afdca64680218d849c" category="paragraph">空のデータストアを保護プランに追加した場合、フェイルオーバーを実行する前に、そのデータストアを保護プランから削除するか、強制フェイルオーバーを実行する必要があります。詳細については、<block ref="a16180f75826879573c72d14ccfccc18" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="2d2e356e77ef22acf218ffb017d91233" category="section-title">以前に除外されたデータストアを保護プランに復元する</block>
+  <block id="1453aa4dc117cbab5d75827143b273ea" category="paragraph">これまで保護対象から除外されていたデータストアを、再度保護対象に含めることができるようになりました。この機能強化により、災害復旧構成の管理と更新を長期的に行う際の柔軟性が向上します。</block>
+  <block id="0f76cabceee2286086c65391269ec324" category="paragraph">詳細については、<block ref="37d0eb884ec50ead320898709eb6d605" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="05c185480595feac79a02ae4a685fcc6" category="section-title">VMFS ベースのデータストアの高速フェイルオーバー</block>
+  <block id="e63830ec714a620621135f51c7c84114" category="paragraph">ディザスタリカバリにより、VMFSベースのデータストアのフェイルオーバーパフォーマンスが向上しました。ホストバスアダプタ（HBA）の再スキャンとデータストアのマウント操作が並行して実行されるようになり、フェイルオーバー全体の時間が短縮され、リカバリイベント中のダウンタイムが最小限に抑えられます。</block>
+  <block id="69aa1f50c340d05c0f749dc51b5d5737" category="inline-link-macro">ディザスタリカバリによるフェイルオーバー</block>
+  <block id="bda5d94c4f296d65baa89f57187dafbd" category="paragraph">フェイルオーバーの詳細については、<block ref="6f81e5aa1c9b02c34c5ec309d5755115" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="c2ca16d048ec66e04bca283eab048ec2" category="cell">ホスト</block>
+  <block id="c558a0155ca880ce7651092b8d34bdda" category="cell">Host.Config.AdvancedConfig</block>
+  <block id="fe4c6a5e7bd6793b37370e4e46daf998" category="cell">詳細設定</block>
+  <block id="bfc4aca9e679b5e54fe1e06ec1a2fdae" category="cell">ホストの高度な設定オプションを設定できます。</block>
+  <block id="b65acfdfa8b200521132554a2bf785c1" category="cell">Host.Config.Storage</block>
+  <block id="a327173237d5e04189c770059b93c5b8" category="cell">Storage partition configuration</block>
+  <block id="8d1a22575f27ac05ff7b4dbaa3e07dd0" category="cell">新しいストレージデバイスのスキャンと iSCSI の管理を可能にします。</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">リソース</block>
+  <block id="a7e4bee1172f5ae98efff7f374c7c442" category="cell">Resource.AssignVMToPool</block>
+  <block id="4a80639450ebfdba618d1bb0d7fd4bc9" category="cell">リソース プール</block>
+  <block id="467e9c87035095663a3dab61ee7fa11f" category="cell">VM のリソース プールへの割り当てを許可します</block>
+  <block id="1c47c283c10eb040185d834c1d4f570f" category="cell">VirtualMachine.Config.AddExistingDisk</block>
+  <block id="c629a65bf0cad09db50b338d3b22ceaa" category="cell">Add existing disk</block>
+  <block id="c77e1221a533a8ee299fde02b09ab63e" category="cell">既存の仮想ディスクを VM に追加できます。</block>
+  <block id="826a9b0bd0c5de4d98b547fcc69301ff" category="cell">VirtualMachine.Config.AddNewDisk</block>
+  <block id="290f3ac3e6b4bd78ff9a9070bb2c965a" category="cell">Add new disk</block>
+  <block id="04195979ac94ef25dd5acd4ddb6f6d46" category="cell">仮想マシンに追加する新しい仮想ディスクを作成できます。</block>
+  <block id="87a51990ea0f64db3976bc03be144283" category="cell">VirtualMachine.Config.RemoveDisk</block>
+  <block id="175d3bc37a203b0e58c2d1bb572971de" category="cell">Remove disk</block>
+  <block id="23f63c2f1d737c005d58d613f81f3d37" category="cell">仮想ディスクデバイスの削除を許可します。</block>
+  <block id="3e323562bd488e4cbd90a025b9424181" category="section-title">2026年6月8日</block>
+  <block id="0926e17414694f3b4201b416c6c4a6ca" category="paragraph">バージョン4.3.4</block>
+  <block id="7aa7ac5ef00e37e99f8bb57b253d37ed" category="paragraph">実稼働時のフェイルオーバーを実施する前に、テストを実行して準備状況を確認できます。テストプロセス中もワークロードはオンライン状態を維持します。</block>
+  <block id="f5fa15f6901bb980064f0a1e081fbfb7" category="list-text">テストフェイルオーバーページで、テストフェイルオーバー用のスナップショットを選択します。**今すぐスナップショットを取得**を選択するか、**選択**して既存のスナップショットを選択します。**選択**を選択した場合は、既存のスナップショットを選択してください。</block>
+  <block id="0a07084d59200e5f62afd96db98a68b5" category="paragraph">次に「テストフェイルオーバー」と入力し、*テストフェイルオーバー*を選択します。</block>
+  <block id="962e92831673929912f04cd68819059b" category="admonition">レプリケーション計画に空のデータストアが含まれている場合は、まず計画から空のデータストアを削除するか、空のデータストアをスキップする**強制フェイルオーバー**オプションを使用する必要があります。</block>
+  <block id="919dfe02d5a57784fd83bb645e8f8b8e" category="paragraph">保持数を変更することで、保存するスナップショットの数を増減できます。</block>
+  <block id="e363882b79ccd237ac1f4dd679c679c2" category="paragraph">進行中またはキューに入っているジョブが停止している場合、あるいは保留中の操作を優先するために、ジョブをキャンセルすることができます。</block>
+  <block id="caf5841d5a0afa8a150bf6da9c22fc2f" category="list-text">ワークロードのドロップダウンメニューで、フィルタを *Kubernetes* に設定します。</block>
+  <block id="86839797735bfc02dea42929601e887a" category="list-text">Settings ウィンドウで、必要に応じてフィールドを編集します。</block>
+  <block id="83cfc8bb47b46515d41842fa32fa608b" category="list-text">検出スケジュールをカスタマイズするには、*スケジュールされた検出を有効にする*チェックボックスをオンにします。検出を開始する日付と、検出の間隔を時間と分で選択します。</block>
 </blocks>

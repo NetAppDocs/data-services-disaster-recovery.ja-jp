@@ -14,9 +14,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 [role="lead"]
 リソースとサイトを追加したら、_レプリケーションプラン_を作成する準備が整います。レプリケーションプランはデータ保護を管理します。レプリケーションを作成するには、ソースサイトと宛先サイトを指定し、リソースグループを選択し、アプリケーションの復元方法と起動方法を選択する必要があります。例えば、1つのアプリケーションに関連付けられた仮想マシン（VM）をグループ化したり、類似した階層を持つアプリケーションをグループ化したりすることができます。
 
-*必須のNetApp Consoleロール* スーパー管理者、ディザスタリカバリ管理者、ディザスタリカバリフェイルオーバー管理者、またはディザスタリカバリアプリケーション管理者ロール。
-
-link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+*必須のNetApp Consoleロール* このタスクを実行するには、Super admin、Disaster recovery admin、Disaster recovery failover admin、またはDisaster recovery application adminロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 *このタスクについて*
 
