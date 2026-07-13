@@ -4,6 +4,7 @@
 
 
 
+[[kubernetes-based-workload-support-preview]]
 === Kubernetesベースのワークロードサポート（プレビュー）
 
 NetApp Disaster Recoveryに、Kubernetesベースのワークロードのサポートが追加されました。Kubernetesサポートにより、OpenShift仮想化環境を含むKubernetesクラスタで実行されているアプリケーションを保護できます。Disaster Recoveryはlink:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["現在 Trident Protect でサポートされている Kubernetes のいずれかのバージョン"^]をサポートし、コンテナ化されたアプリケーションのシームレスな統合と堅牢なディザスタリカバリ機能を保証します。

@@ -16,6 +16,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 
 
+[[view-jobs]]
 == ジョブの表示
 
 *必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーのロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
@@ -31,6 +32,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 
 
+[[cancel-a-job]]
 == ジョブをキャンセルする
 
 進行中またはキューに入っているジョブが停止している場合、あるいは保留中の操作を優先するために、ジョブをキャンセルすることができます。

@@ -36,6 +36,7 @@ image:evs-create-rp-wiz-c0.png["レプリケーションプランの作成、リ
 
 
 
+[[compute-resource-mapping]]
 == コンピューティングリソースのマッピング
 
 サイトは複数の仮想データセンターと複数の vCenter クラスターをホストする可能性があるため、フェイルオーバーが発生した場合に VM を回復する vCenter クラスターを特定する必要があります。
@@ -58,6 +59,7 @@ image:evs-create-rp-wiz-c-compute-resources-1-4.png["レプリケーションプ
 
 
 
+[[map-virtual-network-resources]]
 == 仮想ネットワークリソースをマップする
 
 各 VM には、vCenter ネットワーク インフラストラクチャ内の仮想ネットワークに接続された 1 つ以上の仮想 NIC を設定できます。 DR サイトでの再起動時に各 VM が目的のネットワークに正しく接続されるようにするには、これらの VM を接続する DR サイトの仮想ネットワークを特定します。これを行うには、オンプレミス サイトの各仮想ネットワークを DR サイト上の関連ネットワークにマッピングします。
@@ -72,6 +74,7 @@ image:evs-create-rp-wiz-c-network-resources-1-2.png["レプリケーションプ
 
 
 
+[[define-options-for-vm-reconfiguration-during-failover]]
 == フェイルオーバー中のVM再構成のオプションを定義する
 
 各 VM は、DR vCenter サイトで正しく動作するために変更が必要になる場合があります。仮想マシンセクションでは、必要な変更を加えることができます。
@@ -80,6 +83,7 @@ image:evs-create-rp-wiz-c-network-resources-1-2.png["レプリケーションプ
 
 
 
+[[network-reconfiguration]]
 === ネットワークの再構成
 
 サポートされる IP アドレスの種類は、静的と DHCP です。静的 IP アドレスの場合、次のターゲット IP 設定があります。
@@ -103,6 +107,7 @@ image:evs-create-rp-wiz-c-vm-resources-network-1-2.png["レプリケーション
 
 
 
+[[vm-compute-resource-reconfiguration]]
 === VMコンピューティングリソースの再構成
 
 VM コンピューティング リソースを再構成するには、いくつかのオプションがあります。  NetApp Disaster Recovery は、仮想 CPU の数、仮想 DRAM の量、および VM 名の変更をサポートしています。
@@ -117,6 +122,7 @@ image:evs-create-rp-wiz-c-vm-resources-cpu-mem-1-2.png["レプリケーション
 
 
 
+[[boot-order]]
 === 起動順序
 
 NetApp Disaster Recovery は、ブート順序フィールドに基づいて VM の順序付けられた再起動をサポートします。ブート順序フィールドは、各リソース グループ内の VM の起動方法を示します。ブート順序フィールドに同じ値を持つ VM は並行して起動します。
@@ -131,6 +137,7 @@ image:evs-create-rp-wiz-c-vm-resources-boot-delay-1-2.png["レプリケーショ
 
 
 
+[[custom-guest-os-operations]]
 === カスタムゲストOS操作
 
 NetApp Disaster Recovery は、各 VM に対していくつかのゲスト OS 操作の実行をサポートしています。
@@ -154,6 +161,7 @@ image:evs-create-rp-wiz-c-vm-resources-ac-scripts-creds-1-2.png["レプリケー
 
 
 
+[[map-datastores]]
 == マップデータストア
 
 レプリケーション プランを作成する最後の手順は、 ONTAP がデータストアを保護する方法を特定することです。これらの設定では、レプリケーション プランのリカバリ ポイント目標 (RPO)、維持するバックアップの数、各 vCenter データストアのホスティングONTAPボリュームをレプリケートする場所を定義します。

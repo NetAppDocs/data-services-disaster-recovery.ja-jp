@@ -4,6 +4,7 @@
 
 
 
+[[user-roles-in-netapp-disaster-recovery]]
 === NetApp Disaster Recoveryにおけるユーザーロール
 
 NetApp Disaster Recoveryでは、各ユーザーの特定の機能やアクションへのアクセスを制御するためにロールを採用するようになりました。
@@ -24,6 +25,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles
 
 
 
+[[other-updates-in-netapp-disaster-recovery]]
 === NetApp Disaster Recoveryのその他のアップデート
 
 * 強化されたネットワーク検出

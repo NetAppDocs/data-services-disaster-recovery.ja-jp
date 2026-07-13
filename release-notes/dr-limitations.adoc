@@ -16,12 +16,14 @@ summary: 既知の制限事項では、このリリースのサービスでサ�
 
 
 
+[[wait-until-failback-completes-before-running-discovery]]
 == フェイルバックが完了するまで待ってから検出を実行してください
 
 フェイルオーバーが完了したら、ソース vCenter で検出を手動で開始しないでください。フェイルバックが完了するまで待ってから、ソース vCenter で検出を開始します。
 
 
 
+[[netapp-console-might-not-discover-amazon-fsx-for-netapp-ontap]]
 == NetApp ConsoleがAmazon FSx for NetApp ONTAPを検出しない可能性があります
 
 場合によっては、 NetApp ConsoleでAmazon FSx for NetApp ONTAPクラスターが検出されないことがあります。  FSx 資格情報が正しくなかったことが原因である可能性があります。
@@ -47,6 +49,7 @@ NetApp Disaster RecoveryからONTAP FSx クラスターを削除する必要が�
 
 
 
+[[limitations-with-google-cloud-netapp-volumes]]
 == Google Cloud NetApp Volumesの制限
 
 * フェイルオーバー テストを実行した後、クローン ボリュームを削除するには少なくとも 52 時間待つ必要があります。ボリュームを手動で削除する必要があります。  52 時間後に、フェイルオーバーを再度テストできます。

@@ -1,0 +1,55 @@
+= Kubernetesのアップデート
+:allow-uri-read: 
+
+
+
+
+[[kubernetes-updates]]
+=== Kubernetesのアップデート
+
+ディザスタリカバリでは、Kubernetesベースのワークロードに対して以下の変更が導入されました：
+
+
+
+==== サイトメニューから Trident Protect を管理する
+
+ディザスターリカバリーは、ディザスターリカバリー UI の「サイト」メニューから直接 Trident Protect を管理できるようになりました。Trident Protect をアップグレードしたり、ディザスターリカバリーから削除したりすることで、Kubernetes リソースの管理を効率化できます。
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/manage.html["サイトを管理する"^]を参照してください。
+
+
+
+[[vmware-updates]]
+=== VMware のアップデート
+
+ディザスターリカバリーでは、VMwareベースのワークロードに対して以下の変更が導入されました：
+
+
+
+==== 空のデータストアをフェイルオーバーする
+
+空のデータストアを含むレプリケーションプランでも、プランから除外したり、フェイルオーバーを強制したりすることなく、正常にフェイルオーバーできるようになりました。フェイルオーバー中、Disaster Recovery はディザスターリカバリサイトに空のデータストアを自動的にマウントし、VM を追加してフェイルバック操作用に保護できるようにします。
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["リモートサイトへのフェイルオーバー"^]を参照してください。
+
+
+
+==== vCenterネットワーク自動マッピング
+
+ネットワークマッピング関係をvCenterレベル（つまり、レプリケーション計画ダイアログの外側）で設定できるようになりました。一度設定すれば、Disaster Recovery はレプリケーションプランの追加または編集時にこれらのネットワークマッピングを自動的に適用し、レプリケーションプランの管理を効率化します。
+
+災害復旧機能は、プランごとの上書き設定を引き続きサポートします。レプリケーションプラン内で定義された既存のネットワークマッピングは、ネットワークごとに編集できます。これらのマッピングは、vCenterレベルの定義よりも優先されます。
+
+
+
+[[disaster-recovery-viewer-role-tightening]]
+=== ディザスタリカバリビューアロールの強化
+
+Disaster Recovery ビューアーロールから、「システムアップグレード」タブを表示する機能が削除されました。この変更により、このロールは読み取り専用ユーザーにとってより適切なエクスペリエンスに合致するようになります。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。
+
+
+
+[[system-performance-enhancements]]
+=== システムパフォーマンスの向上
+
+Disaster Recovery では、システムリソースの消費量を削減し、運用全体のパフォーマンスを向上させるための変更が導入されました。

@@ -15,6 +15,7 @@ NetApp Disaster Recoveryでは、実行されるアクションは、各サー�
 
 
 
+[[installation]]
 == インストール
 
 * Disaster Recoveryを使用するには、Consoleエージェントを標準モードでインストールします。Consoleエージェントのインストールの種類の詳細については、 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console の導入モードについて"^]を参照してください。

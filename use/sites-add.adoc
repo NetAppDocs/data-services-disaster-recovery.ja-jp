@@ -21,6 +21,7 @@ TIP: 送信元と送信先の両方で同じNetApp Console エージェントを
 
 
 
+[[add-a-site]]
 == サイトを追加する
 
 災害復旧にサイトを追加する際には、サイト内のリソースの種類に基づいて区別する必要があります。vCentersまたはKubernetesクラスターのいずれかを追加できます。
@@ -40,6 +41,7 @@ NetApp Disaster Recovery にサイトを追加した後、そのサイトにリ�
 
 
 
+[[add-resources-to-a-site]]
 == サイトにリソースを追加する
 
 以前のリリースで vCenter を追加し、検出スケジュールをカスタマイズする場合は、vCenter Server サイトを編集してスケジュールを設定する必要があります。
@@ -153,6 +155,7 @@ image:add-kubernetes-cluster.png["Kubernetesクラスタ追加オプションの
 
 
 
+[[add-subnet-mapping-for-a-vcenter-site]]
 == vCenter サイトのサブネット マッピングを追加する
 
 サブネット マッピングを使用してフェイルオーバー操作時の IP アドレスを管理できます。これにより、vCenter ごとにサブネットを追加できます。これを実行すると、各仮想ネットワークの IPv4 CIDR、デフォルト ゲートウェイ、および DNS が定義されます。
@@ -205,6 +208,7 @@ TIP: CIDR 表記は、IP アドレスとそのネットワーク マスクを指
 
 
 
+[[select-subnet-mapping-for-a-replication-plan]]
 === レプリケーションプランのサブネットマッピングを選択する
 
 レプリケーション プランを作成するときに、レプリケーション プランのサブネット マッピングを選択できます。
@@ -233,6 +237,7 @@ NOTE: VM が 2 つある場合 (たとえば、1 つは Linux で、もう 1 つ
 
 
 
+[[edit-the-vcenter-server-site-and-customize-the-discovery-schedule]]
 == vCenter Server サイトを編集し、検出スケジュールをカスタマイズします
 
 vCenter Server サイトを編集して検出スケジュールをカスタマイズできます。たとえば、多数の VM がある場合は、検出スケジュールを 23 時間 59 分ごとに実行するように設定できます。  VM の数が少ない場合は、検出スケジュールを 12 時間ごとに実行するように設定できます。
@@ -257,6 +262,7 @@ image:sites-edit-schedule.png["検出スケジュールの編集のスクリー�
 
 
 
+[[refresh-discovery-manually]]
 == 検出を手動で更新する
 
 検出はいつでも手動で更新できます。これは、VM を追加または削除し、 NetApp Disaster Recoveryの情報を更新する場合に便利です。

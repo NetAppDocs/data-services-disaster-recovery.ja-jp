@@ -16,6 +16,7 @@ NetApp Disaster Recoveryを使用する際は、適切に機能するようにON
 
 
 
+[[minimum-ontap-permissions]]
 == 最小ONTAP権限
 
 Disaster Recoveryには次のONTAP権限が必要です。
@@ -107,6 +108,7 @@ Disaster Recoveryには次のONTAP権限が必要です。
 |===
 
 
+[[add-permissions-in-ontap]]
 == ONTAP で権限を追加する
 
 ONTAP で権限を追加するには、必要な権限を持つロールを作成し、そのロールをユーザに割り当てる必要があります。このタスクは、ONTAP で System Manager または ONTAP CLI を使用して実行できます。
@@ -207,6 +209,7 @@ security login create -vserver <SVM> -user-or-group-name <user-name> -applicatio
 ====
 
 
+[[configure-disaster-recovery]]
 == ディザスタリカバリの設定
 
 ONTAP ロールを作成したら、link:https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html#step-3-discover-a-cluster["コンソールで ONTAP クラスタを検出する"^]する必要があります。クラスタを検出する際には、ONTAP クラスタの IP アドレス、作成したユーザー名、およびこの手順で使用するパスワードが必要です。Disaster Recovery では、ソースとデスティネーション クラスタの両方で検出を実行する必要があります。

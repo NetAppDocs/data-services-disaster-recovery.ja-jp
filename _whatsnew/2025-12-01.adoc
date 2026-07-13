@@ -4,6 +4,7 @@
 
 
 
+[[support-for-google-cloud-vmware-engine-using-google-cloud-netapp-volumes]]
 === Google Cloud NetApp Volumesを使用した Google Cloud VMware Engine のサポート
 
 NetApp Disaster Recovery、移行、フェイルオーバー、フェイルバック、テスト操作にGoogle Cloud NetApp Volumesを使用する Google Cloud VMware Engine をサポートするようになりました。この統合により、オンプレミス環境と Google Cloud 間でシームレスな障害復旧ワークフローが可能になります。

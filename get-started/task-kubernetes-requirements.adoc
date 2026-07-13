@@ -16,6 +16,7 @@ Kubernetes クラスタ用の NetApp Disaster Recovery を設定する前に、�
 
 
 
+[[prerequisites]]
 == 前提条件
 
 Kubernetes クラスターの要件を設定する前に、Kubernetes クラスタと ONTAP クラスタを設定済みであることを確認してください。
@@ -24,6 +25,7 @@ Kubernetes クラスターの要件を設定する前に、Kubernetes クラス�
 
 
 
+[[kubernetes-clusters]]
 === Kubernetesクラスター
 
 各 Kubernetes クラスタについて、以下を確認してください：
@@ -34,6 +36,7 @@ Kubernetes クラスターの要件を設定する前に、Kubernetes クラス�
 
 
 
+[[ontap-requirements]]
 === ONTAPの要件
 
 各ONTAPクラスタについて、次のリソースが設定されていることを確認してください：
@@ -48,6 +51,7 @@ Kubernetes クラスターの要件を設定する前に、Kubernetes クラス�
 
 
 
+[[install-netapp-trident-csi]]
 == NetApp Trident CSIをインストール
 
 link:https://docs.netapp.com/us-en/trident/trident-install/kubernetes-deploy-helm.html#deploy-the-trident-operator-and-install-trident-using-helm["各クラスタに Trident オペレータをインストールします。"]
@@ -57,10 +61,12 @@ link:https://docs.netapp.com/us-en/trident/trident-install/kubernetes-deploy-hel
 
 
 
+[[configure-ontap-backend-and-trident-storageclass]]
 == ONTAP バックエンドと Trident StorageClass を設定
 
 
 
+[[create-a-kubernetes-secret]]
 === Kubernetesシークレットを作成する
 
 名前空間に Kubernetes シークレットを作成します：
@@ -77,6 +83,7 @@ kubectl create secret generic trident-ontap-secret -n <namespace> \
 
 
 
+[[create-the-tridentbackendconfig]]
 === TridentBackendConfigを作成します
 
 次のことができます
@@ -105,6 +112,7 @@ spec:
 
 
 
+[[configure-the-storage-class]]
 === ストレージクラスを設定する
 
 link:https://docs.netapp.com/us-en/trident/trident-use/create-stor-class.html["ストレージクラスオブジェクトを作成します"^]。プロビジョナー `csi.trident.netapp.io`を使用します。例：
@@ -136,6 +144,7 @@ Trident Protectでアプリケーションデータをレプリケートする�
 
 
 
+[[configure-volume-group-snapshot-custom-resource-definitions-crd]]
 == ボリュームグループスナップショットのカスタムリソース定義（CRD）を設定する
 
 link:https://docs.netapp.com/us-en/trident/trident-use/vol-group-snapshots.html#deploy-a-volume-snapshot-controller["スナップショットCRDとスナップショットコントローラをインストールします。"^]。これらのインストールは、Trident Protectのボリュームスナップショットに必要です。
@@ -150,6 +159,7 @@ kubectl get crd volumesnapshotclasses.snapshot.storage.k8s.io
 ----
 
 
+[[configure-volume-group-snapshots]]
 === ボリューム グループ Snapshot を設定する
 
 link:https://docs.netapp.com/us-en/trident/trident-use/vol-group-snapshots.html#create-volume-group-snapshots["Trident の VolumeSnapshotClass を設定します。"^]
@@ -164,6 +174,7 @@ kubectl patch volumesnapshotclasses.snapshot.storage.k8s.io trident-snapshotclas
 
 
 
+[[verification-summary]]
 == 検証の概要
 
 |===
@@ -206,6 +217,7 @@ kubectl patch volumesnapshotclasses.snapshot.storage.k8s.io trident-snapshotclas
 ====
 
 
+[[more-information]]
 == 詳細情報
 
 * link:https://docs.netapp.com/us-en/trident/trident-protect/learn-about-trident-protect.html["Trident Protectについて学ぶ"^]

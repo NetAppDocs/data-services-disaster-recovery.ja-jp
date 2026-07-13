@@ -37,6 +37,7 @@ link:https://docs.netapp.com/us-en/console-licenses-subscriptions/concept-licens
 
 
 
+[[try-it-out-using-a-30-day-free-trial]]
 == 30日間の無料トライアルでお試しください
 
 30 日間の無料トライアルを使用して、 NetApp Disaster Recoveryを試すことができます。
@@ -70,6 +71,7 @@ image:draas-landing6-free-trial.png["NetApp Disaster Recoveryのランディン�
 
 
 
+[[after-the-trial-ends-subscribe-through-one-of-the-marketplaces]]
 == トライアル終了後は、マーケットプレイスのいずれかから登録してください。
 
 無料トライアルが終了したら、 NetAppからライセンスを購入するか、AWS Marketplace または Microsoft Azure Marketplace を通じてサブスクライブすることができます。この手順では、マーケットプレイスのいずれかで直接サブスクライブする方法の概要を説明します。
@@ -92,6 +94,7 @@ image:dr-licensing-payment-methods.png["NetApp Disaster Recoveryの支払い方�
 
 
 
+[[after-the-trial-ends-purchase-a-byol-license-through-netapp]]
 == トライアル終了後は、 NetAppを通じてBYOLライセンスを購入してください。
 
 試用期間が終了したら、 NetApp の営業担当者を通じてライセンスを購入できます。
@@ -104,6 +107,7 @@ https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-se
 
 
 
+[[update-your-license-when-it-expires]]
 == ライセンスの有効期限が切れたら更新してください
 
 ライセンスの有効期限が近づいている場合、またはライセンス容量が制限に達した場合は、 NetApp Disaster Recovery UI で通知されます。  NetApp Disaster Recoveryライセンスは期限が切れる前に更新できるので、スキャンしたデータへのアクセスが中断されることはありません。
@@ -115,6 +119,7 @@ https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-se
 
 
 
+[[end-the-free-trial]]
 == 無料トライアルを終了する
 
 無料トライアルはいつでも停止できます。また、有効期限が切れるまで待つこともできます。

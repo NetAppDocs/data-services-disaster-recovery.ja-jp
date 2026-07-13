@@ -16,6 +16,7 @@ NetApp Consoleは、単一の作業環境で複数のコンソール エージ�
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 * あなたにはxref:../get-started/dr-prerequisites.html#create-the-netapp-console-agent[作業環境に少なくとも 2 つのコンソール エージェントを追加しました]。
@@ -24,6 +25,7 @@ NetApp Consoleは、単一の作業環境で複数のコンソール エージ�
 
 
 
+[[steps]]
 == 手順
 
 . 災害復旧で、[**サイト**] を選択します。
@@ -43,6 +45,7 @@ image:edit-vcenter.png["コンソールエージェントを変更するスク�
 
 
 
+[[more-information]]
 == 詳細情報
 
 * link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html["コンソールエージェントについて学ぶ"^]

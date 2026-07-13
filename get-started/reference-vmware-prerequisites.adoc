@@ -16,6 +16,7 @@ NetApp Disaster Recoveryを使用する前に、環境がVMware vCenterクラス
 
 
 
+[[general-prerequisites]]
 == 一般的な前提条件
 
 これらの前提条件は、オンプレミスの vCenter クラスタと VMware Cloud for AWS ソフトウェア定義データセンター (SDDC) の両方に適用されます。
@@ -33,6 +34,7 @@ NetApp Disaster Recoveryを使用する前に、環境がVMware vCenterクラス
 
 
 
+[[vmware-cloud-sddc-prerequisites]]
 == VMware Cloud SDDCの前提条件
 
 VMware Cloud SDDC を使用する場合は、以下の追加の前提条件が適用されます。

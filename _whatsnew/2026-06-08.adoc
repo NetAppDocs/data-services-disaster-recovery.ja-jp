@@ -4,6 +4,7 @@
 
 
 
+[[kubernetes-updates]]
 === Kubernetesのアップデート
 
 ディザスタリカバリでは、Kubernetesベースのワークロードに対して以下の変更が導入されました：
@@ -34,6 +35,7 @@
 
 
 
+[[vmware-updates]]
 === VMware のアップデート
 
 

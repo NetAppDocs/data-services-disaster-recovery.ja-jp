@@ -27,6 +27,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 
 
 
+[[manage-vcenter-sites]]
 == vCenter サイトの管理
 
 vCenter サイト名とサイト タイプ (オンプレミスまたは AWS) を編集できます。
@@ -41,6 +42,7 @@ vCenter サイト名とサイト タイプ (オンプレミスまたは AWS) を
 
 
 
+[[manage-resource-groups]]
 == リソース グループの管理
 
 VM またはデータストアごとにリソース グループを作成できます。これらは、レプリケーション プランの作成時または作成後に追加できます。
@@ -71,6 +73,7 @@ VM またはデータストアごとにリソース グループを作成でき�
 
 
 
+[[manage-replication-plans]]
 == レプリケーションプランの管理
 
 レプリケーション プランを無効化、有効化、および削除できます。スケジュールは変更できます。
@@ -108,6 +111,7 @@ image:../use/dr-plan-list.png["レプリケーションプランリスト"]
 
 
 
+[[reconcile-snapshots-on-demand]]
 === オンデマンドでスナップショットを調整する
 
 ディザスタリカバリでは、ソース上のスナップショットが 24 時間ごとに自動的に削除されます。ソースと宛先の間でスナップショットが同期されていないことが判明した場合は、サイト間の一貫性を確保するためにスナップショット間の不一致を解決する必要があります。
@@ -126,6 +130,7 @@ image:../use/dr-plan-list.png["レプリケーションプランリスト"]
 
 
 
+[[delete-a-replication-plan]]
 === レプリケーションプランを削除する
 
 レプリケーション プランを削除すると、そのプランによって作成されたプライマリ スナップショットとセカンダリ スナップショットも削除できます。
@@ -142,6 +147,7 @@ image:../use/dr-plan-list.png["レプリケーションプランリスト"]
 
 
 
+[[change-retention-count-for-failover-schedules]]
 === フェイルオーバースケジュールの保持数を変更する
 
 保持数を変更することで、保存するスナップショットの数を増減できます。
@@ -161,6 +167,37 @@ image:../use/dr-plan-failover-edit.png["フェイルオーバーマッピング�
 
 
 
+[[manage-trident-protect]]
+== Trident Protectの管理
+
+ディザスターリカバリーUIから、Trident Protect をアップグレードまたは削除できます。
+
+.Trident Protectのアップグレード
+. Disaster Recovery で、サイドバーから「サイト」を選択します。
+. ドロップダウンメニューから「**Kubernetes**」を選択します。
+. 変更したいクラスターのアクションメニューで、**クラスターのアップグレード**を選択します。
+. **対象バージョンの選択**ドロップダウンで、アップグレード先の Trident Protect のバージョンを選択します。アップグレードする前に、link:https://docs.netapp.com/us-en/trident/trident-rn.html["Tridentリリースノート"^]を確認し、各バージョンの細かな違いとクラスターへの影響を理解しておくことをお勧めします。
+. アップグレードを開始するには、**アップグレード**を選択してください。
+
+
+.Trident Protect の削除
+. Disaster Recovery で、サイドバーから「サイト」を選択します。
+. ドロップダウンメニューから「**Kubernetes**」を選択します。
+. 変更したいサイトのアクションメニューで、**クラスターの削除**を選択します。
+. ダイアログを確認してから、Trident Protect を削除するクラスターでアンインストールコマンドを実行してください： `helm uninstall trident-protect -n trident-protect`。
+. Trident Protect の削除を完了するには、Disaster Recovery UI に戻り、**「サイトの削除」**を選択します。
+
+
+.サイトからクラスターを削除する
+. Disaster Recovery で、サイドバーから「サイト」を選択します。
+. ドロップダウンメニューから「**Kubernetes**」を選択します。
+. 変更したいサイトのアクションメニューで、**クラスターの削除**を選択します。
+. ダイアログメニューを確認し、「サイトから削除」を選択してください。Trident Protect の操作を続行するには、正しいオプションを選択してください。
+
+
+
+
+[[view-datastore-information]]
 == データストア情報を表示する
 
 ソースとターゲットに存在するデータストアの数に関する情報を表示できます。
@@ -176,6 +213,7 @@ image:../use/dr-plan-failover-edit.png["フェイルオーバーマッピング�
 
 
 
+[[view-virtual-machines-information]]
 == 仮想マシンの情報を表示する
 
 ソースとターゲットに存在する仮想マシンの数、CPU、メモリ、使用可能な容量に関する情報を表示できます。

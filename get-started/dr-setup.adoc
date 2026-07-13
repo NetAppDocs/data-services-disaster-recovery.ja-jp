@@ -19,6 +19,7 @@ TIP: レビューlink:../get-started/dr-prerequisites.html["前提条件"]シス
 
 
 
+[[supported-infrastructures]]
 == サポートされているインフラストラクチャ
 
 NetApp Disaster Recovery は、次のインフラストラクチャで使用できます。
@@ -31,6 +32,7 @@ NetApp Disaster Recovery は、次のインフラストラクチャで使用で�
 
 
 
+[[hybrid-cloud-with-vmware-cloud-and-amazon-fsx-for-netapp-ontap]]
 == VMware Cloud とAmazon FSx for NetApp ONTAPハイブリッド クラウド
 
 この方法は、NFS プロトコルを使用してONTAP FlexVolボリュームでホストされるデータストアを使用するオンプレミスの本番環境の vCenter インフラストラクチャで構成されます。  DR サイトは、NFS プロトコルを使用する 1 つ以上の FSx for ONTAPインスタンスによって提供されるFlexVolボリューム上でホストされるデータストアを使用する 1 つ以上の VMware Cloud SDDC インスタンスで構成されます。
@@ -41,6 +43,7 @@ AWS クラウド インフラストラクチャに関連する災害復旧の場
 
 
 
+[[aws-availability-zones]]
 === AWS アベイラビリティゾーン
 
 AWS は、特定のリージョン内の 1 つ以上のアベイラビリティーゾーン (AZ) でのソリューションのデプロイをサポートしています。ディザスタリカバリでは、VMware Cloud for AWS と AWS FSx for NetApp ONTAP2 つの AWS ホストサービスが使用されます。
@@ -53,6 +56,7 @@ AWS は、特定のリージョン内の 1 つ以上のアベイラビリティ�
 
 
 
+[[on-premises-to-aws]]
 === オンプレミスからAWSへ
 
 AWS は、プライベートデータセンターを AWS クラウドに接続するための次の方法を提供します。各ソリューションには利点とコストに関する考慮事項があります。
@@ -66,6 +70,7 @@ AWS は、プライベートデータセンターを AWS クラウドに接続�
 
 
 
+[[vpc-to-vpc-interconnections]]
 === VPC 間の相互接続
 
 AWS では、次のタイプの VPC 間相互接続を提供しています。各ソリューションには利点とコストに関する考慮事項があります。
@@ -79,6 +84,7 @@ AWS では、次のタイプの VPC 間相互接続を提供しています。�
 
 
 
+[[get-ready-for-on-premises-to-cloud-protection-using-aws]]
 === AWS を使用したオンプレミスからクラウドへの保護の準備
 
 AWS を使用してオンプレミスからクラウドへの保護用にNetApp Disaster Recovery を設定するには、以下を設定する必要があります。
@@ -114,6 +120,7 @@ AWS上でVMware Cloud環境を構成するには、以下の手順に従って�
 
 
 
+[[private-cloud]]
 == プライベート クラウド
 
 NetApp Disaster Recoveryを使用すると、VM データストアを同じプライベート データセンター内またはリモートのプライベート データセンターまたは併置されたデータセンター内の別の vCenter クラスタに複製することで、1 つ以上の vCenter クラスタでホストされている VMware VM を保護できます。
@@ -124,6 +131,7 @@ NetApp Disaster Recoveryを使用すると、VM データストアを同じプ�
 
 
 
+[[get-ready-for-on-premises-to-on-premises-protection]]
 === オンプレミスからオンプレミスへの保護の準備
 
 オンプレミス間の保護のためにNetApp Disaster Recovery を設定する前に、次の要件が満たされていることを確認してください。
@@ -147,6 +155,7 @@ NetApp Disaster Recoveryを使用すると、VM データストアを同じプ�
 
 
 
+[[intelligent-proxy-support]]
 === インテリジェントなプロキシサポート
 
 NetApp Consoleエージェントはインテリジェント プロキシをサポートします。インテリジェント プロキシは、オンプレミス環境をNetApp Consoleに接続するための軽量かつ安全で効率的な方法です。 VPN や直接のインターネット アクセスを必要とせずに、システムとコンソール サービス間の安全な接続を提供します。この最適化されたプロキシ実装は、ローカル ネットワーク内の API トラフィックをオフロードします。

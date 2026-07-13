@@ -19,6 +19,7 @@ VM インフラストラクチャを保護する前に、保護対象の VM を�
 
 
 
+[[create-on-premises-sites]]
 == オンプレミスサイトを作成する
 
 本番環境の vCenter サイトを作成します。
@@ -45,6 +46,7 @@ image:evs-create-site-op-3-5.png["サイト作成ダイアログボックス"]
 
 
 
+[[create-amazon-cloud-sites]]
 == Amazonクラウドサイトを作成する
 
 Amazon FSx for NetApp ONTAPストレージを使用して Amazon EVS の DR サイトを作成します。

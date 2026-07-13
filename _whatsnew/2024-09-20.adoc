@@ -4,6 +4,7 @@
 
 
 
+[[support-for-on-premises-to-on-premises-vmware-vmfs-datastores]]
 === オンプレミスからオンプレミスへの VMware VMFS データストアのサポート
 
 このリリースには、オンプレミス ストレージに保護された iSCSI および FC 用の VMware vSphere 仮想マシン ファイル システム (VMFS) データストアにマウントされた VM のサポートが含まれています。以前は、このサービスは、iSCSI および FC 用の VMFS データストアをサポートする _テクノロジー プレビュー_ を提供していました。

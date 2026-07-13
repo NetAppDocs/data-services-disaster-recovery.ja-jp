@@ -1082,12 +1082,10 @@
   <block id="d26cf1f0512a50b32d5a10b931f5fbe0" category="list-text">アクティビティ ペインですべての操作を確認します。ジョブ モニターですべての操作を表示するには、[*すべてのジョブを表示*] を選択します。</block>
   <block id="d15994bcf2411bb66762cdf4c58704b3" category="doc">NetApp Disaster Recoveryでレプリケーションプランを作成する</block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">*このタスクについて*</block>
-  <block id="978c7c7ea4c54312c02456ee28acd332" category="paragraph">レプリケーション プランを作成し、コンプライアンスとテストのスケジュールを編集することもできます。運用ワークロードに影響を与えずに VM のテスト フェイルオーバーを実行します。</block>
   <block id="fba54b7da5e3ceabe7362e860f7df87d" category="paragraph">複数のデータストア上の複数の VM を保護できます。  NetApp Disaster Recovery は、保護された VM データストアをホストするすべてのONTAPボリュームに対してONTAP整合性グループを作成します。</block>
   <block id="e7d31fc0602fb2ede144d18cdffd816b" category="list-text">準備完了</block>
   <block id="eca4b06cc957b067c25916bf563bfcb1" category="list-text">フェイルバックがコミットされました</block>
   <block id="55af57d923ed95c2495c25a0e4762077" category="list-text">テストフェイルオーバーがコミットされました</block>
-  <block id="2cd55dfb5ccc1ffae31967c7321620ec" category="paragraph">*レプリケーションプランのスナップショット*</block>
   <block id="65dd859759570a8a07801053fcf54421" category="paragraph">ディザスタ リカバリでは、ソース クラスターと宛先クラスターで同じ数のスナップショットが維持されます。デフォルトでは、サービスは 24 時間ごとにスナップショット調整プロセスを実行し、ソース クラスターと宛先クラスターのスナップショットの数が同じであることを確認します。</block>
   <block id="4e5a9a818385822100abb8be4a2ef9c3" category="paragraph">次の状況では、ソース クラスターと宛先クラスター間でスナップショットの数が異なる可能性があります。</block>
   <block id="44dfcfef8dbab15db411756f3ccc6b01" category="list-text">状況によっては、ディザスタ リカバリ以外のONTAP操作によってボリュームからスナップショットが追加または削除されることがあります。</block>
@@ -1096,10 +1094,7 @@
   <block id="4a72656aa601ed9d31033e4be368a919" category="list-text">レプリケーション プランのスナップショット保持数を削減すると、新たに削減された保持数を満たすために、ソース サイトと宛先サイトの両方で最も古いスナップショットがサービスによって削除される可能性があります。</block>
   <block id="49ff95b6dcd137f59a6acecf04a4c3b1" category="inline-image-macro">水平ドットのアクションメニュー</block>
   <block id="7639ea3b77d367f127d70d668027673c" category="paragraph">このような場合、ディザスタ リカバリでは、次の整合性チェック時にソース クラスターと宛先クラスターから古いスナップショットが削除されます。または、管理者は*アクション*を選択して即時スナップショットのクリーンアップを実行することもできます。<block ref="6b4b871445179eda383c81faf6cf5a92" category="inline-image-macro-rx" type="image"></block>レプリケーション プランのアイコンをクリックし、[スナップショットのクリーンアップ] を選択します。</block>
-  <block id="3f1d340403a26ed0ad46982a91385d32" category="paragraph">サービスは 24 時間ごとにスナップショットの対称性チェックを実行します。</block>
-  <block id="17e2d63e3b45ecbfe13bcc32fec929d0" category="paragraph">*始める前に*</block>
   <block id="1059d7b16ffe2236c36ae0e8c15872ca" category="paragraph">SnapMirror関係を作成する前に、Disaster Recovery の外部でクラスタと SVM ピアリングを設定します。</block>
-  <block id="89dd75b1f79276c7e30e794e1c739f04" category="section-title">計画を作成する</block>
   <block id="4f27ef77939e5393adc6b44aec83a6b7" category="paragraph">ウィザードに従って次の手順を実行します。</block>
   <block id="3baff38a392d31950fc8d4d62ea2adc0" category="list-text">vCenter サーバーを選択します。</block>
   <block id="d813bc25d25a7f816dde51c17f6c6ba0" category="list-text">ソース環境のリソースが宛先にどのようにマップされるかをマップします。</block>
@@ -1319,7 +1314,6 @@
   <block id="ee9e0fb0a09a468f33fa6f2dabc4ff49" category="inline-image-macro">フェイルオーバーマッピングの編集ページ</block>
   <block id="2aef38b97efb9369d3e496e8d062d8fd" category="paragraph"><block ref="2aef38b97efb9369d3e496e8d062d8fd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e3a15d734e1eafd89e04f5eb526ec5cc" category="list-text">レプリケーション プランを選択した状態で、[アクション] メニューを選択し、[*古いスナップショットのクリーンアップ*] を選択して、新しい保持カウントに合わせてターゲット上の古いスナップショットを削除します。</block>
-  <block id="a6dcfee4cd10f2ad60c3d81bc2a3b8ad" category="section-title">データストア情報を表示する</block>
   <block id="432624070ae1b8a0b19fd42c048a224c" category="paragraph">ソースとターゲットに存在するデータストアの数に関する情報を表示できます。</block>
   <block id="7e551addf2432bb9127be36e3a23db1c" category="list-text">メニューから*ダッシュボード*を選択します。</block>
   <block id="5e141a758f792ce4ad7e1b2107b1f7a4" category="list-text">サイト行で vCenter を選択します。</block>
@@ -2319,7 +2313,6 @@
   <block id="fd41d6f681fcde1d5668de60a04c0563" category="paragraph"><block ref="fa5ae6d9db1798cb96b18ea5809b60d9" prefix="" category="inline-code"></block></block>
   <block id="83e1151ac17b113708a4a8f22a39063c" category="list-text"><block ref="83e1151ac17b113708a4a8f22a39063c" category="inline-link-macro-rx"></block></block>
   <block id="d1078d331fc762f6c1e11445777639f1" category="list-text"><block ref="e169d85ddc666c008a7e023ca382e5b3" category="inline-link-macro-rx"></block>を確認します。</block>
-  <block id="3e2600f2f1048cf9d96b25b85a3b12b5" category="paragraph">リソースとサイトを追加したら、_レプリケーションプラン_を作成する準備が整います。レプリケーションプランはデータ保護を管理します。レプリケーションを作成するには、ソースサイトと宛先サイトを指定し、リソースグループを選択し、アプリケーションの復元方法と起動方法を選択する必要があります。例えば、1つのアプリケーションに関連付けられた仮想マシン（VM）をグループ化したり、類似した階層を持つアプリケーションをグループ化したりすることができます。</block>
   <block id="fd0863d0dc188b339645e359055610e4" category="admonition">NetApp Disaster Recoveryを導入する前にVMまたはKubernetesクラスタを整理して、無秩序な拡大を最小限に抑えます。保護が必要なリソースはデータストアのサブセットに配置し、保護しないリソースは別のデータストアのサブセットに配置します。レプリケーション計画を作成する前にリソースグループを整理するには、<block ref="2e9e1519a300bb9dc6a403652e82bcd7" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="65dea983a95654f072023e3fd251790f" category="list-text">*ソース*には、ソースとして指定するvCenterまたはKubernetesクラスターを選択します。</block>
   <block id="56da8dc4cd41826eefa46f92a1310a8b" category="paragraph">次のステップは、必要な VM 、データストア、または Kubernetes クラスタを機能的なリソースグループにグループ化することです。リソースグループを使用すると、 Kubernetes クラスタや VM などのリソースセットを共通のスナップショットで保護できます。</block>
@@ -2404,10 +2397,48 @@
   <block id="7aa7ac5ef00e37e99f8bb57b253d37ed" category="paragraph">実稼働時のフェイルオーバーを実施する前に、テストを実行して準備状況を確認できます。テストプロセス中もワークロードはオンライン状態を維持します。</block>
   <block id="f5fa15f6901bb980064f0a1e081fbfb7" category="list-text">テストフェイルオーバーページで、テストフェイルオーバー用のスナップショットを選択します。**今すぐスナップショットを取得**を選択するか、**選択**して既存のスナップショットを選択します。**選択**を選択した場合は、既存のスナップショットを選択してください。</block>
   <block id="0a07084d59200e5f62afd96db98a68b5" category="paragraph">次に「テストフェイルオーバー」と入力し、*テストフェイルオーバー*を選択します。</block>
-  <block id="962e92831673929912f04cd68819059b" category="admonition">レプリケーション計画に空のデータストアが含まれている場合は、まず計画から空のデータストアを削除するか、空のデータストアをスキップする**強制フェイルオーバー**オプションを使用する必要があります。</block>
   <block id="919dfe02d5a57784fd83bb645e8f8b8e" category="paragraph">保持数を変更することで、保存するスナップショットの数を増減できます。</block>
   <block id="e363882b79ccd237ac1f4dd679c679c2" category="paragraph">進行中またはキューに入っているジョブが停止している場合、あるいは保留中の操作を優先するために、ジョブをキャンセルすることができます。</block>
   <block id="caf5841d5a0afa8a150bf6da9c22fc2f" category="list-text">ワークロードのドロップダウンメニューで、フィルタを *Kubernetes* に設定します。</block>
   <block id="86839797735bfc02dea42929601e887a" category="list-text">Settings ウィンドウで、必要に応じてフィールドを編集します。</block>
   <block id="83cfc8bb47b46515d41842fa32fa608b" category="list-text">検出スケジュールをカスタマイズするには、*スケジュールされた検出を有効にする*チェックボックスをオンにします。検出を開始する日付と、検出の間隔を時間と分で選択します。</block>
+  <block id="a3385cf694f169469155cf608126cc13" category="section-title">サイトメニューから Trident Protect を管理する</block>
+  <block id="d108f39d7ac8db7fc5eab434cd7df7fc" category="paragraph">ディザスターリカバリーは、ディザスターリカバリー UI の「サイト」メニューから直接 Trident Protect を管理できるようになりました。Trident Protect をアップグレードしたり、ディザスターリカバリーから削除したりすることで、Kubernetes リソースの管理を効率化できます。</block>
+  <block id="ceb6da856e73533ddb08cf15abe120b7" category="inline-link-macro">サイトを管理する</block>
+  <block id="cee9739236651212176e7c87838bb2d3" category="paragraph">詳細については、<block ref="b4c4c365d924dbf2ff79378d36f70a71" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="cc6fa95b1e18a1fb7c53cf32734ead26" category="paragraph">ディザスターリカバリーでは、VMwareベースのワークロードに対して以下の変更が導入されました：</block>
+  <block id="7f2d139bc27153ad07daea80fab0a433" category="section-title">空のデータストアをフェイルオーバーする</block>
+  <block id="bfea9e3d533bac76e79429a83d38837c" category="paragraph">空のデータストアを含むレプリケーションプランでも、プランから除外したり、フェイルオーバーを強制したりすることなく、正常にフェイルオーバーできるようになりました。フェイルオーバー中、Disaster Recovery はディザスターリカバリサイトに空のデータストアを自動的にマウントし、VM を追加してフェイルバック操作用に保護できるようにします。</block>
+  <block id="d3835be5f3c2a797d5fc948f95289e0c" category="paragraph">詳細については、<block ref="a16180f75826879573c72d14ccfccc18" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="0fddd8fb8cd772934e1e5021d105b7fb" category="section-title">vCenterネットワーク自動マッピング</block>
+  <block id="07efa6bd1ca4b90d1c4eb002786f661b" category="paragraph">ネットワークマッピング関係をvCenterレベル（つまり、レプリケーション計画ダイアログの外側）で設定できるようになりました。一度設定すれば、Disaster Recovery はレプリケーションプランの追加または編集時にこれらのネットワークマッピングを自動的に適用し、レプリケーションプランの管理を効率化します。</block>
+  <block id="1eee5c19633b811fc646be143dcd283f" category="paragraph">災害復旧機能は、プランごとの上書き設定を引き続きサポートします。レプリケーションプラン内で定義された既存のネットワークマッピングは、ネットワークごとに編集できます。これらのマッピングは、vCenterレベルの定義よりも優先されます。</block>
+  <block id="d315df6836105d6791cc83a6539ee7e9" category="section-title">ディザスタリカバリビューアロールの強化</block>
+  <block id="266377e44a916fdf2cc18bfbb23cf6bf" category="paragraph">Disaster Recovery ビューアーロールから、「システムアップグレード」タブを表示する機能が削除されました。この変更により、このロールは読み取り専用ユーザーにとってより適切なエクスペリエンスに合致するようになります。<block ref="8100c1fe7b8d110e1492908ee1d65a0c" category="inline-link-macro-rx"></block>。</block>
+  <block id="3ddd9403dd985627a83f357af005a768" category="section-title">システムパフォーマンスの向上</block>
+  <block id="baa35064269b3904d8b57c0745ca18f8" category="paragraph">Disaster Recovery では、システムリソースの消費量を削減し、運用全体のパフォーマンスを向上させるための変更が導入されました。</block>
+  <block id="de2e4685966d24481dfab35c95ad44dc" category="section-title">2026年7月13日</block>
+  <block id="17d61647c38ceaeec784c2ea23dd1f02" category="paragraph">バージョン4.3.5</block>
+  <block id="460dfd853a44f41cd7e36e73abb3183d" category="paragraph">リソースとサイトを追加したら、データ保護を管理するための_レプリケーションプラン_を作成します。レプリケーションプランを作成するには、ソースサイトと宛先サイトを指定し、リソースグループを選択し、アプリケーションの復元方法と起動方法を選択する必要があります。例えば、1つのアプリケーションに関連付けられた仮想マシン（VM）をグループ化したり、類似した階層を持つアプリケーションをグループ化したりすることができます。</block>
+  <block id="64a6f997b6cbcf26c538dbf71179cfe3" category="paragraph">レプリケーションプランを作成する際には、コンプライアンスやテストのスケジュールを編集して、本番データに影響を与えることなくテストフェイルオーバーを実行することもできます。</block>
+  <block id="aa0c550dfb503c90e6b173a0a07f63e0" category="section-title">レプリケーションプランについて</block>
+  <block id="70e9daad0ce38ec31033633e81624571" category="section-title">レプリケーションプランのスナップショット</block>
+  <block id="f4cbef5ca3f18eff6d1ab043a838c42d" category="paragraph">災害復旧機能は、24時間ごとにスナップショットの対称性チェックを実行します。</block>
+  <block id="0199f8e45e93965175d2ac0013366462" category="list-text">vCenter レベルでネットワークマッピングを設定すると、レプリケーションプランの作成時にディザスターリカバリーがそれらのマッピングを認識します。レプリケーションプランの作成後に vCenter レベルでネットワークマッピングを変更または追加した場合、レプリケーションプランを手動で編集したときにディザスターリカバリーがそれらのマッピングを認識します。</block>
+  <block id="8545a0d7cdafff8da2dece1a851630dc" category="section-title">Trident Protectの管理</block>
+  <block id="3609f175bfca3663a769d710b6693940" category="paragraph">ディザスターリカバリーUIから、Trident Protect をアップグレードまたは削除できます。</block>
+  <block id="516ee22feede3bac94e552d7d7d47c7a" category="list-title">Trident Protectのアップグレード</block>
+  <block id="852fd4e3ec5d4c29fa8a8cefa3c21471" category="list-text">Disaster Recovery で、サイドバーから「サイト」を選択します。</block>
+  <block id="8cfefefc34bbe900b668594477ef4ad5" category="list-text">ドロップダウンメニューから「**Kubernetes**」を選択します。</block>
+  <block id="78804847b12a6563801a02b538c145df" category="list-text">変更したいクラスターのアクションメニューで、**クラスターのアップグレード**を選択します。</block>
+  <block id="d67cab9a5414e00a7ccf215f2d7dbd33" category="inline-link-macro">Tridentリリースノート</block>
+  <block id="2a5efaa429a3a54de621dd8d0ad21ea4" category="list-text">**対象バージョンの選択**ドロップダウンで、アップグレード先の Trident Protect のバージョンを選択します。アップグレードする前に、<block ref="135c4f4ed1782a7c491e834c1b93041f" category="inline-link-macro-rx"></block>を確認し、各バージョンの細かな違いとクラスターへの影響を理解しておくことをお勧めします。</block>
+  <block id="38f32ced896e30548fa0f6bcfbba01a5" category="list-text">アップグレードを開始するには、**アップグレード**を選択してください。</block>
+  <block id="b402cd35b5fb9a57addd459fc4b1882a" category="list-title">Trident Protect の削除</block>
+  <block id="b97f5202b0568bf1ab06be0a84b05837" category="list-text">変更したいサイトのアクションメニューで、**クラスターの削除**を選択します。</block>
+  <block id="f4721b43df8877d17946e2b9dd373ced" category="list-text">ダイアログを確認してから、Trident Protect を削除するクラスターでアンインストールコマンドを実行してください：<block ref="e32e94385e578bc57593f18c76552bb7" prefix=" " category="inline-code"></block>。</block>
+  <block id="d7d19228040ec612e692641319a73229" category="list-text">Trident Protect の削除を完了するには、Disaster Recovery UI に戻り、**「サイトの削除」**を選択します。</block>
+  <block id="8527638a378e1869ef948cf228cb1967" category="list-title">サイトからクラスターを削除する</block>
+  <block id="2e6e87ad0d5bb097a11e43a094522ce3" category="list-text">ダイアログメニューを確認し、「サイトから削除」を選択してください。Trident Protect の操作を続行するには、正しいオプションを選択してください。</block>
+  <block id="4c6f2ecfa631674b204ee705d90449fe" category="section-title">データストア情報を表示する</block>
 </blocks>
