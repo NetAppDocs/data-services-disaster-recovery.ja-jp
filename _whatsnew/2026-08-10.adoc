@@ -1,0 +1,46 @@
+= ダッシュボードの改善
+:allow-uri-read: 
+
+
+
+
+[[improved-dashboard]]
+=== ダッシュボードの改善
+
+Disaster Recovery ダッシュボードが刷新され、Disaster Recovery 環境全体を包括的かつ一目で把握できる、より優れたユーザーエクスペリエンスが提供されるようになりました。新しいダッシュボードには以下の機能が含まれています：
+
+* *統合されたワークロード可視化* — VMwareとKubernetesのワークロードと基盤となるインフラストラクチャの状態を、単一の画面から監視できます。
+* *問題の事前発見* — ダッシュボードが環境上の問題を自動的に強調表示することで、診断の迅速化と解決までの時間の短縮が可能になります。
+* *容量利用率* — 容量に関する指標がダッシュボード内に直接表示されるようになり、リソース消費の状況をより簡単に把握できるようになりました。
+
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/dashboard-view.html["ダッシュボードでNetApp Disaster Recoveryプランの健全性を確認する"^]を参照してください。
+
+
+
+[[improved-reports]]
+=== レポートの改善
+
+レポート機能が拡張され、環境全体における Disaster Recovery アクティビティに関するより詳細なインサイトを提供できるようになりました。
+
+* VMwareワークロード、Kubernetesワークロード、またはその両方を対象としたレポートを生成することで、レポートを対象者に合わせて柔軟にカスタマイズできます。
+* 各レポートは、指定された期間の完全なアクティビティサマリーを提供し、Disaster Recovery環境におけるイベントを完全に可視化します。
+
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/reports.html["NetApp Disaster Recoveryレポートを作成する"^]を参照してください。
+
+
+
+[[user-job-logging]]
+=== ユーザージョブのログ記録
+
+Disaster Recovery において、ユーザーレベルのジョブログ機能により、ジョブの責任性および監査可能性が向上しました。実行されるすべてのジョブには、そのジョブを開始したユーザーが記録されるようになり、コンプライアンス遵守やトラブルシューティングのための明確な監査証跡が提供されます。Disaster Recovery によって自動的にトリガーされるジョブは「system」として識別されるため、ユーザーが開始したアクティビティとサービスが開始したアクティビティを容易に区別できます。
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/monitor-jobs.html["NetApp Disaster Recoveryジョブの監視"^]を参照してください。
+
+
+
+[[performance-and-resource-optimization]]
+=== パフォーマンスとリソースの最適化
+
+システム全体のリソース消費量を削減し、Disaster Recovery 操作全体のパフォーマンスを向上させるため、内部的なさまざまな改善が行われました。

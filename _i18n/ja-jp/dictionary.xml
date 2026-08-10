@@ -1062,24 +1062,11 @@
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">このオプションを使用すると、再度ログインするよう求められます。これらのアカウントのトークンは 90 日後に期限切れになることに注意してください。これを知らせる通知が投稿されます。</block>
   <block id="c3533d0746cb1de0d34486c00ae36990" category="summary">NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。</block>
   <block id="d1a664c22b47275444c9a34501c2aac2" category="doc">ダッシュボードでNetApp Disaster Recoveryプランの健全性を確認する</block>
-  <block id="f236d43ec0e67c4b89d0afe52b6b6a75" category="paragraph">NetApp Disaster Recoveryダッシュボードを使用すると、ディザスタ リカバリ サイトとレプリケーション プランの健全性を確認できます。どのサイトとプランが正常か、切断されているか、または劣化しているかをすぐに確認できます。</block>
   <block id="f23e4fbac73cf601cee1add8b6e11922" category="list-text">NetApp Disaster Recoveryメニューから、*ダッシュボード* を選択します。</block>
-  <block id="04edaa59dc99bd9193a5ad37083cc900" category="list-text">ダッシュボードで次の情報を確認します。</block>
   <block id="b845a02ab309809100805f1256a064e8" category="list-text">*サイト*: サイトの健全性を表示します。サイトのステータスは次のいずれかになります。</block>
-  <block id="0e17ce70dd39a8a056cb5ca0081d4526" category="list-text">*実行中*: vCenter は接続されており、正常に動作しており、実行中です。</block>
-  <block id="ed4bdaafb191f860f256d0b1e88eb50e" category="list-text">*ダウン*: vCenter にアクセスできないか、接続の問題が発生しています。</block>
-  <block id="45fa526b7f7589c94a8a5911f187838f" category="list-text">*問題*: vCenter にアクセスできないか、接続の問題が発生しています。</block>
-  <block id="e2438a3d730fa8490b06524ee1d8b0ed" category="paragraph">サイトの詳細を表示するには、ステータスの場合は「*すべて表示*」を選択するか、すべてを表示するには「*サイトを表示*」を選択します。</block>
   <block id="18c8e34abace1973ab5a4468dba74870" category="list-text">*レプリケーション プラン*: プランの健全性を表示します。プランのステータスは次のいずれかになります。</block>
   <block id="ddc1e4c30a24a09d9ea40b7e332147a4" category="list-text">*準備ができて*</block>
   <block id="f44027b669999f97854e8ef8c8215f16" category="list-text">*失敗した*</block>
-  <block id="71fa181482da7d95240895b60c1654ee" category="paragraph">レプリケーション プランの詳細を確認するには、ステータスの [すべて表示] を選択するか、[レプリケーション プランを表示] を選択してすべてを表示します。</block>
-  <block id="42ad006ef72ab8b86610109a75d3073b" category="list-text">*リソース グループ*: リソース グループの正常性を表示します。リソース グループのステータスは次のいずれかになります。</block>
-  <block id="44cd3c457f12a5322db95c67eb00d629" category="list-text">*保護された VM*: VM はリソース グループの一部です。</block>
-  <block id="8a5ac28d6ec264c5863fb5328c2943db" category="list-text">*保護されていない VM*: VM はリソース グループの一部ではありません。</block>
-  <block id="348a99edae23b1f4e21c5ce75d209a50" category="paragraph">詳細を確認するには、それぞれの下にある *表示* リンクを選択してください。</block>
-  <block id="2ce874f5717134aa8a63e219f05d39f9" category="list-text">フェイルオーバー、テストフェイルオーバー、および移行の数。たとえば、2 つのプランを作成し、移行先に移行した場合、移行数は「2」と表示されます。</block>
-  <block id="d26cf1f0512a50b32d5a10b931f5fbe0" category="list-text">アクティビティ ペインですべての操作を確認します。ジョブ モニターですべての操作を表示するには、[*すべてのジョブを表示*] を選択します。</block>
   <block id="d15994bcf2411bb66762cdf4c58704b3" category="doc">NetApp Disaster Recoveryでレプリケーションプランを作成する</block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">*このタスクについて*</block>
   <block id="fba54b7da5e3ceabe7362e860f7df87d" category="paragraph">複数のデータストア上の複数の VM を保護できます。  NetApp Disaster Recovery は、保護された VM データストアをホストするすべてのONTAPボリュームに対してONTAP整合性グループを作成します。</block>
@@ -1331,13 +1318,11 @@
   <block id="d112f103569329954b57e42717e32021" category="paragraph">すべてのNetApp Disaster Recoveryジョブを監視し、その進行状況を確認できます。</block>
   <block id="b2885babde6f690716af50f947f38fa4" category="list-text">メニューから*ジョブ監視*を選択します。</block>
   <block id="a658e38fe05c1b71ade8529d73e083db" category="list-text">操作に関連するすべてのジョブを調べ、タイムスタンプとステータスを確認します。</block>
-  <block id="a2628e207373ba02728e8a48a677eca6" category="list-text">特定のジョブの詳細を表示するには、その行を選択します。</block>
   <block id="19a2cef623f0e702dd97e37e1bddd114" category="list-text">情報を更新するには、[*更新*] を選択します。</block>
   <block id="24391a0c4e58147fa07febdb32887a1a" category="section-title">ジョブをキャンセルする</block>
   <block id="860b70267867fe6caf0f4adfd247b3e2" category="list-text">NetApp Consoleの左側のナビゲーション バーから、*保護* &gt; *災害復旧* を選択します。</block>
   <block id="26abc41be60bda806b144bd6ecedad10" category="list-text">ジョブ モニター ページで、キャンセルするジョブの ID をメモします。</block>
   <block id="49e474835558193a9bed54c7dadf777e" category="paragraph">ジョブは「進行中」または「キューに登録済み」の状態である必要があります。</block>
-  <block id="fa463eaf10ea5f2243e402c5c574ce96" category="list-text">[アクション] 列で、[*ジョブのキャンセル*] を選択します。</block>
   <block id="73f285b2a2d2e36caf8a2b3dceba3bff" category="summary">NetApp Disaster Recoveryを使用すると、 SnapMirrorレプリケーションを使用して、ソース サイトの VMware アプリケーションをクラウド内の災害復旧リモート サイトに複製できます。</block>
   <block id="5542a31575b0db973ecf1e27638145e5" category="doc">NetApp Disaster Recoveryでアプリケーションを別のサイトに複製する</block>
   <block id="f198c3ed2ffa46dda182aca950d079a7" category="admonition">災害復旧計画を作成し、ウィザードで繰り返しを識別し、災害復旧サイトへのレプリケーションを開始すると、 NetApp Disaster Recovery は30 分ごとに、レプリケーションが計画に従って実際に実行されているかどうかを確認します。ジョブ モニター ページで進行状況を監視できます。</block>
@@ -1345,15 +1330,9 @@
   <block id="860a7c0767c6d5a81c5c68c072b88c23" category="list-text">右側で*アクション*オプションを選択します<block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block>*複製*を選択します。</block>
   <block id="4fcb591c27b70823ff71112c0db6af4f" category="summary">災害復旧レポートを確認すると、災害復旧への備えを分析するのに役立ちます。事前に設計されたレポートには、フェイルオーバーとフェイルバックの概要、すべてのサイトのレプリケーションの詳細、過去 1 年間のジョブの詳細が含まれます。</block>
   <block id="a82244df08ebf8974422f7646e0239a4" category="doc">NetApp Disaster Recoveryレポートを作成する</block>
-  <block id="840e9ba54a3eb4b6ca1ba64036216f73" category="paragraph">NetApp Disaster Recoveryレポートを確認すると、ディザスタ リカバリへの備えを分析するのに役立ちます。事前に設計されたレポートには、過去 7 日間のアカウント内のすべてのサイトのテスト フェイルオーバーの概要、レプリケーション プランの詳細、ジョブの詳細が含まれます。</block>
   <block id="8c0063a0e5fb937e4b6c45cefbf9765b" category="paragraph">レポートは PDF、HTML、または JSON 形式でダウンロードできます。</block>
-  <block id="cd463f7ca5dbc8268a82ea8d8f5e4281" category="paragraph">ダウンロードリンクは6時間有効です。</block>
   <block id="d034750cd0fb1d447a3cf19d364332e1" category="list-text">NetApp Consoleの左側のナビゲーション バーから、*レプリケーション プラン* を選択します。</block>
   <block id="3b0a91a5ea7b77db2fb83f740b7d1303" category="list-text">*レポートの作成*を選択します。</block>
-  <block id="32e3f74f58555c69fe922de2e2c5a1fb" category="list-text">ファイル形式の種類と過去 7 日間の期間を選択します。</block>
-  <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">*作成*を選択します。</block>
-  <block id="5da6bcdd6ceb1c5910fb17277177402d" category="admonition">レポートが表示されるまで数分かかる場合があります。</block>
-  <block id="ab6b0c72784c216662673e59f1357cc1" category="list-text">レポートをダウンロードするには、[*レポートのダウンロード*] を選択し、管理者のダウンロード フォルダーで選択します。</block>
   <block id="c52bb35ab590385850c5a43aeeb51966" category="doc">NetApp Disaster Recoveryで VM を整理するためのリソース グループを作成する</block>
   <block id="68924c47e2eb51445ff8e93c1ce1bbc2" category="paragraph">VM 自体またはデータストア内の VM をグループ化できます。</block>
   <block id="142aa3cf2c56c4cee9658fbb7fa95634" category="paragraph">次の方法を使用してリソース グループを作成できます。</block>
@@ -2441,4 +2420,45 @@
   <block id="8527638a378e1869ef948cf228cb1967" category="list-title">サイトからクラスターを削除する</block>
   <block id="2e6e87ad0d5bb097a11e43a094522ce3" category="list-text">ダイアログメニューを確認し、「サイトから削除」を選択してください。Trident Protect の操作を続行するには、正しいオプションを選択してください。</block>
   <block id="4c6f2ecfa631674b204ee705d90449fe" category="section-title">データストア情報を表示する</block>
+  <block id="63459ccd5f56d025aab8953dda2cac89" category="doc">ダッシュボードの改善</block>
+  <block id="f682318aec1bd156e47f27a6821a89a5" category="paragraph">Disaster Recovery ダッシュボードが刷新され、Disaster Recovery 環境全体を包括的かつ一目で把握できる、より優れたユーザーエクスペリエンスが提供されるようになりました。新しいダッシュボードには以下の機能が含まれています：</block>
+  <block id="9823d8b117c3e7a42545ab50cbf51e42" category="list-text">*統合されたワークロード可視化* — VMwareとKubernetesのワークロードと基盤となるインフラストラクチャの状態を、単一の画面から監視できます。</block>
+  <block id="cb6d28fda9538aed2308a2a41da8fef6" category="list-text">*問題の事前発見* — ダッシュボードが環境上の問題を自動的に強調表示することで、診断の迅速化と解決までの時間の短縮が可能になります。</block>
+  <block id="4682c01fd7e04d919efdbb898660b551" category="list-text">*容量利用率* — 容量に関する指標がダッシュボード内に直接表示されるようになり、リソース消費の状況をより簡単に把握できるようになりました。</block>
+  <block id="83ffc188b91ae4a820fc973dcb4f2932" category="paragraph">詳細については、<block ref="8f765f2bdeedf185243a86837c41ce64" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="1b89eeafa349152b4736736033fd9afa" category="section-title">レポートの改善</block>
+  <block id="0dc7dafa2af4e7002cfea0adec9f9574" category="paragraph">レポート機能が拡張され、環境全体における Disaster Recovery アクティビティに関するより詳細なインサイトを提供できるようになりました。</block>
+  <block id="7f09e48950606d1acab05c889751f513" category="list-text">VMwareワークロード、Kubernetesワークロード、またはその両方を対象としたレポートを生成することで、レポートを対象者に合わせて柔軟にカスタマイズできます。</block>
+  <block id="7a778b01d59bf3ae1ff3f2feb2d289b6" category="list-text">各レポートは、指定された期間の完全なアクティビティサマリーを提供し、Disaster Recovery環境におけるイベントを完全に可視化します。</block>
+  <block id="fd5ba3d3711dc4d9c0e25f25fe06d680" category="paragraph">詳細については、<block ref="39a309d4a05fe8ce442631f7b813f522" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="2c06591fa7a638998ecf07caf020e711" category="section-title">ユーザージョブのログ記録</block>
+  <block id="c021095f262d283ec8653a39f95e447d" category="paragraph">Disaster Recovery において、ユーザーレベルのジョブログ機能により、ジョブの責任性および監査可能性が向上しました。実行されるすべてのジョブには、そのジョブを開始したユーザーが記録されるようになり、コンプライアンス遵守やトラブルシューティングのための明確な監査証跡が提供されます。Disaster Recovery によって自動的にトリガーされるジョブは「system」として識別されるため、ユーザーが開始したアクティビティとサービスが開始したアクティビティを容易に区別できます。</block>
+  <block id="42ed5c1343751a7af21890f24cd3c64e" category="paragraph">詳細については、<block ref="40b7771ffeffc9237f3cc63a2ebdb5c0" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="00d2a24b32e6b20b963007b68cdb131f" category="section-title">パフォーマンスとリソースの最適化</block>
+  <block id="30f4219e3688914aa51c7df386e1780b" category="paragraph">システム全体のリソース消費量を削減し、Disaster Recovery 操作全体のパフォーマンスを向上させるため、内部的なさまざまな改善が行われました。</block>
+  <block id="6ffc226d668d783acc3c710ae22bd61d" category="section-title">2026年8月10日</block>
+  <block id="2c613e5d46b6a88da4ef71969949f8ed" category="paragraph">バージョン4.3.6</block>
+  <block id="64d5f2a483005a7cc6303c4015d43a5c" category="paragraph">NetApp Disaster Recovery ダッシュボードを使用すると、ディザスタリカバリサイトとレプリケーション計画の健全性を確認できます。どのサイトやプランが健全か、切断されているか、または機能が低下しているかを簡単に評価できます。また、最近の警告や失敗したジョブを確認したり、保護されているワークロードと保護されていないワークロードを確認したり、容量の概要を確認したりすることもできます。</block>
+  <block id="bd068902af2ce39e706eebf1c24b4d76" category="list-text">ダッシュボードのヘルス情報を確認します。</block>
+  <block id="a42ca2864206a93e33039e6598055690" category="list-text">*稼働中*：サイトは接続されており、正常に稼働しています。</block>
+  <block id="36cd7041f6cbfd714bd608ae3d78d535" category="list-text">*ダウン*：サイトにアクセスできないか、接続に問題が発生しています。</block>
+  <block id="9b2a75730600af9907e95659422ba650" category="list-text">*問題*：サイトに接続の問題が発生しています。</block>
+  <block id="a34ac24ac668b7073f201165e855f7fa" category="paragraph">詳細を表示するには、**「すべてのサイトを表示」**を選択してください。</block>
+  <block id="205be22566e424b4c8a81c6d8e8864e6" category="list-text">*警告*</block>
+  <block id="f45e2c030a4c208e00f685932255a3ca" category="paragraph">レプリケーションプランの詳細を確認するには、*すべてのレプリケーションプランを表示*を選択してください。</block>
+  <block id="c829e7823834805c5cfdbad004224956" category="list-text">「最近の警告とジョブ」を確認すると、最近実行されたジョブと警告、およびそれらに関連するステータスが表示されます。すべてのジョブを表示するには、「すべてのジョブを表示」を選択してください。</block>
+  <block id="cb616e9285bb30b93344966fddafd029" category="list-text">*検出と保護のステータス*を確認すると、検出されたワークロードの数と、保護されたワークロードと保護されていないワークロードの内訳がタイプ別に数値で表示されます。また、検出されたすべてのワークロードの合計容量、およびワークロードの種類別の容量を確認することもできます。</block>
+  <block id="c1f56983411f9326a2cf92b7e410cdf2" category="list-text">特定のジョブの詳細を表示するには、該当する行を選択してください。アクションメニューを選択して**「ジョブ詳細のダウンロード」**を選択すると、ジョブの詳細をダウンロードしてオフラインで確認できます。</block>
+  <block id="7e8d3582ff1a097fae78e430ac2242b4" category="admonition">ジョブの詳細を確認する際、Disaster Recovery はジョブを開始したユーザーをレポートします。担当者が「system」と記載されている場合、これは Disaster Recovery がジョブを開始したことを意味します。</block>
+  <block id="69ebf4461fc9429dbfcd7813c2832c6a" category="list-text">アクションメニューを選択し、**ジョブをキャンセル**を選択してください。</block>
+  <block id="c6f5d2645082be603586c7fcecedd01e" category="doc">NetApp Disaster Recovery でレポートを作成する</block>
+  <block id="458bdb93da448c5d3e7bece387f1c4d2" category="paragraph">NetApp Disaster Recovery レポートは、災害復旧への備えを分析するのに役立ちます。レポートには、レプリケーション計画に関する詳細な情報が記載されており、計画の対象となるリソースグループ、VM または Kubernetes クラスタの数、およびデータストアの数などが含まれます。また、コンプライアンス状況、ジョブの概要、リカバリポイント目標（RPO）や保持数などのバックアップ設定も表示されます。</block>
+  <block id="466b68043567b88303b6c00217b4aeb5" category="paragraph">レポートのダウンロードリンクは、生成後6時間有効です。</block>
+  <block id="c5cbff21ca879b1c12f07a2c7ced7d25" category="list-text"><block ref="3127a7e60ca42a30e72a85e6e4e87658" category="inline-link-macro-rx"></block>にログインします。</block>
+  <block id="86179d32bfddb5ed25033adf646f60d7" category="list-text">レポートの対象とする*ワークロード*を選択してください：Kubernetes、VMware、またはすべて。</block>
+  <block id="a4b18ba0532b0bf268eb0e3e25dcb79c" category="list-text">レポートの対象となる*ファイル形式*（PDF、HTML、またはJSON）と*期間*（過去1日間から7日間）を選択してください。</block>
+  <block id="a5a7078aa40bb08318bf73843094da19" category="image-alt">レポート作成画面のスクリーンショット</block>
+  <block id="3d5401fc3d8a7a798c226379efd0e54a" category="list-text">レポートを生成するには、「作成」を選択してください。</block>
+  <block id="c7752461db4ae72d9cab16a4731fae88" category="admonition">レポートの生成には数分かかる場合があります。</block>
+  <block id="570cb7369470f1ec54ee8b421baca86e" category="list-text">レプリケーションプランのダッシュボードで、*レポートのダウンロード*を選択します。</block>
 </blocks>
