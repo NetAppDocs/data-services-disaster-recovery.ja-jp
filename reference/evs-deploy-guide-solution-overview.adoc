@@ -4,7 +4,7 @@ permalink: reference/evs-deploy-guide-solution-overview.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, bluexp, evs, console, amazon elastic vmware service 
 summary: Amazon EVS と Amazon FSxN を使用したNetApp Disaster Recoveryのソリューションの概要。 
 ---
-= Amazon EVS と Amazon FSs for NetApp ONTAPを使用したNetApp Disaster Recoveryのソリューション概要
+= Amazon EVS と Amazon FSx for NetApp ONTAP を使用した NetApp Disaster Recovery について学ぶ
 :allow-uri-read: 
 
 

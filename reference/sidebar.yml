@@ -18,8 +18,6 @@ entries:
     url: "/reference/evs-deploy-guide-install-connector.html"
   - title: Amazon EVS 用のNetApp Disaster Recoveryを構成する
     entries:
-    - title: Amazon EVS 向けNetApp Disaster Recoveryの構成の概要
-      url: "/reference/evs-deploy-guide-config-draas.html"
     - title: Amazon EVS の前提条件
       url: "/reference/evs-deploy-guide-config-prereqs.html"
     - title: Amazon EVS 用のONTAPストレージアレイを追加する
@@ -30,18 +28,10 @@ entries:
       url: "/reference/evs-deploy-guide-add-sites.html"
     - title: Amazon EVS 用の vCenter クラスターを追加する
       url: "/reference/evs-deploy-guide-add-vcenters.html"
-  - title: Amazon EVS のレプリケーション プランを作成する
+  - title: Amazon EVS のレプリケーション プランを構成する
     entries:
-    - title: Amazon EVS のレプリケーション プランの作成の概要
+    - title: Amazon EVS のレプリケーション プランを作成する
       url: "/reference/evs-deploy-guide-creating-replication-plans.html"
-    - title: Amazon EVSのレプリケーションプランを作成する手順1
-      url: "/reference/evs-deploy-guide-create-rp-wiz-01.html"
-    - title: Amazon EVS のレプリケーションプランを作成する手順 2
-      url: "/reference/evs-deploy-guide-create-rp-wiz-02.html"
-    - title: Amazon EVSのレプリケーションプランを作成する手順3
-      url: "/reference/evs-deploy-guide-create-rp-wiz-03.html"
-    - title: Amazon EVSのレプリケーションプランを作成する手順4
-      url: "/reference/evs-deploy-guide-create-rp-wiz-04.html"
     - title: Amazon EVSのレプリケーションプランを確認する
       url: "/reference/evs-deploy-guide-verify-rp.html"
   - title: レプリケーションプラン操作を実行する

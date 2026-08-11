@@ -4,7 +4,7 @@ permalink: use/dashboard-view.html
 keywords: disaster recovery remediate, disaster recovery, failover, failback, replication, bluexp, netapp 
 summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。 
 ---
-= ダッシュボードでNetApp Disaster Recoveryプランの健全性を確認する
+= NetApp Disaster Recovery で災害復旧計画の健全性を確認する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
