@@ -2418,7 +2418,6 @@
   <block id="f2489988adcc83c8328b64c01b5308d6" category="cell">フェイルオーバーまたはフェイルバック操作には、SnapMirror 転送スナップショットを使用しないでください。</block>
   <block id="8635bfe3dfd0446a5bc45f3c73546984" category="cell">*MirrorVault*</block>
   <block id="40cfffad2f3d0e318535cd9e00394b01" category="cell">代替案</block>
-  <block id="1c03e501e1cc5d812343e62be1c30caf" category="cell">フェイルオーバーまたはフェイルバック中に選択されたスナップショットが、ソースボリュームと宛先ボリュームの両方に存在することを確認してください。そうしないと、次のエラーが発生します：「'snapmirrored' 状態への移行に失敗しました。理由：共通のスナップショットが見つかりませんでした。」</block>
   <block id="bca192e71c231d6ab9a907fd44cc17f3" category="cell">*非同期*</block>
   <block id="e03f6f41d6ba74d93a81feb52f770dea" category="cell">*MirrorLatest*</block>
   <block id="3ccbb106bb4a2ad8ae674a099a17e670" category="cell">_推奨しません_</block>
@@ -2431,4 +2430,5 @@
   <block id="05823e82f50bb96f9783ed51efa47a1c" category="list-text">*プラットフォーム管理のバックアップと保持スケジュールを使用する*：外部のスナップショット管理ソリューションを使用している場合は、このチェックボックスをオンにしてください。NetApp Disaster Recovery は、ネイティブ ONTAP SnapMirror ポリシースケジューラやサードパーティ統合などの外部スナップショット管理ソリューションの使用をサポートしています。レプリケーション計画内のすべてのデータストア（ボリューム）に、他の場所で管理されている SnapMirror 関係がすでに存在する場合、それらのスナップショットを NetApp Disaster Recovery の復旧ポイントとして使用できます。</block>
   <block id="18dcf9b091544785104de7fe70a61388" category="doc">サイト、リソース グループ、レプリケーション プランを NetApp Disaster Recovery で管理する</block>
   <block id="8f2bfb22b13c9aac8af0825753fd1e67" category="sidebar">Amazon EVS のレプリケーション プランを構成する</block>
+  <block id="139e8f63e4cf3154556b863a379b708f" category="cell">フェイルオーバーまたはフェイルバック中に選択されたスナップショットが、ソースボリュームと宛先ボリュームの両方に存在することを確認してください。そうしないと、次のエラーが発生します：「'snapmirrored' 状態への移行に失敗しました。理由：共通のスナップショットが見つかりませんでした。」フェイルオーバーまたはフェイルバック操作には、SnapMirror 転送スナップショットを使用しないでください。</block>
 </blocks>
