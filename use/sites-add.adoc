@@ -12,7 +12,7 @@ summary: 災害復旧計画を作成する前に、 NetApp Disaster Recoveryで�
 
 
 [role="lead"]
-ディザスタリカバリ計画を作成する前に、NetApp Disaster Recoveryにサイトを追加する必要があります。サイトとは、vCenterサーバまたはKubernetesクラスタ（オンプレミスまたはクラウド）の集合です。プライマリサイトまたは本番サイトとディザスタリカバリサイトを追加する必要があります。
+災害復旧計画を作成する前に、保護したいサイトを NetApp Disaster Recovery に追加してください。サイトとは、オンプレミスまたはクラウド上の vCenter サーバーまたは Kubernetes クラスターの集合です。本番サイトと災害復旧サイトの両方を追加してください。
 
 
 TIP: 送信元と送信先の両方で同じNetApp Console エージェントを使用するようにしてください。

@@ -12,7 +12,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 
 [role="lead"]
-災害が解決したら、災害復旧サイトからソース サイトにフェールバックして通常の運用に戻ります。復元するスナップショットを選択できます。
+災害が解決したら、ディザスタリカバリサイトからソースサイトへフェイルバックして、通常の運用を再開します。リカバリに使用するスナップショットを選択できます。
 
 *必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、または災害復旧フェイルオーバー管理者ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
@@ -21,7 +21,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 [[about-failback]]
 == フェイルバックについて
 
-フェイルバックでは、 NetApp Disaster Recovery は、レプリケーションの方向を反転する前に、すべての変更を元のソース仮想マシンにレプリケート (再同期) します。このプロセスは、ターゲットへのフェイルオーバーが完了した関係から開始され、次の手順が含まれます。
+フェイルバックでは、NetApp Disaster Recoveryは、レプリケーションの方向を反転させる前に、変更内容を元のソース仮想マシンに複製（再同期）します。このプロセスは、リレーションシップがターゲットにフェイルオーバーした後に開始され、以下の手順が含まれます。
 
 * 回復したサイトでコンプライアンス チェックを実行します。
 * 回復されたサイトにあると特定された各 vCenter クラスタの vCenter 情報を更新します。
@@ -36,7 +36,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 [[before-you-begin]]
 == 開始する前に
 
-データストアベースの保護を使用している場合、データストアに追加された VM は、フェールオーバー プロセスでデータストアに追加される可能性があります。このような状況が発生した場合は、フェイルバックを開始する前に、これらの VM の追加マッピング情報を提供するようにしてください。リソースマッピングを編集するには、 link:manage.html#manage-replication-plans["レプリケーションプランの管理"]。
+データストアベースの保護を使用している場合、フェイルオーバー中にVMがデータストアに追加される可能性があります。このような事態が発生した場合は、フェイルバックを開始する前にこれらのVMの追加マッピング情報を提供してください。リソースマッピングを編集するには、link:manage.html#manage-replication-plans["レプリケーションプランの管理"]を参照してください。
 
 
 
@@ -53,7 +53,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 +
 image::site-type-toggle.png[サイトタイプ切り替えのスクリーンショット]
 
-. フェイルバックするレプリケーション計画を特定します。*Actions* オプション image:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"] を選択し、*Recover* にカーソルを合わせて *Failback* を選択します。
+. フェイルバックするレプリケーション計画を特定します。*アクション* オプション image:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"] を選択し、*リカバリ* にカーソルを合わせて *フェイルバック* を選択します。
 . 復旧対象となるデータストアのスナップショットを選択してください。*今すぐスナップショットを作成*を選択すると新しいスナップショットが作成され、*選択*を選択すると利用可能なスナップショットから選択できます。
 +
 image:failback.png["フェイルバック ダイアログのスクリーンショット"]
@@ -71,7 +71,7 @@ image:failback.png["フェイルバック ダイアログのスクリーンシ�
 +
 image::site-type-toggle.png[サイトタイプ切り替えのスクリーンショット]
 
-. フェイルバックするレプリケーション計画を特定します。*Actions* オプション image:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"] を選択し、*Recover* にカーソルを合わせて *Failback* を選択します。
+. フェイルバックするレプリケーション計画を特定します。*アクション* オプション image:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"] を選択し、*リカバリ* にカーソルを合わせて *フェイルバック* を選択します。
 . 復旧対象となるクラスターのスナップショットを選択してください。*今すぐスナップショットを取得*を選択すると新しいスナップショットが作成され、*最新のスナップショットを使用*を選択すると最新の正常なスナップショットが使用されます。
 . 操作を確定するには「フェイルバック」と入力し、次に * フェイルバック * を選択してください。
 

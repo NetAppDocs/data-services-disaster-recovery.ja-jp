@@ -12,7 +12,7 @@ summary: NetApp Disaster Recoveryを使用するには、いくつかの手順�
 
 
 [role="lead"]
-NetApp Disaster Recoveryを使用するには、NetApp Consoleとサポートされているディザスタリカバリ環境の両方で設定するためのいくつかの手順を実行します。
+NetApp Disaster Recovery を使用するには、NetApp Console およびサポートされているディザスタリカバリ環境でいくつかのセットアップ手順を完了します。
 
 
 TIP: レビューlink:../get-started/dr-prerequisites.html["前提条件"]システムの準備ができていることを確認します。
@@ -44,15 +44,15 @@ AWS クラウド インフラストラクチャに関連する災害復旧の場
 
 
 [[aws-availability-zones]]
-=== AWS アベイラビリティゾーン
+=== AWSアベイラビリティゾーン
 
-AWS は、特定のリージョン内の 1 つ以上のアベイラビリティーゾーン (AZ) でのソリューションのデプロイをサポートしています。ディザスタリカバリでは、VMware Cloud for AWS と AWS FSx for NetApp ONTAP2 つの AWS ホストサービスが使用されます。
+AWS は、リージョン内の 1 つまたは複数のアベイラビリティ ゾーン （AZ） にソリューションをデプロイすることをサポートしています。NetApp Disaster Recovery では、AWS でホストされている 2 つのサービス（VMware Cloud on AWS と Amazon FSx for NetApp ONTAP）を使用します。
 
-* *VMware Cloud for AWS*: シングル AZ またはデュアル AZ ストレッチ クラスタ SDDC 環境での展開をサポートします。ディザスタリカバリは、Amazon VMware Cloud for AWS の単一 AZ SDDC デプロイメントのみをサポートします。
-* *AWS FSx for NetApp ONTAP*: これをデュアル AZ 構成で導入すると、各ボリュームは単一の FSx システムによって所有されます。各ボリュームは単一の FSx システムによって所有されます。ボリュームのデータは 2 番目の FSx システムにミラーリングされます。 FSx for ONTAPシステムは、シングル AZ またはデュアル AZ のいずれかのデプロイメントで導入できます。ディザスタ リカバリでは、FSx for ONTAP のデプロイメントにおいて、単一 AZ とマルチ AZ の両方の FSx がサポートされます。
+* *VMware Cloud for AWS*：シングルAZまたはデュアルAZのストレッチクラスタSDDC環境へのデプロイをサポートします。NetApp Disaster Recovery は、VMware Cloud on AWS のシングルAZ SDDCデプロイのみをサポートします。
+* *AWS FSx for NetApp ONTAP*：Amazon FSx for NetApp ONTAPがマルチAZ構成で導入されている場合、各ボリュームは1つのFSx for ONTAPファイルシステムによって所有され、データは2つ目のファイルシステムにミラーリングされます。FSx for ONTAPは、シングルAZ構成またはマルチAZ構成で導入できます。NetApp Disaster Recoveryは、両方の導入モデルをサポートしています。
 
 
-*ベスト プラクティス*: AWS DR サイト構成の場合、 NetApp、VMware Cloud と AWS FSx for ONTAPインスタンスの両方に単一の AZ デプロイメントを使用することを推奨しています。 DR用にAWSを利用している為、複数AZを導入するメリットはありません。マルチ AZ ではコストと複雑さが増す可能性があります。
+*ベストプラクティス*：AWS DRサイト構成の場合、NetAppでは、VMware CloudとAWS FSx for ONTAPインスタンスの両方にシングルAZデプロイメントを使用することを推奨します。AWSはディザスタリカバリに使用されているため、複数のアベイラビリティゾーンを導入するメリットはありません。マルチAZデプロイメントは、コストと複雑さを増大させる可能性があります。
 
 
 
@@ -63,7 +63,7 @@ AWS は、プライベートデータセンターを AWS クラウドに接続�
 
 * *AWS Direct Connect*：これは、お客様のプライベートデータセンターと同じ地理的エリアに設置され、AWSパートナーによって提供されるAWSクラウド相互接続サービスです。このソリューションは、公共のインターネット接続を必要とせずに、ローカルデータセンターとAWSクラウド間の安全でプライベートな接続を提供します。これはAWSが提供する最も直接的で効率的な接続方法です。
 * *AWS インターネットゲートウェイ*: AWS クラウドリソースと外部コンピューティングリソース間のパブリック接続を提供します。このタイプの接続は通常、セキュリティが要求されない HTTP/HTTPS サービスなど、外部の顧客にサービスを提供するために使用されます。サービス品質の制御、セキュリティ、接続の保証はありません。このため、この接続方法は、実稼働データセンターをクラウドに接続する場合には推奨されません。
-* *AWS Site-Site VPN*：この仮想プライベートネットワーク接続は、パブリックインターネットサービスプロバイダと連携して安全なアクセス接続を提供するために使用できます。VPNは、AWSクラウドとの間で送受信されるすべてのデータを暗号化および復号化します。VPNはソフトウェアベースまたはハードウェアベースのいずれかです。企業向けアプリケーションの場合、パブリックインターネットサービスプロバイダ（ISP）は、DRレプリケーションに必要な帯域幅とレイテンシが確保されるよう、サービス品質保証を提供する必要があります。
+* *AWS Site-to-Site VPN*：この仮想プライベートネットワーク接続は、公共インターネットサービスプロバイダを介して安全な接続を提供します。VPNは、AWSクラウドとの間で送受信されるすべてのデータを暗号化および復号化します。VPNはソフトウェアベースまたはハードウェアベースのいずれかです。エンタープライズアプリケーションの場合、公共インターネットサービスプロバイダ（ISP）は、DRレプリケーションに必要な帯域幅とレイテンシが確保されるよう、サービス品質保証を提供する必要があります。
 
 
 *ベストプラクティス*: AWS DR サイト構成の場合、 NetAppAWS Direct Connect の使用を推奨しています。このソリューションは、エンタープライズ アプリケーションに最高のパフォーマンスとセキュリティを提供します。利用できない場合は、VPN と併用した高性能パブリック ISP 接続を使用する必要があります。適切なネットワーク パフォーマンスを確保するために、ISP が商用 QoS サービス レベルを提供していることを確認します。
@@ -80,7 +80,7 @@ AWS では、次のタイプの VPC 間相互接続を提供しています。�
 * *AWS Transit Gateway*: これは集中型のルーターベースの接続タイプであり、各 VPC が単一の中央ゲートウェイに接続できるようにします。このゲートウェイは、すべての VPC 間トラフィックの中央ハブとして機能します。これを VPN ソリューションに接続して、オンプレミスのデータセンター リソースが AWS VPC でホストされているリソースにアクセスできるようにすることもできます。このタイプの接続を実装するには、通常、追加のコストが必要です。
 
 
-*ベスト プラクティス*: VMware Cloud と単一の FSx for ONTAP VPC を含む DR ソリューションの場合、 NetAppVPC ピア接続を使用することをお勧めします。複数の FSx for ONTAP VPC を導入する場合は、AWS Transit Gateway を使用して複数の VPC ピア接続の管理オーバーヘッドを削減することをお勧めします。
+*ベストプラクティス*：VMware Cloudと単一のFSx for ONTAP VPCを使用するDR解決策の場合、NetAppはVPCピアリングの使用を推奨します。複数のFSx for ONTAP VPCをデプロイする場合は、複数のVPCピア接続の管理オーバーヘッドを削減するために、AWS Transit Gatewayの使用をお勧めします。
 
 
 
@@ -104,7 +104,7 @@ AWS を使用してオンプレミスからクラウドへの保護用にNetApp 
 
 
 * Amazon FSx for ONTAPをシステムに追加し、 FSx for ONTAPの AWS 認証情報を追加します。
-* AWS FSx for ONTAPインスタンスで宛先ONTAP SVM を作成または検証します。
+* AWS FSx for ONTAP インスタンスのデスティネーション ONTAP SVM を作成または確認します。
 * NetApp Consoleで、ソースのオンプレミスONTAPクラスターと FSx for ONTAPインスタンス間のレプリケーションを構成します。
 
 
@@ -162,6 +162,6 @@ NetApp Consoleエージェントはインテリジェント プロキシをサ�
 
 プロキシが設定されている場合、 NetApp Disaster Recovery はVMware またはONTAPと直接通信を試み、直接通信が失敗した場合は設定されたプロキシを使用します。
 
-NetApp Disaster Recoveryプロキシの実装では、コンソール エージェントと、HTTPS プロトコルを使用した vCenter Server およびONTAPアレイ間のポート 443 通信が必要です。コンソール エージェント内のNetApp Disaster Recoveryエージェントは、アクションを実行するときに VMware vSphere、VC、またはONTAPと直接通信します。
+NetApp Disaster Recovery プロキシの実装では、コンソールエージェントと任意の vCenter サーバーおよび ONTAP アレイ間で、HTTPS プロトコルを使用したポート 443 通信が必要です。コンソールエージェント内の NetApp Disaster Recovery エージェントは、アクションの実行時に VMware vSphere、vCenter サーバー、または ONTAP と直接通信します。
 
 NetApp Consoleでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。

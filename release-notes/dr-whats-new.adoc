@@ -230,7 +230,7 @@ GCVE向けのNetApp Disaster Recoveryサポートの一般提供（GA）が開�
 * *プラットフォーム管理スナップショット：* ONTAPまたはGoogle Cloud Platform（GCP）を通じて、バックアップと保持ポリシーをシームレスに管理します。
 * *レプリケーションプランごとに複数のデータストア：* 複数のデータストアを単一のレプリケーション戦略に統合することで、ディザスタリカバリプランを簡素化できます。
 * *利用できないソースサイトに対する強制フェイルオーバー：* ソースが利用できない場合は、災害復旧サイトに切り替えます。
-* *SnapMirrorの再同期を延期し、必要に応じてレプリケーションをリストアする：* ピーク時の運用期間中に本番ワークロードへの影響を回避するために「skip protect」オプションを使用してSnapMirrorの再同期を延期し、その後「re-protect」オプションを使用して必要に応じてレプリケーションをリストアします
+* *オンデマンドでの SnapMirror 再同期の延期とレプリケーションのリストア：* 「skip protect」オプションを使用してピーク時の運用期間中に本番ワークロードへの影響を回避するために SnapMirror の再同期を延期し、その後「re-protect」オプションを使用してオンデマンドでレプリケーションをリストアします。
 
 
 GCVEのサポートに関する詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/release-notes/dr-limitations.html["Disaster Recoveryでサポートされている構成"^]をご覧ください。
@@ -247,7 +247,7 @@ GCVEのサポートに関する詳細については、link:https://docs.netapp.
 [[exclude-a-datastore-from-replication-plans]]
 === レプリケーションプランからデータストアを除外する
 
-Disaster でレプリケーションプランを作成するときに、特定のデータストアをレプリケーションから除外できるようになりました。VM が複数のデータストアを使用するように構成されている場合、これにより、レプリケートされるデータストアを制限できます。
+ディザスターリカバリーでレプリケーションプランを作成する際に、特定のデータストアをレプリケーション対象から除外できるようになりました。VMが複数のデータストアを使用するように構成されている場合、レプリケートするデータストアを制限できます。
 
 詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]を参照してください。
 
@@ -265,7 +265,7 @@ Disaster でレプリケーションプランを作成するときに、特定�
 [[new-replication-plan-submenu]]
 === 新しいレプリケーションプランのサブメニュー
 
-ディザスタリカバリに、レプリケーションプランダッシュボードからvCenterの更新をトリガーする新しいメニューオプションが追加されました。レプリケーションプランダッシュボードのアクションメニューからサブメニューにアクセスできます：**プランの健全性**を選択してから、**ソースvCenterを更新 / ターゲットvCenterを更新**を選択します。
+ディザスターリカバリーに、レプリケーションプランのダッシュボードから vCenter の更新をトリガーする新しいメニューオプションが追加されました。レプリケーションプランダッシュボードのアクションメニューからサブメニューにアクセスできます。**プランの健全性**を選択し、次に**ソース vCenter の更新 / ターゲット vCenter の更新**を選択してください。
 
 詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#modify-a-replication-plan["レプリケーションプランを変更する"^]を参照してください。
 
@@ -356,7 +356,7 @@ NetApp Disaster Recovery内からSwaggerのドキュメントにアクセスで�
 [[retain-vm-folder-structure-added-as-default-in-replication-plans]]
 === レプリケーション プランに VM フォルダ構造の保持がデフォルトとして追加されました
 
-レプリケーションを作成すると、新しいデフォルトでは VM フォルダー構造が保持されます。リカバリ対象に元のフォルダ階層がない場合、Disaster Recovery によってそれが作成されます。このオプションを選択解除すると、元のフォルダー階層を無視できます。
+レプリケーションプランを作成する際、新しいデフォルト設定ではVMのフォルダ構造が保持されます。リカバリターゲットに元のフォルダ階層が存在しない場合、Disaster Recoveryがそれを作成します。このオプションの選択を解除すると、元のフォルダ階層を無視できます。
 
 詳細については、 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]。
 
@@ -461,7 +461,7 @@ BlueXP disaster recoveryはNetApp Disaster Recoveryに名前が変更されま�
 [[bluexp-is-now-netapp-console]]
 === BlueXPはNetApp Consoleになりました
 
-NetApp Consoleは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetApp Data Servicesの集中管理を提供し、リアルタイムの分析情報、より高速なワークフロー、および高度なセキュリティとコンプライアンスを備えた簡素化された管理を実現します。
+NetApp Console は、強化および再構築された BlueXP 基盤の上に構築されており、オンプレミスおよびクラウド環境全体にわたって、エンタープライズグレードで NetApp ストレージと NetApp Data Services の一元管理を提供します。リアルタイムのインサイト、より迅速なワークフロー、簡素化された管理を実現し、高度なセキュリティとコンプライアンスを備えています。
 
 変更内容の詳細については、 link:https://docs.netapp.com/us-en/console-relnotes/index.html["NetApp Consoleのリリースノート"]。
 
@@ -598,7 +598,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles
 [[windows-local-administrator-password-solution-laps-support]]
 === Windows ローカル管理者パスワードソリューション (LAPS) のサポート
 
-Windows ローカル管理者パスワード ソリューション (Windows LAPS) は、Active Directory 上のローカル管理者アカウントのパスワードを自動的に管理およびバックアップする Windows 機能です。
+Windows Local Administrator Password Solution (Windows LAPS) は、Active Directory 上のローカル管理者アカウントのパスワードを自動的に管理およびバックアップする Windows の機能です。
 
 ドメイン コントローラーの詳細を指定して、サブネット マッピング オプションを選択し、LAPS オプションを確認できるようになりました。このオプションを使用すると、仮想マシンごとにパスワードを入力する必要がなくなります。
 
@@ -628,7 +628,7 @@ Windows ローカル管理者パスワード ソリューション (Windows LAPS
 
 VM1 には、NetworkA に接続された vNIC (10.1.1.50) があります。レプリケーション プラン設定では、NetworkA は NetworkB にマップされます。
 
-フェイルオーバー時に、 NetApp Disaster Recovery は元の IP アドレス (10.1.1) のネットワーク部分を置き換え、元の IP アドレス (10.1.1.50) のホスト アドレス (.50) を保持します。 VM1 の場合、 NetApp Disaster Recovery はNetworkB の CIDR 設定を確認し、NetworkB のネットワーク部分 192.168.1 を使用し、ホスト部分 (.50) を保持して VM1 の新しい IP アドレスを作成します。新しい IP は 192.168.1.50 になります。
+フェイルオーバー時に、NetApp Disaster Recoveryは、元のIPアドレス（10.1.1）のネットワーク部分を置き換え、元のIPアドレス（10.1.1.50）のホストアドレス（.50）を保持します。VM1の場合、NetApp Disaster RecoveryはNetworkBのCIDR設定を確認し、NetworkBのネットワーク部分（192.168.1）を使用し、ホスト部分（.50）を保持してVM1の新しいIPアドレスを作成します。新しいIPアドレスは192.168.1.50になります。
 
 要約すると、ホスト アドレスは同じままですが、ネットワーク アドレスはサイトのサブネット マッピングで構成されているものに置き換えられます。これにより、特に数百のネットワークと数千の VM を管理する場合に、フェイルオーバー時の IP アドレスの再割り当てをより簡単に管理できるようになります。
 
@@ -647,7 +647,7 @@ VM1 には、NetworkA に接続された vNIC (10.1.1.50) があります。レ�
 
 元のソース サイトがオンラインに戻った後、レプリケーション プランの [アクション] メニューから [*リソースの保護*] を選択して、逆方向の保護を確立できます。これにより、プラン内の各ボリュームに対して逆方向のレプリケーション関係を作成しようとします。保護が復元されるまで、このジョブを繰り返し実行できます。保護が復元されると、通常の方法でフェイルバックを開始できます。
 
-スキップ保護の詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"] 。
+スキップ保護の詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"]を参照してください。
 
 
 
@@ -754,7 +754,7 @@ NetApp Consoleでの一般的なプロキシ設定の詳細については、以
 [[asa-r2-support-for-vms-and-datastores-on-vmfs-storage]]
 === VMFSストレージ上のVMおよびデータストアに対するASA r2のサポート
 
-NetApp Disaster Recoveryのこのリリースでは、VM および VMFS ストレージ上のデータストアに対してASA r2 のサポートが提供されます。  ASA r2 システムでは、 ONTAPソフトウェアは基本的な SAN 機能をサポートしますが、SAN 環境でサポートされていない機能は削除されます。
+このリリースの NetApp Disaster Recovery は、VMFSストレージ上のVMおよびデータストア向けのASA r2をサポートします。ASA r2システムでは、ONTAPソフトウェアはSANの必須機能をサポートしながら、SAN環境でサポートされていない機能を削除します。
 
 このリリースでは、 ASA r2 の次の機能がサポートされています。
 
@@ -845,7 +845,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 [[vm-name-aliasing]]
 === VM名のエイリアシング
 
-レプリケーション プランを作成するときに、災害復旧サイトの VM 名にプレフィックスとサフィックスを追加できるようになりました。これにより、プラン内の VM に、より説明的な名前を使用できるようになります。
+レプリケーションプランを作成する際に、災害復旧サイト上の仮想マシン名にプレフィックスとサフィックスを追加できるようになりました。これにより、プラン内の仮想マシンに、より分かりやすい名前を付けることができます。
 
 詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
 

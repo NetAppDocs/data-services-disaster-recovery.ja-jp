@@ -12,11 +12,16 @@ summary: NetApp Disaster Recoveryでは、無料トライアル、従量課金�
 
 
 [role="lead"]
-NetApp Disaster Recoveryでは、無料トライアル、従量課金制サブスクリプション、独自のライセンスの使用など、さまざまなライセンス プランを使用できます。
+NetApp Disaster Recoveryでは、無料トライアル、従量課金制サブスクリプション、お客様独自のライセンス持ち込み（BYOL）など、複数のライセンスオプションをご利用いただけます。
 
 *必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、または災害復旧アプリケーション管理者ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
-*ライセンス オプション* 次のライセンス オプションを使用できます。
+
+
+[[licensing-options]]
+== ライセンスオプション
+
+以下のライセンスオプションをご利用いただけます：
 
 * 30 日間の無料トライアルにサインアップしてください。
 * Amazon Web Services (AWS) Marketplace または Microsoft Azure Marketplace の従量課金制 (PAYGO) サブスクリプションを購入します。
@@ -79,13 +84,13 @@ image:draas-landing6-free-trial.png["NetApp Disaster Recoveryのランディン�
 .手順
 . NetApp Disaster Recoveryで、無料トライアルの有効期限が切れるというメッセージが表示されます。メッセージで、[*サブスクライブまたはライセンスを購入*] を選択します。
 +
-または、 から [*支払い方法の表示*] を選択します。
+または、Disaster Recoveryメニューから「支払い方法の表示」を選択します。
 
 +
 image:dr-licensing-payment-methods.png["NetApp Disaster Recoveryの支払い方法ページ"]
 
 . *AWS Marketplace でサブスクライブ* または *Azure Marketplace でサブスクライブ* を選択します。
-. AWS Marketplace または Microsoft Azure Marketplace を使用して * NetApp Disaster Recovery* をサブスクライブします。
+. AWS Marketplace または Microsoft Azure Marketplace を使用して、*NetApp Disaster Recovery* にサブスクライブしてください。
 . NetApp Disaster Recoveryに戻ると、サブスクライブしたことを示すメッセージが表示されます。
 +
 サブスクリプションの詳細は、NetApp Consoleのサブスクリプション ページで確認できます。link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-homepage.html["NetApp Consoleを使用したサブスクリプションの管理の詳細"^]。
@@ -101,7 +106,12 @@ image:dr-licensing-payment-methods.png["NetApp Disaster Recoveryの支払い方�
 
 独自のライセンスを持ち込む場合 (BYOL)、セットアップにはライセンスの購入、 NetAppライセンス ファイル (NLF) の取得、 NetApp Consoleへのライセンスの追加が含まれます。
 
-* NetApp Consoleにライセンスを追加します ** NetApp の営業担当者からNetApp Disaster Recoveryライセンスを購入したら、コンソールでライセンスを管理できます。
+
+
+[[add-the-license-to-the-netapp-console]]
+=== ライセンスをNetApp Consoleに追加します
+
+NetApp の営業担当者から NetApp Disaster Recovery ライセンスを購入したら、コンソールでライセンスを管理できます。
 
 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["NetApp Consoleでライセンスを追加する方法について学習します"^]。
 
@@ -110,7 +120,7 @@ https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-se
 [[update-your-license-when-it-expires]]
 == ライセンスの有効期限が切れたら更新してください
 
-ライセンスの有効期限が近づいている場合、またはライセンス容量が制限に達した場合は、 NetApp Disaster Recovery UI で通知されます。  NetApp Disaster Recoveryライセンスは期限が切れる前に更新できるので、スキャンしたデータへのアクセスが中断されることはありません。
+ライセンス期間の有効期限が近づいている場合、またはライセンス容量が上限に達している場合は、NetApp Disaster Recovery UIで通知されます。サービスの利用が中断されないよう、有効期限が切れる前に NetApp Disaster Recoveryライセンスを更新することができます。
 
 
 TIP: このメッセージはNetApp Consoleと https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["通知"]。

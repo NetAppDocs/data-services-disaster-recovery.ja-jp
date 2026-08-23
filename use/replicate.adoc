@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use/replicate.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
-summary: NetApp Disaster Recoveryを使用すると、 SnapMirrorレプリケーションを使用して、ソース サイトの VMware アプリケーションをクラウド内の災害復旧リモート サイトに複製できます。 
+summary: NetApp Disaster Recovery を使用すると、SnapMirror レプリケーションを使用して、VMware アプリケーションをソースサイトからクラウド上のリモートディザスタリカバリサイトにレプリケートできます。 
 ---
 = NetApp Disaster Recoveryでアプリケーションを別のサイトに複製する
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: NetApp Disaster Recoveryを使用すると、 SnapMirrorレプリケー
 
 
 [role="lead"]
-NetApp Disaster Recoveryを使用すると、 SnapMirrorレプリケーションを使用して、ソース サイトの VMware アプリケーションをクラウド内の災害復旧リモート サイトに複製できます。
+NetApp Disaster Recovery を使用すると、SnapMirror レプリケーションを使用して、VMware アプリケーションをソースサイトからクラウド上のリモートディザスタリカバリサイトにレプリケートできます。
 
 
 TIP: 災害復旧計画を作成し、ウィザードで繰り返しを識別し、災害復旧サイトへのレプリケーションを開始すると、 NetApp Disaster Recovery は30 分ごとに、レプリケーションが計画に従って実際に実行されているかどうかを確認します。ジョブ モニター ページで進行状況を監視できます。
@@ -20,12 +20,12 @@ TIP: 災害復旧計画を作成し、ウィザードで繰り返しを識別し
 *必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、または災害復旧フェイルオーバー管理者ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
 .開始する前に
-レプリケーションを開始する前に、レプリケーション プランを作成し、アプリをレプリケートすることを選択する必要があります。次に、[アクション] メニューに [*複製*] オプションが表示されます。
+レプリケーションを開始する前に、レプリケーションプランを作成し、レプリケーションの設定を行ってください。すると、「アクション」メニューに「複製」オプションが表示されます。
 
 .手順
 . ログイン https://console.netapp.com/["NetApp Console"^]。
 . NetApp Consoleの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
 . メニューから*レプリケーション プラン*を選択します。
 . レプリケーション プランを選択します。
-. 右側で*アクション*オプションを選択しますimage:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"]*複製*を選択します。
+. 右側で *Actions* メニュー image:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"] を選択し、*Replicate* を選択します。
 

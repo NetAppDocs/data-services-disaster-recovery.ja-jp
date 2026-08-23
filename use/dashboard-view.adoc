@@ -4,7 +4,7 @@ permalink: use/dashboard-view.html
 keywords: disaster recovery remediate, disaster recovery, failover, failback, replication, bluexp, netapp 
 summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。 
 ---
-= NetApp Disaster Recovery で災害復旧計画の健全性を確認する
+= NetApp Disaster Recoveryでディザスタリカバリ計画の健全性を確認する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 
 [role="lead"]
-NetApp Disaster Recovery ダッシュボードを使用すると、ディザスタリカバリサイトとレプリケーション計画の健全性を確認できます。どのサイトやプランが健全か、切断されているか、または機能が低下しているかを簡単に評価できます。また、最近の警告や失敗したジョブを確認したり、保護されているワークロードと保護されていないワークロードを確認したり、容量の概要を確認したりすることもできます。
+NetApp Disaster Recovery ダッシュボードを使用して、ディザスタリカバリサイトとレプリケーション計画の健全性を確認できます。サイトやプランが正常か、切断されているか、デグレードされているかを確認したり、最近の警告や失敗したジョブを確認したり、保護されているワークロードと保護されていないワークロードを特定したり、容量を一目で確認したりできます。
 
 *必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーのロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 

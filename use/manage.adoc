@@ -30,7 +30,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-re
 [[manage-vcenter-sites]]
 == vCenter サイトの管理
 
-vCenter サイト名とサイト タイプ (オンプレミスまたは AWS) を編集できます。
+vCenter サイト名とタイプ（オンプレミスまたは AWS）を編集できます。
 
 *必須NetApp Consoleロール* このタスクを実行するには、組織管理者、フォルダーまたはプロジェクト管理者、または災害復旧管理者ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
@@ -45,7 +45,7 @@ vCenter サイト名とサイト タイプ (オンプレミスまたは AWS) を
 [[manage-resource-groups]]
 == リソース グループの管理
 
-VM またはデータストアごとにリソース グループを作成できます。これらは、レプリケーション プランの作成時または作成後に追加できます。
+リソースグループは、仮想マシンまたはデータストアごとに作成できます。レプリケーションプランを作成する際に追加することも、後から追加することもできます。
 
 *必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、または災害復旧アプリケーション管理者ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
@@ -76,7 +76,7 @@ VM またはデータストアごとにリソース グループを作成でき�
 [[manage-replication-plans]]
 == レプリケーションプランの管理
 
-レプリケーション プランを無効化、有効化、および削除できます。スケジュールは変更できます。
+レプリケーションプランを無効化、有効化、および削除できます。スケジュールは変更できます。
 
 *必須のNetApp Consoleロール* このタスクを実行するには、Super admin、Disaster recovery admin、Disaster recovery failover admin、またはDisaster recovery application adminロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
@@ -150,13 +150,13 @@ image:../use/dr-plan-list.png["レプリケーションプランリスト"]
 [[change-retention-count-for-failover-schedules]]
 === フェイルオーバースケジュールの保持数を変更する
 
-保持数を変更することで、保存するスナップショットの数を増減できます。
+保持カウントを変更することで、保存されるスナップショットの数を増減できます。
 
 *必須のNetApp Consoleロール* このタスクを実行するには、Super admin、Disaster recovery admin、Disaster recovery failover admin、またはDisaster recovery application adminロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
 .手順
 . メニューから*レプリケーション プラン*を選択します。
-. レプリケーション プランを選択し、次に *フェールオーバー マッピング* タブを選択します。*編集* 鉛筆アイコンを選択します。
+. レプリケーションプランを選択し、*フェイルオーバー マッピング*タブを選択します。*編集*の鉛筆アイコンを選択します。
 . *データストア* 行の下矢印を選択して展開します。
 +
 image:../use/dr-plan-failover-edit.png["フェイルオーバーマッピングの編集ページ"]
@@ -192,7 +192,7 @@ image:../use/dr-plan-failover-edit.png["フェイルオーバーマッピング�
 . Disaster Recovery で、サイドバーから「サイト」を選択します。
 . ドロップダウンメニューから「**Kubernetes**」を選択します。
 . 変更したいサイトのアクションメニューで、**クラスターの削除**を選択します。
-. ダイアログメニューを確認し、「サイトから削除」を選択してください。Trident Protect の操作を続行するには、正しいオプションを選択してください。
+. ダイアログを確認し、**「サイトから削除」**を選択します。Trident Protect の操作を続行するには、正しいオプションを選択してください。
 
 
 
@@ -200,7 +200,7 @@ image:../use/dr-plan-failover-edit.png["フェイルオーバーマッピング�
 [[view-datastore-information]]
 == データストア情報を表示する
 
-ソースとターゲットに存在するデータストアの数に関する情報を表示できます。
+ソースサイトとターゲットサイトに存在するデータストアの数を確認できます。
 
 *必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、災害復旧フェイルオーバー管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーの役割が必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 
@@ -216,7 +216,7 @@ image:../use/dr-plan-failover-edit.png["フェイルオーバーマッピング�
 [[view-virtual-machines-information]]
 == 仮想マシンの情報を表示する
 
-ソースとターゲットに存在する仮想マシンの数、CPU、メモリ、使用可能な容量に関する情報を表示できます。
+ソースサイトとターゲットサイトに存在する仮想マシンの数、CPU、メモリ、および利用可能な容量を確認できます。
 
 *必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、災害復旧フェイルオーバー管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーの役割が必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^].link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^].
 

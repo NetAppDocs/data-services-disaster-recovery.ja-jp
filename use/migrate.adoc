@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use/migrate.html 
 keywords: disaster recovery, bluexp disaster recovery, migrate, vmware, vcenter 
-summary: NetApp Disaster Recoveryを使用すると、ソース サイトの VMware アプリケーションを別のサイトに移行できます。 
+summary: NetApp Disaster Recoveryを使用すると、VMwareアプリケーションをソースサイトから別のサイトに移行できます。 
 ---
 = NetApp Disaster Recoveryを使用してアプリケーションを別のサイトに移行する
 :hardbreaks:
@@ -15,13 +15,13 @@ summary: NetApp Disaster Recoveryを使用すると、ソース サイトの VMw
 NetApp Disaster Recoveryを使用すると、ソース サイトの VMware アプリケーションを別のサイトに移行できます。
 
 
-TIP: レプリケーション プランを作成し、ウィザードで繰り返しを指定して移行を開始すると、 NetApp Disaster Recovery は30 分ごとに移行がプランに従って実際に行われているかどうかを確認します。ジョブ モニター ページで進行状況を監視できます。
+TIP: レプリケーションプランを作成し、ウィザードで繰り返し頻度を設定して移行を開始すると、Disaster Recovery は30分ごとに、移行がプランに従って進行しているかどうかの検証を実行します。ジョブモニターページで進捗状況を確認できます。
 
 
 NOTE: 現在、Kubernetesベースのワークロードの移行はサポートされていません。
 
 .開始する前に
-移行を開始する前に、レプリケーション プランを作成し、アプリの移行を選択する必要があります。次に、[アクション] メニューに [*移行*] オプションが表示されます。
+移行を開始する前に、レプリケーションプランを作成し、移行用に構成してください。すると、アクションメニューに「移行」オプションが表示されます。
 
 .手順
 . ログイン https://console.netapp.com/["NetApp Console"^]。
@@ -30,5 +30,5 @@ NOTE: 現在、Kubernetesベースのワークロードの移行はサポート�
 . レプリケーション プランを選択します。
 . 右側の*アクション*オプションimage:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"]を選択し、*復元*にカーソルを合わせてから*移行*を選択します。
 . ダイアログで、*今すぐスナップショットを作成する*を選択して移行用の新しいスナップショットを作成するか、*選択*を選択して移行用の既存のスナップショットを選択します。
-. 操作を確定するには、テキストボックスに「Migrate」と入力し、*Migrate* を選択してください。
+. テキストボックスに「Migrate」と入力して操作を確定し、*Migrate* を選択してください。
 

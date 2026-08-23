@@ -54,6 +54,6 @@ NetApp Disaster Recovery内からSwaggerのドキュメントにアクセスで�
 [[retain-vm-folder-structure-added-as-default-in-replication-plans]]
 === レプリケーション プランに VM フォルダ構造の保持がデフォルトとして追加されました
 
-レプリケーションを作成すると、新しいデフォルトでは VM フォルダー構造が保持されます。リカバリ対象に元のフォルダ階層がない場合、Disaster Recovery によってそれが作成されます。このオプションを選択解除すると、元のフォルダー階層を無視できます。
+レプリケーションプランを作成する際、新しいデフォルト設定ではVMのフォルダ構造が保持されます。リカバリターゲットに元のフォルダ階層が存在しない場合、Disaster Recoveryがそれを作成します。このオプションの選択を解除すると、元のフォルダ階層を無視できます。
 
 詳細については、 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]。

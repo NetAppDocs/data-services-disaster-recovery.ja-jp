@@ -12,14 +12,14 @@ summary: NetApp Disaster Recoveryを使用する前に、Kubernetesクラスタ�
 
 
 [role="lead"]
-Kubernetes クラスタ用の NetApp Disaster Recovery を設定する前に、各 Kubernetes クラスタを準備する必要があります。通常、保護はソースと別のデスティネーション クラスタに適用されます。つまり、これらの手順はペア内の各クラスタに適用する必要があります。
+Kubernetes の NetApp Disaster Recovery を設定する前に、各 Kubernetes クラスターを準備します。保護は通常、ソース クラスターと別のデスティネーション クラスタに適用されるため、ペア内の各クラスターに対してこれらの手順を完了してください。
 
 
 
 [[prerequisites]]
 == 前提条件
 
-Kubernetes クラスターの要件を設定する前に、Kubernetes クラスタと ONTAP クラスタを設定済みであることを確認してください。
+始める前に、Kubernetes クラスターと ONTAP クラスターが設定されていることを確認してください。
 
 ディザスタリカバリはlink:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["現在 Trident Protect でサポートされている Kubernetes のいずれかのバージョン"^]をサポートします。
 
@@ -31,7 +31,7 @@ Kubernetes クラスターの要件を設定する前に、Kubernetes クラス�
 各 Kubernetes クラスタについて、以下を確認してください：
 
 * 各Kubernetesクラスタへの管理者 `kubectl`アクセス権があること。
-* Helm 3 は、インストール コマンドを実行する場所で利用できます。
+* Helm 3は、インストールコマンドを実行できる場所で利用可能です。
 
 
 
@@ -41,10 +41,10 @@ Kubernetes クラスターの要件を設定する前に、Kubernetes クラス�
 
 各ONTAPクラスタについて、次のリソースが設定されていることを確認してください：
 
-* **管理LIF** - これはTridentが管理APIアクセスに使用します
-* **データ（NFS）LIF** - ボリュームのNFSトラフィックに使用されます
-* **SVM名** - ボリュームをホストするストレージVM
-* **認証情報** - Tridentが使用するアカウント（一般的に、 `admin`またはSVMスコープのアカウント）
+* **管理LIF**：Tridentが管理APIにアクセスするために使用します。
+* **データ（NFS）LIF**：ボリュームのNFSトラフィックに使用されます。
+* **SVM名**：ボリュームをホストするストレージVM。
+* **認証情報**： Tridentが使用するアカウント（通常は `admin`またはSVMスコープのアカウント）。
 * ワーカーノードは ONTAP 管理 LIF とデータ LIF に到達できる必要があります。
 *  `autoExportPolicy`をCIDR制限付きで使用する場合は、ノードサブネットを含めてください。
 
@@ -86,7 +86,7 @@ kubectl create secret generic trident-ontap-secret -n <namespace> \
 [[create-the-tridentbackendconfig]]
 === TridentBackendConfigを作成します
 
-次のことができます
+リンクを適用します：https://docs.netapp.com/us-en/trident/trident-use/backend-kubectl.html#step-2-create-the-tridentbackendconfig-cr[`TridentBackendConfig`（お客様のSVM^]を指すもの）。例：
 
 [source, yaml]
 ----
@@ -147,7 +147,7 @@ Trident Protectでアプリケーションデータをレプリケートする�
 [[configure-volume-group-snapshot-custom-resource-definitions-crd]]
 == ボリュームグループスナップショットのカスタムリソース定義（CRD）を設定する
 
-link:https://docs.netapp.com/us-en/trident/trident-use/vol-group-snapshots.html#deploy-a-volume-snapshot-controller["スナップショットCRDとスナップショットコントローラをインストールします。"^]。これらのインストールは、Trident Protectのボリュームスナップショットに必要です。
+link:https://docs.netapp.com/us-en/trident/trident-use/vol-group-snapshots.html#deploy-a-volume-snapshot-controller["スナップショットCRDとスナップショットコントローラ"^]をインストールします。これらのインストールは、Trident Protect でのボリューム スナップショットに必要です。
 
 次のコマンドを使用して、カスタムリソース定義を確認します：
 
@@ -203,7 +203,7 @@ kubectl patch volumesnapshotclasses.snapshot.storage.k8s.io trident-snapshotclas
 
 . クライアント ID とクライアント シークレットを使用して Kubernetes シークレットを作成し、OCCM 認証クレデンシャルを作成します。
 +
-`kubectl create secret generic occmauthcreds --namespace=trident-protect --from-literal=client_id=<clientID> --from-literal=<clientSecret>`
+`kubectl create secret generic occmauthcreds --namespace=trident-protect --from-literal=client_id=<clientID> --from-literal=client_secret=<clientSecret>`
 
 . helmリポジトリを追加または更新します。
 +

@@ -7,7 +7,7 @@
 [[windows-local-administrator-password-solution-laps-support]]
 === Windows ローカル管理者パスワードソリューション (LAPS) のサポート
 
-Windows ローカル管理者パスワード ソリューション (Windows LAPS) は、Active Directory 上のローカル管理者アカウントのパスワードを自動的に管理およびバックアップする Windows 機能です。
+Windows Local Administrator Password Solution (Windows LAPS) は、Active Directory 上のローカル管理者アカウントのパスワードを自動的に管理およびバックアップする Windows の機能です。
 
 ドメイン コントローラーの詳細を指定して、サブネット マッピング オプションを選択し、LAPS オプションを確認できるようになりました。このオプションを使用すると、仮想マシンごとにパスワードを入力する必要がなくなります。
 
