@@ -93,7 +93,7 @@ IMPORTANT: 一部のリリースにはテクノロジープレビューが含ま
 次のライセンス タイプを使用できます。
 
 * 30 日間の無料トライアルにサインアップしてください。
-* Amazon Web Services (AWS) Marketplace または Microsoft Azure Marketplace で従量課金制 (PAYGO) サブスクリプションを購入します。このライセンスを使用すると、長期契約なしで固定の保護容量ライセンスを購入できます。
+* Amazon Web Services (AWS) Marketplace、Azure Marketplace、またはGoogle Cloud Marketplaceで従量課金制（PAYGO）サブスクリプションを購入します。このライセンスにより、長期契約の義務なしに、固定容量の保護ライセンスを購入できます。
 * BYOL (Bring Your Own License) は、 NetApp の営業担当者から取得したNetAppライセンス ファイル (NLF) です。ライセンス シリアル番号を使用して、 NetApp Consoleで BYOL をアクティブ化できます。
 
 
@@ -104,7 +104,7 @@ IMPORTANT: 一部のリリースにはテクノロジープレビューが含ま
 保護されたボリュームは多数の VM をホストできます。一部はNetApp Disaster Recoveryリソース グループの一部ではない可能性があります。いずれにしても、そのボリュームまたは LUN 上のすべての VM によって消費されるストレージは、ライセンスの最大容量に対して使用されます。
 
 
-NOTE: NetApp Disaster Recovery料金は、レプリケーション プランを持つ VM が少なくとも 1 つある場合、ソース サイトのデータストアの使用済み容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、容量許容量に含まれません。  BYOL の場合、データが許可された容量を超えると、追加の容量ライセンスを取得するか、 NetApp Consoleでライセンスをアップグレードするまで、サービスでの操作が制限されます。
+NOTE: NetApp Disaster Recoveryの料金は、少なくとも1つの仮想マシンまたはKubernetesリソースにレプリケーションプランが設定されている場合、ソースサイトのデータストアの使用容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、容量許容量には含まれません。BYOLの場合、データが許容容量を超えると、追加の容量ライセンスを取得するか、NetApp Consoleでライセンスをアップグレードするまで、サービスの操作が制限されます。
 
 NetApp Disaster Recoveryのライセンス設定の詳細については、以下を参照してください。link:../get-started/dr-licensing.html["NetApp Disaster Recoveryライセンスを設定する"] 。
 

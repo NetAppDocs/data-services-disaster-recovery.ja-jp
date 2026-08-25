@@ -139,11 +139,8 @@
   <block id="1842d5453eb18b28e3fe6f5c7acc9eaa" category="list-text">オンプレミス展開での検出時間の短縮を含む、ストレージ検出の改善</block>
   <block id="58077d66ee3ca42d6d7732854dac2714" category="list-text">ロールベースのアクセス制御（RBAC）や強化されたユーザー権限を含む、アイデンティティおよびアクセス管理（IAM）のサポート</block>
   <block id="ef31873b640af7e0e4300d5282baffe4" category="list-text">Azure VMware ソリューションとCloud Volumes ONTAPのプライベート プレビュー サポート。このサポートにより、 Cloud Volumes ONTAPストレージを使用して、オンプレミスから Azure VMware ソリューションへのディザスター リカバリー保護を構成できるようになりました。</block>
-  <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">質問に対する簡単な回答を探している場合は、この FAQ が役立ちます。</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
   <block id="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link"><block ref="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link-rx"></block></block>
-  <block id="608e4777418fc3c48801c19842213f36" category="paragraph">* NetApp Disaster RecoveryURL とは何ですか?*  URL については、ブラウザで次のように入力します。<block ref="50afa4cc4e54d55b53b9cfffe1bc930c" category="inline-link-rx"></block> NetAppコンソールにアクセスします。</block>
-  <block id="b3e4ed172be774a7750c54db8ee694c0" category="paragraph">* NetApp Disaster Recovery を使用するにはライセンスが必要ですか?*完全なアクセスには、 NetApp Disaster Recoveryライセンスが必要です。ただし、無料トライアルで試してみることはできます。</block>
   <block id="dd5a7130a9e4691912bd5e866f5f38d3" category="inline-link-macro">NetApp Disaster Recoveryライセンスを設定する</block>
   <block id="8de8bf3c0e2312de770e9e57b5d7b618" category="paragraph">NetApp Disaster Recoveryのライセンス設定の詳細については、以下を参照してください。<block ref="dcc09fe94eaacf55e14028798bbcb75a" category="inline-link-macro-rx"></block> 。</block>
   <block id="7d34f6a9b5c271fe76e07e48a0c0d2b1" category="list-text">VMware Cloud (VMC) on AWS とAmazon FSx for NetApp ONTAP</block>
@@ -170,7 +167,6 @@
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">ライセンス</block>
   <block id="924cc6eaf82618251de609e2689ed733" category="paragraph">次のライセンス タイプを使用できます。</block>
   <block id="63f202b7fcd80e9277a9e585cd35c7ae" category="list-text">30 日間の無料トライアルにサインアップしてください。</block>
-  <block id="ae8251a7b4c0fab0673e14f4f9d000d1" category="list-text">Amazon Web Services (AWS) Marketplace または Microsoft Azure Marketplace で従量課金制 (PAYGO) サブスクリプションを購入します。このライセンスを使用すると、長期契約なしで固定の保護容量ライセンスを購入できます。</block>
   <block id="c6f69d5df53a010be34f1bdca81f2d34" category="list-text">BYOL (Bring Your Own License) は、 NetApp の営業担当者から取得したNetAppライセンス ファイル (NLF) です。ライセンス シリアル番号を使用して、 NetApp Consoleで BYOL をアクティブ化できます。</block>
   <block id="f32471ef823f660bfa852ce10e9e5843" category="paragraph">すべてのNetAppデータ サービスのライセンスは、 NetApp Consoleのサブスクリプションを通じて管理されます。  BYOL を設定すると、コンソールでサービスのアクティブなライセンスを確認できます。</block>
   <block id="924fd9d885c358418e2ee855de9a3281" category="paragraph">保護されたボリュームは多数の VM をホストできます。一部はNetApp Disaster Recoveryリソース グループの一部ではない可能性があります。いずれにしても、そのボリュームまたは LUN 上のすべての VM によって消費されるストレージは、ライセンスの最大容量に対して使用されます。</block>
@@ -1885,7 +1881,6 @@
   <block id="3dbc5485bf1aa588640ee699337e0892" category="list-text">**アプリケーション中心の保護**：アプリケーションレベルでKubernetesワークロードを保護できるようになり、フェイルオーバー発生時に重要なサービスの復旧が保証されます。</block>
   <block id="6124980497de7eeb616c27d599b53c84" category="list-text">**簡素化されたオーケストレーション**：Disaster Recoveryは、Kubernetesワークロードのバックアップとレプリケーションを自動化する直感的なワークフローを提供し、VMware環境で使用されるのと同じ効率的なSnapMirrorテクノロジを活用します。</block>
   <block id="082f6fbdb4843c5f374a215502f493b9" category="inline-link-macro">NetApp Disaster Recoveryに関するKubernetesの要件</block>
-  <block id="3723578e9eec661a364d573c9d930dd2" category="paragraph">*NetApp Disaster Recoveryにはどのようにアクセスしますか？*NetApp Disaster Recoveryには、特別な設定は必要ありません。Disaster Recoveryは自動的にNetApp Consoleの左側のナビゲーションに表示されます。</block>
   <block id="617eb16cadcea920c3756320dc74fccf" category="summary">クラウドへのディザスタリカバリは、サイト停止やデータ破損イベントからワークロードを保護する、回復力があり対費用効果の高い方法です。NetApp Disaster Recoveryを使用すると、ONTAPストレージで実行されているオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してパブリッククラウド内のVMwareソフトウェアで定義されるデータセンターに、またはディザスタリカバリサイトとしてONTAPストレージを使用する別のオンプレミスVMware環境にレプリケートできます。</block>
   <block id="99768e8237948205202d18a652ffd119" category="inline-image-macro">NetApp Disaster Recoveryのコンポーネントを示す図</block>
   <block id="ba116452d0da87465a7f182425b0428a" category="paragraph"><block ref="ba116452d0da87465a7f182425b0428a" category="inline-image-macro-rx" type="image"></block></block>
@@ -2436,4 +2431,127 @@
   <block id="03c66aa95215fd945ab9f6521baef55e" category="paragraph">リソースグループ内の VM が異なるデータストアでホストされている場合、NetApp Disaster Recovery では、以下のいずれかの方法を使用して、ONTAP ボリュームまたは LUN のデータ整合性スナップショットを作成します。</block>
   <block id="183b61458af19e5b813be061374378cf" category="list-text">*リソースタイプ*を分類します。デフォルトでは、「すべて含める」が選択されており、これは複数のリソースタイプを意味します。</block>
   <block id="372899929926faabc33dabdd64a2ecc2" category="paragraph">災害復旧計画を作成する前に、保護したいサイトを NetApp Disaster Recovery に追加してください。サイトとは、オンプレミスまたはクラウド上の vCenter サーバーまたは Kubernetes クラスターの集合です。本番サイトと災害復旧サイトの両方を追加してください。</block>
+  <block id="11a59530affce2463e250e21bdbcc29c" category="summary">VMwareおよびKubernetesワークロード向けNetApp Disaster Recoveryに関するよくある質問。</block>
+  <block id="6782fe55d65b471e3f7ea9c8c6c97abb" category="paragraph">このFAQでは、VMwareおよびKubernetesワークロード向けのNetApp Disaster Recoveryに関するよくある質問にお答えします。本書は、ディザスタリカバリ構成の実装や、レプリケーション、移行、フェイルオーバー、フェイルバック操作の管理に役立つ概念、用語、システム動作、および制約に焦点を当てています。</block>
+  <block id="cb59b87e00d11222bfd9159d0d23836f" category="section-title">開始</block>
+  <block id="c9765fd31b48f3fca291b4069513a081" category="paragraph-title">NetApp Disaster Recoveryとは何ですか？</block>
+  <block id="685c012b5ad43ae8f78cb16f13b132f2" category="paragraph">NetApp Disaster Recovery は、NetApp Console からアクセスできるクラウドベースの災害復旧サービスであり、VMware および Kubernetes 環境における災害復旧ワークフローを自動化します。このサービスは、ONTAP ストレージを実行するオンプレミスの VMware ワークロード、または Trident が管理する ONTAP ストレージを実行する Kubernetes ワークロードを、災害復旧ターゲットとして別のサイトにレプリケートします。このサービスは、ONTAP SnapMirror テクノロジーと、ネイティブの VMware オーケストレーションまたは Trident Protect オーケストレーションを使用して、圧縮や重複排除などの ONTAP ストレージ効率化機能を維持しながらワークロードを保護します。</block>
+  <block id="009485187b14dcf377759e6990a3cd29" category="paragraph-title">NetApp Disaster Recoveryにはどのようにアクセスすればよいですか？</block>
+  <block id="6ba97b97f5cafb293b8b470e85d345ef" category="paragraph">Disaster Recoveryを有効にするための特別な操作は必要ありません。NetApp Consoleの左側ナビゲーションの「Protection」＞「Disaster recovery」に自動的に表示されます。NetApp Consoleにアクセスするには、ブラウザで「<block ref="50afa4cc4e54d55b53b9cfffe1bc930c" category="inline-link-rx"></block>」と入力します。</block>
+  <block id="8bf50a93bd9428093b7d8d4d5b1b0b36" category="paragraph-title">NetApp Disaster Recoveryを使用するにはライセンスが必要ですか？</block>
+  <block id="00dec6c85f2743479fc02854bda53ae8" category="inline-link-macro">災害復旧ライセンスの設定</block>
+  <block id="a6f94b1b055cfba0760274ebe73edd0f" category="paragraph">完全な継続アクセスには、Disaster Recoveryライセンスが必要です。ライセンスやサブスクリプションを購入する前に、30日間の無料トライアルでサービスをお試しいただけます。詳細については、<block ref="dbcbb19e1cf3cf9e67976fef02d6b337" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="3f3c88b9b64d7c04d0a5af9d9b038b8a" category="paragraph-title">NetApp Disaster Recoveryでサポートされている保護対象は何ですか？</block>
+  <block id="2bbf74ed6470801d33a79aa97284c8a1" category="paragraph">NetApp Disaster Recoveryは、以下の保護対象をサポートします。</block>
+  <block id="03a433c06058e0842e084e12c6761ada" category="list-text">Amazon Elastic VMware Service (EVS) と Amazon FSx for NetApp ONTAP</block>
+  <block id="a4508b30b1ece8318f0401ea22ba314c" category="list-text">Azure VMware Solution (AVS) と NetApp Cloud Volumes ONTAP （iSCSI）（プライベートプレビュー）</block>
+  <block id="1e5c2af338d158fea3074ac741c12f7f" category="list-text">Trident が管理する ONTAP ストレージを使用する Kubernetes クラスター（Trident Protect で保護）</block>
+  <block id="03e34d9d0969ffe91db834baf5fc676c" category="list-text">オンプレミスのNFSベースのVMware環境（ONTAPストレージ使用）、またはオンプレミスのFC/iSCSI VMFS環境</block>
+  <block id="a3112671a6fb73e68a4eb5e2e5596d1d" category="paragraph-title">NetApp Disaster Recoveryでサポートされているデータストアの種類は何ですか？</block>
+  <block id="6d8335c6284a0148e6a1b5e182622f28" category="paragraph">VMwareワークロードの場合、NetApp Disaster Recoveryは以下のデータストアタイプをサポートします：</block>
+  <block id="8d26eec49f6112d9e5765d1264d9af72" category="list-text">ONTAPクラスター上のONTAP FlexVolボリュームにホストされているNFSデータストア</block>
+  <block id="5a29a9fc808b533ac3b2f4df76c93e8b" category="paragraph">Kubernetesワークロードの場合、ディザスターリカバリーは、ONTAPストレージ上のNetApp Tridentを通じてプロビジョニングされた永続ボリュームを保護します。</block>
+  <block id="a153862bfd0588d7dc0f9a29fa98f22a" category="section-title">ライセンスと費用</block>
+  <block id="7695f18938c37b2aabf318dde48840c1" category="paragraph-title">NetApp Disaster Recoveryにはどのようなライセンスオプションがありますか？</block>
+  <block id="18a592d2cf2780535a0976d232a6b68d" category="paragraph">NetApp Disaster Recoveryには、以下のライセンスオプションが用意されています。</block>
+  <block id="31199494c34737143146e2cf1a74b417" category="list-text">30日間の無料トライアル（トライアル期間中は容量制限は適用されません）</block>
+  <block id="b99c57be085b04f4f2f1b3ce0008c1e1" category="list-text">Amazon Web Services (AWS) Marketplace、Azure Marketplace、またはGoogle Cloud Marketplaceでの従量課金制（PAYGO）サブスクリプション</block>
+  <block id="a71c98e80ca40a1236ab4d4c8e91e837" category="list-text">お客様自身のライセンスを使用する方式（BYOL）。これは、NetAppの販売担当者から取得し、NetApp Console でライセンスシリアル番号を使用してアクティベートする NetApp License File（NLF）です。</block>
+  <block id="0899260c78c1e54d84e3cf050a8f64e1" category="paragraph">災害復旧料金は、少なくとも1つの仮想マシンまたはKubernetesリソースにレプリケーションプランが設定されている場合、ソースサイトのデータストアの使用容量に基づいて計算されます。</block>
+  <block id="44023762377876d62f152da635813b23" category="paragraph-title">容量を超過した場合、どうなりますか？</block>
+  <block id="b1cab6c26795bbf5933dd5e1fb5bc234" category="paragraph">BYOLの場合、データが許容容量を超えると、追加の容量ライセンスを取得するか、NetApp Consoleでライセンスをアップグレードするまで、サービスの操作が制限されます。</block>
+  <block id="8f682126932c0bc027583969c665f0b2" category="paragraph-title">30日間の無料トライアル期間終了後はどうなりますか？</block>
+  <block id="bf8c00eccd33cf71d2291453b570ba6d" category="paragraph">無料トライアル期間終了後も、ワークロードやレプリケーションプランなどのリソースの表示や削除、トライアル期間中に作成されたすべてのスケジュール済み操作の実行は引き続き可能です。サービスの全機能を継続して使用するには、クラウド プロバイダから PAYGO サブスクリプションを取得するか、NetApp から BYOL ライセンスを購入する必要があります。</block>
+  <block id="a7fd20275e66fa4773cec0d049fd6735" category="paragraph">ライセンスの購入やサブスクリプションはいつでも可能で、30日間の無料トライアル期間が終了するまでは料金は発生しません。</block>
+  <block id="6c00e4926a955219a7e9c10de1457149" category="section-title">サポートされている環境とインフラストラクチャ</block>
+  <block id="4514c3f298352ef857a50cd3d57cfd07" category="paragraph-title">NetApp Disaster Recoveryはどのようなインフラストラクチャトポロジーをサポートしていますか？</block>
+  <block id="f10dcf48d56e70a97e57a5179159d52e" category="paragraph">NetApp Disaster Recoveryは、以下のトポロジーをサポートしています：</block>
+  <block id="f0fb78ff06794aa000c885a6cf7cc846" category="list-text">オンプレミスのVMware と ONTAP データセンターを、VMware Cloud on AWS または Amazon Elastic VMware Service（EVS）および Amazon FSx for NetApp ONTAP をベースとした AWS DR インフラストラクチャにレプリケートするハイブリッドクラウド DR</block>
+  <block id="4f59f088502d409238ee98fb167b1627" category="list-text">オンプレミスのVMware と ONTAP の vCenter を別のオンプレミスのVMware と ONTAP の vCenter にレプリケートするプライベートクラウドDR</block>
+  <block id="70cbd6c1eca3ee85af56ee77c142fbbc" category="list-text">VMware Cloud on AWS または EVS に基づく AWS DR インフラストラクチャを、FSx for NetApp ONTAP を使用して別の AWS ベースの DR インフラストラクチャに複製するクラウド DR</block>
+  <block id="e5d74f9defabeca515d32bdc3e6882e0" category="list-text">オンプレミスのVMwareおよびONTAPデータセンターをGoogle Cloud VMware EngineとGoogle Cloud NetApp Volumesに基づいたGoogle Cloud DRインフラストラクチャにレプリケートするハイブリッドクラウドDR</block>
+  <block id="8b5545289388529be811a17842721533" category="list-text">Tridentが管理するONTAPストレージを使用したクラスタ間のKubernetes-to-Kubernetes DR</block>
+  <block id="205c3abce10f4db11d5e7a43071941a3" category="section-title">前提条件とセットアップ</block>
+  <block id="bee44633bd765795fd96a89d2ea8d744" category="list-title">Disaster Recoveryを使用する前に満たすべき前提条件は何ですか？</block>
+  <block id="3cc5d65c196d5c02b066a3f38fabc422" category="list-text">NetApp Disaster Recoveryで管理するすべてのVMwareクラスタは、保護対象の仮想マシンをホストするためにONTAPボリュームを使用する必要があります。</block>
+  <block id="2960e86d5435c6d4983a6bedb4e341b9" category="list-text">保護対象となる仮想マシン上では、VMware Tools（またはOpen VM Tools）が実行されている必要があります。</block>
+  <block id="f3f78406752acc9ae3fe2180e45e7f33" category="list-text">Microsoft SQL Server または Oracle Database を実行している Windows VM の場合、データベースの VSS ライターが有効になっている必要があります。</block>
+  <block id="8797466feb8b593d185d9a5b856d40db" category="list-text">Linux上で動作するOracleデータベースの場合、オペレーティングシステムのユーザ認証をOracleデータベースのSYSDBAロールに対して有効にする必要があります。</block>
+  <block id="32458301d6055c57642a02dd2e2a8624" category="inline-link-macro">NetApp Disaster RecoveryのKubernetesクラスタの要件</block>
+  <block id="30d53f5e9f738af2dce8e354b6e02bfa" category="list-text">Kubernetes については、<block ref="170f9022121dc32cb8d6bdb79a86df4b" category="inline-link-macro-rx"></block> の追加要件を確認してください。</block>
+  <block id="b7c94cf1f714b64789658b0bd3c1f536" category="inline-link-macro">災害復旧の前提条件</block>
+  <block id="2791151bd11882e779ad62c4a90bed7d" category="paragraph">全リストについては、<block ref="ab24f14855e7dfb063c4daf2abf49c3e" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="32cb9f4da9f23af0b3a0d8926400a876" category="paragraph-title">コンソールエージェントとは何ですか？また、なぜ必要なのですか？</block>
+  <block id="f6f14ea127e16276280dc1146a521662" category="paragraph">コンソールエージェントは、NetApp Console がお客様の ONTAP ストレージおよび VMware vCenter クラスターと通信できるようにするソフトウェアコンポーネントです。Disaster Recovery が適切に機能するために必要です。エージェントはお客様のプライベートネットワーク（オンプレミスのデータセンターまたはクラウド VPC）に常駐し、お客様の ONTAP ストレージインスタンスおよび vCenter クラスターと通信します。</block>
+  <block id="8e9d521e81d073f77ae2c82143d6170f" category="paragraph">オンプレミスからオンプレミスへのディザスタリカバリの場合は、ディザスタリカバリサイトにオンプレミスのコンソールエージェントをインストールしてください。オンプレミスから AWS への場合は、AWS VPC に AWS 用コンソールエージェントをインストールしてください。送信元と送信先の両方の vCenter クラスターは、同じコンソールエージェントを使用する必要があります。ディザスタリカバリは、標準モードのエージェント展開でのみ機能します。</block>
+  <block id="d438ccd3391b093c3d412dbbf52c4615" category="paragraph-title">Kubernetesクラスターを保護するために必要な条件は何ですか？</block>
+  <block id="2f01c241b558291169d132c87e061c93" category="paragraph">各 Kubernetes クラスターには、NetApp Trident のインストール、ONTAP バックエンドとストレージクラスの構成、およびボリューム スナップショット CRD とコントローラーのインストールが必要です。アプリケーションは、Trident ストレージクラスを通じてプロビジョニングされた永続ボリュームを使用する必要があります。Kubernetes クラスターをサイトとして追加すると、NetApp Disaster Recovery がそのクラスターへの Trident Protect のインストールと登録の手順を案内します。手順ごとのコマンドと検証チェックについては、<block ref="170f9022121dc32cb8d6bdb79a86df4b" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="72d167ef919d5c2ce32f0a4ebe13b34a" category="section-title">中核概念</block>
+  <block id="4ce33d066be7d36d3c5e42092f5c2d72" category="paragraph-title">NetApp Disaster Recoveryにおけるサイトとは何ですか？</block>
+  <block id="24c26aa5a7ef691a688d2c6752f7da09" category="paragraph">サイトとは、通常、物理的なデータセンターまたはクラウドの場所に関連付けられた論理コンテナであり、1 つ以上のvCenterクラスターまたは Kubernetes クラスターをホストします。レプリケーション計画を作成する前に、ソース（本番）サイトと宛先（ディザスタリカバリ）サイトの両方を追加する必要があります。</block>
+  <block id="f612271843c01bba17d71f36507809c8" category="paragraph-title">リソースグループとは何ですか？また、どのように活用されますか？</block>
+  <block id="386675ee09d15b4ecb26861362fd08e2" category="paragraph">リソースグループとは、複数の仮想マシン、データストア、Kubernetesの名前空間およびリソースを単一の単位として管理できる論理コンテナであり、共通のスナップショットで保護することができます。仮想マシンは、一度に1つのリソースグループにしか所属できません。保護したいアプリケーションやワークロードごとにリソースグループを作成することができ、VMはグループ内で設定した起動順序に基づいて起動します。</block>
+  <block id="9f64dd723cccc90d08922938bac1207f" category="paragraph-title">Disaster Recovery におけるレプリケーション計画とは何ですか？</block>
+  <block id="c83a085c0f5007412bbd2761ae6fa4ee" category="paragraph">レプリケーション計画とは、バックアップの頻度やフェイルオーバーイベントの処理方法に関する一連のルールのことです。ソースサイトと宛先サイトを選択し、リソースグループを割り当て、リカバリマッピングを定義し、電源投入時の動作を構成します。プランでは、データ複製の頻度を通じて、目標復旧時点（RPO）を定義します。</block>
+  <block id="d7c52d33ae728dcf2dfc2458e6a234ad" category="paragraph-title">RPOとRTOの違いは何ですか？</block>
+  <block id="d5936ba7dd99cc8a1b2cb68192bb7fc5" category="paragraph">リカバリポイント目標（RPO）とは、災害発生時に許容できる最大データ損失量のことであり、レプリケーション計画のレプリケーション頻度またはスケジュールによって定義されます。リカバリタイム目標（RTO）とは、災害から復旧するために許容される最大時間のことであり、DRサイトへのフェイルオーバーとすべてのVMまたはアプリケーションの再起動にかかる時間によって決まります。</block>
+  <block id="d81737f9809ed4d7f221a84f6106c789" category="section-title">サイト、検出、およびリソースグループ</block>
+  <block id="d1e7d0bc6d9c47e3951244ee293d9b7f" category="list-title">サイトに vCenter を追加するには、どのような情報が必要ですか？</block>
+  <block id="ddb5e1095980894f2fb0d0dfd36e5a01" category="list-text">必要な権限を持つ vCenter アカウントの資格情報（<block ref="0a23d475349d8b59d7b1d04d622e5f7f" category="inline-link-macro-rx"></block> を参照）</block>
+  <block id="03c874a37af5de992c0d9ad7310e9c2b" category="list-text">vCenter にアクセスするためのセキュリティ証明書（自己署名証明書と認証局発行証明書の両方がサポートされています）</block>
+  <block id="4b6f54012db0eaab6da13597466b9cb4" category="inline-link-macro">NetApp Disaster Recoveryにサイトを追加する</block>
+  <block id="19da781ad1ff6faedec1d5d08e809ef1" category="paragraph">手順については、<block ref="983f959211bf5a17b19f7580e1fa8dc3" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="0e4af546d95c84703de8b32deb7d430f" category="paragraph-title">Disaster Recoveryはどのくらいの頻度でvCenterまたはKubernetes環境を検出しますか？</block>
+  <block id="f3615b45c7ee008a57e9d7cd91ddf94b" category="paragraph">検出機能はデフォルトでは24時間ごとに実行されますが、環境に合わせてスケジュールをカスタマイズできます。最短間隔は30分、最長間隔は24時間です。NetApp では、最新の情報を取得するために、まず手動でいくつかの検出を実行し、その後、スケジュールを自動実行に設定することをお勧めします。新しく追加または削除されたリソースは、次回の定期的または手動による検出時に認識されます。</block>
+  <block id="ace9c670964180ada43847433df374b2" category="paragraph-title">保護されたリソースと保護されていないリソースを同じデータストアにホストすることは可能ですか？</block>
+  <block id="824d4f4288bf4634cd19c7faa7e8073d" category="paragraph">いいえ。保護された仮想マシンと保護されていない仮想マシンを同じデータストアでホストすると、問題が発生する可能性があります。つまり、データストアがフェイルオーバーされた場合、そのデータストア上の保護されていない仮想マシンはフェイルオーバー後にソース上に存在しなくなり、Disaster Recovery はフェイルオーバーサイトでそれらを起動しません。</block>
+  <block id="88e9b940c9ea3645df4ac3421569e9af" category="paragraph">Disaster Recoveryを導入する前に、リソースを整理して、保護対象のワークロードと保護対象外のワークロードがそれぞれ別のデータストアのサブセットを使用するようにし、単一のデータストアが複数のレプリケーションプランによって保護されないようにする必要があります。</block>
+  <block id="24408a3793e151cfbb91861a413159c6" category="section-title">複製と保護</block>
+  <block id="7218aa5b5ed515da57d66c69fbbaa93f" category="paragraph-title">どのSnapMirrorレプリケーションポリシーを使用すればよいですか？</block>
+  <block id="dd0421c134e490440d04e91bf0ccb6ec" category="paragraph">プラットフォーム管理（ONTAP管理）のバックアップを使用する予定がある場合は、*MirrorAll*ポリシーを使用してください。*MirrorVault*および*Asynchronous*も代替として使用できますが、フェイルオーバーまたはフェイルバック中に選択されたスナップショットがソースボリュームとデスティネーションボリュームの両方に存在することを確認する必要があります。存在しない場合、操作は「no common snapshot found」エラーで失敗します。フェイルオーバー用の共通スナップショットが1つしか残らないため、*MirrorLatest*は推奨されません。NetApp Disaster Recoveryが管理するSnapMirror関係については、NetApp Disaster Recoveryがレプリケーションのタイミングを管理するため、サービス外でアップデートをスケジュールしないでください。</block>
+  <block id="31e6e9e908e6c5f7da40636171aef75d" category="paragraph-title">既存の SnapMirror 関係を Disaster Recovery で使用できますか？</block>
+  <block id="cb3c6f536437a2202a725d6f719e2dd8" category="paragraph">はい。保護されたデータストアのソースボリュームと宛先ボリュームの間にSnapMirrorリレーションシップがすでに存在する場合、NetApp Disaster Recoveryは新しいリレーションシップを作成する代わりに、そのリレーションシップをすべてのレプリケーション操作に使用します。</block>
+  <block id="19f59b74448f6a27519db281a44e4b12" category="section-title">Migration</block>
+  <block id="2b2c519a9c09c9a357daee65f49d229d" category="paragraph-title">NetApp Disaster Recoveryは、障害復旧に加えて移行もサポートしていますか？</block>
+  <block id="37fca13c16336a96bde58435050fff09" category="inline-link-macro">アプリケーションを別のサイトに移行する</block>
+  <block id="09ce2ef05faf266611a114b984051541" category="paragraph">はい。移行用に構成されたレプリケーションプランを使用すると、VMwareアプリケーションをソースサイトから別のサイトに移行できます。移行を開始すると、サービスは30分ごとに移行が計画通りに進んでいるかどうかを確認します。進捗状況はジョブ監視で確認できます。現在、Kubernetesベースのワークロードの移行はサポートされていません。<block ref="5e54248757725961ec4fdf0f2bd5956a" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="8899c9b7dbe2a21cc0d14f57154212bc" category="section-title">フェイルオーバーとテスト</block>
+  <block id="f270c3437db50c6ab0f1cd2d524b9353" category="paragraph-title">本番環境のワークロードに影響を与えずに、災害復旧計画をテストすることはできますか？</block>
+  <block id="2111cf6f7e1f104e2f5480c0917138d8" category="paragraph">はい。テストフェイルオーバー中、Disaster Recovery は選択したスナップショットの新しいFlexCloneボリュームから一時的なVMを作成し、一時的なFlexCloneバックアップデータストアをESXiホストにマッピングします。これにより、追加の物理容量を消費せず、元のソースボリュームを変更せず、SnapMirror関係や本番環境のワークロードに影響を与えることなく、通常どおりレプリケーションが継続されます。テスト後、*フェイルオーバーテストのクリーンアップ*アクションを使用してテスト環境をクリーンアップしてください。<block ref="524f5a32773e3e832b74877ecf58916f" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="13bd78008a8970f2cd7112816120687b" category="list-title">フェイルオーバー操作中は何が起こりますか？</block>
+  <block id="46f3aa141f16bc138e1f00fb0da83c76" category="list-text">最新のスナップショットが選択された場合、SnapMirror の更新を実行して最新の変更をレプリケートします。</block>
+  <block id="07fd0855bebd759d41e85a0b05078e7a" category="list-text">スナップショットの選択に基づいて、アクティブ ファイル システムは指定されたスナップショットに復元されます。</block>
+  <block id="1ec6edd46294d0e089f9adceea567630" category="list-text">データストアが作成され、VMwareまたはVMCクラスタまたはホストにマウントされます（VMFSデータストアも各LUNにiGroupがマッピングされます）。</block>
+  <block id="8471333abec977717f9935bb2208c101" category="list-text">ターゲットとなる仮想マシンは、リソースグループ内の起動順序に基づいて電源がオンになります。</block>
+  <block id="b53b9b42d28508f30ca3ea4520d0ad26" category="list-text">ソース vCenter がまだアクティブな場合、フェイルオーバー中のソース側の仮想マシンの電源はオフになります。</block>
+  <block id="4eb42964047d17f6c54d43db314dc032" category="list-text">アプリケーションと整合性のある仮想マシンはすべて、静止状態が解除されます。</block>
+  <block id="64876338f43a7dddf94cde5d886c3752" category="list-text">ソース vCenter と ONTAP クラスターがまだアクティブな場合、変更内容を元のソースサイトにレプリケートするための逆 SnapMirror 関係が作成されます（*保護をスキップ* を選択した場合を除く）。</block>
+  <block id="d5c7034f2fc9b34dec2f07e83623c94e" category="paragraph-title">フェイルオーバー時に仮想マシンの起動順序をカスタマイズできますか？</block>
+  <block id="363217ec7b97809e77b8e759c09a5964" category="paragraph">はい。デフォルトでは、すべての仮想マシンは同時に並行して起動しますが、起動順序を制御するために各仮想マシンに連番（例えば、1、2、3）を割り当てたり、複数の仮想マシンに同じ番号を割り当てて同時に起動したりすることができます。また、仮想マシンごとに起動遅延時間（0～10分）を設定することで、起動タイミングをずらすことができます。これは、優先度の高い仮想マシンが起動してから、優先度の低い仮想マシンが起動するようにするために役立ちます。</block>
+  <block id="6d80a3efb80520f47b63dc279e1bea3d" category="section-title">フェイルバック</block>
+  <block id="c199f96c732dffb896730ae4fc9b6803" category="paragraph-title">フェイルバックプロセスとは何か、またいつ使用すべきか？</block>
+  <block id="44f12c565dbce73394bd694616ce9ac1" category="paragraph">フェイルバックとは、災害が解決された後、運用を元のソースサイトに復帰させる機能です。NetApp Disaster Recoveryは、ターゲットへのフェイルオーバーが発生した関係から開始し、レプリケーションの方向を反転させる前に、変更内容を元のソース VM または Kubernetes クラスタに再同期します。プロセス：</block>
+  <block id="b2250b6519a4f056a25ea4c84fdd42f2" category="list-text">復旧したサイトに対してコンプライアンスチェックを実施します。</block>
+  <block id="079b36e4b1109aa24bc458955bdfafa5" category="list-text">復旧したサイトの各 vCenter クラスターの vCenter 情報を更新します。</block>
+  <block id="1744b2e57532714a63aa65b88bee6b1f" category="list-text">対象サイトでは、仮想マシンの電源をオフにして登録を解除し、ボリュームをアンマウントします。</block>
+  <block id="fc1352d18c266f99fad69758b52d0e51" category="list-text">元のソースの SnapMirror 関係を解除して、読み取り / 書き込み可能にします。</block>
+  <block id="42db61736fd1d2f0df54f85c28fa9872" category="list-text">レプリケーション方向を逆にするために SnapMirror 関係を再同期します。</block>
+  <block id="12379932aa978e14cd6d76fa825133c8" category="list-text">ソースVMの電源をオンにして登録し、ソース上にボリュームをマウントします。</block>
+  <block id="4e76033871d8eb52e7a46330cc531bd8" category="inline-link-macro">アプリケーションを元のソースにフェイルバックする</block>
+  <block id="d0ee1332bfe1d2dcc14bb8e0f23a1bc0" category="paragraph"><block ref="d92574bd6530d8f939e71dda0e2a850b" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="13c907a4d0954aa1ae2608b978d9eb36" category="section-title">監視、報告、管理</block>
+  <block id="70dd6703bc7baad3986554a3a674ad0e" category="paragraph-title">サイトとレプリケーションプランの健全性を確認するにはどうすればよいですか？</block>
+  <block id="ca8a545217faa1b5ecb6c20f5c18f44b" category="inline-link-macro">ディザスタリカバリプランの健全性を表示する</block>
+  <block id="dbb7ffb8d61f39175256e59995019d34" category="paragraph">Disaster Recovery の *Dashboard* を使用して、サイトとプランが正常か、切断されているか、劣化しているかを確認したり、最近の警告や失敗したジョブを確認したり、保護されているワークロードと保護されていないワークロードを特定したり、容量を一目で確認したりできます。<block ref="274730a0525c7241e4e1e90adaacaa61" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="294136b6dea02c21775f4a0d2840d61b" category="paragraph-title">ジョブの監視やキャンセルはどのようにすればよいですか？</block>
+  <block id="dfd1782d3d07756f9468409f50dc7e64" category="inline-link-macro">災害復旧ジョブを監視する</block>
+  <block id="bfe5df883bfdbcba46f8f1fa4a9ec38c" category="paragraph">ジョブのタイムスタンプ、ステータス、および開始者（Disaster Recovery によって開始された場合は「システム」）を確認するには、「ジョブ監視」を使用します。「実行中」または「キューに追加済み」のジョブは、そのジョブの「アクション」メニューからキャンセルできます。これは、ジョブが停止した場合や、他の操作を優先する必要がある場合に便利です。詳細については、<block ref="29bb3ef1ff285e3d3f2d4c33e53aff20" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="364c3401bb1483aafb7ac1c3e6980874" category="paragraph-title">どのようなレポートが、どのような形式で入手できますか？</block>
+  <block id="f2f0e5b443a8d91e661e3cea9383b9dd" category="inline-link-macro">Disaster Recovery でレポートを作成する</block>
+  <block id="6945173f0edcde5ee35ab045a8d2e7c6" category="paragraph">VMware、Kubernetes、またはすべてのワークロードを対象としたレポートを生成でき、レプリケーション計画の詳細、コンプライアンス状況、ジョブの概要などを網羅できます。レポートはPDF、HTML、またはJSONファイルとしてダウンロードできます。対象期間は1日から7日間です。詳細については、<block ref="5bffefa9db1727e92010e150d30d9a1b" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="344e4080c182fb26bcaae9b4aafcff09" category="section-title">Kubernetes固有の質問</block>
+  <block id="6c529b0fa4de29d8b96719f5eb415629" category="paragraph-title">AppVaultとは何ですか？</block>
+  <block id="3d6bb738851a3bfae62f8c75b1ffb531" category="paragraph">AppVault は、Trident Protect が Kubernetes の保護データを保存するクラウドストレージターゲットです。Kubernetes レプリケーションプランを設定する際に AppVault を作成します。</block>
+  <block id="2f5122e05c45ffd052c98ecc0e6d46cf" category="list-text">Amazon Web Services (AWS) Marketplace、Azure Marketplace、またはGoogle Cloud Marketplaceで従量課金制（PAYGO）サブスクリプションを購入します。このライセンスにより、長期契約の義務なしに、固定容量の保護ライセンスを購入できます。</block>
+  <block id="3339edb028f501d54393ca849ca0f55b" category="admonition">NetApp Disaster Recoveryの料金は、少なくとも1つの仮想マシンまたはKubernetesリソースにレプリケーションプランが設定されている場合、ソースサイトのデータストアの使用容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、容量許容量には含まれません。BYOLの場合、データが許容容量を超えると、追加の容量ライセンスを取得するか、NetApp Consoleでライセンスをアップグレードするまで、サービスの操作が制限されます。</block>
 </blocks>
