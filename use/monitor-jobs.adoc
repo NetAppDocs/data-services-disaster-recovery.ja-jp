@@ -12,7 +12,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 
 [role="lead"]
-NetApp Disaster Recovery ジョブを監視して、ステータスと進捗状況を追跡します。
+NetApp Disaster Recovery ジョブの履歴、ステータス、詳細を監視します。ジョブのステータスと進捗状況を追跡することで、復旧準備に影響が出る前に、失敗または停滞した操作を検知できます。
 
 
 

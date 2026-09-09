@@ -2406,7 +2406,6 @@
   <block id="57428a711cfa3bd5fc08ccca3ebd74d1" category="admonition">レプリケーションプランを作成し、ウィザードで繰り返し頻度を設定して移行を開始すると、Disaster Recovery は30分ごとに、移行がプランに従って進行しているかどうかの検証を実行します。ジョブモニターページで進捗状況を確認できます。</block>
   <block id="0e00059b7ae89bb2943107122795d39b" category="paragraph">移行を開始する前に、レプリケーションプランを作成し、移行用に構成してください。すると、アクションメニューに「移行」オプションが表示されます。</block>
   <block id="c3ddf9c129ec78b8669259e50ef2b80b" category="list-text">テキストボックスに「Migrate」と入力して操作を確定し、*Migrate* を選択してください。</block>
-  <block id="f1f2884d80fd0cf77d91665857fb19fd" category="paragraph">NetApp Disaster Recovery ジョブを監視して、ステータスと進捗状況を追跡します。</block>
   <block id="119ecc97f4025cf7e813b10479d31164" category="list-text">ジョブの内容（タイムスタンプとステータスを含む）を確認します。</block>
   <block id="3fe84e5e3b6ca68b66ef1e1ff0d7b114" category="list-text">ジョブの詳細を表示するには、該当する行を選択してください。オフラインで確認するためにジョブの詳細をダウンロードするには、アクションメニューを選択し、次に「ジョブの詳細のダウンロード」を選択してください。</block>
   <block id="f917d3f114d10bd11fbc835ef9241353" category="admonition">ジョブの詳細を確認すると、Disaster Recovery はジョブを開始したユーザーを表示します。担当者が「system」と記載されている場合、Disaster Recovery がジョブを開始したことを意味します。</block>
@@ -2567,4 +2566,5 @@
   <block id="3402d8d43abf71995137392eb9b660bc" category="list-text">*「選択」* を選択すると、スナップショットの一覧が新しい順に表示されます。</block>
   <block id="2c9e00774620c5f83c48800d39a8e3a1" category="list-text">「今すぐスナップショットを作成」を選択すると、新しいスナップショットが作成され、デスティネーション クラスタにコピーされます。</block>
   <block id="15816348d7ed6eb8ac7c5354e5a1aa49" category="list-text">レプリケーション計画のフェイルオーバー後に、NetApp Disaster Recovery が逆方向の SnapMirror 保護関係を自動的に作成しないようにするには、「保護をスキップ」を選択してください。これは、復元したサイトを NetApp Disaster Recovery でオンラインに戻す前に、追加の操作を実行する場合に便利です。</block>
+  <block id="d4fd90d5c03a49a34d58a0210e1f6a1b" category="paragraph">NetApp Disaster Recovery ジョブの履歴、ステータス、詳細を監視します。ジョブのステータスと進捗状況を追跡することで、復旧準備に影響が出る前に、失敗または停滞した操作を検知できます。</block>
 </blocks>
