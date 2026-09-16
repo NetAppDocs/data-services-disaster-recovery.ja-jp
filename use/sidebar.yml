@@ -2,7 +2,7 @@
 section: use
 title: NetApp Disaster Recoveryを使用する
 entries:
-- title: ダッシュボードで災害復旧計画の健全性を確認する
+- title: プランの健全性と保護ステータスを確認する
   url: "/use/dashboard-view.html"
 - title: サイトにリソースを追加する
   url: "/use/sites-add.html"
@@ -18,6 +18,10 @@ entries:
   url: "/use/failover.html"
 - title: アプリケーションを元のソースサイトにフェイルバックする
   url: "/use/failback.html"
+- title: AppVaultsを管理する
+  url: "/use/task-appvault.html"
+- title: リソース変換テンプレートを管理する
+  url: "/use/task-resource-transformation.html"
 - title: サイト、プラン、データストア、仮想マシンの情報を管理する
   url: "/use/manage.html"
 - title: 災害復旧ジョブを監視する

@@ -9,12 +9,12 @@ summary: Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster
 
 
 [role="lead"]
-顧客は、実稼働コンピューティング ワークロード用の VMware vSphere ベースの仮想化インフラストラクチャにますます依存するようになっています。これらの仮想マシン (VM) がビジネスにとってより重要になるにつれ、顧客はこれらの VM を物理コンピューティング リソースと同じ種類の災害から保護する必要があります。現在提供されている災害復旧 (DR) ソリューションは複雑で高価であり、多くのリソースを必要とします。仮想化インフラストラクチャに使用される最大のストレージ プロバイダーであるNetApp は、 ONTAPストレージでホストされるあらゆる種類のデータを保護するのと同じ方法で、自社の顧客の VM を確実に保護することに強い関心を持っています。この目標を達成するために、 NetApp はNetApp Disaster Recoveryサービスを作成しました。
+NetApp Disaster Recovery は、オンプレミス環境から Amazon EVS および Amazon FSx for NetApp ONTAP にデータをレプリケートすることで、VMware ワークロードをディザスタリカバリから保護します。
 
 あらゆる DR ソリューションの主な課題の 1 つは、DR レプリケーションおよびリカバリ インフラストラクチャを提供するためだけに、追加のコンピューティング、ネットワーク、およびストレージ リソースを購入、構成、維持するための増分コストを管理することです。重要なオンプレミスの仮想リソースを保護するための一般的なオプションの 1 つは、クラウドでホストされる仮想リソースを DR レプリケーションおよびリカバリ インフラストラクチャとして使用することです。  Amazon は、 NetApp ONTAPがホストする VM インフラストラクチャと互換性のあるコスト効率の高いリソースを提供できるソリューションの一例です。
 
-Amazon は、仮想プライベートクラウド (VPC) 内で VMware Cloud Foundation を有効にする Amazon Elastic VMware Service (Amazon EVS) を導入しました。  Amazon EVS は、使い慣れた VMware ソフトウェアおよびツールとともに AWS の回復力とパフォーマンスを提供し、Amazon EVS vCenter をオンプレミスの仮想化インフラストラクチャの拡張機能として統合できるようにします。
+Amazonは、仮想プライベートクラウド（VPC）内でVMware Cloud Foundationを利用できるようにするAmazon Elastic VMware Service（Amazon EVS）を発表しました。Amazon EVSは、使い慣れたVMwareソフトウェアとツールに加え、AWSの回復力とパフォーマンスを提供し、Amazon EVS のvCentersがオンプレミスの仮想化インフラと統合できるようにします。
 
-Amazon EVS にはストレージリソースが付属していますが、ネイティブストレージを使用すると、ストレージ負荷の高いワークロードを持つ組織ではその有効性が低下する可能性があります。このような場合、Amazon EVS とAmazon FSx for NetApp ONTAPストレージ (Amazon FSxN) を組み合わせると、より柔軟なストレージソリューションを提供できます。さらに、オンプレミスのNetApp ONTAPストレージソリューションを使用して VMware インフラストラクチャをホストしている場合、FSx for ONTAPを備えた Amazon EVS を使用すると、オンプレミスとクラウドでホストされるインフラストラクチャ間でクラス最高のデータ相互運用性と保護機能が得られます。
+Amazon EVSにはストレージリソースが付属していますが、ネイティブストレージを使用すると、ストレージ負荷の高いワークロードを抱える組織ではその効果が低下する可能性があります。このような場合、Amazon EVS と Amazon FSx for NetApp ONTAP ストレージ（Amazon FSxN）を組み合わせることで、より柔軟なストレージソリューションを提供できます。さらに、オンプレミスで NetApp ONTAP ストレージソリューションを使用して VMware インフラをホストしている場合、Amazon EVS と FSx for ONTAP を併用することで、オンプレミス環境とクラウド環境にわたるデータ相互運用性と保護機能を利用できます。
 
 Amazon FSx for NetApp ONTAPの詳細については、以下を参照してください。 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started.html["Amazon FSx for NetApp ONTAPを使い始める"^] 。

@@ -12,14 +12,14 @@ summary: NetApp Disaster Recoveryを使用する際は、適切に機能する�
 
 
 [role="lead"]
-NetApp Disaster Recoveryを使用する際は、適切に機能するようにONTAPで正しい権限が設定されていることを確認してください。
+必要な ONTAP 権限を設定して、NetApp Disaster Recovery が正常に機能するようにします。
 
 
 
 [[minimum-ontap-permissions]]
 == 最小ONTAP権限
 
-Disaster Recoveryには次のONTAP権限が必要です。
+Disaster Recovery には、次の ONTAP 権限が必要です：
 
 [cols="3,1"]
 |===
@@ -111,7 +111,7 @@ Disaster Recoveryには次のONTAP権限が必要です。
 [[add-permissions-in-ontap]]
 == ONTAP で権限を追加する
 
-ONTAP で権限を追加するには、必要な権限を持つロールを作成し、そのロールをユーザに割り当てる必要があります。このタスクは、ONTAP で System Manager または ONTAP CLI を使用して実行できます。
+ONTAP で権限を追加するには、必要な権限を持つロールを作成し、それをユーザーに割り当てます。このタスクは、System Manager または ONTAP CLI を使用して ONTAP で実行できます。
 
 [role="tabbed-block"]
 ====

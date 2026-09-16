@@ -1,0 +1,55 @@
+= NetApp Disaster RecoveryにおけるKubernetesサポートの一般提供（GA）が開始されました
+:allow-uri-read: 
+
+
+
+
+[[kubernetes-support-in-netapp-disaster-recovery-is-now-generally-available-ga]]
+=== NetApp Disaster RecoveryにおけるKubernetesサポートの一般提供（GA）が開始されました
+
+NetApp Disaster RecoveryにおけるKubernetesベースのワークロードのサポートが一般公開（GA）されました。Kubernetesベースのワークロードのサポートにより、OpenShift Virtualization環境を含む、Kubernetesクラスタ上で実行されているアプリケーションを保護できます。Disaster Recoveryは、Trident Protectで現在サポートされているすべてのバージョンのKubernetesをサポートしており、コンテナ化されたアプリケーションのシームレスな統合と堅牢な災害復旧機能を実現します。
+
+Kubernetesベースのワークロードの保護を開始するには、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/task-kubernetes-requirements.html["NetApp Disaster Recoveryに関するKubernetesの要件"^]を参照してください。
+
+
+
+[[resource-transformations]]
+=== リソース変換
+
+Disaster Recovery がリソース変換をサポートするようになり、フェイルオーバー中にワークロードのあらゆる側面を変更できるようになりました。この機能により、ディザスタリカバリイベント時にワークロードをさまざまな環境や構成に柔軟に適応させることができます。
+
+リソース変換は、レプリケーションプランを作成する際に適用されます。新しい設定ページでは、リソース変換の作成、編集、削除を行うことができます。詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-resource-transformation.html["リソース変換を管理する"^]を参照してください。
+
+
+
+[[script-execution]]
+=== スクリプトの実行
+
+アプリケーションの停止と再開を調整するために、カスタムスクリプトをフェイルオーバーワークフローに組み込むことができるようになりました。この機能は、スナップショットがレプリケートされて適切にリストアされる前に、アプリケーションが適切に準備されていることを確認し、フェイルオーバー後に処理をシームレスに再開できるようにします。
+
+カスタムスクリプトを挿入する方法については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]を参照してください。
+
+
+
+[[new-workloads-page]]
+=== 新しいワークロードページ
+
+Disaster Recovery では、UI に「ワークロード」ページが追加され、検出されたすべてのワークロードとその保護状況を包括的に表示できるようになりました。「ワークロード」ページでは、ワークロードをより効果的に監視および管理できます。
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/dashboard-view.html["Disaster Recovery における健全性と保護ステータスを確認する"^]を参照してください。
+
+
+
+[[settings-page]]
+=== 設定ページ
+
+Disaster Recovery に、リソース変換テンプレートと AppVaults を一元管理するための設定ページが追加されました。このページでは、ディザスタリカバリ計画のこれらの重要なコンポーネントを設定および管理するための単一のインターフェイスを提供します。設定ページのオプションの詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-resource-transformation.html["リソース変換を管理する"^] および link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-appvault.html["AppVaultsを管理する"^] を参照してください。
+
+
+
+[[general-improvements]]
+=== 全般的な改善
+
+NetApp Disaster Recoveryでは、よりスムーズでエラーのないユーザーエクスペリエンスを実現するために、レプリケーションプラン作成ページに強化された検証機能を導入しました。
+
+NetApp Disaster Recovery では、断続的なリクエストタイムアウトへの対応能力が向上し、UI の全体的なパフォーマンスと信頼性が強化されました。

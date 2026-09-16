@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: use/task-appvault.html 
+keywords: disaster recovery, appvault, update credentials, trident protect, kubernetes, edit endpoints 
+summary: Disaster Recovery で AppVaults を管理することで、AppVaults の接続ステータス、および災害復旧計画の継続性を確保するための AppVaults の認証情報とエンドポイントを確認できます。 
+---
+= NetApp Disaster RecoveryにおけるAppVaultsの管理
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+NetApp Disaster Recovery の Kubernetes を使用したワークロードは、AppVault（Trident Protect が Kubernetes の保護データを保存するクラウドストレージターゲット）を使用します。AppVaults を管理することで、AppVaults の接続ステータス、およびAppVaults の認証情報とエンドポイントを確認し、レプリケーション計画の正常性を確保することができます。
+
+*必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、または災害復旧アプリケーション管理者ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+
+
+
+[[add-an-appvault]]
+== AppVaultを追加する
+
+Kubernetes のレプリケーション プランを作成するとき、または設定ページから作成するときに、AppVault を追加できます。
+
+.手順
+. Disaster Recovery で、サイドバーから *Settings* を選択します。
+. AppVault カードで、*+ AppVault の追加*を選択します。
+. *名前*を入力し、AppVaultを接続する*コンソールエージェント*を選択します。
+. *AppVault* をホストするクラウド *プロバイダ* を選択します。
+. プロバイダの選択に基づいて、 Disaster Recovery は既存の設定済みクラウドサブスクリプションにデータを入力します。
++
+Azure の場合は、*サブスクリプション*、*リソース グループ*、*ストレージ アカウント*を選択してください。
+
++
+AWS、ONTAP S3、およびStorageGRIDの場合は、「アカウント」または「クレデンシャル」と「バケット」を選択してください。
+
+. ONTAP S3 または StorageGRID を選択した場合、必要に応じて認証情報を追加できます。*認証情報の追加*を選択してオプションを展開し、*認証情報名*、*ゲートウェイノードの FQDN*、*ポート*番号、*アクセスキー*、*シークレットキー*を追加します。
+. **追加**を選択します。
+
+
+
+
+[[update-appvault-credentials]]
+== AppVault 資格情報を更新する
+
+AppVault の認証情報が変更された場合は、設定ページで更新して、レプリケーション計画の継続性を確保してください。認証情報を更新すると、この認証情報を共有するすべての AppVault のキーが置き換えられます。
+
+.手順
+. Disaster Recovery で、サイドバーから *Settings* を選択します。
+. 「Manage AppVaults」を選択します。
+. 更新する AppVault を見つけます。アクションメニューから「更新」を選択します。
+. 変更の影響を受けるAppVaultsの数とレプリケーション計画を確認してください。
+. 新しい*シークレットキー*と*アクセスキー*を入力してください。
+. 変更を適用するには、*認証情報の更新*を選択してください。
+
+
+
+
+[[edit-an-appvault-endpoint]]
+== AppVault エンドポイントを編集する
+
+AppVaultへの接続設定が変更された場合は、Kubernetesワークロードのレプリケーション計画の継続性を確保するために、設定を更新してください。
+
+.手順
+. Disaster Recovery で、サイドバーから *Settings* を選択します。
+. 「Manage AppVaults」を選択します。
+. 編集する AppVault を見つけます。アクションメニューから*編集*を選択します。
+. AppVault の新しいエンドポイントを入力してください。
+. 新しいエンドポイントを適用するには、*Save* を選択します。
+
+
+
+
+[[delete-an-appvault]]
+== AppVaultを削除する
+
+不要になったAppVaultは削除できます。
+
+.手順
+. Disaster Recovery で、サイドバーから *Settings* を選択します。
+. 「Manage AppVaults」を選択します。
+. 削除する AppVault を見つけます。アクションメニューから *削除* を選択します。
+. ダイアログウィンドウで「削除」を選択して操作を確定します。
+

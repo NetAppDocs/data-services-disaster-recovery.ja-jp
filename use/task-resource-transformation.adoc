@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: use/task-resource-transformation.html 
+keywords: disaster recovery, resource transformation, kubernetes, templates 
+summary: リソース変換を使用すると、フェイルオーバー中にワークロードのあらゆる側面を変更できます。この機能により、災害復旧時にワークロードをさまざまな環境や構成に柔軟に対応させることができます。 
+---
+= NetApp Disaster Recovery でリソース変換を管理する
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+Kubernetes ワークロードの NetApp Disaster Recovery では、リソース変換を作成できます。リソース変換を使用すると、フェイルオーバー中にワークロードのあらゆる側面を変更できます。リソース変換機能により、災害復旧イベント時にワークロードをさまざまな環境や構成に柔軟に対応させることができます。
+
+Kubernetesのレプリケーションプランを作成する際に、リソース変換が追加されます。
+
+*必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、または災害復旧アプリケーション管理者ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
+
+
+
+[[create-a-resource-transformation-template]]
+== リソース変換テンプレートを作成する
+
+.手順
+. Disaster Recovery で、サイドバーから *Settings* を選択します。
+. リソース変換カードで、*+ テンプレートを追加*を選択します。
+. リソース変換の *名前* を入力してください。
+. *操作*を選択してください：追加、コピー、移動、削除、置換、またはテスト。
+. *JSONパス*と*変数名*を入力してください。必要に応じて、*デフォルト値*を追加してください。
++
+image::resource-transformation-template.png[リソース変換テンプレートのスクリーンショット]
+
+. テンプレートに操作を追加するには、*+ Add operation* を選択します。前の2つの手順を繰り返し、操作を実行する順序で並べ替えます。
+. テンプレートを作成するには、*追加*を選択してください。
+
+
+
+
+[[edit-a-resource-transformation]]
+== リソース変換を編集する
+
+. Disaster Recovery で、サイドバーから *Settings* を選択します。
+. リソース変換カードで、*リソース変換の管理*を選択します。
+. 編集したいリソース変換を見つけてください。行末にあるアクションメニューから*Edit*を選択します。
+. テンプレートのどのフィールドも編集できます。*名前*、*操作*（追加、コピー、移動、削除、置換、またはテスト）、およびそれらに付随する値（*JSONパス*と*変数名*、または*デフォルト値*）を編集します。操作を追加したり、操作の実行順序を編集したりすることもできます。
+. *保存*を選択します。
+
+
+
+
+[[clone-a-resource-transformation]]
+== リソース変換を複製する
+
+リソース変換を複製して、新しいリソース変換テンプレートのベースとして使用できます。クローンされたテンプレートは、元のテンプレートの名前を使用し、末尾に「-v1」が付加されます。例えば、「scale up deployment」というテンプレートを複製した場合、複製されたテンプレートの名前は「scale up deployment-v1」となります。
+
+.手順
+. Disaster Recovery で、サイドバーから *Settings* を選択します。
+. リソース変換カードで、*リソース変換の管理*を選択します。
+. クローンしたいリソース変換を見つけてください。その行の末尾にあるアクションメニューから*Clone*を選択します。
+. 操作が成功すると、NetApp Disaster Recovery はUIに確認ダイアログを表示します。
++
+複製されたテンプレートは、リソース変換リストで確認できます。
+
+
+
+
+
+[[delete-a-resource-transformation]]
+== リソース変換の削除
+
+リソース変換が不要になった場合は、削除できます。
+
+.手順
+. Disaster Recovery で、サイドバーから *Settings* を選択します。
+. リソース変換カードで、*リソース変換の管理*を選択します。
+. 削除するリソース変換を見つけます。行末にあるアクションメニューから*Delete*を選択します。
+. ダイアログで*削除*を選択して操作を確定します。
+
+
+
+
+[[next-steps]]
+== 次の手順
+
+* link:drplan-create.html["レプリケーションプランを作成する"]
+

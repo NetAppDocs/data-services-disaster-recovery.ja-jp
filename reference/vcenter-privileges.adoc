@@ -12,9 +12,9 @@ summary: NetApp Disaster Recoveryが正常に機能するためには、vCenter�
 
 
 [role="lead"]
-NetApp Disaster Recoveryがサービスを実行するには、vCenterアカウントに最小限のvCenter権限セットが必要です。これらの権限には、データストアの登録と登録解除、仮想マシン（VM）の起動と停止、VMの再構成が含まれます。
+NetApp Disaster Recovery用のvCenterアカウントには、データストアの登録および登録解除、仮想マシン（VM）の起動および停止、およびVMの再構成を行うための最小限の権限セットが必要です。
 
-次の表は、Disaster RecoveryがvCenterクラスタとインターフェースするために必要なすべての権限を示しています。
+次の表に、Disaster Recovery が vCenter クラスタで動作するために必要な権限を示します。
 
 [cols="1,2,2,3"]
 |===

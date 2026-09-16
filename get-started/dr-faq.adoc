@@ -242,4 +242,4 @@ VMware、Kubernetes、またはすべてのワークロードを対象とした�
 == Kubernetes固有の質問
 
 .AppVaultとは何ですか？
-AppVault は、Trident Protect が Kubernetes の保護データを保存するクラウドストレージターゲットです。Kubernetes レプリケーションプランを設定する際に AppVault を作成します。
+AppVaultは、Trident ProtectがKubernetesの保護データを保存するクラウドストレージのターゲットです。Kubernetesレプリケーションプランの設定時にAppVaultを作成します。設定ページでAppVaultsを管理することもできます。

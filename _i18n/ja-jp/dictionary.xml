@@ -444,7 +444,6 @@
   <block id="0da98ea5899daa91a1bbac1ea476d6cf" category="paragraph">これで、本番 (ソース) サイトと DR (宛先) サイトが作成されました。</block>
   <block id="421926d9ca2273c09575ed09e0cd288a" category="summary">Amazon EVS と Amazon FSxN を使用したNetApp Disaster Recoveryの紹介。サイトが作成されたら、 NetApp Disaster Recoveryの各サイトに vCenter クラスターを追加します。各サイトを作成するときに、それぞれのサイトがどのような種類のサイトであるかを示しました。これにより、 NetApp Disaster Recovery は、各サイト タイプでホストされている vCenter に必要なアクセス タイプを把握できるようになります。 Amazon EVS の利点の 1 つは、Amazon EVS vCenter とオンプレミスの vCenter の間に実質的な違いがないことです。どちらも同じ接続および認証情報が必要です。</block>
   <block id="c0b13507b7c62a7122f6d5ccf83fd444" category="doc">NetApp Disaster Recoveryにオンプレミスおよび Amazon EVS vCenter クラスターを追加する</block>
-  <block id="05eb762d9c545c9d987d4037685aab39" category="paragraph">サイトが作成されたら、 NetApp Disaster Recoveryの各サイトに vCenter クラスターを追加します。各サイトを作成するときに、各サイトの種類を指定しました。これにより、 NetApp Disaster Recovery は、各サイト タイプでホストされている vCenter に必要なアクセス タイプを把握できるようになります。 Amazon EVS の利点の 1 つは、Amazon EVS vCenter とオンプレミスの vCenter の間に実質的な違いがないことです。どちらも同じ接続および認証情報が必要です。</block>
   <block id="3ac596c5aa435dd12f683335e2d27760" category="list-title">各サイトにvCenterを追加する手順</block>
   <block id="0a5e3ecee9c072036a5677fe4818dae4" category="list-text">*サイト* オプションから、必要なサイトの *vCenter の追加* を選択します。</block>
   <block id="59662aacba84700bcc666a989987c405" category="inline-image-macro">vCenterオプションの追加</block>
@@ -452,9 +451,7 @@
   <block id="744f4f3b56736e13f1a146b4bfbfbd67" category="list-text">[vCenter サーバーの追加] ダイアログ ボックスで、次の情報を選択または入力します。</block>
   <block id="47c94f41bc590e72427adc9289473101" category="list-text">AWS VPC 内でホストされるNetApp Consoleエージェント。</block>
   <block id="8bf4e0d4e225ffb8df46f2ccff910a1e" category="list-text">追加する vCenter の IP アドレスまたは FQDN。</block>
-  <block id="5b89f24b8876b95ec77cbbec46ac7f03" category="list-text">異なる場合は、ポート値を vCenter クラスタ マネージャが使用する TCP ポートに変更します。</block>
   <block id="62f5ea2637ecf9c5928f94b372bde923" category="list-text">以前に作成したアカウントの vCenter ユーザー名。NetApp NetApp Disaster Recoveryが vCenter を管理するために使用します。</block>
-  <block id="090ccdeb67b025c4f8b7081fde3f9701" category="list-text">会社が外部の証明機関 (CA) または vCenter エンドポイント証明書ストアを使用して vCenter にアクセスする場合は、[自己署名証明書を使用する] チェックボックスをオフにします。それ以外の場合は、ボックスをオンのままにしておきます。</block>
   <block id="b3a5c8845f853fe3c75c53b6ba4b310a" category="inline-image-macro">vCenter の追加ダイアログボックス</block>
   <block id="34fdfb7ad906ce66a12a8da2c109d447" category="paragraph"><block ref="34fdfb7ad906ce66a12a8da2c109d447" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0f5cc47067a5c4b536ab91f1a843de82" category="inline-link">Amazon FSx for NetApp ONTAPを使い始める</block>
@@ -518,13 +515,11 @@
   <block id="fa1610ddfa2152b9e8f5778144e74473" category="inline-image-macro">レプリケーションプランの作成、リソースマッピングページ</block>
   <block id="fe4f9d685407c3d061ae56d4bb07c056" category="paragraph"><block ref="fe4f9d685407c3d061ae56d4bb07c056" category="inline-image-macro-rx" type="image"></block></block>
   <block id="740199b79705af0b0465a7ac59ab8f62" category="list-text">必要なマッピングの各カテゴリを開くには、セクションの横にある下矢印 (*v*) を選択します。</block>
-  <block id="0a235ac401a30cfb7078a7aa681d6763" category="paragraph">サイトは複数の仮想データセンターと複数の vCenter クラスターをホストする可能性があるため、フェイルオーバーが発生した場合に VM を回復する vCenter クラスターを特定する必要があります。</block>
   <block id="5f284173a4e05543b1d3f4f96396fe44" category="list-text">DR サイトにあるデータセンターのリストから仮想データセンターを選択します。</block>
   <block id="98b8fc331440708a4300daf2feca158c" category="list-text">選択した仮想データセンター内のクラスターのリストから、データストアと VM をホストするクラスターを選択します。</block>
   <block id="b98800e8cefd33a1732635723a78893e" category="inline-image-macro">レプリケーションプランの作成、リソースの計算</block>
   <block id="7e7f922d36944c2c720506b1664eb3a6" category="paragraph"><block ref="7e7f922d36944c2c720506b1664eb3a6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5bb09905caece74967f31a8b9acdfec6" category="section-title">仮想ネットワークリソースをマップする</block>
-  <block id="735422ecadbce7a10ea51451e2684498" category="paragraph">各 VM には、vCenter ネットワーク インフラストラクチャ内の仮想ネットワークに接続された 1 つ以上の仮想 NIC を設定できます。 DR サイトでの再起動時に各 VM が目的のネットワークに正しく接続されるようにするには、これらの VM を接続する DR サイトの仮想ネットワークを特定します。これを行うには、オンプレミス サイトの各仮想ネットワークを DR サイト上の関連ネットワークにマッピングします。</block>
   <block id="be8a0f52b3f89ec52898a687a46d98d3" category="list-text">ドロップダウン リストからターゲット セグメントを選択します。</block>
   <block id="ffbce16aa92393c36f22c436fb54ba16" category="list-text">リストされているソース仮想ネットワークごとに前の手順を繰り返します。</block>
   <block id="579a4f796bf2b17e04e79c92ced90e7c" category="inline-image-macro">レプリケーションプラン、ネットワークリソースの作成</block>
@@ -536,8 +531,6 @@
   <block id="7ab1e4417fd162d1f894cc7ff7d92781" category="list-text">*ソースと同じ*: 名前が示すように、サービスはソース サイトの VM で使用されていたのと同じ IP アドレスを宛先 VM でも使用します。これには、前の手順でマップされた仮想ネットワークを同じサブネット設定で構成する必要があります。</block>
   <block id="f8711a934a3ad5b6455a62a3295f6b92" category="list-text">*ソースと異なる*: サービスは、前のセクションでマップした宛先仮想ネットワークで使用される適切なサブネットに対して構成する必要がある各 VM の IP アドレス フィールドのセットを提供します。各 VM に対して、IP アドレス、サブネット マスク、DNS、およびデフォルト ゲートウェイの値を指定する必要があります。必要に応じて、すべての VM に同じサブネット マスク、DNS、ゲートウェイ設定を使用して、すべての VM が同じサブネットに接続される場合のプロセスを簡素化します。</block>
   <block id="d435df5e27b24704914a2630c0742190" category="list-text">*サブネット マッピング*: このオプションは、宛先仮想ネットワークの CIDR 構成に基づいて各 VM の IP アドレスを再構成します。この機能を使用するには、[サイト] ページの vCenter 情報で変更されたとおりに、各 vCenter の仮想ネットワークにサービス内で定義された CIDR 設定があることを確認します。</block>
-  <block id="9878b8f9706d43985e2e2c7735cc56d9" category="paragraph">サブネットを構成すると、サブネット マッピングでは、ソース VM 構成と宛先 VM 構成の両方に IP アドレスの同じユニット コンポーネントが使用されますが、提供された CIDR 情報に基づいて IP アドレスのサブネット コンポーネントが置き換えられます。この機能を使用するには、送信元と宛先の仮想ネットワークの両方が同じIPアドレスクラス（<block ref="0b93165f79d16271b738282c36905f88" prefix=" " category="inline-code"></block> CIDR のコンポーネント)。これにより、保護されたすべての VM をホストするのに十分な IP アドレスが宛先サイトで使用可能になります。</block>
-  <block id="ae5627da5802cb3e1a62f67e6b52b520" category="paragraph">この EVS セットアップでは、送信元と宛先の IP 構成が同じであり、追加の再構成は必要ないと想定しています。</block>
   <block id="8faacc5c62c7b4f41379c86745cf1320" category="list-text">フェールオーバーされた VM に使用する IP アドレスの種類を選択します。</block>
   <block id="ee8fa5ed67895f2bd56b15818f6ba9db" category="paragraph"><block ref="ee8fa5ed67895f2bd56b15818f6ba9db" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a31bffcdbc06bba08556f1bcdb9efd4e" category="section-title">VMコンピューティングリソースの再構成</block>
@@ -565,7 +558,6 @@
   <block id="02a14a8411578842546f29f1aa48aa03" category="inline-image-macro">レプリケーションプラン設定の確認</block>
   <block id="a6028cc77f12edef30126bf564d7e12c" category="paragraph">レプリケーションプラン設定の確認<block ref="039af1de0de6af1a755c0ff0c52a0bf3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="757cef28e3476de7d28c90536bc73e0f" category="summary">Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介。オンプレミスサイトで保護する vCenter があり、DR の宛先として使用できるAmazon FSx for NetApp ONTAPを使用するように設定された Amazon EVS サイトがある場合は、オンプレミスサイト内の vCenter クラスターでホストされている VM のセットを保護するためのレプリケーションプラン (RP) を作成できます。</block>
-  <block id="fef9019000b5b750b8ceb6b358e2b27d" category="paragraph">オンプレミスサイトで保護する vCenter があり、DR の宛先として使用できるAmazon FSx for NetApp ONTAPを使用するように設定された Amazon EVS サイトがある場合は、オンプレミスサイト内の vCenter クラスターでホストされている VM のセットを保護するためのレプリケーションプラン (RP) を作成できます。</block>
   <block id="36de448f666bdfe4bd89443569f9f5b9" category="list-text">任意のNetApp Disaster Recovery画面から、*レプリケーション プラン* オプションを選択します。</block>
   <block id="a26e72d9112ba38f2aeaa80403f2d3b7" category="inline-image-macro">レプリケーションプランオプション</block>
   <block id="fc5423008088d428d5d5288b6d926901" category="paragraph"><block ref="fc5423008088d428d5d5288b6d926901" category="inline-image-macro-rx" type="image"></block></block>
@@ -591,16 +583,11 @@
   <block id="cdda12340d624273bd9002f62fb54d72" category="list-text">各ボリュームの*Total Physical Used*の値をメモします。これは、 NetApp Disaster Recovery が保護する必要があるデータの量であり、ライセンスが必要な容量を決定するために使用する値です。</block>
   <block id="eafff2953feecf7337f42b0ed8618a50" category="doc">NetApp Disaster Recovery用のNetApp Consoleエージェントをインストールする</block>
   <block id="06034a243ae2009d8ded7acc9689b052" category="summary">Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介。</block>
-  <block id="562ef4025c5a60ba97f47d8285729a0b" category="paragraph">顧客は、実稼働コンピューティング ワークロード用の VMware vSphere ベースの仮想化インフラストラクチャにますます依存するようになっています。これらの仮想マシン (VM) がビジネスにとってより重要になるにつれ、顧客はこれらの VM を物理コンピューティング リソースと同じ種類の災害から保護する必要があります。現在提供されている災害復旧 (DR) ソリューションは複雑で高価であり、多くのリソースを必要とします。仮想化インフラストラクチャに使用される最大のストレージ プロバイダーであるNetApp は、 ONTAPストレージでホストされるあらゆる種類のデータを保護するのと同じ方法で、自社の顧客の VM を確実に保護することに強い関心を持っています。この目標を達成するために、 NetApp はNetApp Disaster Recoveryサービスを作成しました。</block>
   <block id="a3fe2ebdabea83ec0809c3eaabe8b916" category="paragraph">あらゆる DR ソリューションの主な課題の 1 つは、DR レプリケーションおよびリカバリ インフラストラクチャを提供するためだけに、追加のコンピューティング、ネットワーク、およびストレージ リソースを購入、構成、維持するための増分コストを管理することです。重要なオンプレミスの仮想リソースを保護するための一般的なオプションの 1 つは、クラウドでホストされる仮想リソースを DR レプリケーションおよびリカバリ インフラストラクチャとして使用することです。  Amazon は、 NetApp ONTAPがホストする VM インフラストラクチャと互換性のあるコスト効率の高いリソースを提供できるソリューションの一例です。</block>
-  <block id="9139aacb33b5be42b71413b7de021e19" category="paragraph">Amazon は、仮想プライベートクラウド (VPC) 内で VMware Cloud Foundation を有効にする Amazon Elastic VMware Service (Amazon EVS) を導入しました。  Amazon EVS は、使い慣れた VMware ソフトウェアおよびツールとともに AWS の回復力とパフォーマンスを提供し、Amazon EVS vCenter をオンプレミスの仮想化インフラストラクチャの拡張機能として統合できるようにします。</block>
-  <block id="79a48534a0ca0e870aba3fff8407f860" category="paragraph">Amazon EVS にはストレージリソースが付属していますが、ネイティブストレージを使用すると、ストレージ負荷の高いワークロードを持つ組織ではその有効性が低下する可能性があります。このような場合、Amazon EVS とAmazon FSx for NetApp ONTAPストレージ (Amazon FSxN) を組み合わせると、より柔軟なストレージソリューションを提供できます。さらに、オンプレミスのNetApp ONTAPストレージソリューションを使用して VMware インフラストラクチャをホストしている場合、FSx for ONTAPを備えた Amazon EVS を使用すると、オンプレミスとクラウドでホストされるインフラストラクチャ間でクラス最高のデータ相互運用性と保護機能が得られます。</block>
   <block id="0f1d73d6c66361ba80e19cc22b86a1b5" category="paragraph">Amazon FSx for NetApp ONTAPの詳細については、以下を参照してください。<block ref="ec78c81b4b092cfc0332e21528365cfc" category="inline-link-rx"></block> 。</block>
   <block id="2ca136729f14575e6999f91c84785e1d" category="summary">Amazon EVS とAmazon FSx for NetApp ONTAPを使用したNetApp Disaster Recoveryの紹介。  NetApp Disaster Recovery をAmazon EVS およびAmazon FSx for NetApp ONTAPと組み合わせて使用​​することで、フェイルオーバーの実行、フェイルオーバーのテスト、リソースの更新、移行、スナップショットの即時作成、レプリケーション プランの無効化または有効化、古いスナップショットのクリーンアップ、スナップショットの調整、レプリケーション プランの削除、スケジュールの編集を行うことができます。</block>
   <block id="fd30825a98b1ed8317f4a62bec299dd1" category="doc">NetApp Disaster Recoveryを使用してレプリケーション プラン操作を実行する</block>
-  <block id="4a9c8258cba65aa77d6f8dca4c094113" category="paragraph">NetApp Disaster Recovery をAmazon EVS およびAmazon FSx for NetApp ONTAPと併用して、フェイルオーバー、フェイルオーバーのテスト、リソースの更新、移行、今すぐスナップショットを作成する、レプリケーション プランの無効化/有効化、古いスナップショットのクリーンアップ、スナップショットの調整、レプリケーション プランの削除、スケジュールの編集などの操作を実行します。</block>
   <block id="568e662aeb6cb5f3abafa0083f29082f" category="section-title">フェイルオーバー</block>
-  <block id="06345068bbff395a98cb1b4d92fd19f4" category="paragraph">実行する必要がある主な操作は、決して起こらないことを願う操作、つまり、オンプレミスの運用サイトで壊滅的な障害が発生した場合に DR (宛先) データセンターにフェールオーバーすることです。</block>
   <block id="929f8200b5d5745bf0922d67a7aeb702" category="paragraph">フェイルオーバーは手動で開始されるプロセスです。</block>
   <block id="033c7809cb7db2bd9967ed41da27d653" category="list-title">フェイルオーバー操作にアクセスする手順</block>
   <block id="ebab169037e03975ece39ea0831d6b78" category="list-text">NetApp Disaster Recoveryメニューから、*レプリケーション プラン* を選択します。</block>
@@ -629,8 +616,6 @@
   <block id="40e274aabe3c10540248c941dbd05cb8" category="list-text">メニューから*フェイルオーバーのテスト*を選択します。</block>
   <block id="1a559345b987e0575e0a1c51e219c16d" category="inline-image-macro">テストフェイルオーバーメニューオプション</block>
   <block id="c32e1e17085ed0ca2906e246ecc689ec" category="paragraph"><block ref="c32e1e17085ed0ca2906e246ecc689ec" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e3806a4f1466635f7c69ffd13c31e9dc" category="list-text">本番環境の最新の状態を取得するか（今すぐスナップショットを取得する）、以前に作成したレプリケーション プランのバックアップを使用するか（選択）を決定します。</block>
-  <block id="96f32afb6fcdd8b721d52f9a62dc7958" category="list-text">以前に作成したバックアップを選択した場合は、復元に使用するバックアップを選択します。</block>
   <block id="8d7c2e2984f4134b60d86fd761b977b7" category="list-text">続行するかどうかを確認するには、「Test failwold」という単語を入力します。</block>
   <block id="bf63515cf285de8238ef0309a2d05678" category="list-text">*フェイルオーバーのテスト*を選択します。</block>
   <block id="a8c93ee4438aec7783049b88778065db" category="inline-image-macro">テストフェイルオーバーダイアログボックス</block>
@@ -644,13 +629,11 @@
   <block id="6cba37ba047ae347eaaaaf21a41e3c59" category="paragraph"><block ref="6cba37ba047ae347eaaaaf21a41e3c59" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6e6dd687bfc58aa6ad75e4f0d6a942ba" category="list-text">NetApp Disaster Recovery がコンプライアンス チェックを自動的に実行する頻度を変更するには、レプリケーション プランの [アクション] メニューから [スケジュールの編集] オプションを選択します。</block>
   <block id="5a3b6e2d03ca148a71790459c4bc4819" category="section-title">リソースを更新する</block>
-  <block id="76bfdec4208306ad8bd268e084473f8a" category="paragraph">VM の追加や削除、データストアの追加や削除、データストア間での VM の移動など、仮想インフラストラクチャに変更を加えるたびに、 NetApp Disaster Recoveryサービスで影響を受ける vCenter クラスターの更新を実行する必要があります。デフォルトでは、このサービスは 24 時間に 1 回これを自動的に実行しますが、手動で更新すると、最新の仮想インフラストラクチャ情報が利用可能になり、DR 保護に考慮されるようになります。</block>
   <block id="2a713d2af75a9ff3c8198a63eadd3dd6" category="paragraph">更新が必要となるケースは 2 つあります。</block>
   <block id="8f6b3dc59a290a90778b85f93d204e04" category="list-text">vCenter の更新: vCenter クラスターに VM が追加、削除、または移動されるたびに、vCenter の更新を実行します。</block>
   <block id="bb2c5ba75ada770045e8e19979f779ff" category="list-text">レプリケーション プランの更新: 同じソース vCenter クラスタ内のデータストア間で VM が移動されるたびに、レプリケーション プランの更新を実行します。</block>
   <block id="53172f45c3f78e0f0a061b9894edb469" category="image-alt">リソースメニューオプションの更新</block>
   <block id="10b5b21ed1ee90eca305b558caf7d03b" category="section-title">移行</block>
-  <block id="707279c74e5d0b109cc1736b818641cd" category="paragraph">NetApp Disaster Recovery は主に災害復旧のユースケースに使用されますが、VM セットをソース サイトから宛先サイトに 1 回だけ移動することもできます。これは、クラウド プロジェクトへの協調的な移行のため、または悪天候、政治的紛争、その他の潜在的な一時的な大惨事などの災害回避のために使用できます。</block>
   <block id="36a6fe238d0277d3060c69841bde3fef" category="list-text">レプリケーション プラン内の VM を宛先の Amazon EVS クラスターに移動するには、レプリケーション プランの [アクション] メニューから [*移行*] を選択します。</block>
   <block id="b90eea17869e8ebbc46d383dec36f3ea" category="image-alt">移行メニューオプション</block>
   <block id="11e33978297a963679c0024ac124cb29" category="list-text">移行ダイアログ ボックスに情報を入力します。</block>
@@ -667,7 +650,6 @@
   <block id="fb5d4ab92a440f8da6d5245c90702cd8" category="paragraph">ソース サイトと宛先サイトに保持されている古いスナップショットをクリーンアップする必要がある場合があります。これは、レプリケーション プランのスナップショット保持数が変更された場合に発生する可能性があります。</block>
   <block id="9ead1435f555cbe5194ac03aa3f14153" category="list-text">これらの古いスナップショットを手動で削除するには、レプリケーション プランの [アクション] メニューから [古いスナップショットをクリーンアップ] を選択します。</block>
   <block id="776f371e9915a30a6e7a35215c9f6a31" category="image-alt">古いスナップショットをクリーンアップするメニューオプション</block>
-  <block id="931f869d33d2ed4eb4467347cbb6c599" category="paragraph">このサービスはONTAPボリューム スナップショットを調整するため、 ONTAPストレージ管理者は、サービスの認識なしに、 ONTAP System Manager、 ONTAP CLI、またはONTAP REST API を使用してスナップショットを直接削除できます。サービスは、宛先クラスター上に存在しないソース上のスナップショットを 24 時間ごとに自動的に削除します。ただし、これをオンデマンドで実行できます。この機能により、すべてのサイト間でスナップショットの一貫性を確保できます。</block>
   <block id="2aea80cc7878ee06ac853bd5825acb61" category="list-text">宛先クラスターに存在しないスナップショットをソース クラスターから削除するには、レプリケーション プランの [アクション] メニューから [*スナップショットの調整*] を選択します。</block>
   <block id="910e6231110d3f8f9c342ffd45869c29" category="image-alt">スナップショットの調整メニューオプション</block>
   <block id="1a6a6c930de0933fd7db6de4d1dc477e" category="section-title">レプリケーションプランを削除する</block>
@@ -694,7 +676,6 @@
   <block id="6466fec301c85db6711549707f814c6d" category="list-text">毎週: 曜日を選択</block>
   <block id="9bdde146f3734db431d846a9b67c14be" category="list-text">月次: 月の日付を選択</block>
   <block id="1a45def86f00623d408295cfcdeaf9c7" category="list-text">テストフェイルオーバーを実行する時刻を選択します</block>
-  <block id="d286831c6fab295be218cee5293be970" category="list-text">開始日を選択してください。</block>
   <block id="9662b1330eade6367225de0265b6ab4c" category="list-text">サービスでテスト環境を自動的にクリーンアップするかどうか、またクリーンアップ プロセスを開始する前にテスト環境をどのくらいの時間実行するかを決定します。</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">*保存*を選択します。</block>
   <block id="fd859d2ad3a0f7f4658b9ab4b3f761a3" category="image-alt">スケジュールテストフェイルオーバーの編集</block>
@@ -715,11 +696,8 @@
   <block id="985c57a0f69609e3f52a7bbdc2a8a859" category="list-text">NetApp Disaster Recoveryエージェントは、FSx for ONTAPでホストされるデータ保護ボリュームをアクティブ化します。</block>
   <block id="e49a8f44b1507573b41346a957317fdc" category="list-text">エージェントは、アクティブ化された各 FSx for ONTAPボリュームを Amazon EVS vCenter に登録し、保護された各 VM を Amazon EVS vCenter に登録し、レプリケーション プランに含まれる定義済みルールに従って各 VM を起動します。</block>
   <block id="eb6c0c43103073262c1565e450f8e0e7" category="doc">NetApp Disaster Recoveryですべてが正常に動作していることを確認する</block>
-  <block id="1588932fef32db9cecf00de8dfcc7b0e" category="paragraph">NetApp Disaster Recoveryでレプリケーション プランを追加したら、[レプリケーション プラン] ページに戻り、レプリケーション プランとそのステータスを確認できます。レプリケーション プランが *正常* な状態であることを確認する必要があります。そうでない場合は、続行する前にレプリケーション プランのステータスを確認し、問題を修正する必要があります。</block>
   <block id="2a52c80686f82be8aa2a3e4f3ff7df31" category="inline-image-macro">レプリケーションプランページ</block>
   <block id="d257cabecabcc55ca3f6b7a3cd75ac7b" category="paragraph">図: レプリケーション プラン ページ<block ref="de37ff63ad6c037e77db1184d40c66f9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="dd4ff418fd543998853ac03ab3dfed69" category="paragraph">NetApp Disaster Recovery は、一連のテストを実行して、すべてのコンポーネント (ONTAPクラスタ、vCenter クラスタ、および VM) がアクセス可能であり、VM を保護するためのサービスが適切な状態にあることを確認します。これはコンプライアンス チェックと呼ばれ、定期的に実行されます。</block>
-  <block id="cfd75699026c8ccf116d7cc822922048" category="paragraph">レプリケーション プラン ページでは、次の情報を確認できます。</block>
   <block id="ccb238eb4af46f131c1c95298789caf9" category="list-text">最後のコンプライアンスチェックのステータス</block>
   <block id="ff73ef921a2595317c8ebcfd745b9525" category="list-text">レプリケーションプランのレプリケーション状態</block>
   <block id="dae6a888dd76ab8af615bbd14bb0d970" category="list-text">保護された（ソース）サイトの名前</block>
@@ -1568,8 +1546,6 @@
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">ログイン認証トークンを更新する必要がある場合は、<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block>メニュー。</block>
   <block id="7102eb8b8134f163222e26a148b28643" category="summary">NetApp Disaster Recoveryが正常に機能するためには、vCenterアカウントに最低限のvCenter権限が必要です。</block>
   <block id="e239f3cf124fb9fe9b97d14be5debcf2" category="doc">NetApp Disaster Recovery に必要な vCenter 権限</block>
-  <block id="f9f5a8cb091b3974f4efdfb4cb8ec9fc" category="paragraph">NetApp Disaster Recoveryがサービスを実行するには、vCenterアカウントに最小限のvCenter権限セットが必要です。これらの権限には、データストアの登録と登録解除、仮想マシン（VM）の起動と停止、VMの再構成が含まれます。</block>
-  <block id="bbca177b8f73de5ad1de8c9771bd1ce1" category="paragraph">次の表は、Disaster RecoveryがvCenterクラスタとインターフェースするために必要なすべての権限を示しています。</block>
   <block id="484c3cceb97fa36a8403330f3c74a89b" category="cell">権限名（vSphere クライアント）</block>
   <block id="a08e86514b21b7a12a5bf45fd2a99a3f" category="cell">権限名（API）</block>
   <block id="8a5227cc82d14862956938caffc1acf2" category="cell">データストア</block>
@@ -1736,7 +1712,6 @@
   <block id="e3685e9b39c4dbfec3a5462455b43f7d" category="cell">API呼び出し、スクリプト実行</block>
   <block id="ca5d68ad717b18cefbfd5ba03db7fc9c" category="summary">NetApp Console エージェントは、NetApp Console とクラウドまたはオンプレミスのストレージリソース間の接続と管理を調整します。</block>
   <block id="54c585a071d1c4db16522ba27cc6a191" category="paragraph">NetApp Console エージェントを使用すると、NetApp Console の導入をインフラストラクチャに接続して、AWS、Azure、Google Cloud、またはオンプレミス環境全体でソリューションを安全にオーケストレーションできます。Console エージェントは、NetApp Console がデータインフラストラクチャを管理するために実行する必要があるアクションを実行します。Console エージェントは、NetApp Disaster Recovery の SaaS レイヤーを常にポーリングして、実行する必要があるアクションを確認します。</block>
-  <block id="0ed93f213541543ce11a5a41955fdb61" category="paragraph">NetApp Disaster Recoveryでは、実行されるアクションは、各サービスのネイティブAPIを使用してVMware vCenterクラスタとONTAPストレージインスタンスをオーケストレーションし、オンプレミスの場所で実行されている本番VMを保護します。Console agentはネットワーク上の任意の場所にインストールできますが、NetApp Disaster Recoveryの災害復旧サイトにConsole agentをインストールすることをお勧めします。DRサイトにインストールすることで、プライマリサイトに障害が発生した場合でも、NetApp Console UIはConsole agentへの接続を維持し、そのDRサイト内でリカバリプロセスをオーケストレーションできます。</block>
   <block id="7cd8fb6e31cc946c078d2740c76a9899" category="section-title">インストール</block>
   <block id="09e422c729719f602773531e14c7fdcb" category="inline-link">NetApp Console の導入モードについて</block>
   <block id="9787e79ead7b319f8e8361fc7821dd0c" category="list-text">Disaster Recoveryを使用するには、Consoleエージェントを標準モードでインストールします。Consoleエージェントのインストールの種類の詳細については、<block ref="176f6de3ac91258383588e87ceb2df5f" category="inline-link-rx"></block>を参照してください。</block>
@@ -1803,7 +1778,6 @@
   <block id="7d40af2723bf06859de76af9f198b76a" category="summary">NetApp Disaster Recoveryを使用する際は、適切に機能するようにONTAPで正しい権限が設定されていることを確認してください。</block>
   <block id="bee0de6585ac1ea0ad35e287ab014c6f" category="doc">NetApp Disaster Recovery の ONTAP 権限を設定</block>
   <block id="8ad67216cdaef40fdcfdf442f9880d1a" category="section-title">最小ONTAP権限</block>
-  <block id="f53cfaf12220d1479bd7bc98f8fc61ae" category="paragraph">Disaster Recoveryには次のONTAP権限が必要です。</block>
   <block id="db974238714ca8de634a7ce1d083a14f" category="cell">API</block>
   <block id="72eb6abf9272757a5494f0d1f1c91658" category="cell">アクセス レベル</block>
   <block id="944da21c517df0c48dfbef7af28f3093" category="cell">/api</block>
@@ -1839,7 +1813,6 @@
   <block id="b4d1abd13d22d7089694589c8b97f79b" category="cell">/api/svm/peers</block>
   <block id="9c52661d131f07face38ff3baa271d09" category="cell">/api/svm/svms</block>
   <block id="7376f33a273ec46f0b7a7d1460916640" category="section-title">ONTAP で権限を追加する</block>
-  <block id="b295025ee0faa762a112e8b1ff4f6106" category="paragraph">ONTAP で権限を追加するには、必要な権限を持つロールを作成し、そのロールをユーザに割り当てる必要があります。このタスクは、ONTAP で System Manager または ONTAP CLI を使用して実行できます。</block>
   <block id="26ed02718973e705cd69ee6e109400e0" category="open-title">System Manager</block>
   <block id="27623f36a095b5f5626aa6693f9f0545" category="paragraph">このプロセスは、ソース クラスタとデスティネーション クラスタそれぞれに対して個別に実行する必要があります。</block>
   <block id="6598a6676741a382a437fbcee1a07f47" category="list-title">ロールを作成する</block>
@@ -1995,15 +1968,12 @@
   <block id="ecc5c96e34177e9acd36b6d5a19b4316" category="admonition">名前空間でCLIコマンド<block ref="958b58c53e75bae5abeaed4b1e734f52" prefix=" " category="inline-code"></block>を実行して、ストレージクラスを確認します。</block>
   <block id="cecdc246749a954a3b820b31bc008db6" category="list-text">Snapshot スケジュールを設定します。</block>
   <block id="67b20a828985dfc5812f5168da4250b9" category="paragraph">* Snapshots and retention start time * （カレンダーの日付と時刻）、 * Snapshot and retention frequency * （スナップショットが開始される頻度）、および * Snapshot retention count * （保存されるスナップショットの数）を選択します。</block>
-  <block id="7b7b4d8ed4d1bbf8a314fd5ccaa6477f" category="paragraph">スナップショットの頻度を設定する際、最小許容間隔は 5 分です。</block>
   <block id="f60addf61c3485b1599b66a8eada52ab" category="list-text">*AppVaultの追加*を選択して、保護データが保存されるAppVaultを作成します。</block>
   <block id="f57e34b9733857c90f118e2860fdc560" category="list-text">*名前*を入力し、AppVaultを接続する*コンソールエージェント*を選択します。</block>
   <block id="aefecf255872cb18999d61ebae9d0cdc" category="list-text">*AppVault* をホストするクラウド *プロバイダ* を選択します。</block>
-  <block id="5ba549307f769710df5b050816497d71" category="list-text">プロバイダの選択に基づいて、 Disaster Recovery は既存の設定済みクラウドサブスクリプションにデータを入力します。クラウド プロバイダの *Subscription* 、 *Resource group* 、 *Storage account* を選択します。</block>
   <block id="7174ea6988f438d85266f06a4d178a79" category="list-text">**追加**を選択します。</block>
   <block id="f7f4a1655d3cbed36a9f4a3ac84a092d" category="list-text">フェイルオーバーマッピングを確認してから、**追加**を選択してレプリケーションプランを作成します。</block>
   <block id="c96445b8b9cefea59b8c554a58c1449a" category="paragraph">「追加」を選択すると、**Job monitoring**でさまざまなジョブを監視できます。</block>
-  <block id="f8facadd6b1d552f3f648dc3bfbdb8fc" category="admonition">Kubernetesの場合、これはレプリケーションを作成するための最終ステップです。vCentersの場合は、<block ref="fc900fdf57ed4db8c225ca75259b8e72" category="inline-xref-macro-rx"></block>に進みます。</block>
   <block id="b24fddbb2c061e7def99de8fb873e946" category="admonition">このセクションは、vCentersにのみ必要です。Kubernetesの場合は、これを完了する必要はありません。</block>
   <block id="38024e76a2b64efa68a6d51d33e31f6e" category="paragraph">*ネットワーク設定* Disaster Recoveryは、VMネットワーク向けの幅広い構成オプションをサポートしています。ターゲットサイトの仮想ネットワークが、ソースサイトの運用仮想ネットワークとは異なるTCP/IP設定を使用している場合、これらの設定を変更する必要が生じる可能性があります。</block>
   <block id="b60fe3207297f056bd4af1c6f6939a13" category="paragraph">VM ゲスト OS でスクリプトを実行するには、以下の条件を満たす必要があります：</block>
@@ -2233,20 +2203,15 @@
   <block id="6fec06276146c70a7a05bb5e6d3afe94" category="section-title">レプリケーション計画ウィザードを開始する</block>
   <block id="73d967450f10f13278437132d4cb0661" category="section-title">vCenters を選択</block>
   <block id="9d53e3e062f307bbb17738485cd6463c" category="section-title">保護対象のVMリソースを選択する</block>
-  <block id="667b950c66ec5238ca6fff8f3c48c6c6" category="paragraph">保護対象となる仮想マシンを選択する方法は複数あります。次の手順では、vCenter データストア全体を保護する方法を示しますが、ニーズに最適な方法を選択してください。</block>
   <block id="126d953ce220133258b7a58131031eb4" category="list-text">*個々の仮想マシンを選択*：*仮想マシン*ボタンを選択すると、保護する個々の仮想マシンを選択できます。各仮想マシンを選択すると、サービスはそれを画面右側にあるデフォルトのリソースグループに追加します。</block>
-  <block id="0c33e768499cbef6bd2e25498c6d8ae0" category="list-text">*以前に作成したリソース グループを選択します*：ディザスター リカバリ メニューの「リソース グループ」オプションを使用して、カスタム リソース グループを事前に作成できます。これは必須ではありません。レプリケーション計画プロセスの一環として、他の2つの方法を使用してリソース グループを作成することもできます。詳細については、<block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="48b9ef7f729168b7f56d7a1c10fd43f1" category="list-text">*すべての vCenter データストアを選択*：このレプリケーション プランで保護する VM が多数ある場合、個々の VM を選択する方法は効率的ではない可能性があります。NetApp Disaster Recovery はボリュームベースの SnapMirror レプリケーションを使用して VM を保護するため、データストア上に存在するすべての VM がボリュームの一部としてレプリケートされます。ほとんどの場合、データストアに存在するすべての VM を NetApp Disaster Recovery で保護および再起動できるように設定することをお勧めします。このオプションを使用すると、選択したデータストアでホストされているすべての VM を保護対象 VM のリストに追加するようにサービスに指示できます。</block>
   <block id="6a9ad2fb807955122e3d7197c383f842" category="list-text">必要に応じて、リソースグループ名の横にある鉛筆アイコンを選択して、リソースグループの名前を適切な名前に変更します。</block>
   <block id="b12e2cc8ccedb2d7fa48d398d66b40d0" category="section-title">リソースのマッピング</block>
   <block id="b1e5a14d73152372a2f84f7374118db9" category="paragraph">保護対象の仮想マシンを選択した後、ネットワークマッピングを実行する必要があります。ネットワークマッピングには4つの領域があります。</block>
   <block id="87bd8f99883f9c35edff3a256ea36921" category="inline-image-macro">20.20</block>
   <block id="5e196ec310096e08b0b54d207418ff50" category="list-text">注意アイコン（<block ref="74ca4987fc979f01749ba054e9b5eb9d" category="inline-image-macro-rx" type="image"></block>）が付いているセクションでは、マッピング情報を指定する必要があります。</block>
-  <block id="9303be731aa0c82e0b1787f8bb52799f" category="list-text">チェックアイコン（<block ref="b6227c7fd70a2d5c9ad9bd2ab002dc96" category="inline-image-macro-rx" type="image"></block>）が付いているセクションは、マッピング済みまたはデフォルトのマッピングが設定されています。現在の設定がお客様の要件を満たしていることを確認してください。</block>
   <block id="400943a5b6d32b75f6db148c48672392" category="list-title">アクセスリソースマッピング</block>
   <block id="fbb82fdd08993c05060b83654da39246" category="section-title">コンピューティングリソースのマッピング</block>
   <block id="18daba455efe3cbca30237efaa3fe041" category="list-text">必要に応じて、対象クラスタ内の対象ホストを選択します。</block>
-  <block id="e840940eda6adffdacdc879001961052" category="paragraph">この手順は不要です。これは、Disaster Recovery が vCenter のクラスターに追加された最初のホストを選択するためです。その時点で、VM は引き続きその ESXi ホスト上で実行されるか、または VMware DRS が設定された DRS ルールに基づいて必要に応じて VM を別の ESXi ホストに移動します。</block>
   <block id="514bb139449c90b48b32bc9d959132c7" category="list-text">オプションで、VM登録を配置するトップレベルのvCenterフォルダの名前を指定します。この手順は組織のニーズを満たすことができますが、必須ではありません。</block>
   <block id="e0674048365d95ca72db3eee850572e1" category="paragraph">デフォルトでは、Disaster Recovery はソースのオンプレミスサイトで使用されているものと同じ設定を各 VM に使用します。これは、VM が同じ IP アドレス、仮想 CPU、および仮想 DRAM 構成を使用することを前提としています。</block>
   <block id="8ea2553b27f1d6b34e28df398c876c11" category="list-title">ネットワーク設定の再構成を変更する</block>
@@ -2262,10 +2227,8 @@
   <block id="61e580496b602cb5f536fb10be855093" category="list-text">必要に応じて、各仮想マシンの再起動間隔に遅延時間を指定できます。この時間は、この仮想マシンの再起動が完了した後、次に高い起動順序番号を持つ仮想マシンの前に挿入されます。この数値は分単位です。</block>
   <block id="5da60ca1e4dab36a6c71df1d560a2227" category="paragraph">ディザスターリカバリでは、各仮想マシンに対してゲストOSの操作の一部を実行できます。</block>
   <block id="e0b38f33c7a8ada147d88c0c0bf934c6" category="list-text">Disaster Recovery は、Oracle データベースおよび Microsoft SQL Server データベースを実行している VM のアプリケーション整合性バックアップを取得できます。</block>
-  <block id="08e6090cd415877dfaa3efe4f5e5ae95" category="list-text">NetApp Disaster Recovery は、各仮想マシンに対して、ゲスト OS に適したカスタム定義スクリプトを実行できます。このようなスクリプトを実行するには、ゲスト OS が承認するユーザー認証情報と、スクリプトに記載されている操作を実行するための十分な権限が必要です。</block>
   <block id="1dbb0069d4d63f8e24c63448be1bf8f5" category="list-text">必要に応じて、VMがOracleまたはSQL Serverデータベースをホストしている場合は、*アプリケーション整合性レプリカを作成する*チェックボックスをオンにします。</block>
   <block id="1714db5d674206e35649fdb12eb303ed" category="list-text">オプションとして、起動プロセスの一環としてゲストOS内でカスタムアクションを実行するには、任意のVM用のスクリプトをアップロードします。すべてのVMで単一のスクリプトを実行するには、ハイライト表示されているチェックボックスを選択し、各項目を入力してください。</block>
-  <block id="dd0685633c27a3c85dd734cdd68c1224" category="paragraph">レプリケーション計画を作成する最後のステップは、ONTAPがデータストアをどのように保護するかを特定することです。これらの設定は、レプリケーション計画のリカバリポイント目標（RPO）、保持すべきバックアップの数、および各vCenterデータストアをホストするONTAPボリュームのレプリケート先を定義します。</block>
   <block id="3a0f24e5e7210137a18af44e6c9941f0" category="paragraph">デフォルトでは、Disaster Recovery は独自のスナップショットレプリケーションスケジュールを管理しますが、オプションで、データストア保護のために既存のSnapMirrorレプリケーションポリシースケジュールを使用するよう指定することもできます。</block>
   <block id="44aaa0be508b78275977f2bc707c953e" category="paragraph">さらに、使用するデータLIF（論理インターフェース）とエクスポートポリシーをオプションでカスタマイズすることもできます。これらの設定を指定しない場合、Disaster Recoveryは適切なプロトコル（NFS、iSCSI、またはFC）に関連付けられたすべてのデータLIFを使用し、NFSボリュームにはデフォルトのエクスポートポリシーを使用します。</block>
   <block id="b6105c030b2f70ecdf4ebb23a57cb9cd" category="list-title">データストア（ボリューム）マッピングの設定</block>
@@ -2359,8 +2322,6 @@
   <block id="8e4dba18199645dbcad533f0a3acf0c3" category="inline-link-macro">スナップショットCRDとスナップショットコントローラ</block>
   <block id="bc5f6fc21f6a94d180764bb6c6a4cd7d" category="paragraph"><block ref="eec6190e0599877ad03e04b40eef0c58" category="inline-link-macro-rx"></block>をインストールします。これらのインストールは、Trident Protect でのボリューム スナップショットに必要です。</block>
   <block id="918fa72b18f488b31c1a63283c4f2148" category="paragraph"><block ref="4569567eb3ca20d8c53676753a511f69" prefix="" category="inline-code"></block></block>
-  <block id="a53eb6648d9aed67745bf8a9653ab7af" category="doc">NetApp Disaster Recoveryでディザスタリカバリ計画の健全性を確認する</block>
-  <block id="b8982e9a7225d5e51f0ca1ce12eefcf5" category="paragraph">NetApp Disaster Recovery ダッシュボードを使用して、ディザスタリカバリサイトとレプリケーション計画の健全性を確認できます。サイトやプランが正常か、切断されているか、デグレードされているかを確認したり、最近の警告や失敗したジョブを確認したり、保護されているワークロードと保護されていないワークロードを特定したり、容量を一目で確認したりできます。</block>
   <block id="d601ac6a8739700584fe1f4c446d9754" category="list-text">*ダウン*：サイトにアクセスできないか、接続に問題が発生しています。</block>
   <block id="6026e48cd116a5cbacecfc8da06638ea" category="paragraph">リソースとサイトを追加したら、データを保護するための_レプリケーションプラン_を作成してください。このプランでは、アプリケーションのソースサイトとデスティネーションサイト、リソースグループ、リカバリマッピング、および電源投入時の動作を定義します。また、コンプライアンスやテストのスケジュールを設定したり、本番データに影響を与えることなくテストフェイルオーバーを実行したりすることもできます。</block>
   <block id="1c4de46c0cd1d0a73f4e3432ea708002" category="paragraph">複数のデータストア上の複数の仮想マシンを保護できます。NetApp Disaster Recovery は、保護された仮想マシンのデータストアをホストするすべての ONTAP ボリュームに対して ONTAP 整合性グループを作成します。</block>
@@ -2544,7 +2505,6 @@
   <block id="6945173f0edcde5ee35ab045a8d2e7c6" category="paragraph">VMware、Kubernetes、またはすべてのワークロードを対象としたレポートを生成でき、レプリケーション計画の詳細、コンプライアンス状況、ジョブの概要などを網羅できます。レポートはPDF、HTML、またはJSONファイルとしてダウンロードできます。対象期間は1日から7日間です。詳細については、<block ref="5bffefa9db1727e92010e150d30d9a1b" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="344e4080c182fb26bcaae9b4aafcff09" category="section-title">Kubernetes固有の質問</block>
   <block id="6c529b0fa4de29d8b96719f5eb415629" category="paragraph-title">AppVaultとは何ですか？</block>
-  <block id="3d6bb738851a3bfae62f8c75b1ffb531" category="paragraph">AppVault は、Trident Protect が Kubernetes の保護データを保存するクラウドストレージターゲットです。Kubernetes レプリケーションプランを設定する際に AppVault を作成します。</block>
   <block id="2f5122e05c45ffd052c98ecc0e6d46cf" category="list-text">Amazon Web Services (AWS) Marketplace、Azure Marketplace、またはGoogle Cloud Marketplaceで従量課金制（PAYGO）サブスクリプションを購入します。このライセンスにより、長期契約の義務なしに、固定容量の保護ライセンスを購入できます。</block>
   <block id="3339edb028f501d54393ca849ca0f55b" category="admonition">NetApp Disaster Recoveryの料金は、少なくとも1つの仮想マシンまたはKubernetesリソースにレプリケーションプランが設定されている場合、ソースサイトのデータストアの使用容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、容量許容量には含まれません。BYOLの場合、データが許容容量を超えると、追加の容量ライセンスを取得するか、NetApp Consoleでライセンスをアップグレードするまで、サービスの操作が制限されます。</block>
   <block id="c9dcf9057588b19f1d398446f68f093d" category="admonition">特定のスナップショットベースラインを選択する場合、SnapMirror転送スナップショットは、フェイルオーバー中に削除される可能性があるため、デフォルトでは非表示になっています。この削除により、「共通のスナップショットが見つかりません」というエラーが発生し、フェイルオーバー後にワークロードを再保護できなくなります。引き続きSnapMirror転送スナップショットを使用できますが、リスクを承認するための追加の確認プロンプトを完了する必要があります。</block>
@@ -2567,4 +2527,159 @@
   <block id="2c9e00774620c5f83c48800d39a8e3a1" category="list-text">「今すぐスナップショットを作成」を選択すると、新しいスナップショットが作成され、デスティネーション クラスタにコピーされます。</block>
   <block id="15816348d7ed6eb8ac7c5354e5a1aa49" category="list-text">レプリケーション計画のフェイルオーバー後に、NetApp Disaster Recovery が逆方向の SnapMirror 保護関係を自動的に作成しないようにするには、「保護をスキップ」を選択してください。これは、復元したサイトを NetApp Disaster Recovery でオンラインに戻す前に、追加の操作を実行する場合に便利です。</block>
   <block id="d4fd90d5c03a49a34d58a0210e1f6a1b" category="paragraph">NetApp Disaster Recovery ジョブの履歴、ステータス、詳細を監視します。ジョブのステータスと進捗状況を追跡することで、復旧準備に影響が出る前に、失敗または停滞した操作を検知できます。</block>
+  <block id="bc084b415a20851b8e676913db93fcd2" category="doc">NetApp Disaster RecoveryにおけるKubernetesサポートの一般提供（GA）が開始されました</block>
+  <block id="9324db17e670e1369640c556f71a1423" category="paragraph">NetApp Disaster RecoveryにおけるKubernetesベースのワークロードのサポートが一般公開（GA）されました。Kubernetesベースのワークロードのサポートにより、OpenShift Virtualization環境を含む、Kubernetesクラスタ上で実行されているアプリケーションを保護できます。Disaster Recoveryは、Trident Protectで現在サポートされているすべてのバージョンのKubernetesをサポートしており、コンテナ化されたアプリケーションのシームレスな統合と堅牢な災害復旧機能を実現します。</block>
+  <block id="09aa82bf41a96669e2e7ab72fce53b68" category="paragraph">Kubernetesベースのワークロードの保護を開始するには、<block ref="d1415fee440f8c1c4acbcf4ee7535778" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="8bbea59fb56a0e0b18eb0dbc87a3e911" category="section-title">リソース変換</block>
+  <block id="23ec139ada546bb40b0037293927926e" category="paragraph">Disaster Recovery がリソース変換をサポートするようになり、フェイルオーバー中にワークロードのあらゆる側面を変更できるようになりました。この機能により、ディザスタリカバリイベント時にワークロードをさまざまな環境や構成に柔軟に適応させることができます。</block>
+  <block id="1cb71dc0319186e8a5ef959445ae26e6" category="inline-link-macro">リソース変換を管理する</block>
+  <block id="5dc97329134aa1a46a95297e199ee57a" category="paragraph">リソース変換は、レプリケーションプランを作成する際に適用されます。新しい設定ページでは、リソース変換の作成、編集、削除を行うことができます。詳細については、<block ref="1e2c857c3180265548c388e582cc81c4" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="0005eb91a417f10c94b24edc1e676ea5" category="section-title">スクリプトの実行</block>
+  <block id="ad16d4c0c6b04f812d8564ab531bda48" category="paragraph">アプリケーションの停止と再開を調整するために、カスタムスクリプトをフェイルオーバーワークフローに組み込むことができるようになりました。この機能は、スナップショットがレプリケートされて適切にリストアされる前に、アプリケーションが適切に準備されていることを確認し、フェイルオーバー後に処理をシームレスに再開できるようにします。</block>
+  <block id="d95a404e2a85810893af45ecfb3ef7b0" category="paragraph">カスタムスクリプトを挿入する方法については、<block ref="5e71e4e6b8c5e7bff47e3e8fc9f8f4a2" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="0ac0cf25fb19b7466972d2b8ef97537e" category="section-title">新しいワークロードページ</block>
+  <block id="babaac79e8e47c52ae80323ebd24d838" category="paragraph">Disaster Recovery では、UI に「ワークロード」ページが追加され、検出されたすべてのワークロードとその保護状況を包括的に表示できるようになりました。「ワークロード」ページでは、ワークロードをより効果的に監視および管理できます。</block>
+  <block id="7c969269e165a2fc615e6e844ac581c4" category="inline-link-macro">Disaster Recovery における健全性と保護ステータスを確認する</block>
+  <block id="62cca7f4abc63d606056cd2842c6540f" category="paragraph">詳細については、<block ref="97bec68dd22e6068edf69b3149251ef2" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="cb212c0e367b7e5f6090b19e7f1473eb" category="section-title">設定ページ</block>
+  <block id="7d4c91b69e54df2f702e8579ef0febe4" category="inline-link-macro">AppVaultsを管理する</block>
+  <block id="492b98a527a1b4e6495db2e0303f0c2a" category="paragraph">Disaster Recovery に、リソース変換テンプレートと AppVaults を一元管理するための設定ページが追加されました。このページでは、ディザスタリカバリ計画のこれらの重要なコンポーネントを設定および管理するための単一のインターフェイスを提供します。設定ページのオプションの詳細については、<block ref="1e2c857c3180265548c388e582cc81c4" category="inline-link-macro-rx"></block> および <block ref="798f6a1b892593cf81f8f5b5eaacd21a" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="e4c84482ee4555ae482d96b91322224c" category="section-title">全般的な改善</block>
+  <block id="8904eb8da011894f529ca214813ca630" category="paragraph">NetApp Disaster Recoveryでは、よりスムーズでエラーのないユーザーエクスペリエンスを実現するために、レプリケーションプラン作成ページに強化された検証機能を導入しました。</block>
+  <block id="d0a5cb5d70546b098b3c7c48225d6234" category="paragraph">NetApp Disaster Recovery では、断続的なリクエストタイムアウトへの対応能力が向上し、UI の全体的なパフォーマンスと信頼性が強化されました。</block>
+  <block id="e8c488b8e85a77fbb17126d0f6c9e50a" category="paragraph">AppVaultは、Trident ProtectがKubernetesの保護データを保存するクラウドストレージのターゲットです。Kubernetesレプリケーションプランの設定時にAppVaultを作成します。設定ページでAppVaultsを管理することもできます。</block>
+  <block id="b9cf3453b35a3e8ee5fab283850b27ae" category="paragraph">サイトを作成したら、各サイトの vCenter クラスタを NetApp Disaster Recovery に追加します。サイトのタイプによって、そのサイトの vCenters に対して NetApp Disaster Recovery が必要とするアクセス権限が決まります。Amazon EVS vCenters とオンプレミスの vCenters は、同じ接続情報および認証情報を使用します。</block>
+  <block id="2f452f8938f62826ec56b3056a810704" category="list-text">必要に応じて、ポートをvCenterサーバが使用する TCP ポートに変更してください。</block>
+  <block id="43b6a263490ee7c0adb8f876febdcfe0" category="list-text">組織が外部認証局 （CA） または vCenter エンドポイント証明書ストアを使用している場合は、「自己署名証明書を使用する」のチェックを外します。それ以外の場合は、チェックボックスにチェックを入れたままにしてください。</block>
+  <block id="28bf7ee75691ea41515be2651c52c5e0" category="paragraph">保護するオンプレミスの vCenters を特定し、ディザスタリカバリのデスティネーションとして Amazon FSx for NetApp ONTAP を使用する Amazon EVS サイトを設定したら、オンプレミスの vCenter クラスタ上の VM を保護するためのレプリケーション プランを作成します。</block>
+  <block id="29a56c2c629acc000f2164ff994661b5" category="paragraph">保護対象となる仮想マシンを選択する方法は複数あります。以下の手順は、vCenter データストア全体を保護する方法を示していますが、ニーズに最適な方法を選択してください。</block>
+  <block id="ca6598a0ea316873c844e035cdc44ae1" category="list-text">*以前に作成したリソース グループを選択します*： ディザスター リカバリ メニューの「リソース グループ」オプションを使用して、カスタム リソース グループを事前に作成できます。これはオプションです。レプリケーション プラン作成時に、他の 2 つの方法を使用してリソース グループを作成することもできます。詳細については、<block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="5b27aebb5387bd7d609757afa62eb232" category="list-text">*すべてのvCenterデータストアを選択*：このオプションを選択すると、データストア上に存在するすべての仮想マシンがボリュームの一部としてレプリケートされます。レプリケーションプランで保護する仮想マシンが複数ある場合は、個々の仮想マシンを選択する手間を省くために、このオプションを使用してください。ほとんどの場合、データストアに存在する仮想マシンは、Disaster Recoveryによって保護され、再起動されるように設定する必要があります。このオプションを使用すると、選択したデータストアでホストされているすべての仮想マシンを保護対象仮想マシンのリストに追加するようにサービスに指示できます。</block>
+  <block id="26e9d8bde290501b42e417f1e11fe9b1" category="list-text">チェックアイコン（<block ref="b6227c7fd70a2d5c9ad9bd2ab002dc96" category="inline-image-macro-rx" type="image"></block>）が付いているセクションは、デフォルトのマッピングを使用するか、既にマッピング済みです。マッピングを確認し、現在の構成が要件を満たしていることを確認してください。</block>
+  <block id="d3da15a7bd61a03f762442414ec5e267" category="paragraph">サイトは複数の仮想データセンターと複数のvCenterクラスターをホストできるため、フェイルオーバーが発生した場合にVMを復旧させるvCenterクラスターを特定する必要があります。</block>
+  <block id="84958f73308c70c26a8c7baf5c3504db" category="paragraph">この手順は不要です。Disaster Recoveryは、vCenter のクラスターに追加された最初のホストを選択します。VMは引き続きそのESXiホスト上で実行されるか、VMware DRSが設定されたDRSルールに基づいて別のESXiホストに移動します。</block>
+  <block id="af9db459ff217bbf9c08e7ce23a5dcae" category="paragraph">各 VM は、vCenter ネットワーク インフラ内の仮想ネットワークに接続された 1 つ以上の仮想 NIC を持つことができます。災害復旧サイトで再起動した際に、各 VM が目的のネットワークに適切に接続されるようにするには、これらの VM を接続する災害復旧サイトの仮想ネットワークを特定します。オンプレミス サイトの各仮想ネットワークを災害復旧サイト上の関連ネットワークにマッピングすることで、これを実行します。</block>
+  <block id="d0dd9123b9515d955654ecbda3a3d52a" category="paragraph">サブネットを設定すると、サブネットマッピングでは、送信元と宛先のVM構成の両方でIPアドレスのホスト部分が同じものが使用されますが、IPアドレスのサブネット部分は指定されたCIDR情報に基づいて置き換えられます。この機能では、送信元と宛先の仮想ネットワークの両方が同じIPアドレスクラス（<block ref="0b93165f79d16271b738282c36905f88" prefix=" " category="inline-code"></block> CIDRの構成要素）である必要があります。これにより、保護対象の仮想マシンすべてをホストするために、宛先サイトに十分なIPアドレスが確保されることが保証されます。</block>
+  <block id="c322b53db90ff32661a1b4ab954899ec" category="paragraph">このAmazon EVSの設定では、送信元と宛先のIP構成は同じであり、追加の再設定は不要であると想定しています。</block>
+  <block id="4c568706efc1d4b61a71bbb71fe033b0" category="list-text">Disaster Recovery では、各仮想マシンのゲスト OS に対してカスタムスクリプトを実行できます。このようなスクリプトを実行するには、ゲスト OS が承認するユーザー認証情報と、スクリプトに記載されている操作を実行するための十分な権限が必要です。</block>
+  <block id="52ae27c468647802e0190252ad9b22a8" category="paragraph">レプリケーション計画を作成する最後のステップは、ONTAPがデータストアをどのように保護するかを特定することです。これらの設定は、レプリケーション計画のリカバリポイント目標（RPO）、保持すべきバックアップの数、および各vCenterデータストアのホスティングONTAPボリュームのレプリケート先を定義します。</block>
+  <block id="3e49edee823ada0665614ad54d421e6b" category="paragraph">Disaster Recovery では、これらのアクションは各サービスのネイティブ API を使用して VMware vCenter クラスターと ONTAP ストレージ インスタンスをオーケストレーションし、オンプレミスの場所で稼働している本番環境の VM を保護します。コンソール エージェントはネットワーク上のどの場所にもインストールできますが、Disaster Recovery では、災害復旧サイトにコンソール エージェントをインストールすることをお勧めします。災害復旧サイトにインストールすることで、プライマリ サイトで障害が発生した場合でも、NetApp コンソール UI はコンソール エージェントとの接続を維持し、その災害復旧サイト内で復旧プロセスをオーケストレーションできます。</block>
+  <block id="406d28ff72e0ae9421b13706f77b9133" category="paragraph">NetApp Disaster Recovery は、オンプレミス環境から Amazon EVS および Amazon FSx for NetApp ONTAP にデータをレプリケートすることで、VMware ワークロードをディザスタリカバリから保護します。</block>
+  <block id="7bb3fd1d7d6421aeada4b228bf830892" category="paragraph">Amazonは、仮想プライベートクラウド（VPC）内でVMware Cloud Foundationを利用できるようにするAmazon Elastic VMware Service（Amazon EVS）を発表しました。Amazon EVSは、使い慣れたVMwareソフトウェアとツールに加え、AWSの回復力とパフォーマンスを提供し、Amazon EVS のvCentersがオンプレミスの仮想化インフラと統合できるようにします。</block>
+  <block id="d0d1e1f9bce58ff6443e8655c8b4c896" category="paragraph">Amazon EVSにはストレージリソースが付属していますが、ネイティブストレージを使用すると、ストレージ負荷の高いワークロードを抱える組織ではその効果が低下する可能性があります。このような場合、Amazon EVS と Amazon FSx for NetApp ONTAP ストレージ（Amazon FSxN）を組み合わせることで、より柔軟なストレージソリューションを提供できます。さらに、オンプレミスで NetApp ONTAP ストレージソリューションを使用して VMware インフラをホストしている場合、Amazon EVS と FSx for ONTAP を併用することで、オンプレミス環境とクラウド環境にわたるデータ相互運用性と保護機能を利用できます。</block>
+  <block id="9d2c896b461225d28993aa1dd9047fcf" category="paragraph">レプリケーションプランをNetApp Disaster Recoveryで設定した後、フェイルオーバーの実行、フェイルオーバーのテスト、リソースの更新、移行、スナップショットおよびレプリケーションプランの管理を行うことができます。メンテナンス以外で最も重要な対応は、障害発生時のフェイルオーバーです。</block>
+  <block id="cb284df818207f06d9f621ed22750436" category="list-text">使用するスナップショットを選択してください。本番環境の最新のコピーを作成するには、*今すぐスナップショットを撮る*を選択してください。以前にキャプチャしたスナップショットを使用するには、*選択*を選択し、既存のスナップショットを選択します。</block>
+  <block id="b1e71cd413e56509440638415c2d43da" category="paragraph">仮想マシンの追加や削除、データストアの追加や削除、データストア間での仮想マシンの移動など、仮想インフラに変更を加えた場合は、Disaster Recovery で影響を受ける vCenter クラスタを更新する必要があります。Disaster Recovery はデフォルトで24時間ごとに自動的に更新されますが、手動で更新することで、最新の仮想インフラ情報がディザスタリカバリ保護に反映されることを確認できます。</block>
+  <block id="95b50cd52d840a47bd1a8f061957797e" category="paragraph">NetApp Disaster Recovery を使用して、災害発生時のレプリケーションとフェイルオーバーを管理するだけでなく、ソースサイトからデスティネーション サイトへの仮想マシンの一回限りの移行もサポートします。クラウドへの移行の一環として、あるいは異常気象や政情不安といった壊滅的な事態に対応する際の災害回避手順として、一回限りの移行を実行する場合があります。</block>
+  <block id="d2e29a13905cbef527e4e2570884b690" category="paragraph">Disaster Recovery は ONTAP ボリュームスナップショットを調整するため、ONTAP ストレージ管理者は、ONTAP System Manager、ONTAP CLI、または ONTAP REST API を使用して、サービスに通知することなくスナップショットを直接削除できます。Disaster Recovery は、ソース上のスナップショットのうち、デスティネーション クラスタに存在しないスナップショットを24時間ごとに自動的に削除します。必要に応じて、スナップショットを手動で削除できます。この機能により、すべてのサイトでスナップショットの一貫性を確保できます。</block>
+  <block id="bcadaaf780e6fd58e057b2958789c893" category="list-text">開始日を選択してください。</block>
+  <block id="4608904b2a5a97d3dc9a6c4ed3f8d2ad" category="paragraph">NetApp Disaster Recovery でレプリケーションプランを追加したら、続行する前にプランが *Healthy* 状態であることを確認してください。</block>
+  <block id="762904458bbfb6ea9676cc302dae8654" category="paragraph">NetApp Disaster Recovery は、ONTAP クラスタ、vCenter クラスタ、および仮想マシンを含むすべてのコンポーネントがアクセス可能で保護の準備が整っているかどうかを確認するための一連のテストを実行します。これはコンプライアンスチェックと呼ばれ、定期的に実施されます。</block>
+  <block id="77c2410fbbd5da673d4e983bc249d839" category="paragraph">レプリケーション計画ページには、以下の情報が表示されます：</block>
+  <block id="1067d584a6e992c0589d1f92aafe7858" category="paragraph">必要な ONTAP 権限を設定して、NetApp Disaster Recovery が正常に機能するようにします。</block>
+  <block id="3ea48d658291a75ed85e415311766759" category="paragraph">Disaster Recovery には、次の ONTAP 権限が必要です：</block>
+  <block id="514d10c4471c787f55eb1c42a520282a" category="paragraph">ONTAP で権限を追加するには、必要な権限を持つロールを作成し、それをユーザーに割り当てます。このタスクは、System Manager または ONTAP CLI を使用して ONTAP で実行できます。</block>
+  <block id="c32dabaa5413a89c876153c92d4dec95" category="paragraph">NetApp Disaster Recovery用のvCenterアカウントには、データストアの登録および登録解除、仮想マシン（VM）の起動および停止、およびVMの再構成を行うための最小限の権限セットが必要です。</block>
+  <block id="a255af9b80b5d09c6f6e91eb6e1e5dac" category="paragraph">次の表に、Disaster Recovery が vCenter クラスタで動作するために必要な権限を示します。</block>
+  <block id="9d26347bf9049c082d482aa87b79d702" category="section-title">2026年9月16日</block>
+  <block id="c6c8e0f1a10eed471b7e7d1806abe885" category="paragraph">バージョン4.3.7</block>
+  <block id="e05396b05c416565eca286e7ee65892c" category="doc">NetApp Disaster Recoveryでプランの健全性とワークロード保護のステータスを確認する</block>
+  <block id="b28e483364e08ab1575de89a1b2704fe" category="paragraph">NetApp Disaster Recovery は、Disaster Recovery によって検出されたワークロードや、サイトおよびレプリケーションプランの健全性に関するインサイトを得るための複数の方法を提供します。</block>
+  <block id="011581ffba54f9302ee02a6afa13eb0a" category="paragraph">*ダッシュボード*には、サイトやプランの健全性に関する情報が表示され、正常、切断、または機能低下の状態が示されます。また、最近の警告や失敗したジョブも表示されます。また、容量と保護状況の概要も提供します。ダッシュボードを使用して、健全性の状態を確認し、ワークロードの概要を把握できます。</block>
+  <block id="44a675e7d055dacb3e18389d5f05f213" category="paragraph">「ワークロード」ページには、Disaster Recoveryによって検出された各VMwareおよびKubernetesワークロードの詳細なリストが表示されます。ワークロードとその保護ステータスに関する情報を提供します。「ワークロード」ページを使用して、ワークロードに関する詳細情報および保護ステータスを確認できます。</block>
+  <block id="f53b3ea4d70c1fab87c459ffdda580b0" category="section-title">ダッシュボードでヘルス状態と保護ステータスを確認する</block>
+  <block id="9d16dce094ba2af815cfe3894bae8a75" category="section-title">ワークロードの保護状態を確認する</block>
+  <block id="875bbab879cdc6f202ed770fc12feb52" category="paragraph">ワークロードページを使用して、Disaster Recovery によって検出された個々のワークロードの保護ステータスを確認します。保護ステータスに加えて、Disaster Recovery は各ワークロードタイプについて以下の情報を表示します。</block>
+  <block id="49396edcdc3d3d7e4bec42adc037a5ef" category="cell">Kubernetesワークロード</block>
+  <block id="337399b28f1404bcce820e887245de0a" category="cell">vCenterワークロード</block>
+  <block id="249694a485fc5d3289c38986b4f8e887" category="list-text">クラスタ</block>
+  <block id="49ee3087348e8d44e1feda1917443987" category="list-text">Name</block>
+  <block id="92c09e667f418bada7b3ecae154a6ab1" category="list-text">保護された名前空間</block>
+  <block id="3a3bcdce1192defd6bf56e93bffb6b6f" category="list-text">レプリケーション計画（割り当てられている場合）</block>
+  <block id="a7d6475ec8993b7224d6facc8cb0ead6" category="list-text">サイト</block>
+  <block id="0306f309d85c77b515e2062211ad3b92" category="list-text">保護ステータス</block>
+  <block id="be70a8462e76377bf6617032c00c4811" category="list-text">CPU</block>
+  <block id="5da9d8dd34bb2acaf82c45ecfdc5fcbd" category="list-text">データセンター名</block>
+  <block id="02dc05740dd95ec7dcb34f77aca1c852" category="list-text">データストア名</block>
+  <block id="4789f23283b3a61f858b641a1bef19a3" category="list-text">メモリ</block>
+  <block id="224b68acf165b8c44bcf445590682641" category="list-text">リソースグループ（存在する場合）</block>
+  <block id="5991ccf52a2d511815f4c5f13a0f8e66" category="list-text">vCenter IP アドレス</block>
+  <block id="d75412b8b9738ae1c1ebf28afef115d7" category="list-text">ワークロード名</block>
+  <block id="45790168574698232cc9574fc7035915" category="list-text">NetApp Disaster Recovery メニューから、*ワークロード*を選択します。</block>
+  <block id="0105572a6094a48d4da6a8689f6fc4e5" category="list-text">ドロップダウンメニューで、*vCenter* または *Kubernetes* ワークロードを表示するフィルターを選択します。</block>
+  <block id="13047f1ca24815ab708baea59cd26348" category="list-text">特定のワークロードを検索したり、保護状態（保護済みまたは保護なし）でワークロードをフィルタリングしたりすることもできます。</block>
+  <block id="3259c90ef9fe8915d680844c8bbd1caf" category="list-text">ワークロードと保護状態に関する情報を確認してください。保護対象のワークロードには緑色のチェックマークが表示されます。保護されていないワークロードには灰色のダッシュが表示されます。</block>
+  <block id="c027507b89ae4164d30ec50fb735c759" category="paragraph">スナップショットの取得頻度を設定する際は、少なくとも5分に1回以上の頻度を選択する必要があります。</block>
+  <block id="6f5d85e29b59aa4625f3ad14a37077cd" category="list-text">プロバイダの選択に基づいて、 Disaster Recovery は既存の設定済みクラウドサブスクリプションにデータを入力します。</block>
+  <block id="8d57596f9b796b61e90df9540d12cc03" category="paragraph">Azure の場合は、クラウド プロバイダの *サブスクリプション*、*リソース グループ*、*ストレージ アカウント* を選択してください。</block>
+  <block id="d575618a014f5e9564ca37f19e47ce57" category="paragraph">AWS、ONTAP S3、StorageGRID の場合は、*アカウント*、*認証情報*、*バケット*を選択してください。</block>
+  <block id="5a5927bde0ac7465b00ff420f8ccdb8c" category="list-text">ONTAP S3 または StorageGRID を選択した場合、必要に応じて認証情報を追加できます。*認証情報の追加*を選択してオプションを展開し、*認証情報名*、*ゲートウェイノードの FQDN*、*ポート*番号、*アクセスキー*、*シークレットキー*を追加します。</block>
+  <block id="796c589626154baa50e1f1b1c6b6ff97" category="section-title">リソース変換とスクリプト実行</block>
+  <block id="bb9e542c041adb6fce43a5550a447aee" category="paragraph">Kubernetes のレプリケーションプランでは、リソース変換とスクリプト実行を適用できます。これらの手順はオプションです。</block>
+  <block id="89fd45000e9691421f0cd2d2422f2098" category="paragraph-title">リソース変換を追加する</block>
+  <block id="daac935d0f9259f469bdeb6216a7bedd" category="inline-link-macro">変換の作成方法とリソースの割り当て方法について説明します。</block>
+  <block id="0c4a14974502f9daa46b26f0f2ad91af" category="paragraph">リソース変換を追加することで、フェイルオーバー中にワークロードのあらゆる側面を変更できるようになります。リソース変換機能により、災害復旧時にワークロードをさまざまな環境や構成に柔軟に対応させることができます。<block ref="3dabf3282929fee49f60b75761c255a7" category="inline-link-macro-rx"></block></block>
+  <block id="e205d695b91bf2e7c538d79e949032cf" category="paragraph">リソース変換は、リストした順序で適用されます。</block>
+  <block id="3c1b80402134e1bcf4d562332133349d" category="list-text">ドロップダウンリストから、追加するリソース変換を選択してください。</block>
+  <block id="fcb3c8f6cc48c49276cecf84a984d4e3" category="list-text">変換を適用するリソースを選択し、必要な値を追加します。</block>
+  <block id="cbec0809085850277568c1bd54c193fd" category="list-text">変換処理の順序を確認し、操作が適切な順序で実行されることを確認してください。</block>
+  <block id="8cb4231adcba0ade99c6e505e976ffe5" category="paragraph-title">スクリプト実行を追加する</block>
+  <block id="5c46d471bbbf250802741c4dba10129f" category="paragraph">ディザスターリカバリーでは、スナップショットを取得する前または後にスクリプトを実行して、アプリケーションの停止と再開を管理できます。この操作を実行することで、スナップショットの複製と復元が行われる前にアプリケーションが適切に準備され、フェイルオーバー後にシームレスに運用を再開できるようになります。</block>
+  <block id="3675e17b3371ca5d66b47ca3e188c192" category="list-text">「+ Add script」を選択します。</block>
+  <block id="2cb4c5ea3f0dbc03f52c086f51c9c0c9" category="list-text">スクリプトファイルを選択するには、*アップロード* を選択してください。</block>
+  <block id="7605c81f8da3d277fdcf1a41e0fa8b5b" category="list-text">*実行ステージ*を選択してください。スナップショットを作成する前に実行する場合は *[スナップショット前]*、作成後に実行する場合は *[スナップショット後]* を選択します。</block>
+  <block id="c72b4f4535f2247a2eb6d04e4d80d806" category="summary">Disaster Recovery で AppVaults を管理することで、AppVaults の接続ステータス、および災害復旧計画の継続性を確保するための AppVaults の認証情報とエンドポイントを確認できます。</block>
+  <block id="653c6c62d27e4a4915da09b6cc9380ae" category="doc">NetApp Disaster RecoveryにおけるAppVaultsの管理</block>
+  <block id="4f3b0db26a003addfb4485b781fe2cba" category="paragraph">NetApp Disaster Recovery の Kubernetes を使用したワークロードは、AppVault（Trident Protect が Kubernetes の保護データを保存するクラウドストレージターゲット）を使用します。AppVaults を管理することで、AppVaults の接続ステータス、およびAppVaults の認証情報とエンドポイントを確認し、レプリケーション計画の正常性を確保することができます。</block>
+  <block id="6bd42ee2a8b45f038ad8af98f78d98c6" category="section-title">AppVaultを追加する</block>
+  <block id="94140e82a3c7e458b3dd52cdb64e0030" category="paragraph">Kubernetes のレプリケーション プランを作成するとき、または設定ページから作成するときに、AppVault を追加できます。</block>
+  <block id="4f54930c26983a7ccc9a16101ad36d80" category="list-text">Disaster Recovery で、サイドバーから *Settings* を選択します。</block>
+  <block id="439d69f6e41a85669ad615afcbc08fb1" category="list-text">AppVault カードで、*+ AppVault の追加*を選択します。</block>
+  <block id="68219dbc6c8ebc8883ba623a6a84265a" category="paragraph">Azure の場合は、*サブスクリプション*、*リソース グループ*、*ストレージ アカウント*を選択してください。</block>
+  <block id="83221edc743997ff4ec1c49412993380" category="paragraph">AWS、ONTAP S3、およびStorageGRIDの場合は、「アカウント」または「クレデンシャル」と「バケット」を選択してください。</block>
+  <block id="f0c064ed074050cac00931b0b0d14ba7" category="section-title">AppVault 資格情報を更新する</block>
+  <block id="0cd91dc2023fb4803e0a3b8f2e2b25c4" category="paragraph">AppVault の認証情報が変更された場合は、設定ページで更新して、レプリケーション計画の継続性を確保してください。認証情報を更新すると、この認証情報を共有するすべての AppVault のキーが置き換えられます。</block>
+  <block id="852a2b6c78b0e0f79e67163b8c49c973" category="list-text">「Manage AppVaults」を選択します。</block>
+  <block id="3cdb76c786d818a49b68faddbe3f46e6" category="list-text">更新する AppVault を見つけます。アクションメニューから「更新」を選択します。</block>
+  <block id="7fb80b7c22c4c01aaf22daf33618a7d5" category="list-text">変更の影響を受けるAppVaultsの数とレプリケーション計画を確認してください。</block>
+  <block id="71ba65ccfaa9da5e2b100d10725ceaa6" category="list-text">新しい*シークレットキー*と*アクセスキー*を入力してください。</block>
+  <block id="c7b73e8ceda2ecd544916d1b74b1270f" category="list-text">変更を適用するには、*認証情報の更新*を選択してください。</block>
+  <block id="4fbece5fde2f096f32fd66b2ff9a6b55" category="section-title">AppVault エンドポイントを編集する</block>
+  <block id="f6bcef5db7536caa23fd5b0d7b2fce29" category="paragraph">AppVaultへの接続設定が変更された場合は、Kubernetesワークロードのレプリケーション計画の継続性を確保するために、設定を更新してください。</block>
+  <block id="19a1d7fbf2c278e075d10a7e0aeba0ed" category="list-text">編集する AppVault を見つけます。アクションメニューから*編集*を選択します。</block>
+  <block id="757aeadac45d4b21ab2e8cda038dd7c9" category="list-text">AppVault の新しいエンドポイントを入力してください。</block>
+  <block id="46bfcd2d10e924e8cfea700da679abd8" category="list-text">新しいエンドポイントを適用するには、*Save* を選択します。</block>
+  <block id="dd6070b7dfdd053704200446affd4a91" category="section-title">AppVaultを削除する</block>
+  <block id="350fbf86613e0144162dda691b4673f2" category="paragraph">不要になったAppVaultは削除できます。</block>
+  <block id="27f574474a9870d7c30357f956705d61" category="list-text">削除する AppVault を見つけます。アクションメニューから *削除* を選択します。</block>
+  <block id="e203df84d6c012e5c2537c2624e64896" category="list-text">ダイアログウィンドウで「削除」を選択して操作を確定します。</block>
+  <block id="d6de3255b3701b50a54b31377ec88b74" category="summary">リソース変換を使用すると、フェイルオーバー中にワークロードのあらゆる側面を変更できます。この機能により、災害復旧時にワークロードをさまざまな環境や構成に柔軟に対応させることができます。</block>
+  <block id="596225757a35c9c6c33c5bad227a0407" category="doc">NetApp Disaster Recovery でリソース変換を管理する</block>
+  <block id="0b1e889c9ce8c94f1051f26332cea70b" category="paragraph">Kubernetes ワークロードの NetApp Disaster Recovery では、リソース変換を作成できます。リソース変換を使用すると、フェイルオーバー中にワークロードのあらゆる側面を変更できます。リソース変換機能により、災害復旧イベント時にワークロードをさまざまな環境や構成に柔軟に対応させることができます。</block>
+  <block id="3dbd9c4d3265c8373f61d3c5d2c2acd4" category="paragraph">Kubernetesのレプリケーションプランを作成する際に、リソース変換が追加されます。</block>
+  <block id="93f09445bf39151008d23c3879496d00" category="section-title">リソース変換テンプレートを作成する</block>
+  <block id="d07cfbf2de391e4155f7b1555ca56ca3" category="list-text">リソース変換カードで、*+ テンプレートを追加*を選択します。</block>
+  <block id="a398f727581b305ad1515f6249e8a6ad" category="list-text">リソース変換の *名前* を入力してください。</block>
+  <block id="45fbc6e5c0ad4dd62784cff77826f98a" category="list-text">*操作*を選択してください：追加、コピー、移動、削除、置換、またはテスト。</block>
+  <block id="747616591e931585d7be5d918252c7ed" category="list-text">*JSONパス*と*変数名*を入力してください。必要に応じて、*デフォルト値*を追加してください。</block>
+  <block id="63c94ba39f5f0beaa677a085e2fb5018" category="image-alt">リソース変換テンプレートのスクリーンショット</block>
+  <block id="74e5d0e1a3c167a6352e81de9d55e499" category="list-text">テンプレートに操作を追加するには、*+ Add operation* を選択します。前の2つの手順を繰り返し、操作を実行する順序で並べ替えます。</block>
+  <block id="f64efb31fd2448628eed66846283d7b2" category="list-text">テンプレートを作成するには、*追加*を選択してください。</block>
+  <block id="29b9aabbca2091b4eaa4d3b399f8a2be" category="section-title">リソース変換を編集する</block>
+  <block id="5ad9d221cdc1124d456442c7e12aa089" category="list-text">リソース変換カードで、*リソース変換の管理*を選択します。</block>
+  <block id="a04c86ad43e8b7f2cd01741c0002c416" category="list-text">編集したいリソース変換を見つけてください。行末にあるアクションメニューから*Edit*を選択します。</block>
+  <block id="e9fc8d1833952a59befcd9be00b89b50" category="list-text">テンプレートのどのフィールドも編集できます。*名前*、*操作*（追加、コピー、移動、削除、置換、またはテスト）、およびそれらに付随する値（*JSONパス*と*変数名*、または*デフォルト値*）を編集します。操作を追加したり、操作の実行順序を編集したりすることもできます。</block>
+  <block id="c4dd1d5a864013b2befb02d8c6b6b9de" category="section-title">リソース変換を複製する</block>
+  <block id="fdde1c69fbc3247781c756c3ed30f054" category="paragraph">リソース変換を複製して、新しいリソース変換テンプレートのベースとして使用できます。クローンされたテンプレートは、元のテンプレートの名前を使用し、末尾に「-v1」が付加されます。例えば、「scale up deployment」というテンプレートを複製した場合、複製されたテンプレートの名前は「scale up deployment-v1」となります。</block>
+  <block id="40fbc454476ec7b656299c1a10dff5b5" category="list-text">クローンしたいリソース変換を見つけてください。その行の末尾にあるアクションメニューから*Clone*を選択します。</block>
+  <block id="c812dcceb8496cbb3e5865703fbcb7f6" category="list-text">操作が成功すると、NetApp Disaster Recovery はUIに確認ダイアログを表示します。</block>
+  <block id="718d9c14186b79c126a6b2f91855e952" category="paragraph">複製されたテンプレートは、リソース変換リストで確認できます。</block>
+  <block id="310749d7b7c3773588566b4e91c684a1" category="section-title">リソース変換の削除</block>
+  <block id="bdf7fe5e8b7cf046401c2a299e4d3227" category="paragraph">リソース変換が不要になった場合は、削除できます。</block>
+  <block id="e5d18dce024af8414f8d5bd8098764a1" category="list-text">削除するリソース変換を見つけます。行末にあるアクションメニューから*Delete*を選択します。</block>
+  <block id="76ab4b23be9ab76ef362392d04eff80f" category="list-text">ダイアログで*削除*を選択して操作を確定します。</block>
+  <block id="cce78dc6ebbec7385a01f2146d6d01c8" category="section-title">次の手順</block>
+  <block id="808c9323236f2ed48bff12970a5f1c49" category="list-text"><block ref="808c9323236f2ed48bff12970a5f1c49" category="inline-link-macro-rx"></block></block>
+  <block id="005c3fd782ef9a703a22a6405758e8d0" category="sidebar">プランの健全性と保護ステータスを確認する</block>
+  <block id="8b2d90137c20f81f88555e65f6c0467a" category="sidebar">リソース変換テンプレートを管理する</block>
 </blocks>

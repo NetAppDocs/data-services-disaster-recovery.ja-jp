@@ -4,7 +4,7 @@ permalink: use/dashboard-view.html
 keywords: disaster recovery remediate, disaster recovery, failover, failback, replication, bluexp, netapp 
 summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。 
 ---
-= NetApp Disaster Recoveryでディザスタリカバリ計画の健全性を確認する
+= NetApp Disaster Recoveryでプランの健全性とワークロード保護のステータスを確認する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,13 +12,20 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 
 
 [role="lead"]
-NetApp Disaster Recovery ダッシュボードを使用して、ディザスタリカバリサイトとレプリケーション計画の健全性を確認できます。サイトやプランが正常か、切断されているか、デグレードされているかを確認したり、最近の警告や失敗したジョブを確認したり、保護されているワークロードと保護されていないワークロードを特定したり、容量を一目で確認したりできます。
+NetApp Disaster Recovery は、Disaster Recovery によって検出されたワークロードや、サイトおよびレプリケーションプランの健全性に関するインサイトを得るための複数の方法を提供します。
+
+*ダッシュボード*には、サイトやプランの健全性に関する情報が表示され、正常、切断、または機能低下の状態が示されます。また、最近の警告や失敗したジョブも表示されます。また、容量と保護状況の概要も提供します。ダッシュボードを使用して、健全性の状態を確認し、ワークロードの概要を把握できます。
+
+「ワークロード」ページには、Disaster Recoveryによって検出された各VMwareおよびKubernetesワークロードの詳細なリストが表示されます。ワークロードとその保護ステータスに関する情報を提供します。「ワークロード」ページを使用して、ワークロードに関する詳細情報および保護ステータスを確認できます。
 
 *必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーのロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
+
+
+[[view-health-and-protection-status-in-the-dashboard]]
+== ダッシュボードでヘルス状態と保護ステータスを確認する
+
 .手順
-. ログイン https://console.netapp.com/["NetApp Console"^]。
-. NetApp Consoleの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
 . NetApp Disaster Recoveryメニューから、*ダッシュボード* を選択します。
 +
 image:dr-dashboard.png["NetApp Disaster Recoveryダッシュボード"]
@@ -49,4 +56,46 @@ image:dr-dashboard.png["NetApp Disaster Recoveryダッシュボード"]
 
 . 「最近の警告とジョブ」を確認すると、最近実行されたジョブと警告、およびそれらに関連するステータスが表示されます。すべてのジョブを表示するには、「すべてのジョブを表示」を選択してください。
 . *検出と保護のステータス*を確認すると、検出されたワークロードの数と、保護されたワークロードと保護されていないワークロードの内訳がタイプ別に数値で表示されます。また、検出されたすべてのワークロードの合計容量、およびワークロードの種類別の容量を確認することもできます。
+
+
+
+
+[[review-workloads-protection-status]]
+== ワークロードの保護状態を確認する
+
+ワークロードページを使用して、Disaster Recovery によって検出された個々のワークロードの保護ステータスを確認します。保護ステータスに加えて、Disaster Recovery は各ワークロードタイプについて以下の情報を表示します。
+
+|===
+| Kubernetesワークロード | vCenterワークロード 
+
+
+ a| 
+* クラスタ
+* Name
+* 保護された名前空間
+* レプリケーション計画（割り当てられている場合）
+* サイト
+* 保護ステータス
+
+ a| 
+* CPU
+* データセンター名
+* データストア名
+* メモリ
+* 保護ステータス
+* レプリケーション計画（割り当てられている場合）
+* リソースグループ（存在する場合）
+* vCenter IP アドレス
+* ワークロード名
+
+
+|===
+.手順
+. NetApp Disaster Recovery メニューから、*ワークロード*を選択します。
+. ドロップダウンメニューで、*vCenter* または *Kubernetes* ワークロードを表示するフィルターを選択します。
++
+image::site-type-toggle.png[サイトタイプ切り替えのスクリーンショット]
+
+. 特定のワークロードを検索したり、保護状態（保護済みまたは保護なし）でワークロードをフィルタリングしたりすることもできます。
+. ワークロードと保護状態に関する情報を確認してください。保護対象のワークロードには緑色のチェックマークが表示されます。保護されていないワークロードには灰色のダッシュが表示されます。
 

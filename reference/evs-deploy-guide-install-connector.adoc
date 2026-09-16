@@ -11,7 +11,7 @@ summary: NetApp Console エージェントは、NetApp Console とクラウド�
 [role="lead"]
 NetApp Console エージェントを使用すると、NetApp Console の導入をインフラストラクチャに接続して、AWS、Azure、Google Cloud、またはオンプレミス環境全体でソリューションを安全にオーケストレーションできます。Console エージェントは、NetApp Console がデータインフラストラクチャを管理するために実行する必要があるアクションを実行します。Console エージェントは、NetApp Disaster Recovery の SaaS レイヤーを常にポーリングして、実行する必要があるアクションを確認します。
 
-NetApp Disaster Recoveryでは、実行されるアクションは、各サービスのネイティブAPIを使用してVMware vCenterクラスタとONTAPストレージインスタンスをオーケストレーションし、オンプレミスの場所で実行されている本番VMを保護します。Console agentはネットワーク上の任意の場所にインストールできますが、NetApp Disaster Recoveryの災害復旧サイトにConsole agentをインストールすることをお勧めします。DRサイトにインストールすることで、プライマリサイトに障害が発生した場合でも、NetApp Console UIはConsole agentへの接続を維持し、そのDRサイト内でリカバリプロセスをオーケストレーションできます。
+Disaster Recovery では、これらのアクションは各サービスのネイティブ API を使用して VMware vCenter クラスターと ONTAP ストレージ インスタンスをオーケストレーションし、オンプレミスの場所で稼働している本番環境の VM を保護します。コンソール エージェントはネットワーク上のどの場所にもインストールできますが、Disaster Recovery では、災害復旧サイトにコンソール エージェントをインストールすることをお勧めします。災害復旧サイトにインストールすることで、プライマリ サイトで障害が発生した場合でも、NetApp コンソール UI はコンソール エージェントとの接続を維持し、その災害復旧サイト内で復旧プロセスをオーケストレーションできます。
 
 
 
