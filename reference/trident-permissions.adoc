@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: reference/trident-permissions.html 
+keywords: disaster recovery, IAM, permissions, Trident Protect, S3, StorageGrid, AppVault, cluster registration, cluster discover 
+summary: NetApp Disaster Recovery を使用する場合は、Kubernetes クラスターを検出および登録するために正しい Trident Protect 構成が設定されていることを確認してください。 
+---
+= NetApp Disaster Recovery用のTrident Protect権限を構成します
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+NetApp Disaster Recovery を使用する場合は、Kubernetes クラスターを検出および登録するために正しい Trident Protect 構成が設定されていることを確認してください。
+
+
+
+[[trident-protect-cluster-permissions]]
+== Trident Protect クラスター権限
+
+Disaster Recovery では、以下のクラスタ権限が必要です。
+
+[cols="3,1"]
+|===
+| アクセス許可 | 機能 
+
+
+| dr:trident_cluster-view | 登録済みの Kubernetes クラスターと、Disaster Recovery で使用されるクラスターのインベントリを表示します。 
+
+
+| dr:trident_cluster-create | Kubernetesクラスターを登録し、セットアップコマンドを生成します。 
+
+
+| dr:trident_cluster-update | 登録済みのKubernetesクラスターを変更します。 
+
+
+| dr:trident_cluster-delete | 登録済みのKubernetesクラスターを削除します。 
+
+
+| dr:trident_cluster-refresh | Trident クラスターの検出を実行します。 
+|===
+
+
+[[trident-protect-appvault-permissions]]
+== Trident Protect AppVault 権限
+
+次のAppVault権限は Disaster Recovery で必要です。
+
+[cols="3,1"]
+|===
+| アクセス許可 | 機能 
+
+
+| dr:trident_appvault-view | Trident AppVaultsと、AppVaultのセットアップに必要なクラウド/オブジェクトストアの検出データを表示します。 
+
+
+| dr:trident_appvault-create | Disaster Recovery を通じて Trident AppVault カスタムリソースを作成します。 
+|===
+
+
+[[trident-protect-credential-permissions]]
+== Trident Protect のクレデンシャル権限
+
+Disaster Recovery では、以下のクレデンシャル権限が必要です。
+
+[cols="3,1"]
+|===
+| アクセス許可 | 機能 
+
+
+| dr:credential-view | 認証情報のメタデータを表示し、AppVault設定用のONTAP S3/StorageGRIDバケットを一覧表示します。 
+
+
+| dr:credential-create | ONTAP S3 および StorageGRID を含むクレデンシャルを登録します。 
+
+
+| dr:credential-update | ONTAP S3 と StorageGRID を含む資格情報を更新します。 
+
+
+| dr:credential-delete | ONTAP S3 と StorageGRID を含む資格情報を削除します。 
+|===

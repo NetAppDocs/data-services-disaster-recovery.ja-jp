@@ -1145,7 +1145,6 @@
   <block id="b5e92408332ec8fe388fc403b03249bf" category="section-title">仮想マシンの情報を表示する</block>
   <block id="3849da8702f93c4c73b8b2d18d7d3b4d" category="list-text">*仮想マシン*を選択します。</block>
   <block id="2e91c6382e139b4d3b0307917725df9c" category="list-text">仮想マシンの情報を表示します。</block>
-  <block id="74b7e5a581d3f8be472f23c9f533948e" category="summary">NetApp Disaster Recoveryを使用すると、ソース サイトの VMware アプリケーションを別のサイトに移行できます。</block>
   <block id="e149f52ef3987c9798fc0b5e92f0d94c" category="doc">NetApp Disaster Recoveryを使用してアプリケーションを別のサイトに移行する</block>
   <block id="c1845ff7083c49cb3022e9cb477f265b" category="summary">NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。すべての災害復旧ジョブを監視し、その進行状況を確認できます。</block>
   <block id="45b443b335251cfe162de8423d5b2021" category="doc">NetApp Disaster Recoveryジョブの監視</block>
@@ -1880,7 +1879,6 @@
   <block id="265b5db3aaacf91c1fc792d5022d95b7" category="paragraph">VMware Cloud SDDC を使用する場合は、以下の追加の前提条件が適用されます。</block>
   <block id="9aa66a327a3181a340b88cc81b7ac070" category="summary">NetApp Disaster Recoveryを使用する前に、Kubernetesクラスタが要件を満たしていることを確認してください。</block>
   <block id="90e2c61883b995611cf3a865b7eefbbd" category="doc">NetApp Disaster Recoveryに関するKubernetesクラスタの要件</block>
-  <block id="189edd980c131edf9d5711ed1e7b1d73" category="paragraph">ディザスタリカバリは<block ref="ee3b2775270ba891227fbdcc3618242b" category="inline-link-macro-rx"></block>をサポートします。</block>
   <block id="85eb427901278daf26f132cb3e076914" category="section-title">Kubernetesクラスター</block>
   <block id="3db879f685c32ec1d391ee151f8cbbb3" category="paragraph">各 Kubernetes クラスタについて、以下を確認してください：</block>
   <block id="b6a170e7cec78934ee3380877053401e" category="list-text">各Kubernetesクラスタへの管理者<block ref="0f12ee5c9f1dd90158580f1c292b0d37" prefix=" " category="inline-code"></block>アクセス権があること。</block>
@@ -1892,7 +1890,6 @@
   <block id="92601eac5d4e753f0d60f0e5ba9a27f1" category="inline-link-macro">各クラスタに Trident オペレータをインストールします。</block>
   <block id="bd2bdca3f6b8a3f02b562505d50b41e2" category="paragraph"><block ref="bd2bdca3f6b8a3f02b562505d50b41e2" category="inline-link-macro-rx"></block></block>
   <block id="ed5e6801d7e087345895d132f7e9d2dc" category="paragraph">既に Trident をインストール済みの場合は、次のコマンドでインストールを確認してください<block ref="8dd3e3fab389d3d56b4dbea697d52e91" prefix=" " category="inline-code"></block>。インストールが成功すると、数分後に Trident コントローラー、ノード ポッド（DaemonSet）、およびオペレータの状態が<block ref="5bda814c4aedb126839228f1a3d92f09" prefix=" " category="inline-code"></block>状態になります。</block>
-  <block id="33c1ffdebe58ba196b293c23e0e2f697" category="section-title">ONTAP バックエンドと Trident StorageClass を設定</block>
   <block id="ed6eabebedff09350cdabab556887c62" category="section-title">Kubernetesシークレットを作成する</block>
   <block id="019a873bad5bd15622bc515c6deabc69" category="paragraph">名前空間に Kubernetes シークレットを作成します：</block>
   <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
@@ -2312,7 +2309,6 @@
   <block id="7bb121cdcae2c2832838e2f290a86bf5" category="list-text">NetApp Disaster Recoveryが管理するすべてのVMwareクラスタは、保護対象のVMをホストするためにONTAPボリュームを使用する必要があります。</block>
   <block id="dfb6f3404d01c2320e91dc82c3743342" category="list-text">VMware Cloud SDDC を Amazon FSx for NetApp ONTAP インスタンスにリンクします。<block ref="703588ab376df01744e79984f081d5fd" category="inline-link-rx"></block>を参照してください。</block>
   <block id="652475d7336cd836411ec7d566842d60" category="paragraph">Kubernetes の NetApp Disaster Recovery を設定する前に、各 Kubernetes クラスターを準備します。保護は通常、ソース クラスターと別のデスティネーション クラスタに適用されるため、ペア内の各クラスターに対してこれらの手順を完了してください。</block>
-  <block id="9ac66e8e2bbbe7b9901c0c80b4c7ed2e" category="paragraph">始める前に、Kubernetes クラスターと ONTAP クラスターが設定されていることを確認してください。</block>
   <block id="0a4e25753cea4f154af0469ab230e9ba" category="list-text">Helm 3は、インストールコマンドを実行できる場所で利用可能です。</block>
   <block id="538e8cc604d9acb8c54b11be5d28123e" category="list-text">**管理LIF**：Tridentが管理APIにアクセスするために使用します。</block>
   <block id="e8fe43ecd8f37d6c3b374d6267a0e1bc" category="list-text">**データ（NFS）LIF**：ボリュームのNFSトラフィックに使用されます。</block>
@@ -2348,7 +2344,6 @@
   <block id="5d6353688a496fa47de65c195b8ac3bc" category="paragraph">フェイルバックでは、NetApp Disaster Recoveryは、レプリケーションの方向を反転させる前に、変更内容を元のソース仮想マシンに複製（再同期）します。このプロセスは、リレーションシップがターゲットにフェイルオーバーした後に開始され、以下の手順が含まれます。</block>
   <block id="44d4c6d5260eb624900ebb869b4a4939" category="paragraph">データストアベースの保護を使用している場合、フェイルオーバー中にVMがデータストアに追加される可能性があります。このような事態が発生した場合は、フェイルバックを開始する前にこれらのVMの追加マッピング情報を提供してください。リソースマッピングを編集するには、<block ref="aae3ec9b67319c36c78ebcd18b670ec7" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="a1502915916db4624a57959d103aa608" category="list-text">フェイルバックするレプリケーション計画を特定します。*アクション* オプション <block ref="771645334c0631c5881bfc9858be7f5b" category="inline-image-macro-rx" type="image"></block> を選択し、*リカバリ* にカーソルを合わせて *フェイルバック* を選択します。</block>
-  <block id="dfd07f1f5209a167efdb80c6f3885d11" category="paragraph">災害が発生した場合は、プライマリのオンプレミス VMware サイトを別のオンプレミス VMware サイト、または VMware Cloud on AWS にフェイルオーバーします。また、フェイルオーバー処理を事前にテストして、復旧が期待どおりに機能することを確認することもできます。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="section-title">タスク概要</block>
   <block id="634ed35083de0dc9fd6ca402130b2364" category="paragraph">フェイルオーバー中、NetApp Disaster Recovery はデフォルトで最新の SnapMirror スナップショットコピーを使用しますが、ポイントインタイムスナップショットから特定のスナップショットを選択することもできます（SnapMirror の保持ポリシーに基づく）。最新のレプリカがランサムウェア攻撃などによって侵害された場合は、ポイントインタイムオプションを使用してください。</block>
   <block id="992afcf904b48182f53abedd4c345eb3" category="paragraph">ライブフェイルオーバーを実行する前に、テストを実行して準備状況を確認できます。テストプロセス中もワークロードはオンライン状態を維持します。</block>
@@ -2379,12 +2374,10 @@
   <block id="260df5358fdc3f07758e38ffb3a77c19" category="list-text">レポートの *File type* （PDF、HTML、JSON）と *Time period* （過去1～7日間）を選択してください。</block>
   <block id="ba11bffa8084f9c85a1963af8d050a3f" category="summary">リソースグループを使用すると、依存関係のあるリソースを、要件を満たす論理的なグループに整理できます。</block>
   <block id="6e21e837facbd5d06523d904bcd2334d" category="doc">NetApp Disaster Recovery でリソースグループを作成する</block>
-  <block id="1679edd6924beab7d71a5390cf59b854" category="paragraph">サイトにリソースを追加したら、リソースグループを作成して、仮想マシン、データストア、またはKubernetesクラスターを単一の単位として整理します。リソースグループを使用すると、依存関係のあるリソースを、要件を満たす論理的なグループに整理できます。例えば、1つのアプリケーション用の仮想マシンをグループ化したり、類似した階層を共有するアプリケーションをグループ化したりできます。リソースグループには、リカバリ中に実行される遅延起動順序を含めることもできます。</block>
   <block id="868ae8e25cad278cb95070092e1b5058" category="admonition">各リソースグループには、1つ以上の仮想マシン、データストア、またはKubernetesクラスタを含めることができます。仮想マシンは、レプリケーションプランに含めた順序に基づいて起動します。リソースグループリスト上で仮想マシンまたはデータストアを上下にドラッグすることで、順序を変更できます。</block>
   <block id="7ef9d7f4e6bf5f38edfd03606bf493da" category="paragraph">NetApp Disaster Recovery は、リソースグループ内の VM をホストする基盤となる ONTAP ボリュームと LUN を複製することで VM を保護します。これを行うために、システムはリソースグループ内の VM をホストする各データストアの名前を vCenter に照会します。NetApp Disaster Recovery は、そのデータストアをホストするソース ONTAP ボリュームまたは LUN を特定します。すべての保護は、SnapMirror レプリケーションを使用して ONTAP ボリュームレベルで実行されます。</block>
   <block id="03c66aa95215fd945ab9f6521baef55e" category="paragraph">リソースグループ内の VM が異なるデータストアでホストされている場合、NetApp Disaster Recovery では、以下のいずれかの方法を使用して、ONTAP ボリュームまたは LUN のデータ整合性スナップショットを作成します。</block>
   <block id="183b61458af19e5b813be061374378cf" category="list-text">*リソースタイプ*を分類します。デフォルトでは、「すべて含める」が選択されており、これは複数のリソースタイプを意味します。</block>
-  <block id="372899929926faabc33dabdd64a2ecc2" category="paragraph">災害復旧計画を作成する前に、保護したいサイトを NetApp Disaster Recovery に追加してください。サイトとは、オンプレミスまたはクラウド上の vCenter サーバーまたは Kubernetes クラスターの集合です。本番サイトと災害復旧サイトの両方を追加してください。</block>
   <block id="11a59530affce2463e250e21bdbcc29c" category="summary">VMwareおよびKubernetesワークロード向けNetApp Disaster Recoveryに関するよくある質問。</block>
   <block id="6782fe55d65b471e3f7ea9c8c6c97abb" category="paragraph">このFAQでは、VMwareおよびKubernetesワークロード向けのNetApp Disaster Recoveryに関するよくある質問にお答えします。本書は、ディザスタリカバリ構成の実装や、レプリケーション、移行、フェイルオーバー、フェイルバック操作の管理に役立つ概念、用語、システム動作、および制約に焦点を当てています。</block>
   <block id="cb59b87e00d11222bfd9159d0d23836f" category="section-title">開始</block>
@@ -2682,4 +2675,53 @@
   <block id="808c9323236f2ed48bff12970a5f1c49" category="list-text"><block ref="808c9323236f2ed48bff12970a5f1c49" category="inline-link-macro-rx"></block></block>
   <block id="005c3fd782ef9a703a22a6405758e8d0" category="sidebar">プランの健全性と保護ステータスを確認する</block>
   <block id="8b2d90137c20f81f88555e65f6c0467a" category="sidebar">リソース変換テンプレートを管理する</block>
+  <block id="870caf8c63b38657c754a6ae2bfdccfa" category="list-text">Kubernetes クラスターの要件を設定する前に、Kubernetes クラスタと ONTAP クラスタを設定済みであることを確認してください。</block>
+  <block id="6fc27d93b674dc2181e0f20fed00ba74" category="list-text">サポートされているバージョンのKubernetesを使用していることを確認してください。Disaster Recovery は <block ref="ee3b2775270ba891227fbdcc3618242b" category="inline-link-macro-rx"></block> をサポートしています。</block>
+  <block id="ef591b016875b0c367446c1b32d0cb33" category="inline-link-macro">Trident Protect の権限</block>
+  <block id="6a8721c6d84b89d600d6f9f71aee3cd0" category="list-text">適切な<block ref="2e82bab41ca83cccc3d3234ff27d0186" category="inline-link-macro-rx"></block>を設定します。</block>
+  <block id="da4a61950000370345af09d5653606e5" category="section-title">NetApp Consoleロール</block>
+  <block id="000b23326681f264355080f1b40f0c3a" category="inline-link-macro">Disaster Recovery の検出、フェイルオーバー、およびその他のタスクを実行するために、正しい Console ロールが設定されていることを確認してください。</block>
+  <block id="633d8dca168073e743492024f682a468" category="paragraph">Trident Protect と Kubernetes の設定を完了したら、<block ref="75e0472282f0516ba7697bd410d51691" category="inline-link-macro-rx"></block></block>
+  <block id="95318750d34cc904bb16702f9a790ce8" category="summary">NetApp Disaster Recovery を使用する場合は、Kubernetes クラスターを検出および登録するために正しい Trident Protect 構成が設定されていることを確認してください。</block>
+  <block id="4fb98e5696b973e4f7e26f71b1dc5572" category="doc">NetApp Disaster Recovery用のTrident Protect権限を構成します</block>
+  <block id="510f7e6ce9bfcf6223b479b6d2b5bf57" category="section-title">Trident Protect クラスター権限</block>
+  <block id="e63fae19e777b24af95d46b917748920" category="paragraph">Disaster Recovery では、以下のクラスタ権限が必要です。</block>
+  <block id="ed5dea09095f671b801bee34ea28a319" category="cell">アクセス許可</block>
+  <block id="86408593c34af77fdd90df932f8b5261" category="cell">機能</block>
+  <block id="075beeeea7e84e77a2ecc9b64b6c9276" category="cell">dr:trident_cluster-view</block>
+  <block id="fccae372786983126b9675ff75dfdbc7" category="cell">登録済みの Kubernetes クラスターと、Disaster Recovery で使用されるクラスターのインベントリを表示します。</block>
+  <block id="33c1f6a282a123d4cb586cdfc39796ba" category="cell">dr:trident_cluster-create</block>
+  <block id="2ef43485b730a57e6d07cff8f3000fb5" category="cell">Kubernetesクラスターを登録し、セットアップコマンドを生成します。</block>
+  <block id="cfb270fe2ed558fee43873a56ed2de55" category="cell">dr:trident_cluster-update</block>
+  <block id="a22b7cbab8eae9790586bc03c12fbe0c" category="cell">登録済みのKubernetesクラスターを変更します。</block>
+  <block id="d5f936a20f2376f49e243e2b6ea3fcea" category="cell">dr:trident_cluster-delete</block>
+  <block id="1d8144283609007a3d4c341c419c349a" category="cell">登録済みのKubernetesクラスターを削除します。</block>
+  <block id="33ecd3ae9b8df84f4271d342f6cdd95c" category="cell">dr:trident_cluster-refresh</block>
+  <block id="8acf065073d123ab8eeb78e96905246f" category="cell">Trident クラスターの検出を実行します。</block>
+  <block id="9cd9d05d35ebe6942d491e995eb85059" category="section-title">Trident Protect AppVault 権限</block>
+  <block id="8c7283f469c713d4e5f2e9d03fffb21f" category="paragraph">次のAppVault権限は Disaster Recovery で必要です。</block>
+  <block id="29b70ab80a4f3aecbd88e1aa39334b52" category="cell">dr:trident_appvault-view</block>
+  <block id="4e6887c24ac5bb7b528699f806376f21" category="cell">Trident AppVaultsと、AppVaultのセットアップに必要なクラウド/オブジェクトストアの検出データを表示します。</block>
+  <block id="e525b1d33e3251e3b61c77ec8aa4b345" category="cell">dr:trident_appvault-create</block>
+  <block id="3faa34364f354654f4330d1023ab4196" category="cell">Disaster Recovery を通じて Trident AppVault カスタムリソースを作成します。</block>
+  <block id="c473474f3a32f5ce35cebb7bac6ea99a" category="section-title">Trident Protect のクレデンシャル権限</block>
+  <block id="01bac8a90b2b6c564c7d063b834773a7" category="paragraph">Disaster Recovery では、以下のクレデンシャル権限が必要です。</block>
+  <block id="57dea2516cdc11e5173ac0e824c65ed2" category="cell">dr:credential-view</block>
+  <block id="d53f4c1b208e8e382831c9ae73eee559" category="cell">認証情報のメタデータを表示し、AppVault設定用のONTAP S3/StorageGRIDバケットを一覧表示します。</block>
+  <block id="c0e93404607f0eea5f02a73c75225bbf" category="cell">dr:credential-create</block>
+  <block id="8c5965f17b42f7518125742451c79924" category="cell">ONTAP S3 および StorageGRID を含むクレデンシャルを登録します。</block>
+  <block id="c237c22374e72d1ba1788c15ddb6fe60" category="cell">dr:credential-update</block>
+  <block id="d8d15ad255eb96a9222a8f0f61c9f3a2" category="cell">ONTAP S3 と StorageGRID を含む資格情報を更新します。</block>
+  <block id="48b722a9b0d9600d166bf0f2b2a64f8b" category="cell">dr:credential-delete</block>
+  <block id="c84e57eedd140baa3e64f5ac5e7f1871" category="cell">ONTAP S3 と StorageGRID を含む資格情報を削除します。</block>
+  <block id="ca2825c2ddf78928b38c75787c2ca73d" category="paragraph">災害やその他の同様の事象が発生した場合は、NetApp Disaster Recovery を使用して重要なワークロードを復旧させ、計画されたマッピングに基づいてアプリケーションが災害復旧サイトで再開できるようにします。</block>
+  <block id="77cb0faa6eb8788ec91dedae1de2f3f9" category="paragraph">Disaster Recovery は、フェイルオーバーのテストもサポートしています。テストを実施することで、プロセスに慣れることができ、復旧が期待どおりに機能することを確認できます。</block>
+  <block id="fbddadf2edd321dc064fe81274b6ff1e" category="paragraph">NetApp Disaster Recovery は、VMware アプリケーションをソースサイトからセカンダリサイトに移行することをサポートします。たとえば、インフラストラクチャに変更を加えた結果、ターゲット環境で本番運用を引き継ぐ必要がある場合などに、移行機能を使用できます。</block>
+  <block id="4e3e73573935056375c83edc2d6f5bfe" category="paragraph">NetApp Disaster Recovery を使用すると、SnapMirror レプリケーションを使用して、VMware アプリケーションをソースサイトからクラウド上のリモートディザスタリカバリサイトにレプリケートできます。リモートサイトでリカバリデータを最新の状態に保つことで、保護対象アプリケーションを最新の SnapMirror スナップショットからリストアできます。</block>
+  <block id="6187f0da8e0aee4b4df945d5f7c68b0f" category="paragraph">インシデント発生前にレポートを使用してレプリケーションのコンプライアンスと復旧履歴を評価し、保護上のギャップを特定します。</block>
+  <block id="8240e502c7ce5e9805091f5f8c4a3085" category="inline-link-macro">保護状況は、ダッシュボードで概要を確認したり、ワークロードページでワークロード別に確認したりできます。</block>
+  <block id="18d6539292478681d68b9282daa86220" category="admonition"><block ref="18d6539292478681d68b9282daa86220" category="inline-link-macro-rx"></block></block>
+  <block id="efcf3aea6733a7f1535a22c63a31816e" category="section-title">ディザスタリカバリレポートについて</block>
+  <block id="08e23a6b35ef4e66680d353da268fa9d" category="paragraph">サイトにリソースを追加した後、リソースグループを作成して、仮想マシン、データストア、またはKubernetesクラスターを単一の単位として整理することができます。リソースグループを使用すると、依存関係のあるリソースを、要件を満たす論理的なグループに整理できます。例えば、1つのアプリケーション用の仮想マシンをグループ化したり、類似した階層を共有するアプリケーションをグループ化したりできます。リソースグループには、リカバリ中に実行される遅延起動順序を含めることもできます。これにより、リソースが正しい順序で起動することが保証されます。</block>
+  <block id="0b3812b60ebe3c1059cea904557f00cb" category="paragraph">災害復旧計画を作成する前に、保護したいサイトを NetApp Disaster Recovery に追加してください。サイトとは、オンプレミスまたはクラウド上の vCenter サーバーまたは Kubernetes クラスターの集合です。Disaster Recovery が復旧に使用するリソースを調整できるように、本番サイトと災害復旧サイトの両方を追加してください。</block>
 </blocks>

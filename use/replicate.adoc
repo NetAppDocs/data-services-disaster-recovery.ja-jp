@@ -12,7 +12,7 @@ summary: NetApp Disaster Recovery を使用すると、SnapMirror レプリケ�
 
 
 [role="lead"]
-NetApp Disaster Recovery を使用すると、SnapMirror レプリケーションを使用して、VMware アプリケーションをソースサイトからクラウド上のリモートディザスタリカバリサイトにレプリケートできます。
+NetApp Disaster Recovery を使用すると、SnapMirror レプリケーションを使用して、VMware アプリケーションをソースサイトからクラウド上のリモートディザスタリカバリサイトにレプリケートできます。リモートサイトでリカバリデータを最新の状態に保つことで、保護対象アプリケーションを最新の SnapMirror スナップショットからリストアできます。
 
 
 TIP: 災害復旧計画を作成し、ウィザードで繰り返しを識別し、災害復旧サイトへのレプリケーションを開始すると、 NetApp Disaster Recovery は30 分ごとに、レプリケーションが計画に従って実際に実行されているかどうかを確認します。ジョブ モニター ページで進行状況を監視できます。

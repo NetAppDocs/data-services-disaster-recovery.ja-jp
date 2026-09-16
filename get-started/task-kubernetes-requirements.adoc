@@ -19,9 +19,10 @@ Kubernetes の NetApp Disaster Recovery を設定する前に、各 Kubernetes �
 [[prerequisites]]
 == 前提条件
 
-始める前に、Kubernetes クラスターと ONTAP クラスターが設定されていることを確認してください。
+* Kubernetes クラスターの要件を設定する前に、Kubernetes クラスタと ONTAP クラスタを設定済みであることを確認してください。
+* サポートされているバージョンのKubernetesを使用していることを確認してください。Disaster Recovery は link:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["現在 Trident Protect でサポートされている Kubernetes のいずれかのバージョン"^] をサポートしています。
+* 適切なlink:../reference/trident-permissions.html["Trident Protect の権限"]を設定します。
 
-ディザスタリカバリはlink:https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["現在 Trident Protect でサポートされている Kubernetes のいずれかのバージョン"^]をサポートします。
 
 
 
@@ -61,13 +62,8 @@ link:https://docs.netapp.com/us-en/trident/trident-install/kubernetes-deploy-hel
 
 
 
-[[configure-ontap-backend-and-trident-storageclass]]
-== ONTAP バックエンドと Trident StorageClass を設定
-
-
-
 [[create-a-kubernetes-secret]]
-=== Kubernetesシークレットを作成する
+== Kubernetesシークレットを作成する
 
 名前空間に Kubernetes シークレットを作成します：
 
@@ -113,7 +109,7 @@ spec:
 
 
 [[configure-the-storage-class]]
-=== ストレージクラスを設定する
+== ストレージクラスを設定する
 
 link:https://docs.netapp.com/us-en/trident/trident-use/create-stor-class.html["ストレージクラスオブジェクトを作成します"^]。プロビジョナー `csi.trident.netapp.io`を使用します。例：
 
@@ -215,6 +211,13 @@ kubectl patch volumesnapshotclasses.snapshot.storage.k8s.io trident-snapshotclas
 
 
 ====
+
+
+[[netapp-console-roles]]
+== NetApp Consoleロール
+
+Trident Protect と Kubernetes の設定を完了したら、link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["Disaster Recovery の検出、フェイルオーバー、およびその他のタスクを実行するために、正しい Console ロールが設定されていることを確認してください。"^]
+
 
 
 [[more-information]]
