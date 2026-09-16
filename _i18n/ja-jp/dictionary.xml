@@ -2724,4 +2724,5 @@
   <block id="efcf3aea6733a7f1535a22c63a31816e" category="section-title">ディザスタリカバリレポートについて</block>
   <block id="08e23a6b35ef4e66680d353da268fa9d" category="paragraph">サイトにリソースを追加した後、リソースグループを作成して、仮想マシン、データストア、またはKubernetesクラスターを単一の単位として整理することができます。リソースグループを使用すると、依存関係のあるリソースを、要件を満たす論理的なグループに整理できます。例えば、1つのアプリケーション用の仮想マシンをグループ化したり、類似した階層を共有するアプリケーションをグループ化したりできます。リソースグループには、リカバリ中に実行される遅延起動順序を含めることもできます。これにより、リソースが正しい順序で起動することが保証されます。</block>
   <block id="0b3812b60ebe3c1059cea904557f00cb" category="paragraph">災害復旧計画を作成する前に、保護したいサイトを NetApp Disaster Recovery に追加してください。サイトとは、オンプレミスまたはクラウド上の vCenter サーバーまたは Kubernetes クラスターの集合です。Disaster Recovery が復旧に使用するリソースを調整できるように、本番サイトと災害復旧サイトの両方を追加してください。</block>
+  <block id="163f4744512c53baf24fa0cfd3a4e497" category="sidebar">必要な Trident 権限</block>
 </blocks>
