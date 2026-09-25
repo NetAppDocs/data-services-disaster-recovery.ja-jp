@@ -12,7 +12,7 @@ summary: NetApp Disaster Recoveryでは、無料トライアル、従量課金�
 
 
 [role="lead"]
-NetApp Disaster Recoveryでは、無料トライアル、従量課金制サブスクリプション、お客様独自のライセンス持ち込み（BYOL）など、複数のライセンスオプションをご利用いただけます。
+NetApp Disaster Recovery には、無料トライアル、従量課金制サブスクリプション、お客様所有のライセンス持ち込み（BYOL）など、複数のライセンス オプションがあります。ディザスタ リカバリを設定する前に、ライセンス モデルを確認して、サービスが組織のニーズを満たしていることをご確認ください。
 
 *必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、または災害復旧アプリケーション管理者ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 

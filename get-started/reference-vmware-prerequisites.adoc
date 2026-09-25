@@ -12,7 +12,7 @@ summary: NetApp Disaster Recoveryを使用する前に、環境がVMware vCenter
 
 
 [role="lead"]
-NetApp Disaster Recoveryを使用する前に、環境がVMware vCenterクラスタの要件を満たしていることを確認してください。
+NetApp Disaster Recovery を使用する前に、お客様の環境が VMware vCenter クラスタの要件を満たしていることを確認してください。これにより、レプリケーションとリカバリを互換性の問題なく実行できます。
 
 
 

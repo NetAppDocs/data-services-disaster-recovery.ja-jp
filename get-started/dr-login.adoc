@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: get-started/dr-login.html 
-keywords: bluexp login, disaster recovery log in 
+keywords: bluexp login, disaster recovery, log in, sign in, iam roles 
 summary: NetApp Consoleでサービスにアクセスして、 NetApp Disaster Recoveryを開始します。 
 ---
 = NetApp Disaster Recoveryにアクセス
@@ -12,35 +12,41 @@ summary: NetApp Consoleでサービスにアクセスして、 NetApp Disaster R
 
 
 [role="lead"]
-NetApp Console から NetApp Disaster Recovery にログインします。
+NetApp Disaster Recovery にログインするには、NetApp Support Site のクレデンシャルを使用するか、メールアドレスとパスワードで NetApp クラウドログインにサインアップしてください。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["ログインについて詳しくはこちら"^]。
 
-ログインするには、NetApp Support Siteの認証情報を使用するか、メールアドレスとパスワードでNetAppクラウドログインにサインアップしてください。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["ログインについて詳しくはこちら"^]。
 
-特定のタスクには特定のユーザー ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"]。https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
-.手順
-. ウェブブラウザを開いて、 https://console.netapp.com/["NetApp Console"^] 。
-+
-NetApp Consoleのログイン ページが表示されます。
+[[user-roles]]
+== ユーザーロール
 
+Disaster Recovery では、特定のタスクには特定のユーザーロールが必要です。ユーザーに適切なロールが割り当てられていることを確認してください。
+
+詳細については、以下を参照してください。 * link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーのロールと権限"] * link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["NetApp Console のすべてのサービスに対するアクセスロール"^]
+
+
+
+[[log-into-disaster-recovery]]
+== NetApp Disaster Recoveryにログイン
+
+. ウェブブラウザを開いてください。 https://console.netapp.com/["NetApp Console"^]に移動します。
 . NetApp Consoleにログインします。
 . NetApp Consoleの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
 +
 このサービスに初めてログインする場合は、ランディング ページが表示され、無料トライアルにサインアップできます。
 
 +
-image:draas-landing6-free-trial.png["NetApp Disaster Recoveryのランディング ページのスクリーンショット"]
+image:draas-landing6-free-trial.png["Disaster Recovery のランディングページのスクリーンショット"]
 
 +
-それ以外の場合は、 NetApp Disaster Recoveryボードが表示されます。
+それ以外の場合は、Disaster Recovery ダッシュボードが表示されます。
 
 +
 ** まだ NetApp Console エージェントを追加していない場合は、1つ追加してください。詳細については、 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントについて学ぶ"^]を参照してください。
-** 既存のエージェントを使用しているNetApp Consoleユーザーが「Disaster recovery」を選択すると、サインアップに関するメッセージが表示されます。
+** 既存のエージェントを持つコンソールユーザーの場合、「Disaster recovery」を選択すると、サインアップに関するメッセージが表示されます。
 ** すでにサービスを使用している場合は、「災害復旧」を選択するとダッシュボードが表示されます。
-
-
 +
-image:dr-dashboard.png["NetApp Disaster Recoveryダッシュボード"]
+image:dr-dashboard.png["ディザスタリカバリダッシュボード"]
+
+
 
 

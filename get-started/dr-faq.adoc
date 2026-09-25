@@ -22,8 +22,6 @@ summary: VMwareおよびKubernetesワークロード向けNetApp Disaster Recove
 このFAQでは、VMwareおよびKubernetesワークロード向けのNetApp Disaster Recoveryに関するよくある質問にお答えします。本書は、ディザスタリカバリ構成の実装や、レプリケーション、移行、フェイルオーバー、フェイルバック操作の管理に役立つ概念、用語、システム動作、および制約に焦点を当てています。
 
 
-toc::[]
-
 
 [[getting-started]]
 == 開始
