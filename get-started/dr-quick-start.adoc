@@ -58,7 +58,7 @@ NetApp Disaster Recovery の設定方法を学び、システムがワークロ�
 [role="quick-margin-para"]
 これらのタスクには、_Disaster Recovery admin_ または _Disaster Recovery failover admin role_ が必要です。
 
-[role="quick-margin-para"]
+[role="quick-margin-list"]
 * link:../use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"]
 * link:../use/failback.html["アプリケーションを元のソースサイトにフェイルバックする"]
 
