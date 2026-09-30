@@ -22,7 +22,7 @@ entries:
   url: "/use/task-appvault.html"
 - title: リソース変換テンプレートを管理する
   url: "/use/task-resource-transformation.html"
-- title: サイト、プラン、データストア、仮想マシンの情報を管理する
+- title: サイト、プラン、データストア、VM情報を管理する
   url: "/use/manage.html"
 - title: 災害復旧ジョブを監視する
   url: "/use/monitor-jobs.html"

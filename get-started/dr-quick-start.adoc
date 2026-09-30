@@ -12,29 +12,53 @@ summary: わずか数ステップでNetApp Disaster Recoveryサービスを開�
 
 
 [role="lead"]
-NetApp Disaster Recovery をすぐに使い始める方法を学びましょう。システムが要件を満たしていることを確認し、ワークロードを検出し、フェイルオーバーに備えてレプリケーション計画を構成します。
+NetApp Disaster Recovery の設定方法を学び、システムがワークロードを正常に検出するための要件を満たし、フェイルオーバーに備えてレプリケーション計画を構成できるようにします。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]前提条件を確認する
 [role="quick-margin-para"]
-link:../get-started/dr-prerequisites.html["システムがこれらの要件を満たしていることを確認してください"] 。
+コンソールエージェントをデプロイして権限を割り当てるには、_スーパー管理者_または_組織管理者_の役割が必要です。
+
+[role="quick-margin-list"]
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["Console エージェントをデプロイする"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["Disaster Recovery のユーザーロールを確認し、必要なユーザーに権限を割り当てます。"^]
+* link:../get-started/dr-prerequisites.html["システムがこれらの要件を満たしていることを確認してください"]
+* ワークロードタイプに応じた適切な要件を満たしていることを確認してください。
++
+** link:../get-started/reference-vmware-prerequisites.html["VMwareの前提条件"]
+** link:../get-started/task-kubernetes-requirements.html["Kubernetesの前提条件"]
+
+
+
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]NetApp Disaster Recoveryのセットアップ
-[role="quick-margin-list"]
-* link:../get-started/dr-setup.html["サービスのインフラストラクチャを構築する"] 。
-* link:../get-started/dr-licensing.html["ライセンスの設定"] 。
-
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"]次は何?
 [role="quick-margin-para"]
-サービスの設定が完了したら、次の手順を実行してください。
+これらのタスクを実行するには、_スーパー管理者_または_ディザスタリカバリ管理者_のロールが必要です。
 
 [role="quick-margin-list"]
-* link:../use/sites-add.html["vCenter サイトをNetApp Disaster Recoveryに追加する"] 。
-* link:../use/manage.html#manage-resource-groups["最初のリソースグループを作成する"] 。
-* link:../use/drplan-create.html["最初のレプリケーションプランを作成する"] 。
-* link:../use/replicate.html["アプリケーションを別のサイトに複製する"] 。
-* link:../use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"] 。
-* link:../use/failback.html["アプリケーションを元のソースサイトにフェイルバックする"] 。
-* link:../use/manage.html["サイト、リソース グループ、レプリケーション プランを管理する"] 。
-* link:../use/monitor-jobs.html["災害復旧オペレーションの監視"] 。
+* link:../get-started/dr-setup.html["サービスのインフラストラクチャを構築する"]
+* link:../get-started/dr-licensing.html["ライセンスの設定"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"]ディザスタリカバリプランを設定する
+[role="quick-margin-para"]
+これらのタスクには _Disaster recovery admin_ ロールが必要です。
+
+[role="quick-margin-list"]
+* link:../use/sites-add.html["サイトを Disaster Recovery に追加"]
+* link:../use/manage.html#manage-resource-groups["リソース グループの作成"]
+* link:../use/task-appvault.html["Kubernetesワークロードの場合、AppVaultを追加します"]
+* link:../use/drplan-create.html["レプリケーションプランを作成する"]
+* link:../use/replicate.html["アプリケーションを別のサイトに複製する"]
+* link:../use/task-resource-transformation.html["Kubernetesワークロードのリソース変換を管理する"]
+* link:../use/manage.html["サイト、リソース グループ、レプリケーション プランを管理する"]
+* link:../use/monitor-jobs.html["災害復旧オペレーションの監視"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"] 災害からの復旧
+[role="quick-margin-para"]
+これらのタスクには、_Disaster Recovery admin_ または _Disaster Recovery failover admin role_ が必要です。
+
+[role="quick-margin-para"]
+* link:../use/failover.html["アプリケーションをリモートサイトにフェイルオーバーする"]
+* link:../use/failback.html["アプリケーションを元のソースサイトにフェイルバックする"]
 
