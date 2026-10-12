@@ -16,6 +16,45 @@ NetApp Disaster Recoveryの新機能について説明します。
 
 
 
+[[12-october-2026]]
+== 2026年10月12日
+
+バージョン4.3.8
+
+
+
+[[optional-boot-order-for-kubernetes-resource-groups]]
+=== Kubernetesリソースグループのオプションの起動順序
+
+NetApp Disaster Recoveryで、Kubernetesレプリケーションプラン内のリソースグループの起動順序をオプションで設定できるようになりました。具体的には、リソースの優先順位とオプションの遅延時間を指定できます。このオプションを使用すると、必要に応じてリソースを同時に起動し、他のリソースに依存するリソースの起動を遅延させることで、アプリケーションが正常な状態でオンラインに戻るのをサポートできます。
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]を参照してください。
+
+
+
+[[snaplock-volume-support]]
+=== SnapLockボリュームサポート
+
+Disaster RecoveryでSnapLockボリュームがサポートされるようになり、改ざん防止スナップショットのフェイルオーバーが可能になりました。SnapLockボリュームを使用してフェイルバックを実行する際、フェイルバックを正常に完了させるには、*今すぐスナップショットを取得*オプションを使用する必要があります。
+
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["フェイルオーバー"^]およびlink:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failback.html["failback（フェイルバック）"^]の手順を参照してください。
+
+
+
+[[simplified-refresh-and-compliance-runs]]
+=== 更新とコンプライアンス実行の簡素化
+
+vCenter、レプリケーション計画、およびコンプライアンスの更新の実行は、より迅速な実行を促進するために単一のジョブに簡素化されました。この変更を確認するには、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/monitor-jobs.html["ジョブの監視"^] の方法をご確認ください。
+
+
+
+[[kubernetes-compliance-checks]]
+=== Kubernetesのコンプライアンスチェック
+
+Disaster Recoveryに、Kubernetesワークロードの欠落している作業環境を特定するためのコンプライアンスチェックが追加されました。これらのコンプライアンスチェックは、レプリケーション計画の整合性を保つためにワークロードの健全性を確保するのに役立ちます。
+
+
+
 [[16-september-2026]]
 == 2026年9月16日
 
