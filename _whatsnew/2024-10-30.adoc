@@ -42,7 +42,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーション プランを作成し、コンピューティング リソースをマップするときに、データセンター、クラスター、ホストに指定したフォルダーに VM が回復されるようにフォルダーをマップできるようになりました。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -60,7 +60,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーション プランを作成するときに、プラン内の各 VM のブート遅延を設定できるようになりました。これにより、VM の起動シーケンスを設定して、後続の優先度の VM が起動される前に、優先度 1 の VM がすべて実行されていることを確認できます。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -69,7 +69,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーション プランを作成すると、プラン内の各 VM のオペレーティング システムを確認できるようになりました。これは、VM をリソース グループにグループ化する方法を決定するのに役立ちます。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -78,7 +78,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーションプランを作成する際に、災害復旧サイト上の仮想マシン名にプレフィックスとサフィックスを追加できるようになりました。これにより、プラン内の仮想マシンに、より分かりやすい名前を付けることができます。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 

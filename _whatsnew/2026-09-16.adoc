@@ -27,7 +27,7 @@ Disaster Recovery がリソース変換をサポートするようになり、�
 
 アプリケーションの停止と再開を調整するために、カスタムスクリプトをフェイルオーバーワークフローに組み込むことができるようになりました。この機能は、スナップショットがレプリケートされて適切にリストアされる前に、アプリケーションが適切に準備されていることを確認し、フェイルオーバー後に処理をシームレスに再開できるようにします。
 
-カスタムスクリプトを挿入する方法については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]を参照してください。
+カスタムスクリプトを挿入する方法については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-kubernetes.html["レプリケーションプランを作成する"^]を参照してください。
 
 
 

@@ -26,9 +26,9 @@ NetApp Disaster Recoveryの新機能について説明します。
 [[optional-boot-order-for-kubernetes-resource-groups]]
 === Kubernetesリソースグループのオプションの起動順序
 
-NetApp Disaster Recoveryで、Kubernetesレプリケーションプラン内のリソースグループの起動順序をオプションで設定できるようになりました。具体的には、リソースの優先順位とオプションの遅延時間を指定できます。このオプションを使用すると、必要に応じてリソースを同時に起動し、他のリソースに依存するリソースの起動を遅延させることで、アプリケーションが正常な状態でオンラインに戻るのをサポートできます。
+NetApp Disaster Recoveryでは、リソースの優先順位とオプションの遅延時間を指定することで、Kubernetesレプリケーションプラン内のリソースグループのオプションの起動順序を設定できるようになりました。このオプションを使用すると、必要に応じてリソースを同時に起動したり、他のリソースに依存するリソースの起動を遅延させたりすることができ、アプリケーションが正常な状態でオンラインに復帰するのをサポートします。
 
-詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]を参照してください。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-kubernetes.html["レプリケーションプランを作成する"^]を参照してください。
 
 
 
@@ -85,7 +85,7 @@ Disaster Recovery がリソース変換をサポートするようになり、�
 
 アプリケーションの停止と再開を調整するために、カスタムスクリプトをフェイルオーバーワークフローに組み込むことができるようになりました。この機能は、スナップショットがレプリケートされて適切にリストアされる前に、アプリケーションが適切に準備されていることを確認し、フェイルオーバー後に処理をシームレスに再開できるようにします。
 
-カスタムスクリプトを挿入する方法については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]を参照してください。
+カスタムスクリプトを挿入する方法については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-kubernetes.html["レプリケーションプランを作成する"^]を参照してください。
 
 
 
@@ -374,7 +374,7 @@ GCVEのサポートに関する詳細については、link:https://docs.netapp.
 
 ディザスターリカバリーでレプリケーションプランを作成する際に、特定のデータストアをレプリケーション対象から除外できるようになりました。VMが複数のデータストアを使用するように構成されている場合、レプリケートするデータストアを制限できます。
 
-詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]を参照してください。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"^]を参照してください。
 
 
 
@@ -392,7 +392,7 @@ GCVEのサポートに関する詳細については、link:https://docs.netapp.
 
 ディザスターリカバリーに、レプリケーションプランのダッシュボードから vCenter の更新をトリガーする新しいメニューオプションが追加されました。レプリケーションプランダッシュボードのアクションメニューからサブメニューにアクセスできます。**プランの健全性**を選択し、次に**ソース vCenter の更新 / ターゲット vCenter の更新**を選択してください。
 
-詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#modify-a-replication-plan["レプリケーションプランを変更する"^]を参照してください。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-modify.html["レプリケーションプランを変更する"^]を参照してください。
 
 
 
@@ -483,7 +483,7 @@ NetApp Disaster Recovery内からSwaggerのドキュメントにアクセスで�
 
 レプリケーションプランを作成する際、新しいデフォルト設定ではVMのフォルダ構造が保持されます。リカバリターゲットに元のフォルダ階層が存在しない場合、Disaster Recoveryがそれを作成します。このオプションの選択を解除すると、元のフォルダ階層を無視できます。
 
-詳細については、 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"^]を参照してください。
 
 
 
@@ -501,7 +501,7 @@ NetApp Disaster Recovery内からSwaggerのドキュメントにアクセスで�
 
 新しい親 VM フォルダを指定するか、[**元のフォルダ階層を保持**] オプションのチェックを外すことで、この設定を上書きできるようになりました。
 
-詳細については、 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -549,7 +549,7 @@ ONTAPでカスケード関係を設​​定し、そのレプリケーション
 
 ディザスタ リカバリでは、登録中に VMware ハードウェアを vSphere の以前のバージョンにダウングレードできるようになりました。これは、ソース ESX ホストが災害復旧サイトよりも新しいバージョンを実行している場合に役立ちます。
 
-詳細については、 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#select-vcenter-servers["NetApp Disaster Recoveryでレプリケーションプランを作成する"]。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html#select-vcenter-servers["NetApp Disaster Recoveryでレプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -565,7 +565,7 @@ ONTAPでカスケード関係を設​​定し、そのレプリケーション
 
 バックアップを作成する前に実行するカスタム スクリプトをフェイルオーバー ワークフローに挿入できるようになりました。バックアップ前のスクリプトを使用すると、スナップショットが複製される前に VM の状態を制御し、VM を移行用に準備することができます。たとえば、フェイルオーバー後に別のスクリプトを使用して再マウントされる NFS マウントをアンマウントするスクリプトを挿入できます。
 
-詳細については、 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#select-vcenter-servers["NetApp Disaster Recoveryでレプリケーションプランを作成する"]。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html#select-vcenter-servers["NetApp Disaster Recoveryでレプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -727,7 +727,7 @@ Windows Local Administrator Password Solution (Windows LAPS) は、Active Direct
 
 ドメイン コントローラーの詳細を指定して、サブネット マッピング オプションを選択し、LAPS オプションを確認できるようになりました。このオプションを使用すると、仮想マシンごとにパスワードを入力する必要がなくなります。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -787,7 +787,7 @@ NetApp Disaster Recovery、ネイティブのONTAP SnapMirrorポリシー スケ
 
 これが構成されると、サービスは定期的にスケジュールされたスナップショットを取得せず、代わりに外部エンティティに依存してスナップショットを取得および更新します。
 
-レプリケーションプランで外部スナップショットソリューションを使用する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+レプリケーション計画で外部スナップショットソリューションを使用する方法の詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -820,7 +820,7 @@ NetApp Disaster Recovery は24 時間ごとに検出を実行します。この�
 * レプリケーション プランを作成し、プラン内にリソース グループを作成すると、データストア内の VM を確認できます。
 
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -936,7 +936,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーション プランを作成し、コンピューティング リソースをマップするときに、データセンター、クラスター、ホストに指定したフォルダーに VM が回復されるようにフォルダーをマップできるようになりました。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -954,7 +954,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーション プランを作成するときに、プラン内の各 VM のブート遅延を設定できるようになりました。これにより、VM の起動シーケンスを設定して、後続の優先度の VM が起動される前に、優先度 1 の VM がすべて実行されていることを確認できます。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -963,7 +963,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーション プランを作成すると、プラン内の各 VM のオペレーティング システムを確認できるようになりました。これは、VM をリソース グループにグループ化する方法を決定するのに役立ちます。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -972,7 +972,7 @@ NetApp Disaster Recoveryの 30 日間無料トライアルに今すぐサイン�
 
 レプリケーションプランを作成する際に、災害復旧サイト上の仮想マシン名にプレフィックスとサフィックスを追加できるようになりました。これにより、プラン内の仮想マシンに、より分かりやすい名前を付けることができます。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -1103,7 +1103,7 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 [[replication-plan-updates]]
 === レプリケーションプランの更新
 
-アプリケーション ページでデータストア別に VM をフィルタリングし、リソース マッピング ページでターゲットの詳細を選択することにより、レプリケーション プランをより簡単に追加できます。参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+アプリケーションページでデータストアごとに仮想マシンをフィルタリングし、リソースマッピングページでターゲットの詳細を選択することで、レプリケーションプランをより簡単に追加できます。 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -1198,9 +1198,9 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 [[edit-schedules]]
 === スケジュールを編集する
 
-このリリースでは、コンプライアンス テストとフェイルオーバー テストのスケジュールを設定して、必要に応じて正しく動作することを確認できるようになりました。
+今回のリリースにより、コンプライアンステストとフェイルオーバーテストのスケジュールを設定できるようになり、これらのテストが正しく機能することを確認できます。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-modify.html["レプリケーションプランを変更する"]を参照してください。
 
 
 
@@ -1220,7 +1220,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 * 静的 IP: ソース VM と同じ情報または異なる情報を選択できます。ソースと同じものを選択した場合は、資格情報を入力する必要はありません。一方、ソースとは異なる情報を使用する場合は、資格情報、IP アドレス、サブネット マスク、DNS、ゲートウェイ情報を提供できます。
 
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -1238,7 +1238,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 レプリケーション プランを開発しながらSnapMirror関係を作成できるようになりました。以前は、 NetApp Disaster Recoveryの外部で関係を作成する必要がありました。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -1247,7 +1247,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 レプリケーション プランを作成するときに、異なるボリュームおよび異なる SVM からの VM を含めることができます。  NetApp Disaster Recovery は、すべてのボリュームを含めて整合性グループのスナップショットを作成し、すべてのセカンダリ ロケーションを更新します。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -1256,7 +1256,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 レプリケーション プランを作成するときに、リソース グループに VM を追加できます。リソース グループを使用すると、各 VM に遅延を設定して、遅延されたシーケンスで VM の電源をオンにすることができます。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -1265,7 +1265,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 
 アプリケーション整合性のあるスナップショット コピーを作成するように指定できます。サービスはアプリケーションを静止させ、スナップショットを取得してアプリケーションの一貫した状態を取得します。
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -1325,11 +1325,11 @@ NetApp Disaster Recoveryのこのプレビュー リリースには、次の更�
 
 * *RPO*: レプリケーション プランのデータストア セクションで、復旧ポイント目標 (RPO) と保持数を入力できるようになりました。これは、設定された時間よりも古くない、存在する必要があるデータの量を示します。たとえば、これを 5 分に設定すると、災害が発生した場合にシステムが最大 5 分間のデータを失っても、ビジネスクリティカルなニーズには影響しません。
 +
-参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+ https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 * *ネットワークの機能強化*: レプリケーション プランの仮想マシン セクションでソースとターゲットの場所の間でネットワークをマッピングするときに、 NetApp Disaster RecoveryDHCP または静的 IP の 2 つのオプションが提供されるようになりました。以前は、DHCP のみがサポートされていました。静的 IP の場合は、サブネット、ゲートウェイ、および DNS サーバーを構成します。さらに、仮想マシンの資格情報を入力できるようになりました。
 +
-参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+ https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 * *スケジュールの編集*: レプリケーション プランのスケジュールを更新できるようになりました。
 +
@@ -1342,7 +1342,7 @@ NetApp Disaster Recoveryのこのプレビュー リリースには、次の更�
 ** 一貫性グループとしての多対1
 ** 多対多
 +
-参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+ https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
@@ -1372,7 +1372,7 @@ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-int
 [[resource-groups-update-for-boot-order]]
 === ブート順序のリソース グループの更新
 
-災害復旧またはレプリケーション プランを作成するときに、機能リソース グループに仮想マシンを追加できます。リソース グループを使用すると、依存関係にある仮想マシンのセットを、要件を満たす論理グループにまとめることができます。たとえば、グループには回復時に実行できるブート順序を含めることができます。このリリースでは、各リソース グループに 1 つ以上の仮想マシンを含めることができます。仮想マシンは、プランに含めた順序に基づいて電源がオンになります。参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#select-applications-to-replicate-and-assign-resource-groups["複製するアプリケーションを選択し、リソース グループを割り当てます"]。
+災害復旧計画またはレプリケーション計画を作成する際に、仮想マシンを機能リソースグループに追加できます。リソースグループを使用すると、依存関係のある仮想マシン群を、要件を満たす論理グループにまとめることができます。例えば、グループには復旧時に実行できる起動順序を含めることができます。今回のリリースにより、各リソースグループに1台以上の仮想マシンを含めることができるようになりました。仮想マシンは、プランに含めた順序に基づいて起動します。 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["複製するアプリケーションを選択し、リソース グループを割り当てます"]を参照してください。
 
 
 
@@ -1386,7 +1386,7 @@ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-int
 [[replication-plan-shows-recovery-point-objective-rpo-transfer-schedules]]
 === レプリケーション計画は、リカバリポイント目標（RPO）の転送スケジュールを示します。
 
-災害復旧またはレプリケーション プランを作成するときに、VM を選択します。このリリースでは、データストアまたは VM に関連付けられている各ボリュームに関連付けられているSnapMirror を表示できるようになりました。SnapMirrorスケジュールに関連付けられている RPO 転送スケジュールも表示できます。RPO は、災害後の復旧にバックアップ スケジュールが十分かどうかを判断するのに役立ちます。参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+災害復旧またはレプリケーション計画を作成する際には、VMを選択します。今回のリリースでは、データストアまたはVMに関連付けられている各ボリュームに関連付けられたSnapMirrorを表示できるようになりました。SnapMirrorスケジュールに関連付けられているRPO転送スケジュールも確認できます。RPOは、災害発生後に復旧するためにバックアップスケジュールが十分かどうかを判断するのに役立ちます。 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 

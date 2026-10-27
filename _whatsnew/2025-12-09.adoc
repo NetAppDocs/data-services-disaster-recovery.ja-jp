@@ -11,7 +11,7 @@
 
 新しい親 VM フォルダを指定するか、[**元のフォルダ階層を保持**] オプションのチェックを外すことで、この設定を上書きできるようになりました。
 
-詳細については、 link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"]。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 

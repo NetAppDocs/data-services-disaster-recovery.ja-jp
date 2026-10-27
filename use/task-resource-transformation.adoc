@@ -84,5 +84,5 @@ image::resource-transformation-template.png[リソース変換テンプレート
 [[next-steps]]
 == 次の手順
 
-* link:drplan-create.html["レプリケーションプランを作成する"]
+* link:task-replication-plan-kubernetes.html["Kubernetesワークロードのレプリケーションプランを作成する"]
 

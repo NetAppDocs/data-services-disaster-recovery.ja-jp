@@ -53,4 +53,4 @@ NetApp Disaster Recovery、ネイティブのONTAP SnapMirrorポリシー スケ
 
 これが構成されると、サービスは定期的にスケジュールされたスナップショットを取得せず、代わりに外部エンティティに依存してスナップショットを取得および更新します。
 
-レプリケーションプランで外部スナップショットソリューションを使用する方法の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+レプリケーション計画で外部スナップショットソリューションを使用する方法の詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。

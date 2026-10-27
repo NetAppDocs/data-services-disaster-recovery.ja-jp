@@ -9,7 +9,7 @@
 
 ディザスターリカバリーでレプリケーションプランを作成する際に、特定のデータストアをレプリケーション対象から除外できるようになりました。VMが複数のデータストアを使用するように構成されている場合、レプリケートするデータストアを制限できます。
 
-詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]を参照してください。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"^]を参照してください。
 
 
 
@@ -27,7 +27,7 @@
 
 ディザスターリカバリーに、レプリケーションプランのダッシュボードから vCenter の更新をトリガーする新しいメニューオプションが追加されました。レプリケーションプランダッシュボードのアクションメニューからサブメニューにアクセスできます。**プランの健全性**を選択し、次に**ソース vCenter の更新 / ターゲット vCenter の更新**を選択してください。
 
-詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html#modify-a-replication-plan["レプリケーションプランを変更する"^]を参照してください。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-modify.html["レプリケーションプランを変更する"^]を参照してください。
 
 
 

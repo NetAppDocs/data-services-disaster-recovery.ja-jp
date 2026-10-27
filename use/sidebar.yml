@@ -8,8 +8,16 @@ entries:
   url: "/use/sites-add.html"
 - title: リソースグループを作成する
   url: "/use/resource-group.html"
-- title: レプリケーションプランを作成する
-  url: "/use/drplan-create.html"
+- title: レプリケーションプラン
+  entries:
+  - title: レプリケーションプランについて学ぶ
+    url: "/use/concept-replication-plan.html"
+  - title: VMwareレプリケーションプランを作成する
+    url: "/use/task-replication-plan-vmware.html"
+  - title: Kubernetesレプリケーションプランを作成する
+    url: "/use/task-replication-plan-kubernetes.html"
+  - title: レプリケーションプランを変更する
+    url: "/use/task-replication-plan-modify.html"
 - title: 別のサイトに複製する
   url: "/use/replicate.html"
 - title: 別のサイトに移行する

@@ -24,8 +24,10 @@ indexpage:
     links:
     - title: サイトにvCenterを追加する
       url: "/use/sites-add.html"
-    - title: 災害復旧計画を作成する
-      url: "/use/drplan-create.html"
+    - title: VMwareの災害復旧計画を作成する
+      url: "/use/task-replication-plan-vmware.html"
+    - title: Kubernetesの災害復旧計画を作成する
+      url: "/use/task-replication-plan-kubernetes.html"
     - title: アプリを別のサイトに複製する
       url: "/use/replicate.html"
     - title: アプリを別のサイトに移行する

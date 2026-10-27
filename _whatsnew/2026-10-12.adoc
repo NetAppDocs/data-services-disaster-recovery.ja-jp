@@ -7,9 +7,9 @@
 [[optional-boot-order-for-kubernetes-resource-groups]]
 === Kubernetesリソースグループのオプションの起動順序
 
-NetApp Disaster Recoveryで、Kubernetesレプリケーションプラン内のリソースグループの起動順序をオプションで設定できるようになりました。具体的には、リソースの優先順位とオプションの遅延時間を指定できます。このオプションを使用すると、必要に応じてリソースを同時に起動し、他のリソースに依存するリソースの起動を遅延させることで、アプリケーションが正常な状態でオンラインに戻るのをサポートできます。
+NetApp Disaster Recoveryでは、リソースの優先順位とオプションの遅延時間を指定することで、Kubernetesレプリケーションプラン内のリソースグループのオプションの起動順序を設定できるようになりました。このオプションを使用すると、必要に応じてリソースを同時に起動したり、他のリソースに依存するリソースの起動を遅延させたりすることができ、アプリケーションが正常な状態でオンラインに復帰するのをサポートします。
 
-詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"^]を参照してください。
+詳細については、link:https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-kubernetes.html["レプリケーションプランを作成する"^]を参照してください。
 
 
 

@@ -26,7 +26,7 @@ NetApp Disaster Recovery は24 時間ごとに検出を実行します。この�
 * レプリケーション プランを作成し、プラン内にリソース グループを作成すると、データストア内の VM を確認できます。
 
 
-詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/drplan-create.html["レプリケーションプランを作成する"] 。
+詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
 
 
