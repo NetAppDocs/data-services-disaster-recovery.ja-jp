@@ -29,7 +29,7 @@ NetApp Disaster Recovery には、無料トライアル、従量課金制サブ�
 
 
 
-NOTE: NetApp Disaster Recovery料金は、レプリケーション プランを持つ VM が少なくとも 1 つある場合、ソース サイトのデータストアの使用済み容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、容量許容量に含まれません。  BYOL の場合、データが許可された容量を超えると、追加の容量ライセンスを取得するか、 NetApp Consoleでライセンスをアップグレードするまで、サービスでの操作が制限されます。
+NOTE: 災害復旧料金は、少なくとも1つの仮想マシンまたはKubernetesリソースにレプリケーションプランが設定されている場合、ソースサイトにおける使用容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、容量許容量には含まれません。BYOLの場合、データが許容容量を超えると、NetApp Consoleで追加の容量ライセンスを取得するかライセンスをアップグレードするまで、サービスでの操作が制限されます。
 
 link:https://docs.netapp.com/us-en/console-licenses-subscriptions/concept-licenses-subscriptions.html["サブスクリプションについて詳しくはこちら"^]。
 
@@ -45,7 +45,7 @@ link:https://docs.netapp.com/us-en/console-licenses-subscriptions/concept-licens
 [[try-it-out-using-a-30-day-free-trial]]
 == 30日間の無料トライアルでお試しください
 
-30 日間の無料トライアルを使用して、 NetApp Disaster Recoveryを試すことができます。
+30日間の無料トライアルを利用して、Disaster Recoveryをお試しいただけます。
 
 
 NOTE: トライアル期間中は容量制限は適用されません。
@@ -61,13 +61,13 @@ NOTE: トライアル期間中は容量制限は適用されません。
 このサービスに初めてログインする場合は、ランディング ページが表示されます。
 
 +
-image:draas-landing6-free-trial.png["NetApp Disaster Recoveryのランディング ページのスクリーンショット"]
+image:draas-landing6-free-trial.png["Disaster Recovery のランディングページのスクリーンショット"]
 
 . 他のサービス用のコンソール エージェントをまだ追加していない場合は、追加します。
 +
 コンソールエージェントを追加するには、 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントについて学ぶ"^] 。
 
-. エージェントを設定すると、 NetApp Disaster Recoveryランディング ページで、エージェントを追加するボタンが無料トライアルを開始するためのボタンに変わります。  *無料トライアルを開始*を選択します。
+. エージェントを設定すると、Disaster Recoveryのランディングページで、エージェントを追加するボタンが無料トライアルを開始するボタンに変わります。*無料トライアルを開始*を選択します。
 . まず、プライマリサイトとディザスタリカバリサイトを追加することから始めます。
 +
 詳細については、link:../use/sites-add.html["サイトを追加する"]を参照してください。
@@ -82,16 +82,16 @@ image:draas-landing6-free-trial.png["NetApp Disaster Recoveryのランディン�
 無料トライアルが終了したら、 NetAppからライセンスを購入するか、AWS Marketplace または Microsoft Azure Marketplace を通じてサブスクライブすることができます。この手順では、マーケットプレイスのいずれかで直接サブスクライブする方法の概要を説明します。
 
 .手順
-. NetApp Disaster Recoveryで、無料トライアルの有効期限が切れるというメッセージが表示されます。メッセージで、[*サブスクライブまたはライセンスを購入*] を選択します。
+. 災害復旧画面で、無料トライアル期間が終了するというメッセージが表示されます。メッセージで、*購読またはライセンスの購入*を選択します。
 +
 または、Disaster Recoveryメニューから「支払い方法の表示」を選択します。
 
 +
-image:dr-licensing-payment-methods.png["NetApp Disaster Recoveryの支払い方法ページ"]
+image:dr-licensing-payment-methods.png["ディザスタリカバリの支払い方法ページ"]
 
 . *AWS Marketplace でサブスクライブ* または *Azure Marketplace でサブスクライブ* を選択します。
-. AWS Marketplace または Microsoft Azure Marketplace を使用して、*NetApp Disaster Recovery* にサブスクライブしてください。
-. NetApp Disaster Recoveryに戻ると、サブスクライブしたことを示すメッセージが表示されます。
+. AWS MarketplaceまたはMicrosoft Azure Marketplaceを使用して、*Disaster Recovery*をサブスクライブします。
+. Disaster Recoveryに戻ると、サブスクライブ済みであることを示すメッセージが表示されます。
 +
 サブスクリプションの詳細は、NetApp Consoleのサブスクリプション ページで確認できます。link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-homepage.html["NetApp Consoleを使用したサブスクリプションの管理の詳細"^]。
 
@@ -111,7 +111,7 @@ image:dr-licensing-payment-methods.png["NetApp Disaster Recoveryの支払い方�
 [[add-the-license-to-the-netapp-console]]
 === ライセンスをNetApp Consoleに追加します
 
-NetApp の営業担当者から NetApp Disaster Recovery ライセンスを購入したら、コンソールでライセンスを管理できます。
+NetAppの営業担当者からDisaster Recoveryライセンスを購入すると、Consoleでライセンスを管理できます。
 
 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["NetApp Consoleでライセンスを追加する方法について学習します"^]。
 
@@ -120,7 +120,7 @@ https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-se
 [[update-your-license-when-it-expires]]
 == ライセンスの有効期限が切れたら更新してください
 
-ライセンス期間の有効期限が近づいている場合、またはライセンス容量が上限に達している場合は、NetApp Disaster Recovery UIで通知されます。サービスの利用が中断されないよう、有効期限が切れる前に NetApp Disaster Recoveryライセンスを更新することができます。
+ライセンス期間の有効期限が近づいている場合、またはライセンス容量が上限に達している場合は、Disaster Recovery UIで通知されます。Disaster Recoveryライセンスの有効期限が切れる前に更新することで、サービスの利用に中断が生じるのを防ぐことができます。
 
 
 TIP: このメッセージはNetApp Consoleと https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["通知"]。
@@ -135,7 +135,7 @@ https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-se
 無料トライアルはいつでも停止できます。また、有効期限が切れるまで待つこともできます。
 
 .手順
-. NetApp Disaster Recoveryで、*無料トライアル - 詳細を表示*を選択します。
+. Disaster Recoveryで、*無料トライアル - 詳細を見る*を選択します。
 . ドロップダウンの詳細で、[*無料トライアルを終了*]を選択します。
 +
 image:draas-trial-end3.png["無料トライアルページ終了"]
@@ -146,7 +146,7 @@ image:draas-trial-end3.png["無料トライアルページ終了"]
 
 +
 
-NOTE: 無料トライアルを終了し、データの削除を要求せず、ライセンスまたはサブスクリプションを購入しなかった場合、 NetApp Disaster Recovery は無料トライアルの終了から 60 日後にすべてのデータを削除します。
+NOTE: 無料トライアル期間を終了し、データの削除を要求せず、ライセンスまたはサブスクリプションを購入しなかった場合、Disaster Recoveryは無料トライアル期間終了後60日後にすべてのデータを削除します。
 
 . テキストボックスに「トライアル終了」と入力します。
 . *終了*を選択します。

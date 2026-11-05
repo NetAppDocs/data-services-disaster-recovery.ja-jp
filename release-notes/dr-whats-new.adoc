@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: release-notes/dr-whats-new.html 
 keywords: disaster recovery, bluexp, disaster recovery, vmware, vcenter, draas, disaster 
-summary: NetApp Disaster Recoveryは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。NetApp Disaster Recoveryを使用すると、NetAppクラウドストレージを使用して、ONTAPストレージを実行しているオンプレミスのVMwareワークロードを、ディザスタリカバリサイトとしてパブリッククラウド内のVMwareのソフトウェアで定義されるデータセンターにレプリケートできます。 
+summary: NetApp Disaster Recoveryは、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。NetApp Disaster Recoveryを使用すると、ONTAPストレージで実行されているオンプレミスのVMwareおよびKubernetesワークロードを災害復旧サイトにレプリケートできます。 
 ---
 = NetApp Disaster Recoveryの新機能
 :hardbreaks:
@@ -1079,7 +1079,7 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 [[05-july-2024]]
 == 2024年7月5日
 
-このNetApp Disaster Recoveryリリースには、次の更新が含まれています。
+今回の災害復旧リリースには、以下のアップデートが含まれています：
 
 
 
@@ -1146,16 +1146,16 @@ NOTE: NetApp は、プレビューされたワークロード容量に対して�
 [[updates-to-prerequisite-information]]
 === 前提条件情報の更新
 
-NetApp Disaster Recovery の前提条件情報が更新されました。
+災害復旧の前提条件に関する情報が更新されました。
 
-参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-prerequisites.html["NetApp Disaster Recoveryの前提条件"]。
+ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-prerequisites.html["災害復旧の前提条件"]を参照してください。
 
 
 
 [[15-may-2024]]
 == 2024年5月15日
 
-このNetApp Disaster Recoveryリリースには、次の更新が含まれています。
+今回の災害復旧リリースには、以下のアップデートが含まれています：
 
 
 
@@ -1169,27 +1169,27 @@ NetApp Disaster Recovery の前提条件情報が更新されました。
 [[licensing-updates]]
 === ライセンスの更新
 
-NetApp Disaster Recoveryでは、90 日間の無料トライアルにサインアップしたり、Amazon Marketplace で従量課金制 (PAYGO) サブスクリプションを購入したり、NetApp の営業担当者またはNetAppサポート サイト (NSS) から取得したNetAppライセンス ファイル (NLF) である Bring Your NetApp License (BYOL) を使用したりすることができます。
+Disaster Recoveryでは、90日間の無料トライアルへのサインアップ、Amazon Marketplaceでの従量課金制（PAYGO）サブスクリプションの購入、またはBring Your Own License（BYOL）の利用が可能です。これはNetAppライセンスファイル（NLF）であり、お客様のNetApp営業担当者またはNetApp Support Site（NSS）から取得します。
 
-NetApp Disaster Recoveryのライセンス設定の詳細については、以下を参照してください。link:../get-started/dr-licensing.html["ライセンスの設定"] 。
+Disaster Recoveryのライセンス設定の詳細については、link:../get-started/dr-licensing.html["ライセンスの設定"]を参照してください。
 
-https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"]。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["災害復旧について詳しくはこちらをご覧ください"]。
 
 
 
 [[05-march-2024]]
 == 2024年3月5日
 
-これはNetApp Disaster Recoveryの一般提供リリースであり、次の更新が含まれています。
+これはDisaster Recoveryの一般提供版リリースであり、以下の更新が含まれています。
 
 
 
 [[licensing-updates]]
 === ライセンスの更新
 
-NetApp Disaster Recoveryでは、90 日間の無料トライアルにサインアップするか、 NetApp の営業担当者から取得したNetAppライセンス ファイル (NLF) である Bring Your Own License (BYOL) を使用することができます。ライセンス シリアル番号を使用して、 NetApp Consoleサブスクリプションで BYOL をアクティブ化できます。  NetApp Disaster Recovery料金は、データストアのプロビジョニングされた容量に基づいて決まります。
+Disaster Recoveryでは、90日間の無料トライアルにサインアップするか、NetApp営業担当者から取得するNetAppライセンスファイル（NLF）であるBring Your Own License（BYOL）を利用できます。ライセンスのシリアル番号を使用して、NetApp ConsoleのサブスクリプションでBYOLをアクティブ化できます。Disaster Recoveryの料金は、データストアのプロビジョニング済み容量に基づいています。
 
-NetApp Disaster Recoveryのライセンス設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html["ライセンスの設定"] 。
+災害復旧のライセンス設定の詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-licensing.html["ライセンスの設定"]を参照してください。
 
 すべてのNetApp Consoleデータサービスのライセンス管理の詳細については、 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["すべてのNetApp Consoleデータサービスのライセンスを管理する"^] 。
 
@@ -1207,7 +1207,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 [[01-february-2024]]
 == 2024年2月1日
 
-このNetApp Disaster Recoveryプレビュー リリースには、次の更新が含まれています。
+このディザスタリカバリプレビューリリースには、以下の更新が含まれています：
 
 
 
@@ -1227,7 +1227,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 [[custom-scripts]]
 === カスタムスクリプト
 
-フェイルオーバー後のプロセスとして含めることができるようになりました。カスタム スクリプトを使用すると、フェイルオーバー プロセス後にNetApp Disaster Recoveryでスクリプトを実行できます。たとえば、カスタム スクリプトを使用して、フェイルオーバーが完了した後にすべてのデータベース トランザクションを再開できます。
+フェイルオーバー後のプロセスとして含めることができるようになりました。カスタムスクリプトを使用すると、フェイルオーバー処理後にDisaster Recoveryにスクリプトを実行させることができます。例えば、カスタムスクリプトを使用して、フェイルオーバー完了後にすべてのデータベーストランザクションを再開することができます。
 
 詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/failover.html["リモートサイトへのフェイルオーバー"] 。
 
@@ -1236,7 +1236,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 [[snapmirror-relationship]]
 === SnapMirror関係
 
-レプリケーション プランを開発しながらSnapMirror関係を作成できるようになりました。以前は、 NetApp Disaster Recoveryの外部で関係を作成する必要がありました。
+レプリケーション計画の作成中に、SnapMirrorリレーションシップを作成できるようになりました。以前は、Disaster Recoveryの外部でリレーションシップを作成する必要がありました。
 
 詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
@@ -1245,7 +1245,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 [[consistency-groups]]
 === 一貫性グループ
 
-レプリケーション プランを作成するときに、異なるボリュームおよび異なる SVM からの VM を含めることができます。  NetApp Disaster Recovery は、すべてのボリュームを含めて整合性グループのスナップショットを作成し、すべてのセカンダリ ロケーションを更新します。
+レプリケーションプランを作成する際、異なるボリュームや異なるSVMに属するVMを含めることができます。ディザスタリカバリは、すべてのボリュームを含めて整合性グループスナップショットを作成し、すべてのセカンダリロケーションを更新します。
 
 詳細については、 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
@@ -1272,7 +1272,7 @@ NetApp Disaster Recoveryのライセンス設定の詳細については、以�
 [[11-january-2024]]
 == 2024年1月11日
 
-NetApp Disaster Recoveryのこのプレビュー リリースには、次の更新が含まれています。
+このDisaster Recoveryのプレビュー版には、以下の更新が含まれています：
 
 
 
@@ -1281,33 +1281,33 @@ NetApp Disaster Recoveryのこのプレビュー リリースには、次の更�
 
 このリリースでは、ダッシュボードから他のページの情報にさらに迅速にアクセスできるようになりました。
 
-https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryについて学ぶ"]。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["災害復旧について学ぶ"]。
 
 
 
 [[20-october-2023]]
 == 2023年10月20日
 
-NetApp Disaster Recoveryのこのプレビュー リリースには、次の更新が含まれています。
+このディザスタリカバリのプレビューリリースには、次の更新が含まれています。
 
 
 
 [[protect-on-premises-nfs-based-vmware-workloads]]
 === オンプレミスの NFS ベースの VMware ワークロードを保護する
 
-NetApp Disaster Recovery を使用すると、パブリック クラウドに加えて、オンプレミスの NFS ベースの VMware 環境を別のオンプレミスの NFS ベースの VMware 環境への災害から保護できるようになります。  NetApp Disaster Recovery は、災害復旧計画の完了を調整します。
+Disaster Recoveryを使用すると、パブリッククラウドに加えて、別のオンプレミスのNFSベースのVMware環境に対して、オンプレミスのNFSベースのVMwareワークロードを災害から保護できるようになりました。Disaster Recoveryは、災害復旧計画の完了をオーケストレーションします。
 
 
 NOTE: このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。
 
-https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"]。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["災害復旧について詳しくはこちらをご覧ください"]。
 
 
 
 [[27-september-2023]]
 == 2023年9月27日
 
-NetApp Disaster Recoveryのこのプレビュー リリースには、次の更新が含まれています。
+このDisaster Recoveryのプレビュー版には、以下の更新が含まれています：
 
 
 
@@ -1327,7 +1327,7 @@ NetApp Disaster Recoveryのこのプレビュー リリースには、次の更�
 +
  https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
-* *ネットワークの機能強化*: レプリケーション プランの仮想マシン セクションでソースとターゲットの場所の間でネットワークをマッピングするときに、 NetApp Disaster RecoveryDHCP または静的 IP の 2 つのオプションが提供されるようになりました。以前は、DHCP のみがサポートされていました。静的 IP の場合は、サブネット、ゲートウェイ、および DNS サーバーを構成します。さらに、仮想マシンの資格情報を入力できるようになりました。
+* *ネットワーク機能の強化*：レプリケーション計画の仮想マシンセクションでソースとターゲットの場所間のネットワークをマッピングする場合、Disaster Recoveryでは、DHCPまたは静的IPの2つのオプションが利用できるようになりました。以前はDHCPのみがサポートされていました。静的IPの場合は、サブネット、ゲートウェイ、DNSサーバを設定します。さらに、仮想マシンの認証情報を入力できるようになりました。
 +
  https://docs.netapp.com/us-en/data-services-disaster-recovery/use/task-replication-plan-vmware.html["レプリケーションプランを作成する"]を参照してください。
 
@@ -1355,15 +1355,15 @@ NetApp Disaster Recoveryのこのプレビュー リリースには、次の更�
 
 
 
-[[netapp-disaster-recovery-preview]]
-=== NetApp Disaster Recoveryプレビュー
+[[disaster-recovery-preview]]
+=== 災害復旧プレビュー
 
-NetApp Disaster Recoveryプレビューは、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。最初に、 NetApp Disaster Recoveryプレビューを使用すると、 Amazon FSx for ONTAPを使用して、 NetAppストレージを実行しているオンプレミスの NFS ベースの VMware ワークロードを AWS 上の VMware Cloud (VMC) に保護できます。
+Disaster Recoveryプレビューは、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。最初は、Disaster Recoveryプレビューを使用することで、NetAppストレージで実行されているオンプレミスのNFSベースのVMwareワークロードを、Amazon FSx for ONTAPを使用してAWS上のVMware Cloud（VMC）に保護できます。
 
 
 NOTE: このプレビュー オファリングでは、 NetApp は一般提供開始前にオファリングの詳細、内容、およびタイムラインを変更する権利を留保します。
 
-https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"]。
+https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["災害復旧について詳しくはこちらをご覧ください"]。
 
 このリリースには次の更新が含まれています。
 
@@ -1379,7 +1379,7 @@ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-int
 [[replication-verification]]
 === レプリケーション検証
 
-災害復旧またはレプリケーション プランを作成し、ウィザードで繰り返しを指定して、災害復旧サイトへのレプリケーションを開始すると、 NetApp Disaster Recovery は30 分ごとに、レプリケーションがプランに従って実際に実行されているかどうかを確認します。ジョブ モニター ページで進行状況を監視できます。参照 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/replicate.html["アプリケーションを別のサイトに複製する"]。
+災害復旧またはレプリケーション計画を作成し、ウィザードで繰り返しを指定して、災害復旧サイトへのレプリケーションを開始すると、Disaster Recoveryは30分ごとに、レプリケーションが計画どおりに実際に実行されていることを確認します。Job Monitorページで進捗状況を確認できます。 https://docs.netapp.com/us-en/data-services-disaster-recovery/use/replicate.html["アプリケーションを別のサイトに複製する"] を参照してください。
 
 
 
@@ -1400,13 +1400,13 @@ https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-int
 [[18-may-2023]]
 == 2023年5月18日
 
-これはNetApp Disaster Recoveryの最初のリリースです。
+これはDisaster Recoveryの初回リリースです。
 
 
 
 [[cloud-based-disaster-recovery-service]]
 === クラウドベースの災害復旧サービス
 
-NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。最初に、 NetApp Disaster Recoveryプレビューを使用すると、 Amazon FSx for ONTAPを使用して、 NetAppストレージを実行しているオンプレミスの NFS ベースの VMware ワークロードを AWS 上の VMware Cloud (VMC) に保護できます。
+Disaster Recoveryは、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。初期段階では、Disaster Recoveryのプレビュー版を使用して、NetAppストレージで実行されているオンプレミスのNFSベースのVMwareワークロードを、Amazon FSx for ONTAPを使用してAWS上のVMware Cloud（VMC）に保護することができます。
 
-link:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["NetApp Disaster Recoveryの詳細"]。
+link:https://docs.netapp.com/us-en/data-services-disaster-recovery/get-started/dr-intro.html["災害復旧について詳しくはこちらをご覧ください"]。

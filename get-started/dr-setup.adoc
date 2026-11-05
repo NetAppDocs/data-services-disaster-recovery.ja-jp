@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: get-started/dr-setup.html 
-keywords: bluexp, disaster recovery, aws, amazon web services, amazon fsx for netapp ontap 
+keywords: bluexp, disaster recovery, aws, amazon web services, amazon fsx for netapp ontap, vmware, kubernetes, trident protect 
 summary: NetApp Disaster Recoveryを使用するには、いくつかの手順を実行してセットアップする必要があります。 
 ---
 = NetApp Disaster Recovery用のインフラストラクチャをセットアップする
@@ -22,12 +22,13 @@ TIP: レビューlink:../get-started/dr-prerequisites.html["前提条件"]シス
 [[supported-infrastructures]]
 == サポートされているインフラストラクチャ
 
-NetApp Disaster Recovery は、次のインフラストラクチャで使用できます。
+災害復旧は、以下のインフラストラクチャで使用できます：
 
 * ハイブリッドクラウドディザスタリカバリは、オンプレミスの VMware と ONTAP データセンターを、VMware Cloud on AWS または Elastic VMware Service（EVS）および Amazon FSx for NetApp ONTAP に基づく AWS ディザスタリカバリインフラストラクチャにレプリケートします。
 * オンプレミスのVMware と ONTAP の vCenter を別のオンプレミスのVMware と ONTAP の vCenter にレプリケートするプライベートクラウドのディザスタリカバリ。
 * VMware Cloud on AWS または EVS に基づく AWS ディザスター リカバリ インフラストラクチャを、FSx for NetApp ONTAP を使用して別の AWS ベースのディザスター リカバリ インフラストラクチャに複製するクラウド ディザスター リカバリ。
 * ハイブリッドクラウドディザスタリカバリは、オンプレミスのVMware と ONTAP データセンターを、Google Cloud VMware Engine と Google Cloud NetApp Volumes をベースとした Google のディザスタリカバリインフラストラクチャにレプリケートします。
+* Tridentで管理されたONTAPストレージを使用した、Kubernetesクラスタ間のKubernetesディザスタリカバリ。クラスタの要件については、link:task-kubernetes-requirements.html["Kubernetesクラスタの要件"]を参照してください。
 
 
 
@@ -46,10 +47,10 @@ AWS クラウド インフラストラクチャに関連する災害復旧の場
 [[aws-availability-zones]]
 === AWSアベイラビリティゾーン
 
-AWS は、リージョン内の 1 つまたは複数のアベイラビリティ ゾーン （AZ） にソリューションをデプロイすることをサポートしています。NetApp Disaster Recovery では、AWS でホストされている 2 つのサービス（VMware Cloud on AWS と Amazon FSx for NetApp ONTAP）を使用します。
+AWS は、リージョン内の 1 つまたは複数のアベイラビリティ ゾーン（AZ）にソリューションをデプロイすることをサポートしています。ディザスタリカバリでは、AWSでホストされる2つのサービス：VMware Cloud on AWSとAmazon FSx for NetApp ONTAPを使用します。
 
-* *VMware Cloud for AWS*：シングルAZまたはデュアルAZのストレッチクラスタSDDC環境へのデプロイをサポートします。NetApp Disaster Recovery は、VMware Cloud on AWS のシングルAZ SDDCデプロイのみをサポートします。
-* *AWS FSx for NetApp ONTAP*：Amazon FSx for NetApp ONTAPがマルチAZ構成で導入されている場合、各ボリュームは1つのFSx for ONTAPファイルシステムによって所有され、データは2つ目のファイルシステムにミラーリングされます。FSx for ONTAPは、シングルAZ構成またはマルチAZ構成で導入できます。NetApp Disaster Recoveryは、両方の導入モデルをサポートしています。
+* *VMware Cloud for AWS*：シングルAZまたはデュアルAZのストレッチクラスタSDDC環境へのデプロイをサポートします。災害復旧は、VMware Cloud on AWSのシングルAZ SDDCデプロイのみをサポートします。
+* *AWS FSx for NetApp ONTAP*：Amazon FSx for NetApp ONTAPがマルチAZ構成で導入されている場合、各ボリュームは1つのFSx for ONTAPファイルシステムによって所有され、データは2つ目のファイルシステムにミラーリングされます。FSx for ONTAPは、シングルAZ構成またはマルチAZ構成で導入できます。Disaster Recoveryは、両方の導入モデルをサポートしています。
 
 
 *ベストプラクティス*：AWS 災害復旧サイト構成の場合、NetApp では、VMware Cloud と AWS FSx for ONTAP インスタンスの両方にシングル AZ デプロイメントを使用することを推奨します。AWS は災害復旧に使用されているため、複数のアベイラビリティゾーンを導入するメリットはありません。マルチ AZ デプロイメントは、コストと複雑さを増大させる可能性があります。
@@ -87,7 +88,7 @@ AWS では、次のタイプの VPC 間相互接続を提供しています。�
 [[get-ready-for-on-premises-to-cloud-protection-using-aws]]
 === AWS を使用したオンプレミスからクラウドへの保護の準備
 
-AWS を使用してオンプレミスからクラウドへの保護用にNetApp Disaster Recovery を設定するには、以下を設定する必要があります。
+AWSを使用してオンプレミスからクラウドへの保護のための災害復旧を設定するには、次の設定が必要です：
 
 * NetApp ONTAP用の AWS FSx をセットアップする
 * VMware Cloud on AWS SDDC をセットアップする
@@ -123,7 +124,7 @@ AWS上でVMware Cloud環境を構成するには、以下の手順に従って�
 [[private-cloud]]
 == プライベート クラウド
 
-NetApp Disaster Recoveryを使用すると、VM データストアを同じプライベート データセンター内またはリモートのプライベート データセンターまたは併置されたデータセンター内の別の vCenter クラスタに複製することで、1 つ以上の vCenter クラスタでホストされている VMware VM を保護できます。
+1つ以上のvCenterクラスタでホストされているVMware VMを保護するには、ディザスタリカバリを使用して、VMデータストアを同じプライベートデータセンター内、またはリモートのプライベートデータセンターやコロケーションデータセンターにある別のvCenterクラスタにレプリケートします。
 
 オンプレミスからオンプレミスへの状況では、物理サイトの 1 つにコンソール エージェントをインストールします。
 
@@ -134,7 +135,7 @@ Disaster Recovery は、イーサネットと TCP/IP を使用したサイト間
 [[get-ready-for-on-premises-to-on-premises-protection]]
 === オンプレミスからオンプレミスへの保護の準備
 
-オンプレミス間の保護のためにNetApp Disaster Recovery を設定する前に、次の要件が満たされていることを確認してください。
+オンプレミス環境間保護のための災害復旧を設定する前に、以下の要件を満たしていることを確認してください：
 
 * ONTAPストレージ
 +
@@ -147,7 +148,7 @@ Disaster Recovery は、イーサネットと TCP/IP を使用したサイト間
 * vCenter クラスタ
 +
 ** 保護する VM が NFS データストア ( ONTAP NFS ボリュームを使用) または VMFS データストア ( NetApp iSCSI LUN を使用) でホストされていることを確認します。
-** レビューlink:../reference/vcenter-privileges.html["vCenter 権限"]NetApp Disaster Recoveryに必要です。
+** 災害復旧に必要なlink:../reference/vcenter-privileges.html["vCenter 権限"]を確認してください。
 ** 災害復旧ユーザー アカウント (デフォルトの vCenter 管理者アカウントではない) を作成し、そのアカウントに vCenter 権限を割り当てます。
 
 
@@ -160,8 +161,8 @@ Disaster Recovery は、イーサネットと TCP/IP を使用したサイト間
 
 NetApp Consoleエージェントはインテリジェント プロキシをサポートします。インテリジェント プロキシは、オンプレミス環境をNetApp Consoleに接続するための軽量かつ安全で効率的な方法です。 VPN や直接のインターネット アクセスを必要とせずに、システムとコンソール サービス間の安全な接続を提供します。この最適化されたプロキシ実装は、ローカル ネットワーク内の API トラフィックをオフロードします。
 
-プロキシが設定されている場合、 NetApp Disaster Recovery はVMware またはONTAPと直接通信を試み、直接通信が失敗した場合は設定されたプロキシを使用します。
+プロキシが設定されている場合、Disaster RecoveryはVMwareまたはONTAPとの直接通信を試み、直接通信が失敗した場合は設定されたプロキシを使用します。
 
-NetApp Disaster Recovery プロキシの実装では、コンソールエージェントと任意の vCenter サーバーおよび ONTAP アレイ間で、HTTPS プロトコルを使用したポート 443 通信が必要です。コンソールエージェント内の NetApp Disaster Recovery エージェントは、アクションの実行時に VMware vSphere、vCenter サーバー、または ONTAP と直接通信します。
+ディザスタリカバリプロキシの実装には、HTTPSプロトコルを使用したConsoleエージェントと任意のvCenter ServerおよびONTAPアレイ間のポート443通信が必要です。Consoleエージェント内のディザスタリカバリエージェントは、アクションを実行する際にVMware vSphere、vCenter Server、またはONTAPと直接通信します。
 
 NetApp Consoleでの一般的なプロキシ設定の詳細については、以下を参照してください。 https://docs.netapp.com/us-en/console-setup-admin/task-configuring-proxy.html["プロキシサーバーを使用するようにコンソールエージェントを構成する"^] 。

@@ -21,7 +21,7 @@ NetApp Disaster Recovery にログインするには、NetApp Support Site の�
 
 Disaster Recovery では、特定のタスクには特定のユーザーロールが必要です。ユーザーに適切なロールが割り当てられていることを確認してください。
 
-詳細については、以下を参照してください。 * link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーのロールと権限"] * link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["NetApp Console のすべてのサービスに対するアクセスロール"^]
+詳細については、以下を参照してください。 * link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["ディザスタリカバリにおけるユーザーロールと権限"] * link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["NetApp Console のすべてのサービスに対するアクセスロール"^]
 
 
 

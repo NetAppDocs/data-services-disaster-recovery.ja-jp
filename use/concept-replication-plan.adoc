@@ -89,7 +89,7 @@ summary: NetApp Disaster Recoveryでレプリケーションをデプロ
 [[disaster-recovery-managed-backups]]
 == Disaster Recovery管理のバックアップ
 
-Disaster Recovery管理バックアップを使用する場合、NetApp Disaster Recoveryの外部で作成されたSnapMirror関係には、次のガイドラインが適用されます。
+Disaster Recoveryで管理されるバックアップを使用する場合、Disaster Recoveryの外部で作成されたSnapMirror関係には以下のガイドラインが適用されます：
 
 * SnapMirror関係は、MirrorAll、MirrorVault、MirrorLatest、および非同期レプリケーションポリシーをサポートできます。
 * これらの関係については、更新をスケジュールしないでください。これらは Disaster Recovery サービスによって管理されます。
@@ -104,7 +104,7 @@ Disaster Recovery管理バックアップを使用する場合、NetApp Disaster
 
 アプリケーション整合性スナップショットにより、スナップショットが取得されたときにデータベースが整合性のある状態であることが保証されます。これは、フェイルオーバーまたはフェイルバック操作後にデータベースを一貫した状態に復元できることを保証するため重要です。
 
-データベース サーバが管理するデータは、データベース サーバをホストするVMと同じデータストア上にある場合と、別のデータストアにある場合があります。次の表は、NetApp Disaster Recoveryでアプリケーション整合性スナップショットに対してサポートされている構成を示しています：
+データベース サーバが管理するデータは、データベース サーバをホストするVMと同じデータストア上にある場合もあれば、別のデータストア上にある場合もあります。次の表は、ディザスターリカバリにおけるアプリケーション整合性スナップショットでサポートされている構成を示しています：
 
 [cols="20,20,40a"]
 |===

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: use/sites-add.html 
-keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
-summary: 災害復旧計画を作成する前に、 NetApp Disaster Recoveryでプライマリ vCenter サイトとターゲット vCenter 災害復旧サイトを追加する必要があります。 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, kubernetes, trident protect, openshift 
+summary: NetApp Disaster Recovery でディザスタリカバリプランを作成するには、まずプライマリサイトとターゲットディザスタリカバリサイト（vCenter サイトまたは Kubernetes サイト）を追加する必要があります。 
 ---
 = NetApp Disaster Recovery でサイトを追加する
 :hardbreaks:
@@ -47,7 +47,7 @@ NetApp Disaster Recovery にサイトを追加した後、そのサイトにリ�
 以前のリリースで vCenter を追加し、検出スケジュールをカスタマイズする場合は、vCenter Server サイトを編集してスケジュールを設定する必要があります。
 
 
-TIP: NetApp Disaster Recoveryは、24時間に1回検出を実行します。サイトのセットアップ後、後でvCenterまたはKubernetesクラスターを編集して、ニーズに合わせて検出スケジュールをカスタマイズできます。たとえば、VMの数が多い場合は、検出スケジュールを23時間59分ごとに実行するように設定できます。VMの数が少ない場合は、検出スケジュールを12時間ごとに実行するように設定できます。最小間隔は30分、最大間隔は24時間です。
+TIP: Disaster Recoveryは、24時間ごとに1回検出を実行します。サイトのセットアップ後、後からvCenterまたはKubernetesクラスタを編集して、ニーズに合わせて検出スケジュールをカスタマイズできます。たとえば、VMの数が多い場合は、検出スケジュールを23時間59分ごとに実行するように設定できます。VMの数が少ない場合は、検出スケジュールを12時間ごとに実行するように設定できます。最小間隔は30分、最大間隔は24時間です。
 
 環境に関する最新情報を取得するには、まず手動でいくつかの検出を実行する必要があります。その後、自動的に実行されるようにスケジュールを設定できます。
 
@@ -125,7 +125,7 @@ image:sites-list2.png["サイトページのスクリーンショット"]
 
 
 
-vCenter が追加されると、 NetApp Disaster Recovery は、vCenter クラスタ、ESXi ホスト、データストア、ストレージ フットプリント、仮想マシンの詳細、 SnapMirrorレプリカ、仮想マシン ネットワークなどの vCenter 環境の詳細な検出を実行します。
+vCenters を追加すると、Disaster Recovery は vCenter 環境の詳細な検出を実行します。これには、vCenter クラスタ、ESXi ホスト、データストア、ストレージフットプリント、仮想マシンの詳細、SnapMirror レプリカ、仮想マシンネットワークが含まれます。
 
 --
 .Kubernetes
@@ -160,7 +160,7 @@ image:add-kubernetes-cluster.png["Kubernetesクラスタ追加オプションの
 
 サブネット マッピングを使用してフェイルオーバー操作時の IP アドレスを管理できます。これにより、vCenter ごとにサブネットを追加できます。これを実行すると、各仮想ネットワークの IPv4 CIDR、デフォルト ゲートウェイ、および DNS が定義されます。
 
-フェイルオーバー時に、 NetApp Disaster Recovery はマッピングされたネットワークの CIDR を使用して各 vNIC に新しい IP アドレスを割り当てます。
+フェイルオーバー時、Disaster RecoveryはマッピングされたネットワークのCIDRを使用して、各vNICに新しいIPアドレスを割り当てます。
 
 例えば：
 
@@ -170,7 +170,7 @@ image:add-kubernetes-cluster.png["Kubernetesクラスタ追加オプションの
 
 VM1 には、NetworkA に接続された vNIC (10.1.1.50) があります。レプリケーション プラン設定では、NetworkA は NetworkB にマップされます。
 
-フェイルオーバー時に、 NetApp Disaster Recovery は元の IP アドレス (10.1.1) のネットワーク部分を置き換え、元の IP アドレス (10.1.1.50) のホスト アドレス (.50) を保持します。 VM1 の場合、 NetApp Disaster Recovery はNetworkB の CIDR 設定を確認し、NetworkB のネットワーク部分 192.168.1 を使用し、ホスト部分 (.50) を保持して VM1 の新しい IP アドレスを作成します。新しい IP は 192.168.1.50 になります。
+フェイルオーバー時には、Disaster Recoveryは元のIPアドレス（10.1.1）のネットワーク部分を置き換え、元のIPアドレス（10.1.1.50）のホストアドレス（.50）を保持します。VM1の場合、Disaster RecoveryはNetworkBのCIDR設定を参照し、NetworkBのネットワーク部分192.168.1を使用してホスト部分（.50）を保持したままVM1の新しいIPアドレスを作成します。新しいIPアドレスは192.168.1.50になります。
 
 要約すると、ホスト アドレスは同じままですが、ネットワーク アドレスはサイトのサブネット マッピングで構成されているものに置き換えられます。これにより、特に数百のネットワークと数千の VM を管理する場合に、フェイルオーバー時の IP アドレスの再割り当てをより簡単に管理できるようになります。
 
@@ -181,7 +181,7 @@ VM1 には、NetworkA に接続された vNIC (10.1.1.50) があります。レ�
 
 
 .手順
-. NetApp Disaster Recoveryメニューから、*サイト* を選択します。
+. 災害復旧メニューから、*サイト*を選択します。
 . 行動からimage:icon-vertical-dots.png["アクションアイコン"]右側のアイコンをクリックし、*サブネットの追加*を選択します。
 +
 image:dr-sites-subnet-menu.png["サブネットメニューのスクリーンショットを追加"]
@@ -220,7 +220,7 @@ TIP: CIDR 表記は、IP アドレスとそのネットワーク マスクを指
 
 
 .手順
-. NetApp Disaster Recoveryメニューから、*レプリケーション プラン* を選択します。
+. Disaster Recoveryメニューから、*レプリケーションプラン*を選択します。
 . レプリケーション プランを追加するには、[*追加*] を選択します。
 . vCenter サーバーを追加し、リソース グループまたはアプリケーションを選択し、マッピングを完了して、通常の方法でフィールドを入力します。
 . レプリケーション プラン > リソース マッピング ページで、*仮想マシン* セクションを選択します。
@@ -247,7 +247,7 @@ vCenter Server サイトを編集して検出スケジュールをカスタマ�
 検出をスケジュールしたくない場合は、スケジュールされた検出オプションを無効にして、いつでも手動で検出を更新できます。
 
 .手順
-. NetApp Disaster Recoveryメニューから、*サイト* を選択します。
+. 災害復旧メニューから、*サイト*を選択します。
 . 編集したいサイトを選択します。
 . アクションを選択image:icon-vertical-dots.png["アクションアイコン"]右側のアイコンをクリックし、[編集] を選択します。
 . Settings ウィンドウで、必要に応じてフィールドを編集します。
@@ -265,10 +265,10 @@ image:sites-edit-schedule.png["検出スケジュールの編集のスクリー�
 [[refresh-discovery-manually]]
 == 検出を手動で更新する
 
-検出はいつでも手動で更新できます。これは、VM を追加または削除し、 NetApp Disaster Recoveryの情報を更新する場合に便利です。
+検出結果はいつでも手動で更新できます。これは、VMを追加または削除し、Disaster Recoveryの情報を更新したい場合に便利です。
 
 .手順
-. NetApp Disaster Recoveryメニューから、*サイト* を選択します。
+. 災害復旧メニューから、*サイト*を選択します。
 . 更新するサイトを選択します。
 . アクションを選択image:icon-vertical-dots.png["アクションアイコン"]右側のアイコンをクリックし、[更新] を選択します。
 

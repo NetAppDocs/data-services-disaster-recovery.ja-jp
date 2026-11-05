@@ -28,7 +28,7 @@ NetApp Consoleは、単一の作業環境で複数のConsoleエージェント�
 [[steps]]
 == 手順
 
-. 災害復旧で、[**サイト**] を選択します。
+. NetApp Disaster Recoveryで、**サイト**を選択します。
 . ソース vCenter とターゲット vCenter の両方のコンソール エージェントを変更する必要があります。変更する vCenter を特定します。  vCenter のアクション メニューを選択し、[**編集**] を選択します。
 +
 image:dr-sites-subnet-menu.png["サイトダッシュボードのスクリーンショット"]

@@ -13,10 +13,10 @@ Amazon EVSをNetApp Disaster Recoveryで構成するための要件を確認し�
 
 .前提条件
 * link:../get-started/dr-prerequisites.html["Disaster Recovery の一般的な前提条件"]を確認します。
-* NetApp Disaster Recovery が必要な操作を実行するために必要な特定の VMware 権限を持つ vCenter ユーザー アカウントを作成します。
+* ディザスタリカバリで必要な操作を実行するために必要な特定のVMware権限を持つvCenterユーザアカウントを作成します。
 +
 
-NOTE: デフォルトの「\administrator@vsphere.com」管理者アカウントは使用しないことを推奨します。代わりに、ディザスタリカバリプロセスに参加するすべてのvCenterクラスタ上で、NetApp Disaster Recovery専用のユーザーアカウントを作成してください。必要な特定の権限の一覧については、link:vcenter-privileges.html["NetApp Disaster Recoveryに必要な vCenter 権限"]をご参照ください。
+NOTE: デフォルトの「\administrator@vsphere.com」管理者アカウントは**使用しない**ことをお勧めします。代わりに、ディザスタリカバリプロセスに参加するすべてのvCenterクラスタに、ディザスタリカバリ専用のユーザアカウントを作成する必要があります。必要な特定の権限の一覧については、link:vcenter-privileges.html["災害復旧に必要なvCenterの権限"]を参照してください。
 
 * Disaster Recoveryで保護されるVMをホストするすべてのvCenterデータストアが、NetApp ONTAPストレージリソース上に配置されていることを確認してください。
 +

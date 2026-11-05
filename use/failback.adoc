@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: use/failback.html 
-keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, kubernetes, trident protect, openshift 
 summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。 
 ---
-= NetApp Disaster Recoveryでアプリケーションを元のソースにフェイルバック
+= NetApp Disaster Recoveryを使用してソースサイトにフェイルバックする
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -21,14 +21,14 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 [[about-failback]]
 == フェイルバックについて
 
-フェイルバックでは、NetApp Disaster Recoveryは、レプリケーションの方向を反転させる前に、変更内容を元のソース仮想マシンに複製（再同期）します。このプロセスは、リレーションシップがターゲットにフェイルオーバーした後に開始され、以下の手順が含まれます。
+フェイルバックでは、NetApp Disaster Recoveryは、レプリケーションの方向を反転させる前に、変更内容を元のソースワークロードに複製（再同期）します。このプロセスは、リレーションシップがターゲットにフェイルオーバーした後に開始され、以下の手順が含まれます。KubernetesワークロードはVMwareワークロードと同じ順序で実行されます。VMware固有の詳細は括弧内に示されています。
 
 * 回復したサイトでコンプライアンス チェックを実行します。
-* 回復されたサイトにあると特定された各 vCenter クラスタの vCenter 情報を更新します。
-* ターゲット サイトで、仮想マシンの電源をオフにして登録を解除し、ボリュームをマウント解除します。
+* 復旧したサイトに配置されていると識別された各vCenterクラスタまたはKubernetesクラスタの検出情報を更新します。
+* 対象サイトで、保護対象のワークロードを停止し（VMwareの場合は、仮想マシンの電源をオフにして登録を解除）、ボリュームをアンマウントします。
 * 元のソースのSnapMirror関係を解除して、読み取り/書き込み可能にします。
 * レプリケーションを元に戻すには、 SnapMirror関係を再同期します。
-* ソース仮想マシンの電源をオンにして登録し、ソースにボリュームをマウントします。
+* ソース上で保護対象のワークロードを開始し（VMwareの場合は、ソース仮想マシンの電源をオンにして登録する）、ソース上でボリュームをマウントします。
 
 
 
@@ -36,7 +36,7 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 [[before-you-begin]]
 == 開始する前に
 
-データストアベースの保護を使用している場合、フェイルオーバー中にVMがデータストアに追加される可能性があります。このような事態が発生した場合は、フェイルバックを開始する前にこれらのVMの追加マッピング情報を提供してください。リソースマッピングを編集するには、link:manage.html#manage-replication-plans["レプリケーションプランの管理"]を参照してください。
+VMwareワークロードでデータストアベースの保護を使用している場合、フェイルオーバー中にVMがデータストアに追加される可能性があります。このような事態が発生した場合は、フェイルバックを開始する前に、これらのVMの追加マッピング情報を提供してください。リソースマッピングを編集するには、link:manage.html#manage-replication-plans["レプリケーションプランの管理"]を参照してください。
 
 
 
@@ -48,12 +48,12 @@ summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動�
 .vCenter
 --
 .手順
-. NetApp Disaster Recoveryメニューから、*レプリケーション プラン* を選択します。
+. Disaster Recoveryメニューから、*レプリケーションプラン*を選択します。
 . ドロップダウンメニューで、フィルタを *VMware* に設定します。
 +
 image::site-type-toggle.png[サイトタイプ切り替えのスクリーンショット]
 
-. フェイルバックするレプリケーション計画を特定します。*アクション* オプション image:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"] を選択し、*リカバリ* にカーソルを合わせて *フェイルバック* を選択します。
+. フェイルバックするレプリケーション計画を特定します。*アクション* オプション image:../use/icon-horizontal-dots.png["ディザスターリカバリーサービスのアクションメニューアイコン"] を選択し、*リカバリ* にカーソルを合わせて *フェイルバック* を選択します。
 . 復旧対象となるデータストアのスナップショットを選択してください。*今すぐスナップショットを作成*を選択すると新しいスナップショットが作成され、*選択*を選択すると利用可能なスナップショットから選択できます。
 +
 
@@ -70,12 +70,12 @@ image:failback.png["フェイルバック ダイアログのスクリーンシ�
 --
 .Kubernetes
 --
-. NetApp Disaster Recoveryメニューから、*レプリケーション プラン* を選択します。
+. Disaster Recoveryメニューから、*レプリケーションプラン*を選択します。
 . ドロップダウンメニューで、* Kubernetes *レプリケーションプランに絞り込みます。
 +
 image::site-type-toggle.png[サイトタイプ切り替えのスクリーンショット]
 
-. フェイルバックするレプリケーション計画を特定します。*アクション* オプション image:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"] を選択し、*リカバリ* にカーソルを合わせて *フェイルバック* を選択します。
+. フェイルバックするレプリケーション計画を特定します。*アクション* オプション image:../use/icon-horizontal-dots.png["ディザスターリカバリーサービスのアクションメニューアイコン"] を選択し、*リカバリ* にカーソルを合わせて *フェイルバック* を選択します。
 . 復旧対象となるクラスターのスナップショットを選択してください。*今すぐスナップショットを取得*を選択すると新しいスナップショットが作成され、*最新のスナップショットを使用*を選択すると最新の正常なスナップショットが使用されます。
 . 操作を確定するには「フェイルバック」と入力し、次に * フェイルバック * を選択してください。
 

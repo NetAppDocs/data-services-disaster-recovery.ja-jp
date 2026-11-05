@@ -30,7 +30,7 @@ NOTE: VMwareワークロードのレプリケーションプランを作成す�
 
 
 
-TIP: スプロール化を最小限に抑えるため、NetApp Disaster Recoveryをデプロイする前にKubernetesクラスタとネームスペースを整理してください。レプリケーション計画を作成する前にリソースグループを整理する方法については、link:resource-group.html["リソースグループを作成する"]を参照してください。
+TIP: ディザスタリカバリをデプロイする前に、Kubernetesクラスタとネームスペースを整理して、乱立を最小限に抑えます。レプリケーション計画を作成する前にリソースグループを整理するには、link:resource-group.html["リソースグループを作成する"]を参照してください。
 
 
 
@@ -52,7 +52,7 @@ TIP: スプロール化を最小限に抑えるため、NetApp Disaster Recovery
 まず、レプリケーション計画のソースクラスターと宛先クラスターを選択します。
 
 .手順
-. NetApp Disaster Recoveryメニューから、*レプリケーション プラン* を選択します。
+. Disaster Recoveryメニューから、*レプリケーションプラン*を選択します。
 . ドロップダウンメニューから、*Kubernetes*を選択します。
 +
 image::site-type-toggle.png[サイトタイプ切り替えのスクリーンショット]

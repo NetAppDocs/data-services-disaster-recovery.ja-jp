@@ -41,7 +41,7 @@ NetApp Disaster RecoveryからONTAP FSx クラスターを削除する必要が�
 +
 参照 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["Amazon FSx for NetApp ONTAPファイルシステムを作成する"^]。
 
-. NetApp Disaster Recoveryから*Sites*を選択し、vCenter行で*Actions*オプションを選択します。image:../use/icon-vertical-dots.png["NetApp Disaster Recoveryのアクション メニュー アイコン"]をクリックし、[アクション] メニューから [*更新*] を選択して、 NetApp Disaster Recoveryの FSx 検出を更新します。
+. ディザスタリカバリから*サイト*を選択し、vCenterの行で*アクション*オプションimage:../use/icon-vertical-dots.png["ディザスタリカバリのアクションメニューアイコン"]を選択します。次に、アクションメニューから*更新*を選択して、ディザスタリカバリでのFSxの検出を更新します。
 +
 これにより、データストア、その仮想マシン、およびその宛先関係が再検出されます。
 

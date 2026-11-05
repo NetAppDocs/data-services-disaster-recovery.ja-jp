@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/dr-prerequisites.html 
-keywords: what are disaster recovery requirements, disaster recovery prerequisites, bluexp, disaster recovery 
-summary: NetApp Disaster Recoveryを使用する前に、環境がONTAPストレージ、VMware vCenter クラスタ、およびNetApp Consoleの要件を満たしていることを確認してください。 
+keywords: what are disaster recovery requirements, disaster recovery prerequisites, bluexp, disaster recovery, vmware, kubernetes, trident protect 
+summary: NetApp Disaster Recoveryを使用する前に、環境がONTAPストレージ、VMware vCenterクラスタまたはKubernetesクラスタ、およびNetApp Consoleの要件を満たしていることを確認してください。 
 ---
 = NetApp Disaster Recoveryの前提条件
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: NetApp Disaster Recoveryを使用する前に、環境がONTAPストレ
 
 
 [role="lead"]
-セットアップ前にストレージ、vCenter、およびコンソールの前提条件を検証して、ワークロードがレプリケーションとリカバリの準備が整った状態にします。
+ワークロードのレプリケーションとリカバリの準備が整うように、セットアップ前にストレージ、vCenterまたはKubernetesクラスタ、およびConsoleの前提条件を検証します。
 
 
 
@@ -140,11 +140,12 @@ NetApp Consoleユーザーには次のロールが必要です。
 [[gather-credentials-for-ontap-and-vmware]]
 === ONTAPとVMwareの資格情報を収集する
 
-* NetApp Disaster Recoveryを管理するNetApp Consoleプロジェクト内のシステムに、 Amazon FSx for ONTAPと AWS 認証情報を追加する必要があります。
-* NetApp Disaster Recovery には vCenter の資格情報が必要です。  NetApp Disaster Recoveryでサイトを追加するときに、vCenter の資格情報を入力します。
+* Amazon FSx for ONTAPおよびAWSの認証情報は、災害復旧を管理するNetApp Consoleプロジェクト内のシステムに追加する必要があります。
+* Disaster RecoveryにはvCenterのクレデンシャルが必要です。Disaster Recoveryでサイトを追加する際に、vCenterのクレデンシャルを入力します。
 +
-必要なvCenter権限のリストについては、link:../reference/vcenter-privileges.html["NetApp Disaster Recoveryに必要な vCenter 権限"] 。サイトを追加する方法については、link:../use/sites-add.html["サイトを追加する"] 。
+必要なvCenter権限のリストについては、link:../reference/vcenter-privileges.html["災害復旧に必要なvCenterの権限"]を参照してください。サイトの追加方法については、link:../use/sites-add.html["サイトを追加する"]を参照してください。
 
+* Kubernetesクラスタの場合は、Kubernetesサイトを追加する前にlink:task-kubernetes-requirements.html["Kubernetesクラスタの要件"]を確認してください。
 
 
 
@@ -155,12 +156,12 @@ TIP: Amazon Elastic VMware Service（EVS）でディザスタリカバリを使�
 [[create-the-netapp-console-agent]]
 === NetApp Consoleエージェントを作成する
 
-コンソール エージェントは、コンソールがONTAPストレージおよび VMware vCenter クラスターと通信できるようにするソフトウェア コンポーネントです。災害復旧が適切に機能するために必要です。エージェントはプライベート ネットワーク (オンプレミス データセンターまたはクラウド VPC) に常駐し、 ONTAPストレージ インスタンスやその他のサーバーおよびアプリケーション コンポーネントと通信します。災害復旧の場合、これは管理対象の vCenter クラスターへのアクセスです。
+Consoleエージェントは、Consoleがお客様のONTAPストレージおよびVMware vCenterクラスタまたはKubernetesクラスタと通信できるようにするソフトウェアコンポーネントです。ディザスタリカバリが適切に機能するために必要です。エージェントはお客様のプライベートネットワーク（オンプレミスのデータセンターまたはクラウドVPCのいずれか）に配置され、ONTAPストレージインスタンスやその他のサーバおよびアプリケーションコンポーネントと通信します。ディザスタリカバリの場合、これは管理対象のvCenterクラスタまたはKubernetesクラスタへのアクセスとなります。
 
 NetApp Consoleにコンソール エージェントを設定する必要があります。エージェントを使用すると、災害復旧サービスに適切な機能が含まれるようになります。
 
-* NetApp Disaster Recovery は、標準モード エージェントの展開でのみ機能します。見る https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Consoleの標準モードでの使用開始"^]。
-* 送信元と送信先の両方のvCenterクラスタが同じConsoleエージェントを使用していることを確認します。
+* ディザスタリカバリは、標準モードのエージェント展開でのみ機能します。参照 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Consoleの標準モードでの使用開始"^]。
+* ソースとデスティネーションの両方のvCenterクラスタまたはKubernetesクラスタが、同じConsoleエージェントを使用していることを確認してください。
 * 必要なコンソール エージェントの種類:
 +
 ** *オンプレミスからオンプレミスへのディザスタリカバリ*：ディザスタリカバリサイトにオンプレミスの Console エージェントをインストールします。この方法を使用すると、プライマリサイトに障害が発生しても、サービスが DR サイトで仮想リソースを再起動することを妨げません。 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["オンプレミスでコンソールエージェントをインストールしてセットアップする"^]を参照してください。
@@ -172,14 +173,14 @@ NetApp Consoleにコンソール エージェントを設定する必要があ�
 
 TIP: オンプレミスからオンプレミスへの接続には、オンプレミスのコンソール エージェントを使用します。オンプレミスから AWS の場合、ソースのオンプレミス vCenter と宛先のオンプレミス vCenter にアクセスできる AWS コンソールエージェントを使用します。
 
-** インストールされたコンソール エージェントは、Disaster Recovery が管理する vCenter クラスタによって管理されるすべての VMware vCenter クラスタ インスタンスおよび ESXi ホストにアクセスできる必要があります。
+** インストールされたConsoleエージェントは、Disaster Recoveryが管理するすべてのKubernetesクラスタにアクセスできる必要があります。また、Disaster Recoveryが管理するVMware vCenterクラスタインスタンス、およびそれらのvCenterクラスタによって管理されるESXiホストにもアクセスできる必要があります。
 
 
-* NetApp Disaster Recoveryによって管理されるすべてのONTAPアレイは、 NetApp Disaster Recoveryの管理に使用されるNetApp Consoleプロジェクト内のすべてのシステムに追加する必要があります。
+* Disaster Recoveryで管理するすべてのONTAPアレイは、Disaster Recoveryの管理に使用するNetApp Consoleプロジェクト内の任意のシステムに追加する必要があります。
 +
 見る https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAPクラスタの検出"^]。
 
-* NetApp Disaster Recoveryのインテリジェントプロキシの設定については、以下を参照してください。link:../get-started/dr-setup.html["NetApp Disaster Recovery用のインフラストラクチャをセットアップする"] 。
+* 災害復旧用のインテリジェントプロキシの設定については、link:../get-started/dr-setup.html["ディザスタリカバリ用のインフラストラクチャをセットアップする"]を参照してください。
 
 
 
@@ -187,7 +188,7 @@ TIP: オンプレミスからオンプレミスへの接続には、オンプレ
 [[workload-prerequisites]]
 == ワークロードの前提条件
 
-アプリケーション整合性プロセスが確実に成功するには、次の前提条件を適用します。
+VMwareワークロードのアプリケーション整合性プロセスが確実に成功するためには、以下の前提条件を満たしてください：
 
 * 保護する VM 上で VMware ツール (または Open VM ツール) が実行されていることを確認します。
 * Microsoft SQL Server、Oracle Database、またはその両方を実行している Windows VM の場合、データベースで VSS ライターが有効になっている必要があります。
@@ -203,5 +204,5 @@ IMPORTANT: 展開タイプに応じて、link:reference-vmware-prerequisites.htm
 == 詳細情報
 
 * xref:../reference/vcenter-privileges.html[必須のvCenter権限]
-* xref:../reference/evs-deploy-guide-config-prereqs.html[NetApp Disaster Recoveryを使用した Amazon EVS の前提条件]
+* xref:../reference/evs-deploy-guide-config-prereqs.html[ディザスタリカバリを伴うAmazon EVSの前提条件]
 

@@ -9,7 +9,7 @@ summary: VM インフラストラクチャを保護する前に、 NetApp Disast
 
 
 [role="lead"]
-VM インフラストラクチャを保護する前に、保護対象の VM をホストしている VMware vCenter クラスターと、それらの vCenter が配置されている場所を特定する必要があります。最初のステップは、ソース データ センターと宛先データ センターを表すサイトを作成することです。サイトは障害ドメインまたは回復ドメインです。
+NetApp Disaster Recoveryを使用してVMインフラストラクチャを保護する前に、保護対象のVMをホストしているVMware vCenterクラスタと、それらのvCentersの場所を特定します。最初のステップは、ソースとデスティネーションのデータセンターを表すサイトを作成することです。サイトとは、障害ドメインまたはリカバリドメインのことです。
 
 以下を作成する必要があります。
 
@@ -26,7 +26,7 @@ VM インフラストラクチャを保護する前に、保護対象の VM を�
 
 .手順
 . NetApp Consoleの左側のナビゲーション バーから、*保護* > *ディザスタ リカバリ* を選択します。
-. NetApp Disaster Recoveryの任意のページから、*サイト* オプションを選択します。
+. Disaster Recoveryの任意のページから、*サイト*オプションを選択します。
 +
 image:evs-create-site-op-1.png["サイトオプション"]
 
@@ -51,7 +51,7 @@ image:evs-create-site-op-3-5.png["サイト作成ダイアログボックス"]
 
 Amazon FSx for NetApp ONTAPストレージを使用して Amazon EVS の DR サイトを作成します。
 
-. NetApp Disaster Recoveryの任意のページから、*サイト* オプションを選択します。
+. Disaster Recoveryの任意のページから、*サイト*オプションを選択します。
 +
 image:evs-create-site-op-1.png["サイトオプション"]
 

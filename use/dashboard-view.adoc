@@ -4,7 +4,7 @@ permalink: use/dashboard-view.html
 keywords: disaster recovery remediate, disaster recovery, failover, failback, replication, bluexp, netapp 
 summary: NetApp Disaster Recovery は、災害復旧ワークフローを自動化するクラウドベースの災害復旧サービスです。 
 ---
-= NetApp Disaster Recoveryでプランの健全性とワークロード保護のステータスを確認する
+= NetApp Disaster Recoveryでプランの健常性と保護ステータスを表示する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -26,9 +26,9 @@ NetApp Disaster Recovery は、Disaster Recovery によって検出されたワ�
 == ダッシュボードでヘルス状態と保護ステータスを確認する
 
 .手順
-. NetApp Disaster Recoveryメニューから、*ダッシュボード* を選択します。
+. Disaster Recoveryメニューから、*ダッシュボード*を選択します。
 +
-image:dr-dashboard.png["NetApp Disaster Recoveryダッシュボード"]
+image:dr-dashboard.png["ディザスタリカバリダッシュボード"]
 
 . ダッシュボードのヘルス情報を確認します。
 +
@@ -91,7 +91,7 @@ image:dr-dashboard.png["NetApp Disaster Recoveryダッシュボード"]
 
 |===
 .手順
-. NetApp Disaster Recovery メニューから、*ワークロード*を選択します。
+. 災害復旧メニューから*ワークロード*を選択します。
 . ドロップダウンメニューで、*vCenter* または *Kubernetes* ワークロードを表示するフィルターを選択します。
 +
 image::site-type-toggle.png[サイトタイプ切り替えのスクリーンショット]

@@ -21,9 +21,9 @@ NetApp Disaster Recovery を使用する前に、お客様の環境が VMware vC
 
 これらの前提条件は、オンプレミスの vCenter クラスタと VMware Cloud for AWS ソフトウェア定義データセンター (SDDC) の両方に適用されます。
 
-* レビューlink:../reference/vcenter-privileges.html["vCenter 権限"]NetApp Disaster Recoveryに必要です。
-* NetApp Disaster Recoveryが管理するすべてのVMwareクラスタは、保護対象のVMをホストするためにONTAPボリュームを使用する必要があります。
-* NetApp Disaster Recoveryによって管理されるすべての VMware データストアでは、次のいずれかのプロトコルを使用する必要があります。
+* 災害復旧に必要なlink:../reference/vcenter-privileges.html["vCenter 権限"]を確認してください。
+* Disaster Recoveryが管理するすべてのVMwareクラスタは、保護対象のVMをホストするためにONTAPボリュームを使用する必要があります。
+* ディザスタリカバリで管理するすべてのVMwareデータストアは、次のいずれかのプロトコルを使用する必要があります：
 +
 ** NFS
 ** iSCSI または FC プロトコルを使用した VMFS

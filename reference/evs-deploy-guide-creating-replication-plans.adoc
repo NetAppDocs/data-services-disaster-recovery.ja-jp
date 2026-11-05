@@ -254,7 +254,7 @@ image:evs-create-rp-wiz-c-datastore-mapping.png["レプリケーションプラ�
 [[verify-settings]]
 == 設定を確認する
 
-レプリケーション計画情報を NetApp Disaster Recovery に追加したら、入力した情報が正しいことを確認してください。これが最終ステップです。
+Disaster Recoveryでレプリケーションプラン情報を追加したら、入力した情報が正しいことを確認してください。これが最終段階です。
 
 .手順
 . レプリケーション プランをアクティブ化する前に、[*保存*] を選択して設定を確認します。

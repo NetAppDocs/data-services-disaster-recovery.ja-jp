@@ -30,7 +30,7 @@ NetApp Disaster Recovery の設定方法を学び、システムがワークロ�
 
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]NetApp Disaster Recoveryのセットアップ
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"] 災害復旧の設定
 [role="quick-margin-para"]
 これらのタスクを実行するには、_スーパー管理者_または_ディザスタリカバリ管理者_のロールが必要です。
 

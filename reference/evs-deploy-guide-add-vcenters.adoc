@@ -9,7 +9,7 @@ summary: Amazon EVS と Amazon FSxN を使用したNetApp Disaster Recoveryの�
 
 
 [role="lead"]
-サイトを作成したら、各サイトの vCenter クラスタを NetApp Disaster Recovery に追加します。サイトのタイプによって、そのサイトの vCenters に対して NetApp Disaster Recovery が必要とするアクセス権限が決まります。Amazon EVS vCenters とオンプレミスの vCenters は、同じ接続情報および認証情報を使用します。
+サイトを作成したら、vCenterクラスタを各サイト用としてNetApp Disaster Recoveryに追加します。サイトのタイプによって、Disaster RecoveryがそのサイトのvCentersに要求するアクセス権が決まります。Amazon EVS vCentersとオンプレミスvCentersは、同じ接続情報と認証情報を使用します。
 
 .各サイトにvCenterを追加する手順
 . *サイト* オプションから、必要なサイトの *vCenter の追加* を選択します。
@@ -21,7 +21,7 @@ image:evs-add-vcenter-1.png["vCenterオプションの追加"]
 .. AWS VPC 内でホストされるNetApp Consoleエージェント。
 .. 追加する vCenter の IP アドレスまたは FQDN。
 .. 必要に応じて、ポートをvCenterサーバが使用する TCP ポートに変更してください。
-.. 以前に作成したアカウントの vCenter ユーザー名。NetApp NetApp Disaster Recoveryが vCenter を管理するために使用します。
+.. Disaster RecoveryがvCenterを管理するために使用する、以前に作成したアカウントのvCenterユーザ名。
 
 
 

@@ -15,7 +15,7 @@ summary: NetApp Disaster Recovery を使用すると、SnapMirror レプリケ�
 NetApp Disaster Recovery を使用すると、SnapMirror レプリケーションを使用して、VMware アプリケーションをソースサイトからクラウド上のリモートディザスタリカバリサイトにレプリケートできます。リモートサイトでリカバリデータを最新の状態に保つことで、保護対象アプリケーションを最新の SnapMirror スナップショットからリストアできます。
 
 
-TIP: 災害復旧計画を作成し、ウィザードで繰り返しを識別し、災害復旧サイトへのレプリケーションを開始すると、 NetApp Disaster Recovery は30 分ごとに、レプリケーションが計画に従って実際に実行されているかどうかを確認します。ジョブ モニター ページで進行状況を監視できます。
+TIP: 災害復旧計画を作成し、ウィザードで繰り返しのスケジュールを指定して、災害復旧サイトへのレプリケーションを開始すると、Disaster Recoveryは30分ごとに、レプリケーションが計画どおりに実際に実行されていることを確認します。進捗状況はJob Monitorページで確認できます。
 
 *必須NetApp Consoleロール* このタスクを実行するには、スーパー管理者、災害復旧管理者、または災害復旧フェイルオーバー管理者ロールが必要です。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-disaster-rec-roles.html["NetApp Disaster Recoveryにおけるユーザーの役割と権限について学習します"^]。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するNetApp Consoleのアクセスロールについて学習します"^]。
 
@@ -27,5 +27,5 @@ TIP: 災害復旧計画を作成し、ウィザードで繰り返しを識別し
 . NetApp Consoleの左側のナビゲーションから、*保護* > *災害復旧* を選択します。
 . メニューから*レプリケーション プラン*を選択します。
 . レプリケーション プランを選択します。
-. 右側で *Actions* メニュー image:../use/icon-horizontal-dots.png["NetApp Disaster Recoveryサービスのアクション メニュー アイコン"] を選択し、*Replicate* を選択します。
+. 右側で *Actions* メニュー image:../use/icon-horizontal-dots.png["ディザスターリカバリーサービスのアクションメニューアイコン"] を選択し、*Replicate* を選択します。
 
